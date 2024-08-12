@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Get Certificate</title>
+    <link rel="stylesheet" href="certificate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+</head>
+<style>
+</style>
+<body>
+
+    <nav class="navbar">
+        <div onclick="goback()" class="arrowdiv">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="logo">
+            <p>Sudhu<span>Codes.</span></p>
+        </div>
+      </nav>
+    <div class="projects">
+        <div class="container start-container">
+            <h2>Welcome to the HTML Quiz</h2>
+            <p>Please enter your name to start:</p>
+            <input type="text" id="userNameInput" placeholder="Enter your name">
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div class="container quiz-container" style="display: none;">
+            <div id="quiz"></div>
+            <div class="navigation-buttons">
+                <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+                <button id="nextBtn" onclick="nextQuestion()">Next</button>
+                <button id="submitBtn" onclick="showResults()" style="display: none;">Submit</button>
+            </div>
+        </div>
+        <div class="container2" id="resultCertificateContainer" style="display: none;">
+            <div class="results" id="results"></div>
+            <div class="certificate-container" id="certificateContainer">
+                <div id="certificate" class="certificate">
+                    <div class="logo">
+                        <h2>Sudhu<span>Codes.</span></h2>
+                        <hr>
+                        <h3>Certificate of Completion</h3>
+                    </div>
+                    <div class="certificate-info">
+                        <p>This certificate is proudly<br>awarded to</p><br>
+                        <p><strong id="userName"></strong></p><br>
+                        <p>For successfully completing the<br>Frontend Project</p>
+                        <div class="watermark">
+                            <div class="content2">
+                                <p>Date: <span id="currentDate"></span></p>
+                            </div>
+                            <div class="content">
+                                <p>Sudhanshu Kumar</p>
+                                <p>Instructor, SudhuCodes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="downloadCertificate()">Download Certificate</button>
+            </div>
+            <button onclick="toggleDetails()">View Details</button>
+        </div>
+        
+    
+    </div>
+    <footer>
+        <div class="socialLinks">
+            <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
+            <a href="https://github.com/sudhucodes" target="_blank">Github</a>
+            <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
+            <a href="mailto:sudhuteam@gmail.com?subject=Hello%20SudhuCodes&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
+        </div>
+        <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="certificate.js"></script>
+</body>
+</html>

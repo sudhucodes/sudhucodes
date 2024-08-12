@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Full Stack Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-----------------Loader----------------->
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <p>Loading...</p>
+</div>
+
+
+
+<!-----------------Nav--Bar----------------->
+  <nav class="navbar">
+    <div class="logo"><p>Sudhu<span>Codes.</span></p></div>
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <a data-page="allprojects" class="a1" href="#" onclick="showProjects()"><i id="navigator" class="fa-solid fa-square"></i><img src="images/projects.af28bec5.png" height="19px">All Projects <div class="img">
+                <p>4</p>
+                <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+            </div>
+        </a>
+      </li>
+      <li>
+        <a data-page="getcertificate" class="a2" href="#"><i id="navigator1" class="fa-solid fa-square"></i><img src="images/get_certified.38ee65f4.png" height="24px">Get Certificate <div class="img">
+                <p>1</p>
+                <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+            </div>
+        </a>
+      </li>
+      <li>
+        <a data-page="cources" class="a3" href="#"><i id="navigator2" class="fa-solid fa-square"></i><img src="images/free_courses.65673ec2.png" height="19px">Courses <div class="img">
+                <p>Coming Soon</p>
+                <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+            </div>
+        </a>
+      </li>
+      <li>
+        <a data-page="sourcecode" class="a4" href="#"><i id="navigator3" class="fa-solid fa-square"></i><img src="images/code_icon.9a2f1184.svg" height="20px">Source Code <div class="img">
+                <p>Coming Soon</p>
+                <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+            </div>
+        </a>
+      </li>
+      <li>
+        <a data-page="projectassets" class="a5" href="#"><i id="navigator4" class="fa-solid fa-square"></i><img src="images/project_assets.e50333c7.png" height="20px">Project Assets <div class="img">
+                <p>Coming Soon</p>
+                <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+            </div>
+        </a>
+      </li>
+      <li>
+        <a data-page="stockimages" class="a6" href="#"><i id="navigator5" class="fa-solid fa-square"></i><img src="images/stock_pics.11d1f984.png" height="20px">Stock Images <div class="img">
+                <p>Coming Soon</p>
+                <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+            </div>
+        </a>
+      </li>
+    </ul>
+    <div class="toggle-button" id="toggle-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+
+
+<!-----------------All--Content--page----------------->
+<div class="content" id="content">
+
+
+
+<!-----------------allprojects--page----------------->
+<div id="allprojects" class="page active">
+      <div class="allProjects">
+        <h3>Projects</h3>
+      </div>
+
+      <div id="project-buttons" class="project-buttons">
+        <div class="project-buttons1">
+            <button id="htmlCss" onclick="selectButton('htmlCss')"><i class="fa-brands fa-html5"></i>HTML & CSS</button>
+            <button id="react" onclick="selectButton('react')"><i class="fa-brands fa-react"></i>React</button>
+        </div>
+        <div class="project-buttons1">
+            <button id="fullStack" onclick="selectButton('fullStack')"><i class="fa-brands fa-node-js"></i>Full Stack</button>
+            <button id="javaScript" onclick="selectButton('javaScript')"><i class="fa-brands fa-js"></i>JavaScript</button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="allprojects2">
+      <div class="full-stack project-section">
+          <h1>Full Stack Projects</h1>
+      </div>
+      <div class="react project-section">
+          <h1>React Projects</h1>
+      </div>
+      <div class="html-css project-section">
+        <h1>HTML & CSS Projects</h1>
+        <div class="login-page">
+          <a href="#" data-page="logincode"><img src="images/Login-Page.png" height="150px" alt="Login Page"></a>
+          <a href="#" data-page="ecommercecode"><img src="images/E-commerce-Website.png" height="150px" alt="E-commerce Website"></a>
+          <a href="#" data-page="contactcode"><img src="images/Contact-Us.png" height="150px" alt="Contact Us"></a>
+          <a href="#" data-page="multicode"><img src="images/Multi-Step-Form.png" height="150px" alt="Multi-Step Form"></a>
+        </div>
+      </div>      
+      <div class="javascript project-section">
+          <h1>JavaScript Projects</h1>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- --------------------------------------Login page source code------------------------------------- -->
+<div class="logincode page" id="logincode">
+<div class="html-css2 project-section">
+    <h1>Login-Form Project</h1>
+    <div class="login-page">
+        <p><img src="images/Login-Page.png" height="150px"></p>
+    </div>
+    <div class="source-code">
+        <p onclick="downloadloginZip()"><img src="images/project_assets.e50333c7.png" alt="">Download Zip File</p>
+    </div>
+
+    <!-- Only one card section with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">index.html</p>
+              <button onclick="copyloginhtmlcode()" class="btn-copy login-html-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+            <textarea class="area" id="loginhtmlcode" name="code" readonly="">
+                <!DOCTYPE html>
+<!-- --------Code with SudhuCodes----------- -->
+<html2 lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login Form in HTML and CSS | CodingNepal</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body2>
+<div class="login_form">
+<!-- Login form container -->
+<form action="#">
+  <h3>Log in with</h3>
+
+  <div class="login_option">
+    <!-- Google button -->
+    <div class="option">
+      <a href="#">
+        <img src="logos/google.png" alt="Google" />
+        <span>Google</span>
+      </a>
+    </div>
+
+    <!-- Apple button -->
+    <div class="option">
+      <a href="#">
+        <img src="logos/apple.png" alt="Apple" />
+        <span>Apple</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Login option separator -->
+  <p class="separator">
+    <span>or</span>
+  </p>
+
+  <!-- Email input box -->
+  <div class="input_box">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter email address" required />
+  </div>
+
+  <!-- Paswwrod input box -->
+  <div class="input_box">
+    <div class="password_title">
+      <label for="password">Password</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+
+    <input type="password" id="password" placeholder="Enter your password" required />
+  </div>
+
+   <!-- Login button -->
+  <button type="submit">Log In</button>
+
+  <p class="sign_up">Don't have an account? <a href="#">Sign up</a></p>
+</form>
+</div>
+
+</body2>
+</html2>
+            </textarea>
+        </div>
+    </div>
+
+    <!-- Another card section for CSS with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">style.css</p>
+              <button onclick="copylogincsscode()" class="btn-copy login-css-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea class="area" id="logincsscode" name="code"
+readonly="">
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resetting default styling and setting font-family */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Montserrat", sans-serif;
+}
+
+body {
+width: 100%;
+min-height: 100vh;
+padding: 0 10px;
+display: flex;
+background: #626cd6;
+justify-content: center;
+align-items: center;
+}
+
+/* Login form styling */
+.login_form {
+width: 100%;
+max-width: 435px;
+background: #fff;
+border-radius: 6px;
+padding: 41px 30px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.login_form h3 {
+font-size: 20px;
+text-align: center;
+}
+
+/* Google & Apple button styling */
+
+.login_form .login_option {
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+}
+
+.login_form .login_option .option {
+width: calc(100% / 2 - 12px);
+}
+
+.login_form .login_option .option a {
+height: 56px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+background: #F8F8FB;
+border: 1px solid #DADAF2;
+border-radius: 5px;
+margin: 34px 0 24px 0;
+text-decoration: none;
+color: #171645;
+font-weight: 500;
+transition: 0.2s ease;
+}
+
+.login_form .login_option .option a:hover {
+background: #ededf5;
+border-color: #626cd6;
+}
+
+.login_form .login_option .option a img {
+max-width: 25px;
+}
+
+.login_form p {
+text-align: center;
+font-weight: 500;
+}
+
+.login_form .separator {
+position: relative;
+margin-bottom: 24px;
+}
+
+/* Login option separator styling */
+.login_form .separator span {
+background: #fff;
+z-index: 1;
+padding: 0 10px;
+position: relative;
+}
+
+.login_form .separator::after {
+content: '';
+position: absolute;
+width: 100%;
+top: 50%;
+left: 0;
+height: 1px;
+background: #C2C2C2;
+display: block;
+}
+
+form .input_box label {
+display: block;
+font-weight: 500;
+margin-bottom: 8px;
+}
+
+/* Input field styling */
+form .input_box input {
+width: 100%;
+height: 57px;
+border: 1px solid #DADAF2;
+border-radius: 5px;
+outline: none;
+background: #F8F8FB;
+font-size: 17px;
+padding: 0px 20px;
+margin-bottom: 25px;
+transition: 0.2s ease;
+}
+
+form .input_box input:focus {
+border-color: #626cd6;
+}
+
+form .input_box .password_title {
+display: flex;
+justify-content: space-between;
+text-align: center;
+}
+
+form .input_box {
+position: relative;
+}
+
+a {
+text-decoration: none;
+color: #626cd6;
+font-weight: 500;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+/* Login button styling */
+form button {
+width: 100%;
+height: 56px;
+border-radius: 5px;
+border: none;
+outline: none;
+background: #626CD6;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+text-transform: uppercase;
+cursor: pointer;
+margin-bottom: 28px;
+transition: 0.3s ease;
+}
+
+form button:hover {
+background: #4954d0;
+}
+</textarea>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+
+<!-- --------------------------------------Ecommerce page source code------------------------------------- -->
+<div class="ecommercecode page" id="ecommercecode">
+<div class="html-css2 project-section">
+    <h1>E-commerce Website</h1>
+    <p class="comingsoon">Coming Soon</p>
+    <div class="login-page">
+        <p><img src="images/E-commerce-Website.png" height="150px"></p>
+
+    </div>
+    <div class="source-code">
+        <p onclick="downloadeccomerceZip()"><img src="images/project_assets.e50333c7.png">Download Zip File</p>
+    </div>
+    <!-- Only one card section with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">index.html</p>
+              <button onclick="copyeccomercehtmlcode()" class="btn-copy eccomerce-html-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea class="area" id="eccomercehtmlcode" name="code"
+readonly="">
+<!-- Coming Soon -->
+</textarea>
+        </div>
+    </div>
+
+    <!-- Another card section for CSS with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">style.css</p>
+              <button onclick="copyeccomercecsscode()" class="btn-copy eccomerce-css-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea class="area" id="eccomercecsscode" name="code"
+readonly="">
+<!-- Coming Soon -->
+</textarea>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+
+<!-- --------------------------------------Contact-Us page source code------------------------------------- -->
+<div class="contactcode page" id="contactcode">
+<div class="html-css2 project-section">
+    <h1>Contact-Us</h1>
+    <div class="login-page">
+        <p><img src="images/Contact-Us.png" height="150px"></p>
+    </div>
+    <div class="source-code">
+        <p onclick="downloadZip()"><img src="images/project_assets.e50333c7.png" alt="">Download Zip File</p>
+    </div>
+
+    <!-- Only one card section with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">index.html</p>
+              <button onclick="copycontacthtmlcode()" class="btn-copy contact-html-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea class="area" id="contacthtmlcode" name="code"
+readonly="">
+<!DOCTYPE html>
+<!-- --------Code With SudhuCodes---------- -->
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Contact Us - SuduCodes</title>
+                <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap">
+            </head2>
+            <body2>
+            
+                <div class="container">
+                    <h1>Contact With Us</h1>
+                    <p>We would love to respond your queries and help you succeed.<br>Feel free to get in touch with us.</p>
+                    <div class="contact-box">
+                        <div class="contact-left">
+                            <h3>Send your request</h3>
+                            <form>
+            
+                                <div class="input-row">
+                                    <div class="input-group">
+                                        <label>Name</label>
+                                        <input type="text" placeholder="Sudhanshu Kumar">
+                                    </div>
+                                    <div class="input-group">
+                                        <label>Phone</label>
+                                        <input type="text" placeholder="+1 012 345 6789">
+                                    </div>
+            
+            
+                                </div>
+                                <div class="input-row">
+                                    <div class="input-group">
+                                        <label>Email</label>
+                                        <input type="email" placeholder="sudhuteam@gmail.com">
+                                    </div>
+                                    <div class="input-group">
+                                        <label>Subject</label>
+                                        <input type="text" placeholder="Product Demo">
+                                    </div>
+            
+                                </div>
+            
+                                <label>Message</label>
+                                <textarea2 rows="5" placeholder="Your Message"></textarea2>
+                                <button type="submit">Send</button>
+                            </form>
+            
+                        </div>
+            
+                        <div class="contact-right">
+                            <h3>Reach Us</h3>
+            
+                            <table>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>sudhuteam@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td>+1 012 345 6789</td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td>#212, Ground floor, 7th cross <br>
+                                    Some layout, Some Road, Koromangla <br>
+                                Bengaluru 560001</td>
+                                </tr>
+                            </table>
+            
+                        </div>
+                    </div>
+                </div>
+                
+            </body2>
+            </html2>
+          </textarea>
+        </div>
+    </div>
+
+    <!-- Another card section for CSS with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">style.css</p>
+              <button onclick="copycontactcsscode()" class="btn-copy contact-css-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea class="area" id="contactcsscode" name="code"
+readonly="">
+*{
+margin: 0;
+padding: 0;
+}
+
+body2{
+background: #55ffe5;
+font-size: 14px;
+font-family: 'Poppins', sans-serif;
+}
+
+.container{
+width: 80%;
+margin: 50px auto;
+}
+
+.contact-box{
+background: #fff;
+display: flex;
+}
+
+.contact-left{
+flex-basis: 60%;
+padding: 40px 60px;
+}
+
+.contact-right{
+flex-basis: 40%;
+padding: 40px;
+background: #1c00b5;
+color: #fff;
+}
+
+h1{
+margin-bottom: 10px;
+}
+
+.container p{
+margin-bottom: 40px;
+}
+
+.input-row{
+display: flex;
+justify-content: space-around;
+margin-bottom: 20px;
+}
+
+.input-row .input-group{
+flex-basis: 45%;
+}
+
+input{
+width: 100%;
+border: none;
+border-bottom: 1px solid #ccc;
+outline: none;
+padding-bottom: 5px;
+}
+
+textarea2{
+width: 100%;
+border: 1px solid #ccc;
+outline: none;
+padding: 10px;
+box-sizing: border-box;
+}
+
+label{
+margin-bottom: 6px;
+display: block;
+color: #1c00b5;
+}
+
+button{
+background: #1c00b5;
+width: 100px;
+border: none;
+outline: none;
+color: #fff;
+height: 35px;
+border-radius: 30px;
+margin-top: 20px;
+box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+.contact-left h3{
+color: #1c00b5;
+font-weight: 600;
+margin-bottom: 30px;
+}
+
+.contact-right h3{
+font-weight: 600;
+margin-bottom: 30px;
+}
+
+tr td:first-child{
+padding-right: 20px;
+}
+
+
+tr td{
+padding-top: 20px;
+}
+</textarea>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<!-- --------------------------------------Contact-Us page source code------------------------------------- -->
+<div class="multicode page" id="multicode">
+<div class="html-css2 project-section">
+    <h1>Multi-Step-Form</h1>
+    <div class="login-page">
+        <p><img src="images/Multi-Step-Form.png" height="150px"></p>
+    </div>
+    <div class="source-code">
+        <p onclick="downloadmultiZip()"><img src="images/project_assets.e50333c7.png" alt="">Download Zip File</p>
+    </div>
+
+    <!-- Only one card section with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">index.html</p>
+              <button onclick="copymultihtmlcode()" class="btn-copy multi-html-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea class="area" id="multihtmlcode" name="code"
+readonly="">
+<!DOCTYPE html2>
+<!-- ---------Code With SudhuCodes---------- -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Step-Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body2>
+
+<div class="container">
+    <form id="Form1">
+        <h3>CREATE ACCOUNT</h3>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+    
+        <div class="btn-box">
+            <button type="button" id="Next1">Next</button>
+        </div>
+    
+    </form>
+
+
+    <form id="Form2">
+        <h3>SOCIAL LINKS</h3>
+        <input type="text" placeholder="Medium">
+        <input type="text" placeholder="GitHub">
+        <input type="text" placeholder="Linkedin">
+    
+        <div class="btn-box">
+            <button type="button" id="Back1">Back</button>
+            <button type="button" id="Next2">Next</button>
+        </div>
+    
+    </form>
+
+    <form id="Form3">
+        <h3>PERSONAL INFO</h3>
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="text" placeholder="Mobile No." required>
+    
+        <div class="btn-box">
+            <button type="button" id="Back2">Back</button>
+            <button type="button">Submit</button>
+        </div>
+    
+    </form>
+
+    <div class="step-row">
+        <div id="progress"></div>
+        <div class="step-col"><small>Step 1</small></div>
+        <div class="step-col"><small>Step 2</small></div>
+        <div class="step-col"><small>Step 3</small></div>
+    </div>
+
+
+</div>
+    <script>
+
+    var Form1 = document.getElementById("Form1");
+    var Form2 = document.getElementById("Form2");
+    var Form3 = document.getElementById("Form3");
+
+    var Next1 = document.getElementById("Next1")
+    var Next2 = document.getElementById("Next2")
+    var Back1 = document.getElementById("Back1")
+    var Back2 = document.getElementById("Back2")
+
+    var progress = document.getElementById("progress")
+    
+    Next1.onclick = function(){
+        Form1.style.left = "-450px"
+        Form2.style.left = "40px"
+        progress.style.width = "240px"
+    }
+
+    Back1.onclick = function(){
+        Form1.style.left = "40px"
+        Form2.style.left = "450px"
+        progress.style.width = "120px"
+    }
+
+    Next2.onclick = function(){
+        Form2.style.left = "-450px"
+        Form3.style.left = "40px"
+        progress.style.width = "360px"
+    }
+
+    Back2.onclick = function(){
+        Form2.style.left = "40px"
+        Form3.style.left = "450px"
+        progress.style.width = "240px"
+    }
+
+
+    </script>
+
+</body2>
+</html2>
+</textarea>
+        </div>
+    </div>
+
+    <!-- Another card section for CSS with a copy button -->
+    <div class="card">
+        <div class="header">
+          <div class="top">
+            <div class="circle">
+              <span class="red circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="yellow circle2"></span>
+            </div>
+            <div class="circle">
+              <span class="green circle2"></span>
+            </div>
+            <div class="title">
+              <p id="title2">style.css</p>
+              <button onclick="copymulticsscode()" class="btn-copy multi-css-btn-copy">
+                <span
+                  data-text-end="Copied!"
+                  data-text-initial="Copy to clipboard"
+                  class="cp-tooltip"
+                ></span>
+                <span>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 6.35 6.35"
+                    y="0"
+                    x="0"
+                    height="20"
+                    width="20"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-clipboard"
+                  >
+                    <g>
+                      <path
+                        fill="currentColor"
+                        d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                      ></path>
+                    </g>
+                  </svg>
+                  <svg
+                    xml:space="preserve"
+                    style="enable-background:new 0 0 512 512"
+                    viewBox="0 0 24 24"
+                    y="0"
+                    x="0"
+                    height="18"
+                    width="18"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="cp-check-mark"
+                  >
+                    <g>
+                      <path
+                        data-original="#000000"
+                        fill="currentColor"
+                        d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-container">
+          <textarea class="area" id="multicsscode" name="code"
+readonly="">
+*{
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+
+body{
+background: url(65116d11c370dd7b593e563b_Background.png);
+}
+
+.container{
+width: 360px;
+height: 400px;
+margin: 8% auto;
+background: #fff;
+border-radius: 5px;
+position: relative;
+overflow: hidden;
+}
+
+h3{
+text-align: center;
+margin-bottom: 40px;
+color: #777;
+}
+
+.container form{
+width: 280px;
+position: absolute;
+top: 100px;
+left: 40px;
+transition: 0.5s;
+}
+
+form input{
+width: 100%;
+padding: 10px 5px;
+margin: 5px 0px;
+border: 0;
+border-bottom: 1px solid #999;
+outline: none;
+background: transparent;
+}
+
+::placeholder{
+color: #777;
+}
+
+.btn-box{
+width: 100%;
+margin: 30px auto;
+text-align: center;
+}
+
+form button{
+width: 110px;
+height: 35px;
+margin: 0 10px;
+background: linear-gradient(to right, #ff105f, #ffad06);
+border-radius: 30px;
+border: 0;
+outline: none;
+color: #fff;
+cursor: pointer;
+}
+
+#Form2{
+left: 450px;
+}
+
+#Form3{
+left: 450px;
+}
+
+.step-row{
+width: 360px;
+height: 40px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+box-shadow: 0 -1px 5px #000;
+position: relative;
+}
+
+.step-col{
+width: 120px;
+text-align: center;
+color: #333;
+position: relative;
+}
+
+#progress{
+position: absolute;
+height: 100%;
+width: 120px;
+background: linear-gradient(to right, #ff105f, #ffad06);
+transition: 1s;
+}
+
+#progress::after{
+content: '';
+height: 0;
+width: 0;
+border-top: 20px solid transparent;
+border-bottom: 20px solid transparent;
+position: absolute;
+right: -20px;
+top: 0;
+border-left: 20px solid #ffad06;
+}
+</textarea>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<!-----------------Get --Certificate--page----------------->
+<div class="getcertificate page" id="getcertificate">
+<div class="projects">
+    <div class="explore">
+        <div class="explorebtn">
+            <p>Get certified by completing the project & participating in <br>the Quiz.</p>
+            <button>Explore quizzes below <span2>&#8594;</span2></button>
+        </div>
+        <img src="images/certificate.png">
+    </div>
+    <div class="quiz-list">
+        <div class="quiz-item">
+            <h3>Basic HTML Quiz</h3>
+            <button onclick="startQuizhtml()">Start HTML Quiz</button>
+        </div>
+        <div class="quiz-item">
+            <h3>JavaScript Quiz</h3>
+            <button onclick="startQuizjs()">Start JavaScript Quiz</button>
+        </div>
+        <div class="quiz-item">
+            <h3>React Quiz</h3>
+            <button onclick="startQuizreact()">Start React Quiz</button>
+        </div>
+        <div class="quiz-item">
+            <h3>Full-Stack Quiz</h3>
+            <button onclick="startQuizfullstack()">Start Full-Stack Quiz</button>
+        </div>
+        <!-- Add more quizzes here -->
+    </div>
+</div>
+</div>
+
+
+
+    <div id="sourcecode" class="page">
+      <div class="working">
+        <h2>Source Code</h2>
+      <p>Thank you for your patience. We are working hard to bring you <span>this page soon</span> Stay tuned for updates!</p>
+      </div>
+    </div>
+
+    <div id="cources" class="page">
+      <div class="working">
+        <h2>Cources</h2>
+      <p>Thank you for your patience. We are working hard to bring you <span>this page soon</span> Stay tuned for updates!</p>
+      </div>
+    </div>
+    <div id="projectassets" class="page">
+      <div class="working">
+        <h2>Project Assets</h2>
+      <p>Thank you for your patience. We are working hard to bring you <span>this page soon</span> Stay tuned for updates!</p>
+      </div>
+    </div>
+    <div id="stockimages" class="page">
+      <div class="working">
+        <h2>Stock Images</h2>
+      <p>Thank you for your patience. We are working hard to bring you <span>this page soon</span> Stay tuned for updates!</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="socialLinks">
+        <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
+        <a href="https://github.com/sudhucodes" target="_blank">Github</a>
+        <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
+        <a href="mailto:sudhuteam@gmail.com?subject=Sudhucodes-Website&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
+    </div>
+    <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
+</footer>
+  <script src="script.js"></script>
+  <script>
+  function downloadloginZip() {
+  var link = document.createElement('a');
+  link.href = '../Zip/Login-Form.zip';
+  link.download = 'Login-Form.zip';
+  link.click();
+}
+
+function copyloginhtmlcode() {
+// Get the text field
+var textArea = document.getElementById("loginhtmlcode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.login-html-btn-copy');
+copyButton.classList.add('copied');
+
+}
+function copylogincsscode() {
+// Get the text field
+var textArea = document.getElementById("logincsscode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.login-css-btn-copy');
+copyButton.classList.add('copied');
+
+}
+
+
+
+
+function downloadeccomerceZip() {
+            var link = document.createElement('a');
+            link.href = '../Zip/Ecommerse-Red-Store.zip';
+            link.download = 'Ecommerse-Red-Store.zip';
+            link.click();
+        }
+function copyeccomercehtmlcode() {
+// Get the text field
+var textArea = document.getElementById("eccomercehtmlcode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.eccomerce-html-btn-copy');
+copyButton.classList.add('copied');
+
+}
+function copyeccomercecsscode() {
+// Get the text field
+var textArea = document.getElementById("eccomercecsscode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.eccomerce-css-btn-copy');
+copyButton.classList.add('copied');
+
+}
+
+
+
+
+function downloadZip() {
+            var link = document.createElement('a');
+            link.href = '../Zip/Contact-Us-Form.zip';
+            link.download = 'Contact-Us-Form.zip';
+            link.click();
+        }
+function copycontacthtmlcode() {
+// Get the text field
+var textArea = document.getElementById("contacthtmlcode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.contact-html-btn-copy');
+copyButton.classList.add('copied');
+
+}
+function copycontactcsscode() {
+// Get the text field
+var textArea = document.getElementById("contactcsscode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.contact-css-btn-copy');
+copyButton.classList.add('copied');
+
+}
+
+
+
+
+function downloadZip() {
+            var link = document.createElement('a');
+            link.href = '../Zip/Multi-Step-Form.zip';
+            link.download = 'Multi-Step-Form.zip';
+            link.click();
+        }
+function copymultihtmlcode() {
+// Get the text field
+var textArea = document.getElementById("multihtmlcode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.multi-html-btn-copy');
+copyButton.classList.add('copied');
+
+}
+function copymulticsscode() {
+// Get the text field
+var textArea = document.getElementById("multicsscode");
+
+// Select the text field
+textArea.select();
+textArea.setSelectionRange(0, 99999); // For mobile devices
+
+// Copy the text inside the text field
+document.execCommand("copy");
+
+// Change the button state to show the checkmark
+var copyButton = document.querySelector('.multi-css-btn-copy');
+copyButton.classList.add('copied');
+
+}
+
+  </script>
+</body>
+</html>
