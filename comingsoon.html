@@ -101,7 +101,7 @@
 <body>
     <nav class="navbar">
         <div onclick="goback()" class="arrowdiv">
-            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-left">go back</i>
         </div>
         <div class="logo">
             <p>Sudhu<span>Codes.</span></p>
@@ -122,5 +122,15 @@
             </div>
             <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
         </footer>
+
+        <script>
+          function goback(){
+            if (window.history.length > 1) {
+              window.history.back();
+            } else {
+              window.close();
+            }
+          }
+        </script>
 </body>
 </html>
