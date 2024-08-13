@@ -1,3 +1,5 @@
+let navigationHistory = [];
+
 // Function to handle navigation
 function navigateTo(page) {
   const pages = document.querySelectorAll('.page');
@@ -33,84 +35,87 @@ function navigateTo(page) {
   if (navigatorMap[page]) {
     document.querySelector(navigatorMap[page]).style.display = 'block';
   }
+
+  // Update the URL hash to reflect the current page
+  window.location.hash = page;
+
+  // Add the current page to the navigation history
+  navigationHistory.push(page);
 }
 
-
-  
-  // Handle back/forward navigation
-  window.onpopstate = function(event) {
-    if (event.state && event.state.page) {
-      navigateTo(event.state.page);
-    } else {
-      navigateTo('allprojects');
-    }
-  };
-  
-  // Initialize the correct page based on the current URL or show allprojects by default
-  window.onload = function() {
-    // If the path is empty or invalid, default to 'allprojects'
-    const path = window.location.pathname.slice(1);
-    if (path && document.getElementById(path)) {
-      navigateTo(path);
-    } else {
-      navigateTo('allprojects');
-    }
-  };
-  
-  document.querySelectorAll('.nav-links a, .login-page a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const page = this.getAttribute('data-page');
-      navigateTo(page);
-      
-      if (window.innerWidth <= 768) {
-        closeNav();
-      }
-    });
-  });
-  
-  
-  // Toggle Navbar
-  const toggleButton = document.getElementById('toggle-button');
-  const navLinks = document.getElementById('nav-links');
-  
-  toggleButton.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-    toggleButton.classList.toggle('active');
-  });
-  
-  function closeNav() {
-    navLinks.classList.remove('active');
-    toggleButton.classList.remove('active');
+// Handle back/forward navigation using the browser's back button
+window.addEventListener('hashchange', function() {
+  const page = window.location.hash.substring(1); // Get the page name from the hash
+  if (page && document.getElementById(page)) {
+    navigateTo(page);
+  } else {
+    navigateTo('allprojects');
   }
-  
+});
 
+// Initialize the correct page based on the current URL hash or show allprojects by default
+window.onload = function() {
+  const hash = window.location.hash.substring(1); // Get the hash from the URL
+  if (hash && document.getElementById(hash)) {
+    navigateTo(hash);
+  } else {
+    navigateTo('allprojects');
+  }
+};
 
-  const buttons = document.querySelectorAll('.project-buttons1 button');
-  const sections = {
-    fullStack: document.querySelector('.full-stack'),
-    react: document.querySelector('.react'),
-    htmlCss: document.querySelector('.html-css'),
-    javaScript: document.querySelector('.javascript')
+// Handle link clicks
+document.querySelectorAll('.nav-links a, .login-page a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const page = this.getAttribute('data-page');
+    navigateTo(page);
+    
+    if (window.innerWidth <= 768) {
+      closeNav();
+    }
+  });
+});
+
+// Toggle Navbar
+const toggleButton = document.getElementById('toggle-button');
+const navLinks = document.getElementById('nav-links');
+
+toggleButton.addEventListener('click', function() {
+  navLinks.classList.toggle('active');
+  toggleButton.classList.toggle('active');
+});
+
+function closeNav() {
+  navLinks.classList.remove('active');
+  toggleButton.classList.remove('active');
+}
+
+// Button selection and section display logic
+const buttons = document.querySelectorAll('.project-buttons1 button');
+const sections = {
+  fullStack: document.querySelector('.full-stack'),
+  react: document.querySelector('.react'),
+  htmlCss: document.querySelector('.html-css'),
+  javaScript: document.querySelector('.javascript')
 };
 
 function selectButton(buttonId) {
-    buttons.forEach(button => {
-        button.classList.remove('selected');
-    });
-    document.getElementById(buttonId).classList.add('selected');
+  buttons.forEach(button => {
+    button.classList.remove('selected');
+  });
+  document.getElementById(buttonId).classList.add('selected');
 
-    Object.keys(sections).forEach(section => {
-        sections[section].style.display = 'none';
-        sections[section].classList.remove('fade-up'); // Remove animation class if present
-    });
+  Object.keys(sections).forEach(section => {
+    sections[section].style.display = 'none';
+    sections[section].classList.remove('fade-up'); // Remove animation class if present
+  });
 
-    // Display the selected section with fade-up animation
-    const selectedSection = sections[buttonId];
-    selectedSection.style.display = 'block';
-    setTimeout(() => {
-        selectedSection.classList.add('fade-up');
-    }, 10); // Add slight delay to trigger animation
+  // Display the selected section with fade-up animation
+  const selectedSection = sections[buttonId];
+  selectedSection.style.display = 'block';
+  setTimeout(() => {
+    selectedSection.classList.add('fade-up');
+  }, 10); // Add slight delay to trigger animation
 }
 
 function startQuizhtml() {
@@ -129,18 +134,12 @@ function startQuizfullstack() {
   window.open('comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
-
 window.onload = function() {
   selectButton('htmlCss');
   document.querySelector('#navigator').style.display = 'block';
 };
 
-function goback() {
-  window.history.back();
-}
-
 window.addEventListener('load', function() {
   const loaderWrapper = document.getElementById('loader-wrapper');
   loaderWrapper.style.display = 'none'; // Hide the loader
 });
-

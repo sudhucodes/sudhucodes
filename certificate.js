@@ -336,6 +336,10 @@ function downloadCertificate() {
 }
 
 
-function goback() {
-    window.history.back();
+function goback(){
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.close();
+    }
   }
