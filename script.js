@@ -34,8 +34,6 @@ function navigateTo(page) {
 
   if (navigatorMap[page]) {
     document.querySelector(navigatorMap[page]).style.display = 'block';
-      // Scroll to the top of the page
-  window.scrollTo(0, 0);
   }
 
   // Update the URL hash to reflect the current page
@@ -43,6 +41,14 @@ function navigateTo(page) {
 
   // Add the current page to the navigation history
   navigationHistory.push(page);
+
+  scrollToTop();
+}
+
+function scrollToTop() {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 100); // Small delay for mobile
 }
 
 // Handle back/forward navigation using the browser's back button
@@ -137,10 +143,10 @@ function startQuizfullstack() {
 }
 
 window.onload = function() {
-    // Scroll to the top of the page
-    window.scrollTo(0, 0);
+  scrollToTop();
   selectButton('htmlCss');
   document.querySelector('#navigator').style.display = 'block';
+  scrollToTop();
 };
 
 window.addEventListener('load', function() {
