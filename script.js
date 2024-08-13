@@ -1,7 +1,7 @@
 let navigationHistory = [];
 
 // Function to handle navigation
-function navigateTo(page) {
+function navigateTo(page, addToHistory = true) {
   const pages = document.querySelectorAll('.page');
   const navigators = document.querySelectorAll('#navigator, #navigator1, #navigator2, #navigator3, #navigator4, #navigator5');
 
@@ -37,27 +37,18 @@ function navigateTo(page) {
   }
 
   // Update the URL hash to reflect the current page
-  window.location.hash = page;
-
-  // Add the current page to the navigation history
-  navigationHistory.push(page);
-
-  scrollToTop();
-}
-
-function scrollToTop() {
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 100); // Small delay for mobile
+  if (addToHistory) {
+    history.pushState({ page: page }, null, `#${page}`);
+    navigationHistory.push(page);
+  }
 }
 
 // Handle back/forward navigation using the browser's back button
-window.addEventListener('hashchange', function() {
-  const page = window.location.hash.substring(1); // Get the page name from the hash
-  if (page && document.getElementById(page)) {
-    navigateTo(page);
+window.addEventListener('popstate', function(event) {
+  if (event.state && event.state.page) {
+    navigateTo(event.state.page, false);
   } else {
-    navigateTo('allprojects');
+    navigateTo('allprojects', false);
   }
 });
 
@@ -69,6 +60,14 @@ window.onload = function() {
   } else {
     navigateTo('allprojects');
   }
+
+  // Set initial button and navigator display
+  selectButton('htmlCss');
+  document.querySelector('#navigator').style.display = 'block';
+
+  // Hide the loader
+  const loaderWrapper = document.getElementById('loader-wrapper');
+  loaderWrapper.style.display = 'none'; 
 };
 
 // Handle link clicks
@@ -143,10 +142,8 @@ function startQuizfullstack() {
 }
 
 window.onload = function() {
-  scrollToTop();
   selectButton('htmlCss');
   document.querySelector('#navigator').style.display = 'block';
-  scrollToTop();
 };
 
 window.addEventListener('load', function() {
