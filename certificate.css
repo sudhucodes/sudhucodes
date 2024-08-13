@@ -289,18 +289,18 @@ span{
 .start-certificate {
 margin-top: 20px;
 position: relative;
-width: 367.58px;
+width: 370px;
 height: 260px;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 }
 
-.start-certificate img{
+.start-certificate img {
 position: absolute;
 top: 0;
 left: 0;
-width: auto; /* Adjust width automatically */
+width: 100%; /* Adjust width automatically */
 height: 100%; /* Fill the height of the container */
 object-fit: cover;
 }
