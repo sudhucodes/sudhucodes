@@ -13,6 +13,10 @@ body {
   background: #0d1224;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
