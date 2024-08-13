@@ -364,9 +364,10 @@ font-size: 7px;
 }
 .certificate-instructor-sign{
 position: absolute;
-font-family: "Pinyon Script", cursive;
+font-family: "Style Script", cursive;
+font-weight: 400;
 bottom: 46px;
-left: 62px; 
+left: 68px; 
 font-size: 11px;
 }
 
