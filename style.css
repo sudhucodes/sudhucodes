@@ -857,8 +857,8 @@ footer p{
 
 .explore{
   margin: 10px;
-  padding: 10px;
   display: block;
+  width: 366px;
   justify-content: right;
   text-align: right;
   border-radius: 10px;
@@ -866,7 +866,7 @@ footer p{
 }
 
 .explorebtn{
-  padding: 10px;
+  padding: 20px;
   text-align: left;
   font-size: 20px;
 }
@@ -905,5 +905,6 @@ footer p{
 .explore img{
   margin-top: 20px;
   border-radius: 5px;
-  height: 250px;
+  width: 350px;
+  margin: 8px;
 }
