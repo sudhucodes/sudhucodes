@@ -100,6 +100,7 @@ const questions = [
         options: ["&lt;map&gt;", "&lt;imgmap&gt;", "&lt;imagemap&gt;", "&lt;maparea&gt;"],
         correct: 3
     }
+
 ];
 
 
@@ -321,13 +322,19 @@ function generateCertificate() {
 
 function downloadCertificate() {
     const certificateElement = document.getElementById('certificate');
-    html2canvas(certificateElement).then(canvas => {
+    
+    html2canvas(certificateElement, {
+        scale: 4 // Increase scale to improve resolution
+    }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png', 1.0); // 1.0 for full quality
+        
         const link = document.createElement('a');
         link.download = 'certificate.png';
-        link.href = canvas.toDataURL('image/png');
+        link.href = imgData;
         link.click();
     });
 }
+
 
 function goback() {
     window.history.back();

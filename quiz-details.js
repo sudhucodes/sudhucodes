@@ -82,3 +82,7 @@ function toggleDetails() {
     const detailsSection = document.getElementById('questionDetails');
     detailsSection.style.display = detailsSection.style.display === 'none' ? 'block' : 'none';
 }
+
+function goback(){
+    window.history.back();
+}

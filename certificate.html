@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SudhuCodes - Get Certificate</title>
     <link rel="stylesheet" href="certificate.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pinyon+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
@@ -41,22 +40,18 @@
             <div class="results" id="results"></div>
             <div class="certificate-container" id="certificateContainer">
                 <div id="certificate" class="certificate">
-                    <div class="logo">
-                        <h2>Sudhu<span>Codes.</span></h2>
-                        <hr>
-                        <h3>Certificate of Completion</h3>
-                    </div>
-                    <div class="certificate-info">
-                        <p>This certificate is proudly<br>awarded to</p><br>
-                        <p><strong id="userName"></strong></p><br>
-                        <p>For successfully completing the<br>Frontend Project</p>
-                        <div class="watermark">
-                            <div class="content2">
-                                <p>Date: <span id="currentDate"></span></p>
-                            </div>
-                            <div class="content">
-                                <p>Sudhanshu Kumar</p>
-                                <p>Instructor, SudhuCodes</p>
+                    <div class="start-certificate">
+                        <img src="certificate.jpg" alt="">
+                        <div class="certificatedetails">
+                            <p class="certificate-sub-title">This certificate is proudly awarded to</p>
+                            <p class="certificate-name" id="userName"></p>
+                            <p class="certificate-description">For successfully completing the Frontend Project</p>
+                            <!-- Add more paragraphs/headings as needed -->
+                            <p class="certificate-instructor-sign">Sudhanshu Kumar</p>
+                            <p class="certificate-instructor">Instructor, SudhuCodes</p>
+                            <div class="issue-date">
+                                <p>Issued Date:</p>
+                                <p id="currentDate">Wed August 13, 2024</p>
                             </div>
                         </div>
                     </div>
@@ -79,6 +74,8 @@
         <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <script src="certificate.js"></script>
 </body>
 </html>

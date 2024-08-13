@@ -114,17 +114,21 @@ function selectButton(buttonId) {
 }
 
 function startQuizhtml() {
-  window.location.href = `certificate.html`; // Redirect to the respective quiz page
+  window.open('certificate.html', '_blank'); // Open in a new window or tab
 }
+
 function startQuizjs() {
-  window.location.href = `comingsoon.html`; // Redirect to the respective quiz page
+  window.open('comingsoon.html', '_blank'); // Open in a new window or tab
 }
+
 function startQuizreact() {
-  window.location.href = `comingsoon.html`; // Redirect to the respective quiz page
+  window.open('comingsoon.html', '_blank'); // Open in a new window or tab
 }
+
 function startQuizfullstack() {
-  window.location.href = `comingsoon.html`; // Redirect to the respective quiz page
+  window.open('comingsoon.html', '_blank'); // Open in a new window or tab
 }
+
 
 window.onload = function() {
   selectButton('htmlCss');
