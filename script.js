@@ -34,6 +34,8 @@ function navigateTo(page) {
 
   if (navigatorMap[page]) {
     document.querySelector(navigatorMap[page]).style.display = 'block';
+      // Scroll to the top of the page
+  window.scrollTo(0, 0);
   }
 
   // Update the URL hash to reflect the current page
@@ -135,6 +137,8 @@ function startQuizfullstack() {
 }
 
 window.onload = function() {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
   selectButton('htmlCss');
   document.querySelector('#navigator').style.display = 'block';
 };
