@@ -118,6 +118,7 @@ function startQuiz() {
     }
     document.querySelector('.start-container').style.display = 'none';
     document.querySelector('.quiz-container').style.display = 'block';
+    document.querySelector('.navbar').style.display = 'flex';
     loadQuestion();
 }
 
@@ -129,7 +130,7 @@ function loadQuestion() {
 
     quizContainer.innerHTML = `
         <div class="question-info">
-            Question ${currentQuestion + 1} of ${totalQuestions} (Attempted: ${attemptedQuestions})
+            Question ${currentQuestion + 1}/${totalQuestions} (Attempted: ${attemptedQuestions})
         </div>
         <div class="question">${question.question}</div>
         <ul class="options">
@@ -201,11 +202,11 @@ function showResults() {
     let certificateGenerated = false; // New flag to track if certificate should be generated
 
     if (percentage < 50) {
-        feedback = 'Very Bad. Try Again!';
+        feedback = 'Very Bad. Improve Yourself! <br>';
     } else if (percentage >= 50 && percentage < 75) {
-        feedback = 'Average. Keep Improving!';
+        feedback = 'Average. Keep Improving! <br>';
     } else {
-        feedback = 'Very Good. Congratulations!';
+        feedback = 'Congratulations!';
         generateCertificate();
         certificateGenerated = true;
     }
@@ -219,7 +220,7 @@ function showResults() {
     if (resultElement) {
         resultElement.innerHTML = `
             <p>Your Score: ${percentage.toFixed(2)}%</p>
-            <p>${feedback}</p>
+            <p>${feedback} ${userName}</p>
         `;
     } else {
         console.error('results element not found in the DOM.');

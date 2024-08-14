@@ -5,23 +5,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #0d1224;
+  background: #e7f6ff;
 }
 
 .navbar {
-  display: flex;
-  justify-content: center;
+  display: none;
+  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #4e4e4e;
-  background-color: #0d1224;
   padding: 10px 30px;
-  color: #fff;
+  color: #000;
   position: sticky;
+  border-bottom: 1px solid green;
   top: 0;
   z-index: 1000; /* Optional: Ensure it stays on top of other elements */
   height: 40px;
   overflow: hidden;
 }
+
 
 .navbar .arrowdiv {
   position: absolute;
@@ -45,14 +45,14 @@ body {
 }
 
 .navbar .logo {
-  color: white;
+  color: black;
   font-size: 24px;
   cursor: pointer;
   font-weight: bold;
 }
 
 .navbar .logo p{
-  font-weight: 500;
+  font-weight: 600;
 }
 span{
   color: #26ffe3;
@@ -151,6 +151,86 @@ span{
 }
 
 
+/* Responsive Form Styling */
+.form {
+  margin-top: 10%;
+  background-color: #fff;
+  padding: 1rem;
+  max-width: 100%;
+  width: 350px;
+  border-radius: 0.5rem;
+  border: 1px solid #66666633;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.emoji{
+  font-size: 1.8rem;
+}
+.input-container {
+  position: relative;
+  width: 100%; /* Ensure input container takes full width of the form */
+}
+
+
+.input-container input {
+  width: 100%; /* Ensure input fields take full width of the container */
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box; /* Prevent padding from causing overflow */
+  margin: 8px 0;
+  background-color: #fff;
+}
+
+.input-container input:focus {
+  border-color: #626cd6;
+}
+
+.form .submit {
+  display: block;
+  margin: 20px 0 0 0;
+  padding: 0.75rem 1.25rem;
+  background-color: #4F46E5;
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.startarrow{
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+
+.submit:hover {
+  background-color: #3730a3;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 400px) {
+  .form {
+      width: 80%;
+      margin-top: 30%;
+  }
+}
+
+
 
 .projects{
   display: flex;
@@ -163,10 +243,9 @@ span{
 .container {
   display: block;
   max-width: 600px;
-  color: #ffffff;
+  color: #000;
   margin: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.1); /* Light white with transparency */
   border: 2px solid rgba(255, 255, 255, 0.18); /* Slightly transparent border */
   padding: 20px 30px;
   border-radius: 10px;
@@ -203,29 +282,26 @@ span{
 }
 
 .question {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  text-align: left;
   margin-bottom: 20px;
-  color: #ffffff; /* White color for better contrast */
+  color: #000; /* White color for better contrast */
   word-wrap: break-word;
 }
 
 .options {
   list-style-type: none;
   padding: 0;
+  text-align: left;
 }
 
 .options li {
-  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  border: 1px solid #e5e7eb;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  color: #ffffff; /* White text color */
-}
-
-.options li:hover {
-  background: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+  color: #000; /* White text color */
 }
 
 .options li.selected {
@@ -240,31 +316,25 @@ span{
   margin-top: 30px;
 }
 
-.container2 button, .container button {
+
+.container2 button, .navigation-buttons button {
   color: #ffffff;
   border: none;
-  border: 2px solid #4e4e4e;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  background-color: #4F46E5; /* Slightly transparent background */
 }
 
-.container button:hover, .container2 button:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
-}
-
-.container button:disabled {
-  background-color: rgba(255, 255, 255, 0.2); /* Light gray background */
-  color: #bbb; /* Light gray text */
-  cursor: not-allowed; /* Show not-allowed cursor */
-  border-color: rgba(255, 255, 255, 0.2); /* Match border to background */
+.navigation-buttons button:disabled {
+  background-color: #4e46e5ad; 
+  color: #ffffffd3;
+  cursor: not-allowed; 
 }
 
 .results {
   font-size: 1.2em;
-  color: #ffffff; /* White color for better contrast */
+  color: #000; /* White color for better contrast */
   margin-top: 20px;
 }
 
@@ -384,14 +454,14 @@ font-size: 7px;
   align-items: center;
   justify-content: center;
   width: 370px;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 30px;
+  background-color: #fff;
+  padding-top: 10px;
   padding-bottom: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.1); /* Light white with transparency */
-  border: 2px solid rgba(255, 255, 255, 0.18); /* Slightly transparent border */
+  border: 1px solid #66666633;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px); /* Blur effect */
   overflow-y: auto;
   max-height: 80vh;
@@ -483,9 +553,10 @@ font-size: 7px;
 }
 
 .question-info {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: #ffffff;
+  font-size: 1em;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #4e4e4e86;
 }
 
 a{

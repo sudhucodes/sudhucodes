@@ -15,21 +15,31 @@
 <body>
 
     <nav class="navbar">
-        <div onclick="goback()" class="arrowdiv">
-            <i class="fa-solid fa-arrow-left"></i>
-        </div>
         <div class="logo">
-            <p>Sudhu<span>Codes.</span></p>
+            <p>SudhuCodes.</p>
+        </div>
+        <div class="navbartext">
+            <p>Time left: 14:59</p>
         </div>
       </nav>
+
+
+
+      
     <div class="projects">
-        <div class="container start-container">
-            <h2>Welcome to the HTML Quiz</h2>
-            <p>Please enter your name to start:</p>
-            <input type="text" id="userNameInput" placeholder="Enter your name">
-            <button onclick="startQuiz()">Start Quiz</button>
+        <div class="form start-container">
+            <p class="form-title">Let's get started<span class="emoji">👋</span></p>
+            <div class="input-container">
+                <input type="text" id="userNameInput" placeholder="Enter your name">
+             </div>
+             <div class="input-container">
+                <input placeholder="Enter your contact number" type="number">
+            </div>
+            <button class="submit" onclick="startQuiz()">Start the Quiz <span3 class="startarrow">&#8594;</span3></button>
         </div>
-        <div class="container quiz-container" style="display: none;">
+
+
+        <div class="form quiz-container" style="display: none;">
             <div id="quiz"></div>
             <div class="navigation-buttons">
                 <button id="prevBtn" onclick="prevQuestion()">Previous</button>
@@ -61,19 +71,7 @@
             </div>
             <button onclick="toggleDetails()">View Details</button>
         </div>
-        
-    
     </div>
-    <footer>
-        <div class="socialLinks">
-            <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
-            <a href="https://github.com/sudhucodes" target="_blank">Github</a>
-            <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
-            <a href="mailto:sudhuteam@gmail.com?subject=Hello%20SudhuCodes&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
-        </div>
-        <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
-    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
