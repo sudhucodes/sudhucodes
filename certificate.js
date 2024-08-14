@@ -120,6 +120,7 @@ function startQuiz() {
     document.querySelector('.quiz-container').style.display = 'block';
     document.querySelector('.navbar').style.display = 'flex';
     loadQuestion();
+    startTimer();
 }
 
 function loadQuestion() {
@@ -143,6 +144,36 @@ function loadQuestion() {
     document.getElementById('prevBtn').disabled = currentQuestion === 0;
     document.getElementById('nextBtn').style.display = currentQuestion === questions.length - 1 ? 'none' : 'inline-block';
     document.getElementById('submitBtn').style.display = currentQuestion === questions.length - 1 ? 'inline-block' : 'none';
+}
+
+let timerDuration = 15 * 60; // 15 minutes in seconds
+let timerInterval;
+
+function startTimer() {
+    const timerValueElement = document.getElementById('timerValue');
+
+    timerInterval = setInterval(() => {
+        if (timerDuration > 0) {
+            timerDuration--;
+            const minutes = Math.floor(timerDuration / 60);
+            const seconds = timerDuration % 60;
+            timerValueElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        } else {
+            clearInterval(timerInterval);
+            showTimeoutMessage();
+        }
+    }, 1000); // Update every second
+}
+
+function showTimeoutMessage() {
+    document.querySelector('.quiz-container').style.display = 'none';
+    document.querySelector('.navigation-buttons').style.display = 'none';
+    document.querySelector('.navbar').style.display = 'none';
+    document.getElementById('timeoutMessage').style.display = 'flex';
+}
+
+function restartQuiz() {
+    location.reload(); // Refresh the page
 }
 
 

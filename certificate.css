@@ -15,7 +15,6 @@ body {
   padding: 10px 30px;
   color: #000;
   position: sticky;
-  border-bottom: 1px solid green;
   top: 0;
   z-index: 1000; /* Optional: Ensure it stays on top of other elements */
   height: 40px;
@@ -284,7 +283,7 @@ span{
 .question {
   font-size: 1.2em;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #000; /* White color for better contrast */
   word-wrap: break-word;
 }
@@ -316,8 +315,22 @@ span{
   margin-top: 30px;
 }
 
+.timeoutMessage{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 40%;
+  padding: 1rem;
+  max-width: 100%;
+  width: 300px;
+  border-radius: 0.5rem;
+  border: 1px solid #66666633;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
 
-.container2 button, .navigation-buttons button {
+
+.container2 button, .navigation-buttons button, .timeoutMessage button {
   color: #ffffff;
   border: none;
   padding: 10px 20px;

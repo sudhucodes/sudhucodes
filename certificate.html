@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
-<style>
-</style>
+
 <body>
 
     <nav class="navbar">
@@ -19,13 +18,10 @@
             <p>SudhuCodes.</p>
         </div>
         <div class="navbartext">
-            <p>Time left: 14:59</p>
+            <div id="timer" style="margin-left: auto; margin-right: 10px;">Time Left: <span4 id="timerValue">15:60</span4></div>
         </div>
-      </nav>
+    </nav>
 
-
-
-      
     <div class="projects">
         <div class="form start-container">
             <p class="form-title">Let's get started<span class="emoji">👋</span></p>
@@ -38,7 +34,6 @@
             <button class="submit" onclick="startQuiz()">Start the Quiz <span3 class="startarrow">&#8594;</span3></button>
         </div>
 
-
         <div class="form quiz-container" style="display: none;">
             <div id="quiz"></div>
             <div class="navigation-buttons">
@@ -47,6 +42,12 @@
                 <button id="submitBtn" onclick="showResults()" style="display: none;">Submit</button>
             </div>
         </div>
+        
+        <div id="timeoutMessage" class="timeoutMessage" style="display: none;">
+            <p>Time's up! <br> Your session has timed out.</p>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+
         <div class="container2" id="resultCertificateContainer" style="display: none;">
             <div class="results" id="results"></div>
             <div class="certificate-container" id="certificateContainer">

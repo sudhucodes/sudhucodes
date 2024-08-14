@@ -830,41 +830,39 @@ footer p{
 .projects {
   display: grid;
   text-align: center;
+  margin-top: 20px;
   width: 100%;
 }
 
 
 .quiz-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
   margin-bottom: 30px;
 }
 
-.quiz-item {
+/* .quiz-item {
   background-color: #1e2a48;
   border-radius: 10px;
   padding: 30px;
   width: 80%;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
+} */
 
-.quiz-item h3 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #26ffe3;
-}
 
 .quiz-item button {
-  background-color: #26ffe3;
-  border: none;
-  border-radius: 5px;
+  background-color: #12172a;
+  border: 1px solid #4e4e4e;
+  border-radius: 50px;
   margin-top: 10px;
-  color: #0d1224;
-  font-size: 1em;
-  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 30px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: background-color 0.3s, transform 0.2s;
@@ -873,22 +871,31 @@ footer p{
 
 .explore{
   margin: 10px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #12172a;
+  align-items: center;
+  height: 54vh;
   width: 366px;
   justify-content: right;
   text-align: right;
   border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .explorebtn{
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.7rem;
   text-align: left;
+  gap: 20px;
   font-size: 20px;
 }
 
 .explorebtn p{
   line-height: 25px;
+  font-size: 22px;
 }
 
 .explorebtn button{
@@ -919,9 +926,11 @@ footer p{
 }
 
 .explore img{
+  position: absolute;
+  bottom: 0;
   margin-top: 20px;
   border-radius: 5px;
   width: 350px;
   margin: 6px;
-  border: 1px solid #00ffee;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
