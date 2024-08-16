@@ -36,11 +36,19 @@ html{
   color: white;
   font-size: 24px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   font-weight: bold;
 }
 
 .navbar .logo p{
   font-weight: 500;
+}
+
+.navbar .logo img{
+  height: 30px;
 }
 span{
   color: #26ffe3;
