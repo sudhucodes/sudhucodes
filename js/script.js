@@ -71,7 +71,7 @@ window.onload = function() {
 };
 
 // Handle link clicks
-document.querySelectorAll('.nav-links a, .login-page a').forEach(link => {
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const page = this.getAttribute('data-page');
@@ -126,19 +126,19 @@ function selectButton(buttonId) {
 }
 
 function startQuizhtml() {
-  window.open('certificate.html', '_blank'); // Open in a new window or tab
+  window.open('certificates/htmlcertificate.html', '_blank'); // Open in a new window or tab
 }
 
 function startQuizjs() {
-  window.open('comingsoon.html', '_blank'); // Open in a new window or tab
+  window.open('pages/comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
 function startQuizreact() {
-  window.open('comingsoon.html', '_blank'); // Open in a new window or tab
+  window.open('pages/comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
 function startQuizfullstack() {
-  window.open('comingsoon.html', '_blank'); // Open in a new window or tab
+  window.open('pages/comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
 window.onload = function() {
