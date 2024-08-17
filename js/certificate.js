@@ -322,7 +322,7 @@ function showResults() {
 
 
 function toggleDetails() {
-    window.location.href = '/Quizs/html-quiz-details.html'; // Redirect to the new page
+    window.location.href = '../Quizs/html-quiz-details.html'; // Redirect to the new page
 }
 
 
