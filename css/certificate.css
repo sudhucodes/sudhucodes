@@ -30,6 +30,7 @@ body {
 
 .arrowdiv {
   padding-left: 10px;
+  color: #7f8c8d;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   padding-right: 10px;
@@ -44,17 +45,16 @@ body {
 }
 
 .navbar .logo {
-  color: black;
+  color: #7f8c8d;
   font-size: 24px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .navbar .logo p{
   font-weight: 600;
 }
 span{
-  color: #26ffe3;
+  color: #6726ff;
 }
 .nav-links {
   list-style-type: none;
