@@ -27,7 +27,7 @@ html{
   color: #fff;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Optional: Ensure it stays on top of other elements */
+  z-index: 1000;
   height: 40px;
   overflow: hidden;
 }
@@ -114,6 +114,7 @@ span{
   display: none;
   flex-direction: column;
   justify-content: center;
+  -webkit-tap-highlight-color: transparent;
   align-items: center;
   width: 30px;
   height: 30px;
@@ -543,7 +544,7 @@ footer p{
 .projects {
   display: grid;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -555,27 +556,32 @@ footer p{
   justify-content: center;
   gap: 10px;
   padding: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-/* .quiz-item {
+.quiz-item {
   background-color: #1e2a48;
   border-radius: 10px;
   padding: 30px;
-  width: 80%;
+  width: 90%;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-} */
+}
 
+.quiz-item h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #26ffe3;
+}
 
 .quiz-item button {
-  background-color: #12172a;
-  border: 1px solid #4e4e4e;
-  border-radius: 50px;
+  background-color: #26ffe3;
+  border: none;
+  border-radius: 5px;
   margin-top: 10px;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 10px 30px;
+  color: #0d1224;
+  font-size: 1em;
+  padding: 10px 20px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: background-color 0.3s, transform 0.2s;
