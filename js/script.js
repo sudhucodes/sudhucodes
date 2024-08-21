@@ -130,15 +130,15 @@ function startQuizhtml() {
 }
 
 function startQuizjs() {
-  window.open('pages/comingsoon.html', '_blank'); // Open in a new window or tab
+  window.open('certificates/comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
 function startQuizreact() {
-  window.open('pages/comingsoon.html', '_blank'); // Open in a new window or tab
+  window.open('certificates/comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
 function startQuizfullstack() {
-  window.open('pages/comingsoon.html', '_blank'); // Open in a new window or tab
+  window.open('certificates/comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
 window.onload = function() {

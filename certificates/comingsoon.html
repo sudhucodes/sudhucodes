@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Get Certificate</title>
+    <link rel="shortcut icon" href="../images/logo_black.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+<style>
+
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #e7f6ff;
+}
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form {
+    background-color: #fff;
+    padding: 1rem;
+    max-width: 100%;
+    width: 350px;
+    margin: 10px;
+    margin-top: 30%;
+  border-radius: 0.5rem;
+  border: 1px solid #66666633;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+.emoji{
+  font-size: 1.5rem;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7f6ff;
+    padding: 10px 30px;
+    color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Optional: Ensure it stays on top of other elements */
+    height: 40px;
+    overflow: hidden;
+  }
+  
+  .navbar .arrowdiv {
+    position: absolute;
+    left: 25px;
+    cursor: pointer;
+  }
+  
+  .arrowdiv {
+    padding-left: 10px;
+    color: #7f8c8d;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    padding-right: 10px;
+    font-size: 22px;
+    margin-left: -10px;
+    transition: all 0.2s ease;
+  }
+  
+  .arrowdiv:active {
+    color: #ddd; /* Change background color on click */
+    transform: scale(0.90); /* Slightly reduce the size */
+  }
+  
+  .navbar .logo {
+    color: #7f8c8d;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .navbar .logo p{
+    font-weight: 600;
+  }
+  span{
+    color: #6726ff;
+  }
+  span2{
+    color: #f826ff;
+  }
+
+
+footer {
+  color: #7f8c8d;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
+  background-color: #e7f6ff; /* Footer ka background set kare */
+  width: 100%; /* Footer ko full width dena */
+  font-size: 12px;
+  display: grid;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+footer p{
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.socialLinks a{
+  color: #7f8c8d;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 300;
+}
+
+.socialLinks a:hover{
+  color: #26ffe3;
+}
+
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div onclick="goback()" class="arrowdiv">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="logo">
+            <p>Sudhu<span>Codes.</span></p>
+        </div>
+      </nav>
+
+
+    <div class="projects">
+        <div class="form start-container">
+            <p class="form-title">Coming Soon<span class="emoji">😐</span></p>
+            <p>Thank you for your patience. We are working hard to bring you <span2>this page soon</span2> Stay tuned for updates!</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="socialLinks">
+            <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
+            <a href="https://github.com/sudhucodes" target="_blank">Github</a>
+            <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
+            <a href="mailto:sudhuteam@gmail.com?subject=Hello%20SudhuCodes&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
+        </div>
+        <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
+    </footer>
+
+    <script>
+        function goback(){
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.close();
+    }
+  }
+    </script>
+</body>
+</html>

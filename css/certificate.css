@@ -578,17 +578,16 @@ a{
 }
 
 footer {
-  color: #d1d5db;
+  color: #7f8c8d;
   text-align: center;
   padding: 15px;
   margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
-  background-color: #0d1224; /* Footer ka background set kare */
+  background-color: #e7f6ff; /* Footer ka background set kare */
   width: 100%; /* Footer ko full width dena */
   font-size: 12px;
   display: grid;
   gap: 10px;
   box-sizing: border-box;
-  border-top: 1px solid #4e4e4e;
 }
 
 footer p{
@@ -598,7 +597,7 @@ footer p{
 }
 
 .socialLinks a{
-  color: #d1d5db;
+  color: #7f8c8d;
   text-decoration: none;
   padding: 10px;
   font-weight: 300;
