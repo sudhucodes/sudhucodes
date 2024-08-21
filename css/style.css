@@ -10,7 +10,18 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #0d1224;
+  background: var(--body-color);
+}
+
+:root{
+  --body-color: #0d1224;
+  --nav-color: #3498db;
+  --half-logo-color: #26ffe3;
+  --heading-color: #067ff8;
+  --projects-heading-color: #3700feb6;
+  --text-color-light: #7f8c8d;
+  --border-color: #4e4e4e;
+  --text-color-white: #fff;
 }
 
 html{
@@ -21,10 +32,10 @@ html{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #4e4e4e;
-  background-color: #0d1224;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--body-color);
   padding: 10px 30px;
-  color: #fff;
+  color: var(--text-color-white);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -33,7 +44,7 @@ html{
 }
 
 .navbar .logo {
-  color: white;
+  color: var(--text-color-white);
   font-size: 24px;
   cursor: pointer;
   display: flex;
@@ -51,7 +62,7 @@ html{
   height: 30px;
 }
 span{
-  color: #26ffe3;
+  color: var(--half-logo-color);
 }
 .nav-links {
   list-style-type: none;
@@ -66,7 +77,7 @@ span{
 }
 
 .nav-links i{
-  color: #26ffe3;
+  color: var(--half-logo-color);
   text-align: start;
   position: absolute;
   left: 0;
@@ -78,7 +89,7 @@ span{
 }
 
 .nav-links a {
-  border-top: 1px solid #4e4e4e;
+  border-top: 1px solid var(--border-color);
   padding: 22px;
   display: flex;
   align-items: center;
@@ -100,14 +111,14 @@ span{
 
 .nav-links .img p{
   margin: 0;
-  background-color: #12173a;
-  border: 1px solid #4e4e4e;
+  background-color: var(--body-color);
+  border: 1px solid var(--border-color);
   border-radius: 30px;
   padding: 6px 20px;
 }
 
 .a6 {
-  border-bottom: 1px solid #4e4e4e;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .toggle-button {
@@ -126,7 +137,7 @@ span{
   position: absolute;
   width: 25px;
   height: 3px;
-  background: #fff;
+  background: var(--text-color-white);
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
 }
@@ -170,7 +181,7 @@ span{
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #0d1224;
+    background-color: var(--body-color);
     align-items: center;
     transition: right 0.5s ease;
     z-index: 1;
@@ -196,7 +207,7 @@ span{
 
 .page {
   display: none;
-  color: white;
+  color: var(--text-color-white);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -209,7 +220,7 @@ span{
 .allProjects{
   padding-top: 20px;
   text-align: center;
-  color: #fff;
+  color: var(--text-color-white);
 }
 
 .allProjects h3{
@@ -226,7 +237,7 @@ span{
 hr{
   width: 100%;
   margin-top: 10px;
-  border: 0.7px solid #4e4e4e;
+  border: 0.7px solid var(--border-color);
 }
 
 .project-buttons1{
@@ -243,15 +254,15 @@ hr{
   background-color: #0d1224;
   border: none;
   border-radius: 30px;
-  color: #fff;
+  color: var(--text-color-white);
   cursor: pointer;
-  border: 2px solid #4e4e4e;
+  border: 2px solid var(--border-color);
   -webkit-tap-highlight-color: transparent;
 }
 
 .project-buttons1 button.selected {
-  border: 2px solid #26ffe3;
-  color: #fff;
+  border: 2px solid var(--half-logo-color);
+  color: var(--text-color-white);
 }
 
 
@@ -277,7 +288,7 @@ hr{
 
 .full-stack, .react, .html-css, .javascript {
   display: none; /* Hide all sections by default */
-  color: #fff;
+  color: var(--text-color-white);
   margin-bottom: 0;
   padding: 20px;
   opacity: 0;
@@ -306,7 +317,7 @@ hr{
   width: 100%;
   margin-bottom: 10px;
   height: 100%;
-  border: 2px solid #4e4e4e;
+  border: 2px solid var(--border-color);
   transition: 0.4s;
 }
 
@@ -316,11 +327,11 @@ hr{
 
 
 .login-page a img:hover{
-  border-color: #26ffe3;
+  border-color: var(--half-logo-color);
 }
 
 footer {
-  color: #d1d5db;
+  color: var(--text-color-light);
   text-align: center;
   padding: 15px;
   margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
@@ -330,7 +341,7 @@ footer {
   display: grid;
   gap: 10px;
   box-sizing: border-box;
-  border-top: 1px solid #4e4e4e;
+  border-top: 1px solid var(--border-color);
 }
 
 footer p{
@@ -340,14 +351,15 @@ footer p{
 }
 
 .socialLinks a{
-  color: #d1d5db;
+  color: var(--text-color-light);
   text-decoration: none;
   padding: 10px;
   font-weight: 300;
+  transition: 0.3s;
 }
 
 .socialLinks a:hover{
-  color: #26ffe3;
+  color: var(--half-logo-color);
 }
 
 
@@ -359,7 +371,7 @@ footer p{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0d1224;
+  background-color: var(--body-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -447,27 +459,8 @@ footer p{
 
 .full-stack, .react, .html-css2, .javascript {
   display: block; /* Hide all sections by default */
-  color: #fff;
+  color: var(--text-color-white);
   margin: 20px;
-}
-.comingsoon{
-  padding: 10px;
-  color: #0d1224;
-  font-weight: bold;
-  background-color: #26ffe3;
-  font-size: 20px;
-}
-
-.working{
-  padding: 20px;
-}
-
-.working h2{
-  font-weight: 600;
-}
-.working p{
-  padding: 20px;
-  font-weight: 400;
 }
 
 
@@ -485,12 +478,12 @@ footer p{
   width: 100%;
   margin-bottom: 10px;
   height: 100%;
-  border: 2px solid #4e4e4e;
+  border: 2px solid var(--border-color);
   transition: 0.4s;
 }
 
 .login-page p img:hover{
-  border-color: #26ffe3;
+  border-color: var(--half-logo-color);
 }
 
 .project-section{
@@ -522,7 +515,7 @@ footer p{
   -webkit-tap-highlight-color: transparent;
   gap: 10px;
   padding: 12px 20px;
-  border: 2px solid #4e4e4e;
+  border: 2px solid var(--border-color);
   border-radius: 30px;
   margin: 0;
   cursor: pointer;
@@ -531,7 +524,7 @@ footer p{
 }
 
 .source-code p:hover{
-  border-color: #26ffe3;
+  border-color: var(--half-logo-color);
 }
 
 .source-code p img{
@@ -571,11 +564,11 @@ footer p{
 .quiz-item h3 {
   margin: 0;
   font-size: 1.5em;
-  color: #26ffe3;
+  color: var(--half-logo-color);
 }
 
 .quiz-item button {
-  background-color: #26ffe3;
+  background-color: var(--half-logo-color);
   border: none;
   border-radius: 5px;
   margin-top: 10px;
@@ -625,7 +618,7 @@ footer p{
   text-align: center;
   border: none;
   margin-top: 10px;
-  border: 2px solid #4e4e4e;
+  border: 2px solid var(--border-color);
   padding: 8px 20px;
   border-radius: 30px;
   cursor: pointer;

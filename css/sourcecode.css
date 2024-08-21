@@ -58,98 +58,6 @@ body {
   span{
     color: #26ffe3;
   }
-  .nav-links {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  
-  .toggle-button {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .toggle-button span {
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-  }
-  
-  .toggle-button span:nth-child(1) {
-    top: 8px;
-  }
-  
-  .toggle-button span:nth-child(2) {
-    top: 14px;
-  }
-  
-  .toggle-button span:nth-child(3) {
-    top: 20px;
-  }
-  
-  .toggle-button.active span:nth-child(1) {
-    top: 14px;
-    transform: rotate(45deg);
-  }
-  
-  .toggle-button.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .toggle-button.active span:nth-child(3) {
-    top: 14px;
-    transform: rotate(-45deg);
-  }
-  
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      flex-direction: column;
-      position: fixed;
-      top: 61px;
-      right: -100%;
-      width: 200px;
-      height: 100vh;
-      background-color: #0d1224;
-      padding-top: 30px;
-      gap: 20px;
-      align-items: center;
-      transition: right 0.5s ease;
-      z-index: 1;
-    }
-  
-    .nav-links.active {
-      right: 0;
-    }
-  
-    .toggle-button {
-      display: flex;
-    }
-}
 
 /* -------------------source code pages-------------------- */
 
@@ -333,7 +241,7 @@ body {
   
   #loginsignupcombohtmlcode, #loginsignupcombocsscode {
     width: 320px;
-    height: 332px;
+    height: 320px;
     font-size: 10px;
     resize: none;
     background-color: rgb(73, 70, 92);
@@ -349,7 +257,7 @@ body {
   
   #loginhtmlcode, #logincsscode {
     width: 320px;
-    height: 332px;
+    height: 320px;
     font-size: 10px;
     resize: none;
     background-color: rgb(73, 70, 92);
@@ -366,7 +274,7 @@ body {
   
   #eccomercehtmlcode, #eccomercecsscode {
     width: 320px;
-    height: 332px;
+    height: 320px;
     font-size: 10px;
     resize: none;
     background-color: rgb(73, 70, 92);
@@ -400,7 +308,7 @@ body {
   
   #multihtmlcode, #multicsscode {
     width: 320px;
-    height: 332px;
+    height: 320px;
     font-size: 10px;
     resize: none;
     background-color: rgb(73, 70, 92);
