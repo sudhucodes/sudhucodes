@@ -150,3 +150,38 @@ window.addEventListener('load', function() {
   const loaderWrapper = document.getElementById('loader-wrapper');
   loaderWrapper.style.display = 'none'; // Hide the loader
 });
+
+
+
+
+// Get references to the search input and all project containers
+const searchInput = document.querySelector('.search-box input[type="search"]');
+const projectContainers = document.querySelectorAll('.container');
+
+// Add an event listener to the search input to detect changes
+searchInput.addEventListener('input', function() {
+    // Get the search query and convert it to lowercase for case-insensitive comparison
+    const query = searchInput.value.toLowerCase();
+
+    // Loop through all project containers
+    projectContainers.forEach(function(container) {
+        // Get the project title text and convert it to lowercase
+        const projectTitle = container.querySelector('.project-title p').textContent.toLowerCase();
+
+        // Check if the project title includes the search query
+        if (projectTitle.includes(query)) {
+            // If it matches, display the project container
+            container.style.display = 'flex';
+        } else {
+            // If it doesn't match, hide the project container
+            container.style.display = 'none';
+        }
+    });
+
+    // If the search input is empty, display all projects
+    if (query === '') {
+        projectContainers.forEach(function(container) {
+            container.style.display = 'flex';
+        });
+    }
+});

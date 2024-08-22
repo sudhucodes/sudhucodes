@@ -19,8 +19,9 @@ body {
   --half-logo-color: #26ffe3;
   --heading-color: #067ff8;
   --projects-heading-color: #3700feb6;
+  --border-color: #373F62;
+  --text-color: #DADAF2;
   --text-color-light: #7f8c8d;
-  --border-color: #4e4e4e;
   --text-color-white: #fff;
 }
 
@@ -645,4 +646,117 @@ footer p{
   width: 350px;
   margin: 6px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+
+
+
+/* ---------------------source code section---------------- */
+
+.main-container{
+  display: grid;
+  padding: 10px;
+}
+
+.search-box{
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+}
+
+.search-item{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-icon{
+  height: 38px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background-color: var(--body-color); /* Slightly transparent background */
+  font-size: 17px;
+  padding-left: 20px;
+  color: var(--text-color); 
+  transition: 0.2s ease;
+}
+.search-box input {
+  width: 80%;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-left: none;
+  border-radius: 0 5px 5px 0; 
+  outline: none;
+  background-color: var(--body-color); /* Slightly transparent background */
+  font-size: 17px;
+  padding: 0px 20px;
+  margin-bottom: 25px;
+  color: var(--text-color-white); 
+  transition: 0.2s ease;
+}
+
+.search-box input::placeholder {
+  color: var(--text-color); /* Light color for placeholder text */
+}
+
+.search-box input:focus {
+  border-color: #626cd6;
+}
+.search-box:focus-within .search-icon {
+  border-color: #626cd6;
+}
+
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px; /* Set the height as per your requirement */
+  padding: 5px;
+  color: var(--text-color-white);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-color);
+  height: auto;
+}
+
+.project-image img {
+  max-width: 100px; /* Adjust the size of the image */
+  height: auto;
+}
+
+.project-title {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 20px; /* Space between image and title */
+}
+
+.code-buy-now-btn {
+  text-align: center;
+  margin-left: auto;
+}
+
+.code-buy-now-btn p {
+  text-wrap: nowrap;
+  margin: 0;
+  font-size: 13px;
+  background-color: var(--body-color);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 10px 20px;
 }
