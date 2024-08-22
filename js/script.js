@@ -4,14 +4,17 @@ let navigationHistory = [];
 function navigateTo(page, addToHistory = true) {
   const pages = document.querySelectorAll('.page');
   const navigators = document.querySelectorAll('#navigator, #navigator1, #navigator2, #navigator3, #navigator4, #navigator5');
+  const aDivs = document.querySelectorAll('.a1, .a2, .a3, .a4, .a5, .a6');
 
-  // Hide all pages and navigators
+  // Hide all pages, navigators, and reset background of all .a divs
   pages.forEach(p => {
     p.classList.remove('active');
     p.style.opacity = 0;
   });
 
   navigators.forEach(nav => nav.style.display = 'none');
+
+  aDivs.forEach(div => div.style.backgroundImage = '');
 
   // Show the active page and corresponding navigator
   const activePage = document.getElementById(page);
@@ -34,6 +37,18 @@ function navigateTo(page, addToHistory = true) {
 
   if (navigatorMap[page]) {
     document.querySelector(navigatorMap[page]).style.display = 'block';
+
+    // Change background to a linear gradient for the corresponding .a div
+    const correspondingDivMap = {
+      '#navigator': '.a1',
+      '#navigator1': '.a2',
+      '#navigator2': '.a3',
+      '#navigator3': '.a4',
+      '#navigator4': '.a5',
+      '#navigator5': '.a6'
+    };
+
+    document.querySelector(correspondingDivMap[navigatorMap[page]]).style.backgroundImage = 'linear-gradient(to right, rgba(38, 255, 227, 0.25), rgba(38, 255, 227, 0))';
   }
 
   // Update the URL hash to reflect the current page
@@ -42,6 +57,7 @@ function navigateTo(page, addToHistory = true) {
     navigationHistory.push(page);
   }
 }
+
 
 // Handle back/forward navigation using the browser's back button
 window.addEventListener('popstate', function(event) {
@@ -148,7 +164,9 @@ function logoclick() {
 
 window.onload = function() {
   selectButton('htmlCss');
-  
+  if (window.innerWidth > 768) {
+    document.querySelector('.a1').style.backgroundImage = 'linear-gradient(to right, rgba(38, 255, 227, 0.25), rgba(38, 255, 227, 0))';
+  }
   document.querySelector('#navigator').style.display = 'block';
 };
 

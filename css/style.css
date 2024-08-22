@@ -11,6 +11,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: var(--body-color);
+  overflow-x: hidden;
 }
 
 :root{
@@ -202,6 +203,170 @@ span{
   }
 }
 
+
+/* New styles for larger screens (laptops and above) */
+@media (min-width: 769px) {
+  .navbar {
+    width: 96%;
+    height: 50px;
+    position: fixed; /* Ensures it is positioned relative to its normal flow */
+  }
+  .navmsg{
+    display: flex !important;
+  }
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: var(--body-color);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  .nav-links .a1{
+    border-top: 1px solid var(--border-color);
+  }
+  .nav-links li {
+    text-align: left;
+  }
+  .nav-links a{
+    border: none;
+  }
+
+  .avilable{
+    display: none;
+  }
+  .a1{
+    border-top: 1px solid var(--border-color);
+  }
+
+  
+  .content {
+    margin-left: 20%;
+    margin-top: 60px;
+    width: 80%;
+    transition: margin-left 0.5s ease;
+  }
+
+  .allProjects{
+    display: none;
+  }
+  .project-buttons{
+    padding: 50px !important;
+    display: flex !important;
+  }
+  .project-buttons1{
+    display: flex !important;
+    width: 100%;
+    justify-content: space-evenly !important;
+  }
+  .project-buttons1 button{
+    padding: 10px 50px !important;
+    
+  }
+  .login-page{
+    display: grid;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px; /* Space between grid items */
+  }
+  .login-page a img{
+    width: 100%;
+    height: 180px !important;
+    box-sizing: border-box;
+    border: 2px solid var(--border-color);
+    transition: 0.4s;
+  }
+
+  .main-container{
+    display: grid;
+    padding: 20px 90px !important;
+  }
+  .search-item{
+    width: 60% !important;
+  }
+  
+  footer{
+    width: 80% !important;
+    display: flex !important;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin-left: 20% !important;
+  }
+}
+.navmsg{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navmsg p {
+  color: var(--text-color);
+  animation: fadeUpDown 2s ease-in-out infinite;
+}
+
+@keyframes fadeUpDown {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+.navmsg button {
+  all: unset;
+  padding: 7px 16px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1224;
+  border: none;
+  border-radius: 30px;
+  color: var(--text-color-white);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.2s;
+  animation: backgroundFlow 5s linear infinite; /* Adding animation */
+}
+
+@keyframes backgroundFlow {
+  0% {
+    background-color: rgb(83, 9, 255); /* Initial color */
+  }
+  12.5% {
+    background-color: rgb(52, 152, 219); /* First transition color */
+  }
+  25% {
+    background-color: rgb(26, 255, 227); /* Second transition color */
+  }
+  37.5% {
+    background-color: rgb(103, 58, 183); /* Third transition color */
+  }
+  50% {
+    background-color: rgb(241, 196, 15); /* Fourth transition color */
+  }
+  62.5% {
+    background-color: rgb(231, 76, 60); /* Fifth transition color */
+  }
+  75% {
+    background-color: rgb(46, 204, 113); /* Sixth transition color */
+  }
+  87.5% {
+    background-color: rgb(155, 89, 182); /* Seventh transition color */
+  }
+  100% {
+    background-color: rgb(200, 0, 255); /* Loop back to initial color */
+  }
+}
 
 .content {
   text-align: center;
@@ -663,6 +828,8 @@ footer p{
 .search-box{
   padding: 40px 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-item{
@@ -714,13 +881,6 @@ footer p{
   border-color: #626cd6;
 }
 
-
-
-
-
-
-
-
 .container {
   display: flex;
   align-items: center;
@@ -766,4 +926,9 @@ footer p{
   border: 1px solid var(--border-color);
   border-radius: 30px;
   padding: 10px 20px;
+}
+
+.working{
+  width: 100%;
+  padding: 30px;
 }
