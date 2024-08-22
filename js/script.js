@@ -154,34 +154,41 @@ window.addEventListener('load', function() {
 
 
 
-// Get references to the search input and all project containers
-const searchInput = document.querySelector('.search-box input[type="search"]');
+// Get references to the search input, project containers, and cross icon
+const searchInput = document.querySelector('.search-box input[type="text"]');
 const projectContainers = document.querySelectorAll('.container');
+const crossIcon = document.querySelector('.cross-icon');
 
 // Add an event listener to the search input to detect changes
-searchInput.addEventListener('input', function() {
-    // Get the search query and convert it to lowercase for case-insensitive comparison
+searchInput.addEventListener('input', function () {
     const query = searchInput.value.toLowerCase();
 
-    // Loop through all project containers
-    projectContainers.forEach(function(container) {
-        // Get the project title text and convert it to lowercase
-        const projectTitle = container.querySelector('.project-title p').textContent.toLowerCase();
+    if (query !== '') {
+        crossIcon.style.visibility = 'visible';
+        crossIcon.style.opacity = '1';
+    } else {
+        crossIcon.style.visibility = 'hidden';
+        crossIcon.style.opacity = '0';
+    }
 
-        // Check if the project title includes the search query
-        if (projectTitle.includes(query)) {
-            // If it matches, display the project container
-            container.style.display = 'flex';
-        } else {
-            // If it doesn't match, hide the project container
-            container.style.display = 'none';
-        }
+    projectContainers.forEach(function (container) {
+        const projectTitle = container.querySelector('.project-title p').textContent.toLowerCase();
+        container.style.display = projectTitle.includes(query) ? 'flex' : 'none';
     });
 
-    // If the search input is empty, display all projects
     if (query === '') {
-        projectContainers.forEach(function(container) {
+        projectContainers.forEach(function (container) {
             container.style.display = 'flex';
         });
     }
+});
+
+// Add an event listener to the cross icon to clear the search input
+crossIcon.addEventListener('click', function () {
+    searchInput.value = '';
+    crossIcon.style.visibility = 'hidden';
+    crossIcon.style.opacity = '0';
+    projectContainers.forEach(function (container) {
+        container.style.display = 'flex';
+    });
 });

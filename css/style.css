@@ -660,7 +660,7 @@ footer p{
 }
 
 .search-box{
-  padding: 20px;
+  padding: 30px;
   border-bottom: 1px solid var(--border-color);
   display: flex;
 }
@@ -669,28 +669,26 @@ footer p{
   display: flex;
   justify-content: center;
   width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  padding: 0 15px;
+  transition: 0.2s ease;
 }
 
-.search-icon{
-  height: 38.6px;
+.search-icon, .cross-icon{
+  height: 40px;
   display: flex;
   align-items: center;
-  border: 1px solid var(--border-color);
-  border-right: none;
-  border-radius: 5px 0 0 5px;
-  outline: none;
   background-color: var(--body-color); /* Slightly transparent background */
   font-size: 17px;
-  padding-left: 20px;
   color: var(--text-color); 
   transition: 0.2s ease;
 }
 .search-box input {
   width: 80%;
   height: 40px;
-  border: 1px solid var(--border-color);
-  border-left: none;
-  border-radius: 0 5px 5px 0; 
+  border: none;
   outline: none;
   background-color: var(--body-color); /* Slightly transparent background */
   font-size: 17px;
@@ -701,13 +699,14 @@ footer p{
 }
 
 .search-box input::placeholder {
+  font-family: "Outfit", sans-serif;
   color: var(--text-color); /* Light color for placeholder text */
 }
 
 .search-box input:focus {
   border-color: #626cd6;
 }
-.search-box:focus-within .search-icon {
+.search-box:focus-within .search-item {
   border-color: #626cd6;
 }
 
