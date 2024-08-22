@@ -142,12 +142,13 @@ function startQuizfullstack() {
 }
 
 function logoclick() {
-  window.location.href = "index.html";
+  window.location.reload();
 }
 
 
 window.onload = function() {
   selectButton('htmlCss');
+  
   document.querySelector('#navigator').style.display = 'block';
 };
 

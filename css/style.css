@@ -248,7 +248,7 @@ hr{
 }
 
 .project-buttons1 button{
-  padding: 12px 35px;
+  padding: 10px 30px;
   outline: none;
   display: flex;
   align-items: center;
@@ -264,7 +264,7 @@ hr{
 }
 
 .project-buttons1 button.selected {
-  border: 2px solid var(--half-logo-color);
+  border-color: var(--half-logo-color);
   color: var(--text-color-white);
 }
 
@@ -300,10 +300,9 @@ hr{
 }
 
 .full-stack h1, .react h1, .html-css h1, .javascript h1{
-  font-weight: 600;
+  font-weight: 500;
   margin-top: -20px;
   margin-bottom: 10px;
-
   font-size: 20px;
   padding-bottom: 10px;
 }
@@ -669,6 +668,7 @@ footer p{
 .search-item{
   display: flex;
   justify-content: center;
+  background-color: var(--body-color);
   width: 100%;
   border-radius: 50px;
   height: 40px;
@@ -685,7 +685,6 @@ footer p{
   height: 40px;
   display: flex;
   align-items: center;
-  background-color: var(--body-color); /* Slightly transparent background */
   font-size: 17px;
   color: var(--text-color); 
   transition: 0.2s ease;
@@ -695,7 +694,7 @@ footer p{
   height: 40px;
   border: none;
   outline: none;
-  background-color: var(--body-color); /* Slightly transparent background */
+  background-color: transparent; /* Slightly transparent background */
   font-size: 15px;
   padding: 0px 20px;
   margin-bottom: 25px;
