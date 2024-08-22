@@ -141,6 +141,11 @@ function startQuizfullstack() {
   window.open('certificates/comingsoon.html', '_blank'); // Open in a new window or tab
 }
 
+function logoclick() {
+  window.location.href = "index.html";
+}
+
+
 window.onload = function() {
   selectButton('htmlCss');
   document.querySelector('#navigator').style.display = 'block';
