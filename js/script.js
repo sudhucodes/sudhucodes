@@ -115,7 +115,7 @@ function closeNav() {
 }
 
 // Button selection and section display logic
-const buttons = document.querySelectorAll('.project-buttons1 button');
+const buttons = document.querySelectorAll('.project-buttons button');
 const sections = {
   fullStack: document.querySelector('.full-stack'),
   react: document.querySelector('.react'),

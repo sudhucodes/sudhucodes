@@ -362,10 +362,28 @@ span{
   .avilable{
     display: none;
   }
-  .a1{
+  .a1 {
+    position: relative;
+    border: none !important;
+    margin-top: 15px !important;
+  }
+  
+  .a1::before {
+    content: "";
+    position: absolute;
+    top: -15px; /* Shift the border 10px up */
+    left: 0;
+    right: 0;
     border-top: 1px solid var(--border-color);
   }
+  
+  ul{
+    gap: 17px 0 !important;
+  }
 
+  .nav-links a {
+    padding: 15px;
+  }
   
   .content {
     margin-left: 20%;
@@ -377,17 +395,15 @@ span{
   .allProjects{
     display: none;
   }
+
   .project-buttons{
-    padding: 50px !important;
-    display: flex !important;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 30px !important;
+    padding: 50px 70px !important;
   }
-  .project-buttons1{
-    display: flex !important;
-    width: 100%;
-    justify-content: space-evenly !important;
-  }
-  .project-buttons1 button{
-    padding: 10px 40px !important;
+  .project-buttons button{
+    padding: 12px 40px !important;
     
   }
   .login-page{
@@ -660,18 +676,19 @@ hr{
   border: 0.7px solid var(--border-color);
 }
 
-.project-buttons1{
+.project-buttons{
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.project-buttons1 button{
+.project-buttons button{
   padding: 10px 20px;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0d1224;
+  background-color: var(--body-color);
   border: none;
   border-radius: 30px;
   color: var(--text-color-white);
@@ -681,13 +698,13 @@ hr{
   transition: 0.2s;
 }
 
-.project-buttons1 button.selected {
+.project-buttons button.selected {
   border-color: var(--half-logo-color);
   color: var(--text-color-white);
 }
 
 
-.project-buttons1 button i{
+.project-buttons button i{
   font-size: 20px;
   margin: 0;
   margin-right: 10px;
