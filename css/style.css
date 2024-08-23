@@ -424,13 +424,15 @@ span{
 
   .main-container{
     display: grid;
-    padding: 40px 90px !important;
-    padding-bottom: 90px !important;
+    padding: 20px 90px !important;
+    padding-bottom: 80px !important;
   }
   .search-item{
     width: 60% !important;
   }
-
+  .search-box{
+    padding-bottom: 60px !important;
+  }
   body::-webkit-scrollbar {
     width: 5px;
   }
@@ -559,6 +561,20 @@ span{
 
   .quiz-item button i{
     color: var(--half-logo-color);
+  }
+
+  .project-image img {
+    max-width: 100px !important; /* Adjust the size of the image */
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .project-title {
+    font-size: 16px !important;
+  }
+  
+  .code-buy-now-btn p {
+    font-size: 13px !important;
   }
   footer{
     width: 80% !important;
@@ -988,6 +1004,9 @@ footer p{
   padding: 10px;
 }
 
+.container:hover{
+  background-color: var(--click-bg-color);
+}
 .search-box{
   padding: 40px 0;
   display: flex;
@@ -1070,6 +1089,7 @@ footer p{
 .project-image img {
   max-width: 90px; /* Adjust the size of the image */
   height: auto;
+  cursor: pointer;
 }
 
 .project-title {
@@ -1077,12 +1097,14 @@ footer p{
   text-align: left;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
   margin-left: 20px; /* Space between image and title */
 }
 
 .code-buy-now-btn {
   text-align: center;
   margin-left: auto;
+  cursor: pointer;
 }
 
 .code-buy-now-btn p {
