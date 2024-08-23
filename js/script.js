@@ -47,9 +47,10 @@ function navigateTo(page, addToHistory = true) {
       '#navigator4': '.a5',
       '#navigator5': '.a6'
     };
-
+    if (window.innerWidth > 768) {
     document.querySelector(correspondingDivMap[navigatorMap[page]]).style.backgroundImage = 'linear-gradient(to right, rgba(38, 255, 227, 0.25), rgba(38, 255, 227, 0))';
   }
+}
 
   // Update the URL hash to reflect the current page
   if (addToHistory) {

@@ -264,7 +264,7 @@ span{
     justify-content: space-evenly !important;
   }
   .project-buttons1 button{
-    padding: 10px 50px !important;
+    padding: 10px 40px !important;
     
   }
   .login-page{
@@ -277,7 +277,7 @@ span{
   }
   .login-page a img{
     width: 100%;
-    height: 180px !important;
+    height: auto !important;
     box-sizing: border-box;
     border: 2px solid var(--border-color);
     transition: 0.4s;
@@ -413,7 +413,7 @@ hr{
 }
 
 .project-buttons1 button{
-  padding: 10px 30px;
+  padding: 10px 20px;
   outline: none;
   display: flex;
   align-items: center;
@@ -484,7 +484,7 @@ hr{
   width: 100%;
   margin-bottom: 10px;
   height: 100%;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--body-color);
   transition: 0.4s;
 }
 
@@ -929,6 +929,6 @@ footer p{
 }
 
 .working{
-  width: 100%;
+  width: 70%;
   padding: 30px;
 }
