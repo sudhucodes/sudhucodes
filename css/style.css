@@ -58,7 +58,7 @@ html{
 }
 
 .navbar .logo p{
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .navbar .logo img{
@@ -201,6 +201,128 @@ span{
   .toggle-button {
     display: flex;
   }
+  /* -------------------get certificate pages-------------------- */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+.quiz-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.quiz-item {
+  background-color: #1e2a48;
+  border-radius: 10px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-item h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: var(--half-logo-color);
+}
+
+.quiz-item button {
+  background-color: var(--half-logo-color);
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #0d1224;
+  font-size: 1em;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.explore{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #12172a;
+  align-items: center;
+  height: 54vh;
+  width: 366px;
+  justify-content: right;
+  text-align: right;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.explorebtn{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.7rem;
+  text-align: left;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.explorebtn p{
+  line-height: 25px;
+  font-size: 22px;
+}
+
+.explorebtn button{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #3c3c3c;
+  text-align: center;
+  border: none;
+  margin-top: 10px;
+  border: 2px solid var(--border-color);
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s;
+  background-color: #f4f4f4;
+}
+
+.explorebtn span2{
+  display: inline-block;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.explorebtn button:hover span2 {
+  transform: rotate(90deg);
+}
+
+.explore img{
+  position: absolute;
+  bottom: 0;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 350px;
+  margin: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.quiz-item button i{
+  color: var(--body-color);
+  padding-right: 10px;
+}
+
 }
 
 
@@ -316,8 +438,112 @@ span{
   body::-webkit-scrollbar-thumb:active {
     background: linear-gradient(45deg, #ff4e50, #f9d423);
   }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    width: 90%;
+  }
+  .explore{
+    display: grid;
+    padding: 20px;
+    margin: 20px 80px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    grid-template-columns: repeat(2, 1fr); /* Creates 3 equal columns */
+    gap: 20px; /* Space between grid items */
+  }
+  
+  .explorebtn{
+    padding: 1.7rem;
+    text-align: left;
+    gap: 20px;
+    font-size: 20px;
+  }
+  
+  .explorebtn p{
+    line-height: 25px;
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+  
+  .explorebtn button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #3c3c3c;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+    border: 2px solid var(--border-color);
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.3s;
+    background-color: #f4f4f4;
+  }
+  
+  .explorebtn span2{
+    display: inline-block;
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .explorebtn button:hover span2 {
+    transform: rotate(90deg);
+  }
+  
+  .explore img{
+    width: 100%;
+    height: auto !important;
+    box-sizing: border-box;
+    transition: 0.4s;
+  }
+  
+
+  .quiz-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px 20px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
   
   
+  .quiz-item h3 {
+    display: none;
+  }
+  
+  .quiz-item button {
+    padding: 10px 30px;
+    outline: none;
+    gap: 10px;
+    display: flex;
+    text-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d1224;
+    border: none;
+    border-radius: 30px;
+    color: var(--text-color-white);
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.3s;
+  }
+  
+  .quiz-item button:hover{
+    border-color: var(--half-logo-color);
+  }
+
+  .quiz-item button i{
+    color: var(--half-logo-color);
+  }
   footer{
     width: 80% !important;
     display: flex !important;
@@ -735,124 +961,6 @@ footer p{
 }
 
 
-/* -------------------get certificate pages-------------------- */
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
-  width: 100%;
-}
-
-
-.quiz-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.quiz-item {
-  background-color: #1e2a48;
-  border-radius: 10px;
-  padding: 30px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.quiz-item h3 {
-  margin: 0;
-  font-size: 1.5em;
-  color: var(--half-logo-color);
-}
-
-.quiz-item button {
-  background-color: var(--half-logo-color);
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  color: #0d1224;
-  font-size: 1em;
-  padding: 10px 20px;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-
-.explore{
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background-color: #12172a;
-  align-items: center;
-  height: 54vh;
-  width: 366px;
-  justify-content: right;
-  text-align: right;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.explorebtn{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.7rem;
-  text-align: left;
-  gap: 20px;
-  font-size: 20px;
-}
-
-.explorebtn p{
-  line-height: 25px;
-  font-size: 22px;
-}
-
-.explorebtn button{
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #3c3c3c;
-  text-align: center;
-  border: none;
-  margin-top: 10px;
-  border: 2px solid var(--border-color);
-  padding: 8px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: background-color 0.3s;
-  background-color: #f4f4f4;
-}
-
-.explorebtn span2{
-  display: inline-block;
-  font-size: 20px;
-  transition: transform 0.3s;
-}
-
-.explorebtn button:hover span2 {
-  transform: rotate(90deg);
-}
-
-.explore img{
-  position: absolute;
-  bottom: 0;
-  margin-top: 20px;
-  border-radius: 5px;
-  width: 350px;
-  margin: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-
 
 
 
@@ -885,6 +993,10 @@ footer p{
 .search-icon{
   border-right: 1px solid var(--border-color);
   padding-right: 10px;
+}
+
+.cross-icon{
+  cursor: pointer;
 }
 .search-icon, .cross-icon{
   height: 40px;
