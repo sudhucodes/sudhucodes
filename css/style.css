@@ -213,6 +213,7 @@ span{
   }
   .navmsg{
     display: flex !important;
+    padding-right: 20px;
   }
   .nav-links {
     position: fixed;
@@ -285,11 +286,37 @@ span{
 
   .main-container{
     display: grid;
-    padding: 20px 90px !important;
+    padding: 40px 90px !important;
+    padding-bottom: 90px !important;
   }
   .search-item{
     width: 60% !important;
   }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: linear-gradient(45deg, #3b3b3b, #1e1e1e);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff6a00, #ff4e50);
+  }
+  
+  body::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+  }
+  
   
   footer{
     width: 80% !important;
@@ -340,7 +367,7 @@ span{
 
 @keyframes backgroundFlow {
   0% {
-    background-color: rgb(83, 9, 255); /* Initial color */
+    background-color: rgb(200, 0, 255); /* Initial color */
   }
   12.5% {
     background-color: rgb(52, 152, 219); /* First transition color */
@@ -349,7 +376,7 @@ span{
     background-color: rgb(26, 255, 227); /* Second transition color */
   }
   37.5% {
-    background-color: rgb(103, 58, 183); /* Third transition color */
+    background-color: rgb(83, 9, 255); /* Third transition color */
   }
   50% {
     background-color: rgb(241, 196, 15); /* Fourth transition color */
@@ -702,7 +729,9 @@ footer p{
 /* -------------------get certificate pages-------------------- */
 
 .projects {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-top: 10px;
   width: 100%;
