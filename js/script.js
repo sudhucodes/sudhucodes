@@ -70,24 +70,11 @@ window.onload = function() {
 
   selectButton('htmlCss');
   document.querySelector('#navigator').style.display = 'block';
-};
 
-// Function to hide the loader
-function hideLoader() {
+  // Hide the loader after the page is loaded
   const loaderWrapper = document.getElementById('loader-wrapper');
-  loaderWrapper.style.display = 'none';
-}
-
-// Wait until the #allprojects div content is fully loaded
-window.addEventListener('load', function () {
-  // Check if #allprojects is loaded
-  const allProjectsDiv = document.getElementById('allprojects');
-
-  // If #allprojects div has content, hide the loader
-  if (allProjectsDiv) {
-    hideLoader();
-  }
-});
+  if (loaderWrapper) loaderWrapper.style.display = 'none'; 
+};
 
 // Handle link clicks
 document.querySelectorAll('.nav-links a').forEach(link => {
