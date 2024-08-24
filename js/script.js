@@ -152,32 +152,35 @@ function logoclick() {
 }
 
 // Search functionality
-const searchInput = document.querySelector('.search-box input[type="text"]');
-const projectContainers = document.querySelectorAll('.container');
-const crossIcon = document.querySelector('.cross-icon');
+document.querySelectorAll('.search-box').forEach(searchBox => {
+  const searchInput = searchBox.querySelector('input[type="text"]');
+  const projectContainers = document.querySelectorAll('.container');
+  const crossIcon = searchBox.querySelector('.cross-icon');
 
-searchInput.addEventListener('input', function () {
-  const query = searchInput.value.toLowerCase();
+  searchInput.addEventListener('input', function () {
+    const query = searchInput.value.toLowerCase();
 
-  crossIcon.style.visibility = query ? 'visible' : 'hidden';
-  crossIcon.style.opacity = query ? '1' : '0';
+    crossIcon.style.visibility = query ? 'visible' : 'hidden';
+    crossIcon.style.opacity = query ? '1' : '0';
 
-  projectContainers.forEach(function (container) {
-    const projectTitle = container.querySelector('.project-title p').textContent.toLowerCase();
-    container.style.display = projectTitle.includes(query) ? 'flex' : 'none';
+    projectContainers.forEach(function (container) {
+      const projectTitle = container.querySelector('.project-title p').textContent.toLowerCase();
+      container.style.display = projectTitle.includes(query) ? 'flex' : 'none';
+    });
+
+    if (!query) {
+      projectContainers.forEach(container => container.style.display = 'flex');
+    }
   });
 
-  if (!query) {
+  crossIcon.addEventListener('click', function () {
+    searchInput.value = '';
+    crossIcon.style.visibility = 'hidden';
+    crossIcon.style.opacity = '0';
     projectContainers.forEach(container => container.style.display = 'flex');
-  }
+  });
 });
 
-crossIcon.addEventListener('click', function () {
-  searchInput.value = '';
-  crossIcon.style.visibility = 'hidden';
-  crossIcon.style.opacity = '0';
-  projectContainers.forEach(container => container.style.display = 'flex');
-});
 
 document.querySelectorAll('img').forEach(img => {
   img.setAttribute('loading', 'lazy');

@@ -175,29 +175,52 @@ span{
   display: none;
 }
 
-  body::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: linear-gradient(45deg, #3b3b3b, #1e1e1e);
-    border-radius: 10px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #ff6a00, #ee0979);
-    border-radius: 10px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
-  }
-  
-  body::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #ff6a00, #ff4e50);
-  }
-  
-  body::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(45deg, #ff4e50, #f9d423);
-  }
+/* Scrollbar styles for webkit browsers (Chrome, Safari, Edge) */
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, #3b3b3b, #1e1e1e); /* Track background gradient */
+  border-radius: 10px; /* Rounded corners for the track */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Inner shadow for the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff6a00, #ee0979); /* Thumb background gradient */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); /* Shadow for the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff6a00, #ff4e50); /* Hover effect for the thumb */
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(45deg, #ff4e50, #f9d423); /* Active effect for the thumb */
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path fill="white" d="M4 0l4 4h-8l4-4z"/></svg>') no-repeat center center;
+  background-size: 10px; /* Up arrow */
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path fill="white" d="M4 8l4-4h-8l4 4z"/></svg>') no-repeat center center;
+  background-size: 10px; /* Down arrow */
+}
+
+/* Adjust the width of the scrollbar thumb and track to maintain a Chrome-like appearance */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -460,11 +483,13 @@ span{
     flex-direction: column;
     align-items: center;
     padding: 60px;
+    padding-bottom: 80px;
     width: 90%;
   }
   .explore{
     display: grid;
     padding: 20px;
+    padding-bottom: 50px;
     margin: 20px 80px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -1102,7 +1127,7 @@ footer p{
 
 .code-buy-now-btn {
   text-align: center;
-  margin-left: auto;
+  margin-left: 5px;
   cursor: pointer;
 }
 
