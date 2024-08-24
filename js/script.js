@@ -112,6 +112,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     if (window.innerWidth <= 768) {
       closeNav();
     }
+
+    if (toggleButton) {
+      toggleButton.classList.add('active');
+      navLinks.classList.add('active');
+    }
+    
   });
 });
 

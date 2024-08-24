@@ -145,80 +145,39 @@ span{
   border-radius: 5px;
 }
 
+/* Default state (cross icon) */
 .toggle-button span:nth-child(1) {
-  top: 8px;
+  top: 14px;
+  transform: rotate(45deg); /* Top bar is rotated to form one part of the cross */
 }
 
 .toggle-button span:nth-child(2) {
   top: 14px;
+  opacity: 0; /* Middle bar is hidden */
 }
 
 .toggle-button span:nth-child(3) {
-  top: 20px;
+  top: 14px;
+  transform: rotate(-45deg); /* Bottom bar is rotated to form the other part of the cross */
 }
 
+/* Active state (hamburger icon) */
 .toggle-button.active span:nth-child(1) {
-  top: 14px;
-  transform: rotate(45deg);
+  top: 8px;
+  transform: rotate(0deg); /* Top bar returns to original position */
 }
 
 .toggle-button.active span:nth-child(2) {
-  opacity: 0;
+  top: 14px;
+  opacity: 1; /* Middle bar becomes visible */
 }
 
 .toggle-button.active span:nth-child(3) {
-  top: 14px;
-  transform: rotate(-45deg);
+  top: 20px;
+  transform: rotate(0deg); /* Bottom bar returns to original position */
 }
 
-#navigator, #navigator1, #navigator2, #navigator3, #navigator4, #navigator5 {
-  display: none;
-}
 
-/* Scrollbar styles for webkit browsers (Chrome, Safari, Edge) */
-
-body::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #3b3b3b, #1e1e1e); /* Track background gradient */
-  border-radius: 10px; /* Rounded corners for the track */
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Inner shadow for the track */
-}
-
-body::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff6a00, #ee0979); /* Thumb background gradient */
-  border-radius: 10px; /* Rounded corners for the thumb */
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); /* Shadow for the thumb */
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #ff6a00, #ff4e50); /* Hover effect for the thumb */
-}
-
-body::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(45deg, #ff4e50, #f9d423); /* Active effect for the thumb */
-}
-
-body::-webkit-scrollbar-button:single-button:vertical:decrement {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path fill="white" d="M4 0l4 4h-8l4-4z"/></svg>') no-repeat center center;
-  background-size: 10px; /* Up arrow */
-}
-
-body::-webkit-scrollbar-button:single-button:vertical:increment {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path fill="white" d="M4 8l4-4h-8l4 4z"/></svg>') no-repeat center center;
-  background-size: 10px; /* Down arrow */
-}
-
-/* Adjust the width of the scrollbar thumb and track to maintain a Chrome-like appearance */
-body::-webkit-scrollbar {
-  width: 6px;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-}
-
-body::-webkit-scrollbar-track {
-  border-radius: 6px;
-}
 
 
 @media (max-width: 768px) {
@@ -226,7 +185,7 @@ body::-webkit-scrollbar-track {
     flex-direction: column;
     position: fixed;
     top: 60px;
-    right: -100%;
+    right: 0;
     width: 100%;
     height: 100vh;
     background-color: var(--body-color);
@@ -236,7 +195,7 @@ body::-webkit-scrollbar-track {
   }
 
   .nav-links.active {
-    right: 0;
+    right: -100%;
   }
   
   .nav-links li {
@@ -311,7 +270,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: var(--body-color);
+  background-color: #878bff08;
   align-items: center;
   height: 54vh;
   width: 366px;
@@ -355,6 +314,7 @@ body::-webkit-scrollbar-track {
 .explorebtn span2{
   display: inline-block;
   font-size: 20px;
+  padding-bottom: 4px;
   transition: transform 0.3s;
 }
 
@@ -520,9 +480,10 @@ body::-webkit-scrollbar-track {
   }
   .explore{
     display: grid;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    padding-bottom: 50px;
-    background-color: var(--click-bg-color);
+    background-color: #878bff08;
     margin: 20px 80px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -562,6 +523,7 @@ body::-webkit-scrollbar-track {
   
   .explorebtn span2{
     display: inline-block;
+    padding-bottom: 3px;
     font-size: 20px;
     transition: transform 0.3s;
   }
@@ -725,7 +687,19 @@ body::-webkit-scrollbar-track {
 .page.active {
   display: block;
   opacity: 1;
+  animation: fadefast 0.5s ease-in-out forwards;
 }
+@keyframes fadefast {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Slightly above the starting position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
 
 .allProjects{
   padding-top: 20px;
@@ -880,6 +854,56 @@ footer p{
 
 .socialLinks a:hover{
   color: var(--half-logo-color);
+}
+
+
+#navigator, #navigator1, #navigator2, #navigator3, #navigator4, #navigator5 {
+  display: none;
+}
+
+/* Scrollbar styles for webkit browsers (Chrome, Safari, Edge) */
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, #3b3b3b, #1e1e1e); /* Track background gradient */
+  border-radius: 10px; /* Rounded corners for the track */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Inner shadow for the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff6a00, #ee0979); /* Thumb background gradient */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); /* Shadow for the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff6a00, #ff4e50); /* Hover effect for the thumb */
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(45deg, #ff4e50, #f9d423); /* Active effect for the thumb */
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path fill="white" d="M4 0l4 4h-8l4-4z"/></svg>') no-repeat center center;
+  background-size: 10px; /* Up arrow */
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><path fill="white" d="M4 8l4-4h-8l4 4z"/></svg>') no-repeat center center;
+  background-size: 10px; /* Down arrow */
+}
+
+/* Adjust the width of the scrollbar thumb and track to maintain a Chrome-like appearance */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 6px;
 }
 
 
