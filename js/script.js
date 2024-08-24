@@ -1,5 +1,33 @@
 let navigationHistory = [];
 
+// Button selection and section display logic
+const buttons = document.querySelectorAll('.project-buttons button');
+const sections = {
+  fullStack: document.querySelector('.full-stack'),
+  react: document.querySelector('.react'),
+  htmlCss: document.querySelector('.html-css'),
+  javaScript: document.querySelector('.javascript')
+};
+
+function selectButton(buttonId) {
+  buttons.forEach(button => {
+    button.classList.remove('selected');
+  });
+  document.getElementById(buttonId).classList.add('selected');
+
+  Object.keys(sections).forEach(section => {
+    sections[section].style.display = 'none';
+    sections[section].classList.remove('fade-up');
+  });
+
+  // Display the selected section with fade-up animation
+  const selectedSection = sections[buttonId];
+  selectedSection.style.display = 'block';
+  setTimeout(() => {
+    selectedSection.classList.add('fade-up');
+  }, 10);
+}
+
 // Function to handle navigation
 function navigateTo(page, addToHistory = true) {
   const pages = document.querySelectorAll('.page');
@@ -101,33 +129,7 @@ function closeNav() {
   toggleButton.classList.remove('active');
 }
 
-// Button selection and section display logic
-const buttons = document.querySelectorAll('.project-buttons button');
-const sections = {
-  fullStack: document.querySelector('.full-stack'),
-  react: document.querySelector('.react'),
-  htmlCss: document.querySelector('.html-css'),
-  javaScript: document.querySelector('.javascript')
-};
 
-function selectButton(buttonId) {
-  buttons.forEach(button => {
-    button.classList.remove('selected');
-  });
-  document.getElementById(buttonId).classList.add('selected');
-
-  Object.keys(sections).forEach(section => {
-    sections[section].style.display = 'none';
-    sections[section].classList.remove('fade-up');
-  });
-
-  // Display the selected section with fade-up animation
-  const selectedSection = sections[buttonId];
-  selectedSection.style.display = 'block';
-  setTimeout(() => {
-    selectedSection.classList.add('fade-up');
-  }, 10);
-}
 
 function startQuizhtml() {
   window.open('certificates/htmlcertificate.html', '_blank');
