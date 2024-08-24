@@ -70,10 +70,7 @@ window.onload = function() {
 
   selectButton('htmlCss');
   document.querySelector('#navigator').style.display = 'block';
-
-  // Hide the loader after the page is loaded
-  const loaderWrapper = document.getElementById('loader-wrapper');
-  if (loaderWrapper) loaderWrapper.style.display = 'none'; 
+ 
 };
 
 // Handle link clicks
@@ -177,4 +174,72 @@ crossIcon.addEventListener('click', function () {
   crossIcon.style.visibility = 'hidden';
   crossIcon.style.opacity = '0';
   projectContainers.forEach(container => container.style.display = 'flex');
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const loaderWrapper = document.getElementById('loader-wrapper');
+  const lazyImages = document.querySelectorAll("img.lazy");
+  const visibleImages = new Set();
+  
+  // Function to hide loader if all images in viewport are loaded
+  const checkAllVisibleImagesLoaded = () => {
+    const allVisibleImagesLoaded = Array.from(visibleImages).every(image => image.complete);
+    if (allVisibleImagesLoaded) {
+      if (loaderWrapper) loaderWrapper.style.display = 'none';
+    }
+  };
+
+  const onImageLoad = (image) => {
+    visibleImages.delete(image);
+    checkAllVisibleImagesLoaded();
+  };
+
+  if ("IntersectionObserver" in window) {
+    const lazyImageObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const lazyImage = entry.target;
+          if (!visibleImages.has(lazyImage)) {
+            visibleImages.add(lazyImage);
+          }
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+
+          lazyImage.onload = () => onImageLoad(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Fallback for browsers without IntersectionObserver support
+    lazyImages.forEach(function(image) {
+      image.src = image.dataset.src;
+      image.onload = () => onImageLoad(image);
+    });
+  }
+
+  // Initial check for images already in view
+  document.querySelectorAll("img.lazy").forEach((image) => {
+    if (image.getBoundingClientRect().top < window.innerHeight) {
+      visibleImages.add(image);
+      image.src = image.dataset.src;
+      image.onload = () => onImageLoad(image);
+    }
+  });
+
+  // Handle visibility for images in viewport when page is loaded
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll("img.lazy").forEach((image) => {
+      if (image.getBoundingClientRect().top < window.innerHeight && !image.complete) {
+        visibleImages.add(image);
+        image.src = image.dataset.src;
+        image.onload = () => onImageLoad(image);
+      }
+    });
+  });
 });
