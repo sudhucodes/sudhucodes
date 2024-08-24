@@ -303,7 +303,7 @@ span{
   border: none;
   margin-top: 10px;
   border: 2px solid var(--border-color);
-  padding: 8px 20px;
+  padding: 5px 20px;
   border-radius: 30px;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
