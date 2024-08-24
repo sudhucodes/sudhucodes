@@ -70,8 +70,8 @@ window.onload = function() {
   document.querySelector('#navigator').style.display = 'block';
 
   // Hide the loader after the page is loaded
-  const loaderWrapper = document.getElementById('loader-wrapper');
-  if (loaderWrapper) loaderWrapper.style.display = 'none';
+  // const loaderWrapper = document.getElementById('loader-wrapper');
+  // if (loaderWrapper) loaderWrapper.style.display = 'none';
 };
 
 // Handle link clicks
@@ -175,4 +175,8 @@ crossIcon.addEventListener('click', function () {
   crossIcon.style.visibility = 'hidden';
   crossIcon.style.opacity = '0';
   projectContainers.forEach(container => container.style.display = 'flex');
+});
+
+document.querySelectorAll('img').forEach(img => {
+  img.setAttribute('loading', 'lazy');
 });
