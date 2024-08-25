@@ -440,6 +440,7 @@ span{
     padding: 50px 70px !important;
   }
   .project-buttons button{
+    font-family: "Outfit", sans-serif;
     padding: 12px 40px !important;
     
   }
@@ -482,7 +483,7 @@ span{
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #878bff08;
     margin: 20px 80px;
     border: 1px solid var(--border-color);
@@ -513,7 +514,7 @@ span{
     border: none;
     margin-top: 10px;
     border: 2px solid var(--border-color);
-    padding: 8px 20px;
+    padding: 5px 20px;
     border-radius: 30px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
