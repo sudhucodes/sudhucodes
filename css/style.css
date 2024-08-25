@@ -1449,5 +1449,5 @@ body::-webkit-scrollbar-track {
   background: linear-gradient(to right, #24B0FF, #B415FF);
   background-clip: text;
   color: transparent;
-  font-weight: 500;
+  font-weight: 600;
 }
