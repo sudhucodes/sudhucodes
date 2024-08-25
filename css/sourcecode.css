@@ -325,8 +325,8 @@ body {
   
   .btn-copy {
     /* button */
-    --button-bg: #353434;
-    --button-hover-bg: #464646;
+    --button-bg: #24233b;
+    --button-hover-bg: #24233b;
     --button-text-color: #cccccc;
     --button-hover-text-color: #8bb9fe;
     --button-border-radius: 10px;
@@ -360,6 +360,7 @@ body {
     border: none;
     cursor: pointer;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
     outline: none;
   }
   
