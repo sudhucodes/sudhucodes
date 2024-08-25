@@ -26,7 +26,8 @@
         <p><img src="../images/Multi-Step-Form.png" height="150px"></p>
     </div>
     <div class="source-code">
-        <p onclick="downloadmultiZip()"><img src="../images/project_assets.e50333c7.png" alt="">Download Zip File</p>
+        <p onclick="Zip()"><img src="../images/zip-icon.png" alt="">Download Zip File</p>
+        <p onclick="downloadAssets()"><img src="../images/project_assets.e50333c7.png" alt="">Download Assets</p>
         <p onclick="opendemo()"><img src="../images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
     </div>
     </div>
@@ -47,7 +48,7 @@
             </div>
             <div class="title">
               <p id="title2">index.html</p>
-              <button onclick="copymultihtmlcode()" class="btn-copy multi-html-btn-copy">
+              <button onclick="copyhtmlcode()" class="btn-copy html-btn-copy">
                 <span
                   data-text-end="Copied!"
                   data-text-initial="Copy to clipboard"
@@ -101,7 +102,7 @@
           </div>
         </div>
         <div class="code-container">
-          <textarea class="area" id="multihtmlcode" name="code"
+          <textarea class="area" id="htmlcode" name="code"
 readonly="">
 
 </textarea>
@@ -123,7 +124,7 @@ readonly="">
             </div>
             <div class="title">
               <p id="title2">style.css</p>
-              <button onclick="copymulticsscode()" class="btn-copy multi-css-btn-copy">
+              <button onclick="copycsscode()" class="btn-copy css-btn-copy">
                 <span
                   data-text-end="Copied!"
                   data-text-initial="Copy to clipboard"
@@ -177,7 +178,7 @@ readonly="">
           </div>
         </div>
         <div class="code-container">
-          <textarea class="area" id="multicsscode" name="code"
+          <textarea class="area" id="csscode" name="code"
 readonly="">
 
 </textarea>
@@ -198,71 +199,64 @@ readonly="">
 </footer>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    fetch('txt_files/multi-step-form-html.txt')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('multihtmlcode').textContent = data;
-      })
-      .catch(error => console.error('Error loading the file:', error));
-  });
+  const projectName = 'Multi-Step-Form'; // Change the project name here
 
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('txt_files/multi-step-form-css.txt')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('multicsscode').textContent = data;
-      })
-      .catch(error => console.error('Error loading the file:', error));
-  });
-  function goback(){
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      window.close();
-    }
+  fetch(`txt_files/${projectName.toLowerCase()}-html.txt`)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('htmlcode').textContent = data;
+    })
+    .catch(error => console.error('Error loading the file:', error));
+
+  fetch(`txt_files/${projectName.toLowerCase()}-css.txt`)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('csscode').textContent = data;
+    })
+    .catch(error => console.error('Error loading the file:', error));
+});
+
+function goback() {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.close();
   }
-  
-  function opendemo() {
-  window.open('../live_dmo/Multi-Step-Form/index.html', '_blank'); // Open in a new window or tab
 }
-    function downloadmultiZip() {
-            var link = document.createElement('a');
-            link.href = '../Zip/Multi-Step-Form.zip';
-            link.download = 'Multi-Step-Form.zip';
-            link.click();
-        }
-function copymultihtmlcode() {
-// Get the text field
-var textArea = document.getElementById("multihtmlcode");
 
-// Select the text field
-textArea.select();
-textArea.setSelectionRange(0, 99999); // For mobile devices
-
-// Copy the text inside the text field
-document.execCommand("copy");
-
-// Change the button state to show the checkmark
-var copyButton = document.querySelector('.multi-html-btn-copy');
-copyButton.classList.add('copied');
-
+function opendemo() {
+  const projectName = 'Multi-Step-Form'; // Change the project name here
+  window.open(`../live_dmo/${projectName}/index.html`, '_blank'); // Open in a new window or tab
 }
-function copymulticsscode() {
-// Get the text field
-var textArea = document.getElementById("multicsscode");
 
-// Select the text field
-textArea.select();
-textArea.setSelectionRange(0, 99999); // For mobile devices
-
-// Copy the text inside the text field
-document.execCommand("copy");
-
-// Change the button state to show the checkmark
-var copyButton = document.querySelector('.multi-css-btn-copy');
-copyButton.classList.add('copied');
-
+function Zip() {
+  const projectName = 'Multi-Step-Form'; // Change the project name here
+  var link = document.createElement('a');
+  link.href = `../Zip/${projectName}.zip`;
+  link.download = `${projectName}.zip`;
+  link.click();
 }
+
+function copyhtmlcode() {
+  var textArea = document.getElementById("htmlcode");
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
+
+  var copyButton = document.querySelector('.html-btn-copy');
+  copyButton.classList.add('copied');
+}
+
+function copycsscode() {
+  var textArea = document.getElementById("csscode");
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
+
+  var copyButton = document.querySelector('.css-btn-copy');
+  copyButton.classList.add('copied');
+}
+
 </script>
 </body>
 </html>

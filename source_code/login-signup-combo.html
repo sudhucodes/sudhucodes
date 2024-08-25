@@ -26,7 +26,8 @@
             <p><img src="../images/Login-signup-combo.png" height="150px"></p>
         </div>
         <div class="source-code">
-            <p onclick="downloadloginsignupcomboZip()"><img src="../images/project_assets.e50333c7.png" alt="">Download Zip File</p>
+            <p onclick="Zip()"><img src="../images/zip-icon.png" alt="">Download Zip File</p>
+            <p onclick="downloadAssets()"><img src="../images/project_assets.e50333c7.png" alt="">Download Assets</p>
             <p onclick="opendemo()"><img src="../images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
         </div>
         </div>
@@ -47,7 +48,7 @@
                 </div>
                 <div class="title">
                   <p id="title2">index.html</p>
-                  <button onclick="copyloginsignupcombohtmlcode()" class="btn-copy loginsignupcombo-html-btn-copy">
+                  <button onclick="copyhtmlcode()" class="btn-copy html-btn-copy">
                     <span
                       data-text-end="Copied!"
                       data-text-initial="Copy to clipboard"
@@ -101,14 +102,14 @@
               </div>
             </div>
             <div class="code-container">
-                <textarea class="area" id="loginsignupcombohtmlcode" name="code" readonly="">
+                <textarea class="area" id="htmlcode" name="code" readonly="">
 
                 </textarea>
             </div>
         </div>
     
         <!-- Another card section for CSS with a copy button -->
-        <div class="card">
+        <div class="card"> 
             <div class="header">
               <div class="top">
                 <div class="circle">
@@ -122,7 +123,7 @@
                 </div>
                 <div class="title">
                   <p id="title2">style.css</p>
-                  <button onclick="copyloginsignupcombocsscode()" class="btn-copy loginsignupcombo-css-btn-copy">
+                  <button onclick="copycsscode()" class="btn-copy css-btn-copy">
                     <span
                       data-text-end="Copied!"
                       data-text-initial="Copy to clipboard"
@@ -176,7 +177,7 @@
               </div>
             </div>
             <div class="code-container">
-              <textarea class="area" id="loginsignupcombocsscode" name="code"
+              <textarea class="area" id="csscode" name="code"
     readonly="">
 
     </textarea>
@@ -196,74 +197,63 @@
     <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
 </footer>
 <script>
-
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('txt_files/loginsignupcombohtml.txt')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('loginsignupcombohtmlcode').textContent = data;
-      })
-      .catch(error => console.error('Error loading the file:', error));
-  });
-
   document.addEventListener('DOMContentLoaded', () => {
-    fetch('txt_files/loginsignupcombocss.txt')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('loginsignupcombocsscode').textContent = data;
-      })
-      .catch(error => console.error('Error loading the file:', error));
-  });
-function goback(){
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      window.close();
-    }
+  const projectName = 'Login-Signup-Combo'; // Change the project name here
+
+  fetch(`txt_files/${projectName.toLowerCase()}-html.txt`)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('htmlcode').textContent = data;
+    })
+    .catch(error => console.error('Error loading the file:', error));
+
+  fetch(`txt_files/${projectName.toLowerCase()}-css.txt`)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('csscode').textContent = data;
+    })
+    .catch(error => console.error('Error loading the file:', error));
+});
+
+function goback() {
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.close();
   }
-  
-function opendemo() {
-  window.open('../live_dmo/Login & SignUp page combo/index.html', '_blank'); // Open in a new window or tab
 }
 
-function downloadloginsignupcomboZip() {
+function opendemo() {
+  const projectName = 'Login-Signup-Combo'; // Change the project name here
+  window.open(`../live_dmo/${projectName}/index.html`, '_blank'); // Open in a new window or tab
+}
+
+function Zip() {
+  const projectName = 'Login-Signup-Combo'; // Change the project name here
   var link = document.createElement('a');
-  link.href = '../Zip/Login-signup-cobo.zip';
-  link.download = 'Login-signup-cobo.zip';
+  link.href = `../Zip/${projectName}.zip`;
+  link.download = `${projectName}.zip`;
   link.click();
 }
 
-function copyloginsignupcombohtmlcode() {
-// Get the text field
-var textArea = document.getElementById("loginsignupcombohtmlcode");
+function copyhtmlcode() {
+  var textArea = document.getElementById("htmlcode");
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
 
-// Select the text field
-textArea.select();
-textArea.setSelectionRange(0, 99999); // For mobile devices
-
-// Copy the text inside the text field
-document.execCommand("copy");
-
-// Change the button state to show the checkmark
-var copyButton = document.querySelector('.loginsignupcombo-html-btn-copy');
-copyButton.classList.add('copied');
-
+  var copyButton = document.querySelector('.html-btn-copy');
+  copyButton.classList.add('copied');
 }
-function copyloginsignupcombocsscode() {
-// Get the text field
-var textArea = document.getElementById("loginsignupcombocsscode");
 
-// Select the text field
-textArea.select();
-textArea.setSelectionRange(0, 99999); // For mobile devices
+function copycsscode() {
+  var textArea = document.getElementById("csscode");
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); // For mobile devices
+  document.execCommand("copy");
 
-// Copy the text inside the text field
-document.execCommand("copy");
-
-// Change the button state to show the checkmark
-var copyButton = document.querySelector('.loginsignupcombo-css-btn-copy');
-copyButton.classList.add('copied');
-
+  var copyButton = document.querySelector('.css-btn-copy');
+  copyButton.classList.add('copied');
 }
 </script>
 </body>
