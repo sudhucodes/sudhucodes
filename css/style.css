@@ -753,10 +753,10 @@ hr{
 }
 
 
-.project-buttons button i{
-  font-size: 20px;
+.project-buttons button img{
+  height: 18px;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 6px;
   text-align: center;
 }
 
@@ -1188,10 +1188,12 @@ body::-webkit-scrollbar-track {
   text-align: center;
   margin-left: 5px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .code-buy-now-btn p {
   text-wrap: nowrap;
+  
   margin: 0;
   font-size: 11px;
   background-color: var(--body-color);
