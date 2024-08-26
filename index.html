@@ -29,42 +29,42 @@
     <ul class="nav-links" id="nav-links">
       <li>
         <a data-page="allprojects" class="a1" href="#" onclick="showProjects()"><i id="navigator" class="fa-solid fa-square"></i><img src="images/projects.af28bec5.png" height="19px">All Projects <div class="img">
-                <p class="avilable">6</p>
+                <p id="all-project-count" class="avilable"></p>
                 <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
             </div>
         </a>
       </li>
       <li>
         <a data-page="getcertificate" class="a2" href="#"><i id="navigator1" class="fa-solid fa-square"></i><img src="images/get_certified.38ee65f4.png" height="24px">Get Certificate <div class="img">
-                <p class="avilable">6</p>
+                <p id="all-quiz-count" class="avilable"></p>
                 <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
             </div>
         </a>
       </li>
       <li>
         <a data-page="cources" class="a3" href="#"><i id="navigator2" class="fa-solid fa-square"></i><img src="images/free_courses.65673ec2.png" height="19px">Courses <div class="img">
-                <p class="avilable">5</p>
+                <p id="all-cource-count" class="avilable"></p>
                 <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
             </div>
         </a>
       </li>
       <li>
         <a data-page="sourcecode" class="a4" href="#"><i id="navigator3" class="fa-solid fa-square"></i><img src="images/code_icon.9a2f1184.svg" height="20px">Source Code <div class="img">
-                <p class="avilable">8</p>
+                <p id="all-sourcecode-count" class="avilable"></p>
                 <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
             </div>
         </a>
       </li>
       <li>
         <a data-page="projectassets" class="a5" href="#"><i id="navigator4" class="fa-solid fa-square"></i><img src="images/project_assets.e50333c7.png" height="20px">Project Assets <div class="img">
-                <p class="avilable">8</p>
+                <p id="all-projectassets-count" class="avilable"></p>
                 <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
             </div>
         </a>
       </li>
       <li>
         <a data-page="stockimages" class="a6" href="#"><i id="navigator5" class="fa-solid fa-square"></i><img src="images/stock_pics.11d1f984.png" height="20px">Stock Images <div class="img">
-                <p class="avilable">3</p>
+                <p id="all-stockimages-count" class="avilable"></p>
                 <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
             </div>
         </a>
@@ -108,6 +108,7 @@
       <div class="html-css project-section">
         <h1>HTML & CSS Projects</h1>
         <div class="login-page">
+          <a target="_blank" href="source_code/card-design-1.html"><img src="images/Card-Design-1.png" height="150px" alt="Card Design 1"></a>
           <a target="_blank" href="source_code/Glass-Login-Form.html"><img src="images/Glassmorphism-Login-Form.jpg" height="150px" alt="Login Page"></a>
           <a target="_blank" href="source_code/login-signup-combo.html"><img src="images/Login-signup-combo.png" height="150px" alt="Login Page"></a>
           <a target="_blank" href="source_code/login-page.html"><img src="images/Login-Page.png" height="150px" alt="Login Page"></a>
@@ -379,7 +380,7 @@
 
 <!-- -------------project Assets------------- -->
     <div id="projectassets" class="page">
-      <div class="main-container">
+      <div class="main-container assets-container">
         <div class="search-box">
           <div class="search-item">
               <div class="search-icon">
@@ -490,7 +491,7 @@
 <!-- -------------Stock Images------------- -->
     <div id="stockimages" class="page">
       <div class="stock-main">
-        <div>
+        <div class="stock-image-div">
           <p class="stock-title">Stock Images</p>
           <div class="stock-image-links">
             <a target="_blank" href="https://unsplash.com/"><img height="19px" src="images/redirect_icon.a05a35c3.svg" alt=""><p>Unsplash</p></a>
@@ -498,14 +499,14 @@
             <a target="_blank" href="https://pixabay.com/"><img height="19px" src="images/redirect_icon.a05a35c3.svg" alt=""><p>Pixabay</p></a>
           </div>
         </div>
-        <div>
+        <div class="stock-image-div">
           <p class="stock-icon-title">Stock Icon</p>
           <div class="stock-image-links">
             <a target="_blank" href="https://icons8.com/"><img height="19px" src="images/redirect_icon.a05a35c3.svg" alt=""><p>Icons8</p></a>
             <a target="_blank" href="https://www.flaticon.com/"><img height="19px" src="images/redirect_icon.a05a35c3.svg" alt=""><p>Flaticon</p></a>
           </div>
         </div>
-        <div>
+        <div class="stock-image-div">
           <p class="stock-icon-title">Stock Illustration</p>
           <div class="stock-image-links">
             <a target="_blank" href="https://undraw.co/illustrations"><img height="19px" src="images/redirect_icon.a05a35c3.svg" alt=""><p>Undraw</p></a>
