@@ -370,87 +370,119 @@ span{
 }
 
 .start-certificate {
-margin-top: 20px;
-position: relative;
-width: 370px;
-height: 260px;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  margin-top: 20px;
+  position: relative;
+  width: 370px;
+  height: 208px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .start-certificate img {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%; /* Adjust width automatically */
-height: 100%; /* Fill the height of the container */
-object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
 }
+
 
 .certificatedetails {
 position: relative;
 width: 100%;
 height: 100%;
-color: white;
+color: #3e328f;
 }
 
-
+.certificate-logo{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-top: -1px;
+  margin-left: 55px;
+}
+.certificate-logo img{
+  position: relative;
+  height: 18px;
+}
+.certificate-logo p{
+  font-weight: 600;
+  border-bottom: 1px solid #6726ff;
+  font-size: 13px;
+}
+.certificate-main-title{
+  font-size: 11px;
+  position: absolute;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 58px;
+}
 .certificate-sub-title {
 position: absolute;
-top: 90px; 
-left: 50%; 
-transform: translateX(-50%);
+top: 82px; 
+left: 3px; 
+transform: translateX(-60px);
+font-weight: 500;
 width: 100%;
-font-size: 9px; 
+font-size: 8.5px; 
 }
-
+.frontend-project{
+  color: #007bff;
+}
 .certificate-name {
 position: absolute;
-top: 90px;
-color: #e4bd5a;
+top: 89px;
 left: 50%;
-transform: translateX(-50%);
+transform: translateX(-66%);
 width: 100%;
-font-size: 28px;
-font-family: "Pinyon Script", cursive;
+font-size: 17px;
 font-weight: 500;
 }
 
 .certificate-description {
 position: absolute;
-top: 151px;
+top: 122px;
+font-weight: 500;
 left: 50%;
-transform: translateX(-50%);
+transform: translateX(-61%);
 width: 100%;
-font-size: 9px;
+font-size: 8px;
 }
 
 .issue-date {
 position: absolute;
-bottom: 44px;
+bottom: 22px;
 display: grid;
 align-items: center;
 text-align: center;
 justify-content: center;
-height: 30px;
-width: 58px;
-right: 70px; 
+height: 20px;
+right: 20px; 
 font-size: 6px;
+}
+
+.issue-date-flex{
+  display: flex;
+  gap: 2px;
 }
 
 .certificate-instructor{
 position: absolute;
-bottom: 34px;
-left: 65px; 
-font-size: 7px;
+bottom: 7px;
+left: 59px; 
+font-size: 8px;
 }
 .certificate-instructor-sign{
 position: absolute;
 font-family: "Style Script", cursive;
 font-weight: 400;
-bottom: 46px;
-left: 68px; 
+bottom: 14px;
+left: 59px; 
 font-size: 11px;
 }
 

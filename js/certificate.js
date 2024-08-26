@@ -356,7 +356,7 @@ function downloadCertificate() {
     const certificateElement = document.getElementById('certificate');
     
     html2canvas(certificateElement, {
-        scale: 4 // Increase scale to improve resolution
+        scale: 6 // Increase scale to improve resolution
     }).then(canvas => {
         const imgData = canvas.toDataURL('image/png', 1.0); // 1.0 for full quality
         
