@@ -79,19 +79,16 @@ span{
   width: 100%;
 }
 
-.nav-links .i {
+.nav-links i{
   color: var(--half-logo-color);
   text-align: start;
   position: absolute;
   left: 0;
-  height: 52px;
-  background-color: var(--half-logo-color);
-  border-radius: 0 15px 15px 0;
+  rotate: 180deg;
+  font-size: 60px;
   width: 7px;
   display: block;
   overflow: hidden;
-  object-fit: cover; /* Ensures the image covers the width */
-  object-position: right; /* Crops the image from the right side */
 }
 
 .nav-links a {
@@ -388,9 +385,17 @@ span{
   .nav-arrow{
     display: none;
   }
-.nav-links .i {
-  height: 47px !important;
-}
+  .nav-links i{
+    color: var(--half-logo-color);
+    text-align: start;
+    position: absolute;
+    left: 0;
+    rotate: 180deg;
+    font-size: 55px;
+    width: 5px;
+    display: block;
+    overflow: hidden;
+  }
   .avilable{
     display: none;
   }
