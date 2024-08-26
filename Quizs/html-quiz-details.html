@@ -28,6 +28,7 @@
     top: 0;
     z-index: 1000; /* Optional: Ensure it stays on top of other elements */
     height: 40px;
+    /* border-bottom: 1px solid #373F62; */
     overflow: hidden;
   }
   
@@ -78,9 +79,17 @@
             border-radius: 10px;
             max-width: 800px;
         }
-        .container h1{
+        .container .title{
+          display: grid;
+          padding: 20px;
+          background-color: #0d1224;
+          width: 90%;
+          border-radius: 10px;
+        }
+        .container .title h1{
           font-weight: 500;
           margin: 0;
+          font-size: 25px;
           padding: 0;
           color: #067ff8;
         }
@@ -88,20 +97,21 @@
           font-weight: 500;
           color: #34495e;
         }
+        #score{
+          padding: 0;
+          margin: 0px;
+        }
         .container p{
           font-weight: 400;
           color: #7f8c8d;
         }
 
-        #score{
-          padding: 0;
-          margin: 5px;
-        }
         .section{
             padding: 10px;
             padding-left: 20px;
             padding-right: 20px;
             border-radius: 5px;
+            border: 1px solid #0d1224;
             width: 300px;
             background-color: #fff
             
@@ -112,18 +122,7 @@
             padding-right: 20px;
             width: 300px;
         }
-        .section button {
-            color: #4F46E5;
-            border: 2px solid #4F46E5;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
 
-        .section button:hover, .container button:hover{
-            background-color: rgba(255, 255, 255, 0.2); 
-        }
 
         .section h2{
             margin: 5px;
@@ -131,11 +130,11 @@
         .container button{
             border: 2px solid #4F46E5;
             padding: 10px 20px;
-            color: #4F46E5;
+            color: #fff;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #4F46E5;
         }
         .question-details, .attempted-questions, .incorrect-questions, .skipped-questions {
             text-align: left;
@@ -204,8 +203,10 @@ footer p{
       </nav>
     <div class="projects">
         <div class="container">
-            <h1>Quiz Details</h1>
-            <p id="score"></p>
+            <div class="title">
+              <h1>Quiz Details</h1>
+              <p id="score"></p>
+            </div>
             <div class="section">
                 <h2>Attempted Questions</h2>
                 <p id="attemptedQuestions"></p>

@@ -452,6 +452,12 @@ body {
   .navbar{
     height: 50px;
   }
+  .navbar .logo {
+    color: var(--text-color-white);
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+  }
   .html-css2{
     padding: 3rem;
     padding-top: 1rem;
@@ -549,10 +555,12 @@ body {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 6px;
+  cursor: default;
 }
 
 *::-webkit-scrollbar-track {
   border-radius: 6px;
+  cursor: default;
 }
 
 }
