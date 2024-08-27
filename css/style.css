@@ -272,12 +272,19 @@ span{
   position: relative;
   background-color: #878bff08;
   align-items: center;
-  height: 54vh;
+  height: auto;
   width: 366px;
   justify-content: right;
   text-align: right;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.explore .explore-img{
+  display: flex;
+}
+.explore .explore-img img{
+  margin: 0;
+  width: 100%;
 }
 
 .explorebtn{
@@ -322,15 +329,7 @@ span{
   transform: rotate(90deg);
 }
 
-.explore img{
-  position: absolute;
-  bottom: 0;
-  margin-top: 20px;
-  border-radius: 5px;
-  width: 350px;
-  margin: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
+
 
 }
 
@@ -483,13 +482,21 @@ span{
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 40px 0px 0px 20px;
     background-color: #878bff08;
     margin: 20px 80px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     grid-template-columns: repeat(2, 1fr); /* Creates 3 equal columns */
     gap: 20px; /* Space between grid items */
+  }
+
+  .explore .explore-img{
+    display: flex;
+  }
+  .explore .explore-img img{
+    margin: 0;
+    width: 100%;
   }
   
   .explorebtn{
@@ -531,14 +538,6 @@ span{
   
   .explorebtn button:hover span2 {
     transform: rotate(90deg);
-  }
-  
-  .explore img{
-    width: 100%;
-    height: auto !important;
-    box-sizing: border-box;
-    transition: 0.4s;
-    border-radius: 4px;
   }
   
 
