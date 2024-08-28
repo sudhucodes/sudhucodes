@@ -1084,6 +1084,7 @@ body::-webkit-scrollbar-track {
 .main-container{
   display: grid;
   padding: 10px;
+  padding-bottom: 50px;
 }
 
 .container:hover{
