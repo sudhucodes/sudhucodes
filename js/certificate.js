@@ -230,7 +230,7 @@ function showResults() {
 
     const percentage = (score / questions.length) * 100;
     let feedback = '';
-    let certificateGenerated = false; // New flag to track if certificate should be generated
+    let certificateGenerated = false;
 
     if (percentage < 50) {
         feedback = 'Very Bad. Improve Yourself! <br>';
@@ -246,40 +246,55 @@ function showResults() {
     document.querySelector('.navigation-buttons').style.display = 'none';
     document.getElementById('resultCertificateContainer').style.display = 'block';
 
-    // Display results
     const resultElement = document.getElementById('results');
     if (resultElement) {
         resultElement.innerHTML = `
             <p>Your Score: ${percentage.toFixed(2)}%</p>
             <p>${feedback} ${userName}</p>
         `;
-    } else {
-        console.error('results element not found in the DOM.');
     }
 
-    // Display attempted, incorrect, and skipped questions
-    const attemptedQuestionsElement = document.getElementById('attemptedQuestions');
-    if (attemptedQuestionsElement) {
-        attemptedQuestionsElement.textContent = `Questions Attempted: ${attempted}`;
+    const certificateContainer = document.getElementById('certificateContainer');
+    const downloadCertificateButton = document.getElementById('downloadCertificateButton');
+
+    if (certificateGenerated) {
+        if (certificateContainer) {
+            certificateContainer.style.display = 'block';
+        }
+        if (downloadCertificateButton) {
+            downloadCertificateButton.style.display = 'inline-block';
+        }
     } else {
-        console.error('attemptedQuestions element not found in the DOM.');
+        if (certificateContainer) {
+            certificateContainer.style.display = 'none';
+        }
+        if (downloadCertificateButton) {
+            downloadCertificateButton.style.display = 'none';
+        }
     }
 
-    const incorrectAnswersElement = document.getElementById('incorrectAnswers');
-    if (incorrectAnswersElement) {
-        incorrectAnswersElement.textContent = `Incorrect Answers: ${incorrect}`;
-    } else {
-        console.error('incorrectAnswers element not found in the DOM.');
-    }
+    // Submit data to Google Sheets via Apps Script Web App
+    const formUrl = 'https://script.google.com/macros/s/AKfycbziOkCdSLJjTUfm5xFfiyKcQCxTJRzPfsNaKUWeIlDJYS5oag-UwqJbXKxkA8Q7d1Vg/exec'; // Replace with your Web App URL
+    const formData = new FormData();
+    
+    formData.append('userName', userName);
+    formData.append('attempted', attempted);
+    formData.append('score', score);
+    formData.append('incorrect', incorrect);
+    formData.append('skipped', skipped);
+    formData.append('percentage', percentage.toFixed(2));
+    formData.append('certificateGenerated', certificateGenerated ? 'Yes' : 'No');
 
-    const skippedQuestionsElement = document.getElementById('skippedQuestions');
-    if (skippedQuestionsElement) {
-        skippedQuestionsElement.textContent = `Skipped Questions: ${skipped}`;
-    } else {
-        console.error('skippedQuestions element not found in the DOM.');
-    }
+    fetch(formUrl, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+    }).then(response => {
+        console.log('Form submission success:', response);
+    }).catch(error => {
+        console.error('Form submission error:', error);
+    });
 
-    // Save results to local storage
     localStorage.setItem('quizResults', JSON.stringify({
         percentage: percentage.toFixed(2),
         attempted: attempted,
@@ -287,37 +302,8 @@ function showResults() {
         skipped: skipped,
         details: details
     }));
-
-    // Confirm data storage
-    const storedData = localStorage.getItem('quizResults');
-    console.log('Stored data:', storedData);
-
-    // Conditionally display certificate and download button
-    const certificateContainer = document.getElementById('certificateContainer');
-    const downloadCertificateButton = document.getElementById('downloadCertificateButton');
-
-    if (certificateGenerated) {
-        if (certificateContainer) {
-            certificateContainer.style.display = 'block';
-        } else {
-            console.error('certificateContainer element not found in the DOM.');
-        }
-
-        if (downloadCertificateButton) {
-            downloadCertificateButton.style.display = 'inline-block';
-        } else {
-            console.error('downloadCertificateButton element not found in the DOM.');
-        }
-    } else {
-        if (certificateContainer) {
-            certificateContainer.style.display = 'none';
-        }
-
-        if (downloadCertificateButton) {
-            downloadCertificateButton.style.display = 'none';
-        }
-    }
 }
+
 
 
 
