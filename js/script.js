@@ -212,3 +212,27 @@ updateCount('.sourcecode-container', 'all-sourcecode-count', '.container'); // C
 updateCount('.all-cource-container', 'all-cource-count', '.cource-container'); // Count .cource-container divs inside .all-cource-container
 updateCount('.assets-container', 'all-projectassets-count', '.container'); // Count .container divs inside .assets-container
 updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div'); // Count .stock-image-div elements inside .stock-main
+
+
+
+
+
+
+// Set the current version of the website
+const currentVersion = '7.8';
+
+// Check if the current version is stored in localStorage
+const seenVersion = localStorage.getItem('siteVersion');
+
+if (seenVersion !== currentVersion) {
+    // Show the overlay and "What's New" popup
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('whatsNewPopup').style.display = 'block';
+
+    // Store the current version in localStorage after closing the popup
+    document.getElementById('closePopup').addEventListener('click', function() {
+        localStorage.setItem('siteVersion', currentVersion);
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('whatsNewPopup').style.display = 'none';
+    });
+}
