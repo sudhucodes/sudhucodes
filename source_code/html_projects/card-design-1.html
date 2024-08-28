@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SudhuCodes - Glass-Login-Form Source Code</title>
-    <link rel="stylesheet" href="../css/sourcecode.css">
-    <link rel="shortcut icon" href="../images/logo_black.png" type="image/x-icon">
+    <title>SudhuCodes - Card-Design-1 Source Code</title>
+    <link rel="stylesheet" href="/sudhucodes/css/sourcecode.css">
+    <link rel="shortcut icon" href="/sudhucodes/images/logo_black.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
@@ -20,15 +20,15 @@
       </nav>
       
       <div class="html-css2 project-section">
-        <h1>Glass-Login-Form</h1>
+        <h1>Card-Design</h1>
         <div class="image-flex">
           <div class="login-page">
-            <p><img src="../images/Glassmorphism-Login-Form.jpg" height="150px"></p>
+            <p><img src="/sudhucodes/images/Card-Design-1.png" height="150px"></p>
         </div>
         <div class="source-code">
-            <p onclick="Zip()"><img src="../images/zip-icon.png" alt="">Download Zip File</p>
-            <p onclick="downloadAssets()"><img src="../images/project_assets.e50333c7.png" alt="">Download Assets</p>
-            <p onclick="opendemo()"><img src="../images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
+            <p onclick="Zip()"><img src="/sudhucodes/images/zip-icon.png" alt="">Download Zip File</p>
+            <p onclick="downloadAssets()"><img src="/sudhucodes/images/project_assets.e50333c7.png" alt="">Download Assets</p>
+            <p onclick="opendemo()"><img src="/sudhucodes/images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
         </div>
         </div>
     <div class="card-flex">
@@ -201,16 +201,16 @@
 </footer>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-  const projectName = 'Glass-Login-Form'; // Change the project name here
+  const projectName = 'Card-Design-1'; // Change the project name here
 
-  fetch(`txt_files/${projectName.toLowerCase()}-html.txt`)
+  fetch(`html_txt_files/${projectName.toLowerCase()}-html.txt`)
     .then(response => response.text())
     .then(data => {
       document.getElementById('htmlcode').textContent = data;
     })
     .catch(error => console.error('Error loading the file:', error));
 
-  fetch(`txt_files/${projectName.toLowerCase()}-css.txt`)
+  fetch(`html_txt_files/${projectName.toLowerCase()}-css.txt`)
     .then(response => response.text())
     .then(data => {
       document.getElementById('csscode').textContent = data;
@@ -227,14 +227,14 @@ function goback() {
 }
 
 function opendemo() {
-  const projectName = 'Glass-Login-Form'; // Change the project name here
-  window.open(`../live_dmo/${projectName}/index.html`, '_blank'); // Open in a new window or tab
+  const projectName = 'Card-Design-1'; // Change the project name here
+  window.open(`/sudhucodes/live_dmo/html_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
 }
 
 function Zip() {
-  const projectName = 'Glass-Login-Form'; // Change the project name here
+  const projectName = 'Card-Design-1'; // Change the project name here
   var link = document.createElement('a');
-  link.href = `../Zip/${projectName}.zip`;
+  link.href = `/sudhucodes/Zip/${projectName}.zip`;
   link.download = `${projectName}.zip`;
   link.click();
 }

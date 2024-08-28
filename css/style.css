@@ -772,11 +772,20 @@ hr{
   color: yellow;
 }
 
-.full-stack, .react, .html-css, .javascript {
+.html-css{
   display: none; /* Hide all sections by default */
   color: var(--text-color-white);
   margin-bottom: 0;
   padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.full-stack, .react, .javascript {
+  display: none; /* Hide all sections by default */
+  color: var(--text-color-white);
+  margin-bottom: 0;
+  padding: 20px 0;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
