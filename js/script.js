@@ -195,17 +195,20 @@ document.querySelectorAll('img').forEach(img => {
 
 // Function to count and display elements
 function updateCount(selector, targetId, elementType = '*') {
-  const container = document.querySelector(selector);
-  if (container) {
-    const count = container.querySelectorAll(elementType).length;
-    document.getElementById(targetId).innerText = count;
-  }
+  const containers = document.querySelectorAll(selector);
+  let totalCount = 0;
+  
+  containers.forEach(container => {
+    totalCount += container.querySelectorAll(elementType).length;
+  });
+
+  document.getElementById(targetId).innerText = totalCount;
 }
 
 // Update counts for each section
-updateCount('.login-page', 'all-project-count', 'a'); // Count <a> tags inside .login-page
+updateCount('.login-page', 'all-project-count', 'a'); // Sum of <a> tags inside all .login-page containers
 updateCount('.quiz-list', 'all-quiz-count', '.quiz-item'); // Count .quiz-item divs inside .quiz-list
-updateCount('.main-container', 'all-sourcecode-count', '.container'); // Count .container divs inside .main-container
+updateCount('.sourcecode-container', 'all-sourcecode-count', '.container'); // Count .container divs inside .main-container
 updateCount('.all-cource-container', 'all-cource-count', '.cource-container'); // Count .cource-container divs inside .all-cource-container
 updateCount('.assets-container', 'all-projectassets-count', '.container'); // Count .container divs inside .assets-container
-updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div'); // Count direct child <div> elements inside .stock-main
+updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div'); // Count .stock-image-div elements inside .stock-main
