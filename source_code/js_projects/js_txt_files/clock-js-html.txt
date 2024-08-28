@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #4e54c8;
+            background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+            color: #FFFFFF;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #digital-clock {
+            font-size: 4em;
+            font-weight: bold;
+            padding: 30px;
+            border-radius: 5px;
+            letter-spacing: 3px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            background: linear-gradient(to right, #787ef8, #4e54c8);
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="digital-clock"></div>
+
+    <script>
+        function updateDigitalClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const digitalClock = document.getElementById('digital-clock');
+            digitalClock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Update the digital clock every second
+        setInterval(updateDigitalClock, 1000);
+
+        // Initial update when the page loads
+        updateDigitalClock();
+    </script>
+</body>
+</html>
