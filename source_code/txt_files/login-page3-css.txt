@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #e7f6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Add padding for smaller screens */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Make container responsive */
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-section img {
+    height: 100px;
+    width: 100px;
+}
+
+.profile-section h2 {
+    font-weight: 600;
+    text-align: center; /* Center the text */
+}
+
+.form-fields {
+    padding: 2rem 0;
+    display: grid;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.input-group img {
+    height: 18px;
+    margin-top: 10px;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+    padding: 5px 0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #aaa;
+}
+
+.input-wrapper:focus-within {
+    border-bottom-color: #007BFF;
+}
+
+.input-wrapper input:hover {
+    border-bottom-color: #007BFF;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.password-toggle img {
+    height: 18px;
+    position: absolute;
+    right: 0;
+    top: 60%;
+    transform: translateY(-60%);
+    cursor: pointer;
+}
+
+
+.forgot-password {
+    text-align: right;
+    font-size: 13px;
+}
+
+.account-prompt {
+    font-size: 14px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    .profile-section img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .form-fields {
+        padding: 1.5rem 0;
+    }
+
+    .input-wrapper input {
+        font-size: 14px;
+    }
+
+    .forgot-password {
+        font-size: 12px;
+    }
+
+    .account-prompt {
+        font-size: 12px;
+        padding-top: 20px;
+    }
+}
