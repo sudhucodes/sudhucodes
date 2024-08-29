@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SudhuCodes - Login-Page Source Code</title>
-    <link rel="shortcut icon" href="/sudhucodes/images/logo_black.png" type="image/x-icon">
+    <title>SudhuCodes - Website-with-Login-Form Source Code</title>
     <link rel="stylesheet" href="/sudhucodes/css/sourcecode.css">
+    <link rel="shortcut icon" href="/sudhucodes/images/logo_black.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
@@ -20,19 +20,20 @@
       </nav>
       
       <div class="html-css2 project-section">
-        <h1>Login-Form Project</h1>
+        <h1>Website-with-Login-Form</h1>
         <div class="image-flex">
-        <div class="login-page">
-            <p><img src="/sudhucodes/images/Login-Page.png" height="150px"></p>
+          <div class="login-page">
+            <p><img src="/sudhucodes/images/Website-with-Login-Form.png" height="150px"></p>
         </div>
         <div class="source-code">
             <p onclick="Zip()"><img src="/sudhucodes/images/zip-icon.png" alt="">Download Zip File</p>
             <p onclick="downloadAssets()"><img src="/sudhucodes/images/project_assets.e50333c7.png" alt="">Download Assets</p>
             <p onclick="opendemo()"><img src="/sudhucodes/images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
-          </div>
         </div>
+        </div>
+    <div class="card-flex">
 
-        <div class="card-flex">
+
         <!-- Only one card section with a copy button -->
         <div class="card">
             <div class="header">
@@ -102,9 +103,10 @@
               </div>
             </div>
             <div class="code-container">
-                <textarea class="area" id="htmlcode" name="code" readonly="">
-                    
-                </textarea>
+              <textarea class="area" id="htmlcode" name="code"
+    readonly="">
+    
+              </textarea>
             </div>
         </div>
     
@@ -183,7 +185,8 @@
     </textarea>
             </div>
         </div>
-        </div>
+      </div>
+
     </div>
 
 <footer>
@@ -197,9 +200,8 @@
     <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
 </footer>
 <script>
-
-document.addEventListener('DOMContentLoaded', () => {
-  const projectName = 'Login-Page'; // Change the project name here
+  document.addEventListener('DOMContentLoaded', () => {
+  const projectName = 'Website-with-Login-Form'; // Change the project name here
 
   fetch(`html_txt_files/${projectName.toLowerCase()}-html.txt`)
     .then(response => response.text())
@@ -225,12 +227,12 @@ function goback() {
 }
 
 function opendemo() {
-  const projectName = 'Login-Page'; // Change the project name here
+  const projectName = 'Website-with-Login-Form'; // Change the project name here
   window.open(`/sudhucodes/live_dmo/html_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
 }
 
 function Zip() {
-  const projectName = 'Login-Page'; // Change the project name here
+  const projectName = 'Website-with-Login-Form'; // Change the project name here
   var link = document.createElement('a');
   link.href = `/sudhucodes/Zip/html_projects_zip/${projectName}.zip`;
   link.download = `${projectName}.zip`;
