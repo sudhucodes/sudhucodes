@@ -84,6 +84,13 @@ span{
   position: relative;
   width: 100%;
 }
+#nameAlert{
+  color: red;
+  margin: 0;
+  text-align: left;
+  margin-left: 5px;
+  font-size: 14px;
+}
 .select-wrapper {
   margin-top: 10px;
   position: relative;
@@ -170,6 +177,7 @@ span{
 
 .startarrow{
   font-size: 1.5rem;
+  color: #fff;
   margin-left: 5px;
 }
 
@@ -238,6 +246,7 @@ span{
 
 .question {
   font-size: 1.2em;
+  height: 50px;
   text-align: left;
   margin-bottom: 30px;
   color: #000; /* White color for better contrast */

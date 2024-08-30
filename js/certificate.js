@@ -48,7 +48,8 @@ function startQuiz() {
 
     console.log('User name:', userName);
     if (userName.trim() === '') {
-        alert('Please enter your name to start the quiz.');
+        const nameAlert = document.getElementById('nameAlert');
+        nameAlert.textContent = `Please enter your name to start the quiz.`;
         return;
     }
 
@@ -87,7 +88,7 @@ function loadQuestion() {
     document.getElementById('submitBtn').style.display = currentQuestion === questions.length - 1 ? 'inline-block' : 'none';
 }
 
-let timerDuration = 15 * 60; // 15 minutes in seconds
+let timerDuration = 10 * 60; // 15 minutes in seconds
 let timerInterval;
 
 function startTimer() {
