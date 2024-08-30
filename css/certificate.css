@@ -82,7 +82,56 @@ span{
 }
 .input-container {
   position: relative;
-  width: 100%; /* Ensure input container takes full width of the form */
+  width: 100%;
+}
+.select-wrapper {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-wrapper label{
+  margin-left: 5px;
+}
+
+.select-wrapper select {
+  padding: 0.8rem 2.3rem 0.8rem 1rem; /* Increased padding to accommodate custom arrow */
+  font-size: 1rem; /* Match font size with input */
+  border: 1px solid #e5e7eb; /* Match border with input */
+  border-radius: 0.5rem; /* Match border-radius with input */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Match box-shadow with input */
+  background-color: #fff; /* Match background color with input */
+  outline: none; /* Remove default outline */
+  box-sizing: border-box; /* Prevent padding from causing overflow */
+  appearance: none; /* Remove default styling in some browsers */
+  cursor: pointer; /* Pointer cursor for dropdown */
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0.8rem; /* Adjust to position arrow correctly */
+  top: 50%;
+  transform: translateY(-50%); /* Center arrow vertically */
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid #626cd6; /* Arrow color */
+  pointer-events: none; /* Prevent arrow from interfering with selection */
+  z-index: 1; /* Ensure arrow is above the select box */
+}
+
+.select-wrapper select:focus {
+  border-color: #626cd6; /* Match focus border color with input */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); /* Enhanced focus box-shadow */
+}
+
+/* Hide default arrow in Internet Explorer */
+.select-wrapper select::-ms-expand {
+  display: none;
 }
 
 
@@ -363,7 +412,7 @@ font-weight: 500;
 position: absolute;
 top: 122px;
 font-weight: 500;
-left: 50.5%;
+left: 53.5%;
 transform: translateX(-61%);
 width: 100%;
 font-size: 8px;

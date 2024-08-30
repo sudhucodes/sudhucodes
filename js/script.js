@@ -219,7 +219,7 @@ updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div'); // Coun
 
 
 // Set the current version of the website
-const currentVersion = '7.9';
+const currentVersion = '8.0';
 
 // Check if the current version is stored in localStorage
 const seenVersion = localStorage.getItem('siteVersion');

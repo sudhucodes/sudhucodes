@@ -1,124 +1,65 @@
-const questions = [
-    {
-        question: "What is the correct HTML tag for the largest heading?",
-        options: ["&lt;h1&gt;", "&lt;h6&gt;", "&lt;heading&gt;", "&lt;head&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which HTML element is used to specify a footer?",
-        options: ["&lt;footer&gt;", "&lt;bottom&gt;", "&lt;end&gt;", "&lt;foot&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which attribute specifies the destination of a link?",
-        options: ["dest", "href", "link", "path"],
-        correct: 1
-    },
-    {
-        question: "Which attribute is used for image alt text?",
-        options: ["title", "alt", "src", "desc"],
-        correct: 1
-    },
-    {
-        question: "What is the correct HTML tag for an inline frame?",
-        options: ["&lt;iframe&gt;", "&lt;frame&gt;", "&lt;embed&gt;", "&lt;object&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which attribute defines inline styles?",
-        options: ["class", "style", "id", "inline"],
-        correct: 1
-    },
-    {
-        question: "Which HTML5 tag is used for navigation?",
-        options: ["&lt;nav&gt;", "&lt;menu&gt;", "&lt;links&gt;", "&lt;navigation&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which tag is used for audio files?",
-        options: ["&lt;audio&gt;", "&lt;sound&gt;", "&lt;music&gt;", "&lt;voice&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which is not a self-closing tag?",
-        options: ["&lt;img&gt;", "&lt;br&gt;", "&lt;p&gt;", "&lt;hr&gt;"],
-        correct: 2
-    },
-    {
-        question: "Which attribute opens a link in a new tab?",
-        options: ["target", "new", "rel", "link"],
-        correct: 0
-    },
-    {
-        question: "Which element is not semantic?",
-        options: ["&lt;article&gt;", "&lt;section&gt;", "&lt;div&gt;", "&lt;header&gt;"],
-        correct: 2
-    },
-    {
-        question: "Which attribute makes an input required?",
-        options: ["required", "validate", "mandatory", "compulsory"],
-        correct: 0
-    },
-    {
-        question: "Which tag creates a drop-down list?",
-        options: ["&lt;select&gt;", "&lt;list&gt;", "&lt;dropdown&gt;", "&lt;menu&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which attribute merges table cells horizontally?",
-        options: ["colspan", "rowspan", "merge", "colmerge"],
-        correct: 0
-    },
-    {
-        question: "Which tag defines the main content?",
-        options: ["&lt;main&gt;", "&lt;body&gt;", "&lt;content&gt;", "&lt;primary&gt;"],
-        correct: 0
-    },
-    // New questions
-    {
-        question: "Which HTML tag is used to create a numbered list?",
-        options: ["&lt;ol&gt;", "&lt;ul&gt;", "&lt;li&gt;", "&lt;list&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which attribute is used to specify the language of an HTML document?",
-        options: ["lang", "dir", "xml:lang", "locale"],
-        correct: 2
-    },
-    {
-        question: "Which tag is used to define a hyperlink?",
-        options: ["&lt;a&gt;", "&lt;link&gt;", "&lt;href&gt;", "&lt;url&gt;"],
-        correct: 2
-    },
-    {
-        question: "Which tag is used to define a table cell?",
-        options: ["&lt;td&gt;", "&lt;tr&gt;", "&lt;th&gt;", "&lt;cell&gt;"],
-        correct: 0
-    },
-    {
-        question: "Which tag is used to define an image map?",
-        options: ["&lt;map&gt;", "&lt;imgmap&gt;", "&lt;imagemap&gt;", "&lt;maparea&gt;"],
-        correct: 3
-    }
-
-];
+const questionsByLevel = {
+    1: [
+        { question: "What is the correct HTML tag for the largest heading?", options: ["&lt;h1&gt;", "&lt;h6&gt;", "&lt;heading&gt;", "&lt;head&gt;"], correct: 0 },
+        { question: "Which HTML element is used to specify a footer?", options: ["&lt;footer&gt;", "&lt;bottom&gt;", "&lt;end&gt;", "&lt;foot&gt;"], correct: 0 },
+        { question: "Which attribute specifies the destination of a link?", options: ["dest", "href", "link", "path"], correct: 1 },
+        { question: "Which attribute is used for image alt text?", options: ["title", "alt", "src", "desc"], correct: 1 },
+        { question: "What is the correct HTML tag for an inline frame?", options: ["&lt;iframe&gt;", "&lt;frame&gt;", "&lt;embed&gt;", "&lt;object&gt;"], correct: 0 },
+        { question: "Which attribute defines inline styles?", options: ["class", "style", "id", "inline"], correct: 1 },
+        { question: "Which HTML5 tag is used for navigation?", options: ["&lt;nav&gt;", "&lt;menu&gt;", "&lt;links&gt;", "&lt;navigation&gt;"], correct: 0 },
+        { question: "Which tag is used for audio files?", options: ["&lt;audio&gt;", "&lt;sound&gt;", "&lt;music&gt;", "&lt;voice&gt;"], correct: 0 },
+        { question: "Which is not a self-closing tag?", options: ["&lt;img&gt;", "&lt;br&gt;", "&lt;p&gt;", "&lt;hr&gt;"], correct: 2 },
+        { question: "Which attribute opens a link in a new tab?", options: ["target", "new", "rel", "link"], correct: 0 },
+        { question: "Which element is not semantic?", options: ["&lt;article&gt;", "&lt;section&gt;", "&lt;div&gt;", "&lt;header&gt;"], correct: 2 },
+        { question: "Which attribute makes an input required?", options: ["required", "validate", "mandatory", "compulsory"], correct: 0 },
+        { question: "Which tag creates a drop-down list?", options: ["&lt;select&gt;", "&lt;list&gt;", "&lt;dropdown&gt;", "&lt;menu&gt;"], correct: 0 },
+        { question: "Which attribute merges table cells horizontally?", options: ["colspan", "rowspan", "merge", "colmerge"], correct: 0 },
+        { question: "Which tag defines the main content?", options: ["&lt;main&gt;", "&lt;body&gt;", "&lt;content&gt;", "&lt;primary&gt;"], correct: 0 }
+    ],
+    2: [
+        { question: "Which HTML element is used to embed SVG graphics?", options: ["&lt;svg&gt;", "&lt;embed&gt;", "&lt;object&gt;", "&lt;graphic&gt;"], correct: 0 },
+        { question: "Which attribute is used to define a video source in HTML5?", options: ["src", "source", "video-src", "media"], correct: 1 },
+        { question: "Which HTML tag is used to create a form control that lets users enter text?", options: ["&lt;input&gt;", "&lt;textarea&gt;", "&lt;textfield&gt;", "&lt;textbox&gt;"], correct: 1 },
+        { question: "Which HTML5 attribute can be used to specify that an input field is a number?", options: ["type='number'", "number='true'", "data-type='number'", "inputtype='number'"], correct: 0 },
+        { question: "What is the default value of the 'position' property in CSS?", options: ["static", "relative", "absolute", "fixed"], correct: 0 },
+        { question: "Which CSS property is used to change the font of an element?", options: ["font-family", "font-style", "font-weight", "text-font"], correct: 0 },
+        { question: "Which CSS selector is used to target the first child element of its parent?", options: [":first-child", ":nth-child(1)", ":child(1)", ":first-of-type"], correct: 0 },
+        { question: "Which CSS property is used to change the text color of an element?", options: ["color", "text-color", "font-color", "background-color"], correct: 0 },
+        { question: "Which attribute is used to specify the maximum length of an input field in HTML5?", options: ["maxlength", "length", "max", "limit"], correct: 0 },
+        { question: "What is the purpose of the 'data-' attribute in HTML?", options: ["To store custom data", "To define styles", "To create forms", "To embed scripts"], correct: 0 },
+        { question: "Which CSS property controls the spacing between lines of text?", options: ["line-height", "text-spacing", "letter-spacing", "word-spacing"], correct: 0 },
+        { question: "Which HTML tag is used to define an unordered list?", options: ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;list&gt;", "&lt;dl&gt;"], correct: 0 },
+        { question: "Which CSS pseudo-class is used to select elements when the user mouses over them?", options: [":hover", ":focus", ":active", ":visited"], correct: 0 },
+        { question: "Which HTML tag defines a section in a document?", options: ["&lt;section&gt;", "&lt;div&gt;", "&lt;article&gt;", "&lt;group&gt;"], correct: 0 },
+        { question: "Which property is used to set the width of an element's border in CSS?", options: ["border-width", "border-size", "border-thickness", "border-line"], correct: 0 }
+    ]
+};
 
 
+let selectedLevel = 1; // Default level
 let currentQuestion = 0;
-let selectedOptions = Array(questions.length).fill(-1);
+let selectedOptions = Array(20).fill(-1); // Adjust the size based on the number of questions per level
 let userName = '';
 
 function startQuiz() {
     console.log('Start Quiz button clicked');
     userName = document.getElementById('userNameInput').value;
+    selectedLevel = parseInt(document.getElementById('levelSelect').value);
+
     console.log('User name:', userName);
     if (userName.trim() === '') {
         alert('Please enter your name to start the quiz.');
         return;
     }
+
     document.querySelector('.start-container').style.display = 'none';
     document.querySelector('.quiz-container').style.display = 'block';
     document.querySelector('.navbar').style.display = 'flex';
+
+    // Load questions based on the selected level
+    questions = questionsByLevel[selectedLevel];
+
+    selectedOptions = Array(questions.length).fill(-1);
     loadQuestion();
     startTimer();
 }
@@ -202,6 +143,9 @@ function showResults() {
     let incorrect = 0;
     let skipped = 0;
     const details = [];
+    
+    // Get the selected level from the dropdown
+    const selectedLevel = document.getElementById('levelSelect').value;
 
     for (let i = 0; i < questions.length; i++) {
         if (selectedOptions[i] !== -1) {
@@ -273,8 +217,7 @@ function showResults() {
         }
     }
 
-    // Submit data to Google Sheets via Apps Script Web App
-    const formUrl = 'https://script.google.com/macros/s/AKfycbziOkCdSLJjTUfm5xFfiyKcQCxTJRzPfsNaKUWeIlDJYS5oag-UwqJbXKxkA8Q7d1Vg/exec'; // Replace with your Web App URL
+    const formUrl = 'https://script.google.com/macros/s/AKfycbwlxbO-eMnpn97XPKulL5Sw4Dlnjz2yb9qPkYKkdtfLGB3vSW8UKxbmNH3Fd-UgY0EiqA/exec';
     const formData = new FormData();
     
     formData.append('userName', userName);
@@ -283,7 +226,13 @@ function showResults() {
     formData.append('incorrect', incorrect);
     formData.append('skipped', skipped);
     formData.append('percentage', percentage.toFixed(2));
-    formData.append('certificateGenerated', certificateGenerated ? 'Yes' : 'No');
+    formData.append('level', selectedLevel); // Add selected level to form data
+
+    if (percentage >= 75) {
+        formData.append('certificateGenerated', 'Yes');
+    } else {
+        formData.append('certificateGenerated', 'No');
+    }
 
     fetch(formUrl, {
         method: 'POST',
@@ -300,9 +249,13 @@ function showResults() {
         attempted: attempted,
         incorrect: incorrect,
         skipped: skipped,
-        details: details
+        details: details,
+        level: selectedLevel  // Store selected level in local storage
     }));
 }
+
+
+
 
 
 
@@ -314,9 +267,8 @@ function toggleDetails() {
 
 function generateCertificate() {
     const userNameElement = document.getElementById('userName');
-    console.log('userNameElement:', userNameElement); // Debugging statement
     const currentDateElement = document.getElementById('currentDate');
-    console.log('currentDateElement:', currentDateElement); // Debugging statement
+    const levelElement = document.getElementById('level'); // Assuming you add this element for level
 
     if (userNameElement) {
         userNameElement.textContent = userName;
@@ -332,6 +284,12 @@ function generateCertificate() {
         currentDateElement.textContent = `${day} ${month} ${year}`;
     } else {
         console.error('currentDate element not found in the DOM.');
+    }
+
+    if (levelElement) {
+        levelElement.textContent = `Level ${selectedLevel}`;
+    } else {
+        console.error('level element not found in the DOM.');
     }
 
     document.getElementById('certificateContainer').style.display = 'block';

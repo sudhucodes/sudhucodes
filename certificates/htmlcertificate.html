@@ -26,13 +26,21 @@
         <div class="form start-container">
             <p class="form-title">Let's get started<span class="emoji">👋</span></p>
             <div class="input-container">
-                <input type="text" id="userNameInput" placeholder="Enter your name">
-             </div>
-             <!-- <div class="input-container">
-                <input placeholder="Enter your contact number" type="number">
-            </div> -->
-            <button class="submit" onclick="startQuiz()">Start the Quiz <span3 class="startarrow">&#8594;</span3></button>
-        </div>
+              <input type="text" id="userNameInput" placeholder="Enter your name">
+            </div>
+
+                <div class="select-wrapper">
+                  <label for="levelSelect">Select Level:</label>
+                <select id="levelSelect">
+                  <option value="1">Level 1</option>
+                  <option value="2">Level 2</option>
+                </select>
+              </div>
+
+            <button class="submit" onclick="startQuiz()">Start the Quiz <span class="startarrow">&#8594;</span></button>
+          </div>
+          
+        
 
         <div class="form quiz-container" style="display: none;">
             <div id="quiz"></div>
@@ -63,7 +71,7 @@
                             <p class="certificate-main-title">Certificate of Completion</p>
                             <p class="certificate-sub-title">This certificate is proudly awarded to</p>
                             <p class="certificate-name" id="userName"></p>
-                            <p class="certificate-description">For successfully completing the <span class="frontend-project">Frontend Project</span></p>
+                            <p class="certificate-description">For successfully completing the <span class="frontend-project">Frontend Project <span5 id="level"></span5></span></p>
                             <!-- Add more paragraphs/headings as needed -->
                             <p class="certificate-instructor-sign">Sudhanshu Kumar</p>
                             <p class="certificate-instructor">Instructor, SudhuCodes</p>
