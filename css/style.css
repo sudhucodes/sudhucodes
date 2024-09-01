@@ -828,7 +828,7 @@ hr{
   margin-bottom: 10px;
   height: 100%;
   border: 2px solid var(--body-color);
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .login-page a:last-child img {
