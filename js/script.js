@@ -150,7 +150,7 @@ function startQuizreact() {
 }
 
 function startQuizfullstack() {
-  window.open('certificates/comingsoon.html', '_blank');
+  window.open('certificates/fullstackcertificate.html', '_blank');
 }
 
 function logoclick() {
@@ -219,7 +219,7 @@ updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div'); // Coun
 
 
 // Set the current version of the website
-const currentVersion = '9.0';
+const currentVersion = '9.2';
 
 // Check if the current version is stored in localStorage
 const seenVersion = localStorage.getItem('siteVersion');

@@ -1,39 +1,40 @@
 const questionsByLevel = {
     1: [
-        { question: "What is the correct HTML tag for the largest heading?", options: ["&lt;h1&gt;", "&lt;h6&gt;", "&lt;heading&gt;", "&lt;head&gt;"], correct: 0 },
-        { question: "Which HTML element is used to specify a footer?", options: ["&lt;footer&gt;", "&lt;bottom&gt;", "&lt;end&gt;", "&lt;foot&gt;"], correct: 0 },
-        { question: "Which attribute specifies the destination of a link?", options: ["dest", "href", "link", "path"], correct: 1 },
-        { question: "Which attribute is used for image alt text?", options: ["title", "alt", "src", "desc"], correct: 1 },
-        { question: "What is the correct HTML tag for an inline frame?", options: ["&lt;iframe&gt;", "&lt;frame&gt;", "&lt;embed&gt;", "&lt;object&gt;"], correct: 0 },
-        { question: "Which attribute defines inline styles?", options: ["class", "style", "id", "inline"], correct: 1 },
-        { question: "Which HTML5 tag is used for navigation?", options: ["&lt;nav&gt;", "&lt;menu&gt;", "&lt;links&gt;", "&lt;navigation&gt;"], correct: 0 },
-        { question: "Which tag is used for audio files?", options: ["&lt;audio&gt;", "&lt;sound&gt;", "&lt;music&gt;", "&lt;voice&gt;"], correct: 0 },
-        { question: "Which is not a self-closing tag?", options: ["&lt;img&gt;", "&lt;br&gt;", "&lt;p&gt;", "&lt;hr&gt;"], correct: 2 },
-        { question: "Which attribute opens a link in a new tab?", options: ["target", "new", "rel", "link"], correct: 0 },
-        { question: "Which element is not semantic?", options: ["&lt;article&gt;", "&lt;section&gt;", "&lt;div&gt;", "&lt;header&gt;"], correct: 2 },
-        { question: "Which attribute makes an input required?", options: ["required", "validate", "mandatory", "compulsory"], correct: 0 },
-        { question: "Which tag creates a drop-down list?", options: ["&lt;select&gt;", "&lt;list&gt;", "&lt;dropdown&gt;", "&lt;menu&gt;"], correct: 0 },
-        { question: "Which attribute merges table cells horizontally?", options: ["colspan", "rowspan", "merge", "colmerge"], correct: 0 },
-        { question: "Which tag defines the main content?", options: ["&lt;main&gt;", "&lt;body&gt;", "&lt;content&gt;", "&lt;primary&gt;"], correct: 0 }
+        { question: "Which HTTP method is used to retrieve data from a server?", options: ["GET", "POST", "PUT", "DELETE"], correct: 0 },
+        { question: "What does 'DOM' stand for in web development?", options: ["Document Object Model", "Data Object Manager", "Document Operation Mode", "Digital Object Model"], correct: 0 },
+        { question: "Which CSS property is used to change the background color of an element?", options: ["background-color", "color", "bg-color", "background"], correct: 0 },
+        { question: "Which JavaScript function is used to parse a string to an integer?", options: ["parseInt()", "parseFloat()", "toInteger()", "Number()"], correct: 0 },
+        { question: "What does SQL stand for?", options: ["Structured Query Language", "Simple Query Language", "Sequential Query Language", "Server Query Language"], correct: 0 },
+        { question: "Which of the following is a JavaScript framework?", options: ["React", "Laravel", "Django", "Flask"], correct: 0 },
+        { question: "In Node.js, which module is used to create a server?", options: ["http", "fs", "path", "url"], correct: 0 },
+        { question: "Which of the following is used to style React components?", options: ["CSS", "SCSS", "Styled Components", "All of the above"], correct: 3 },
+        { question: "Which SQL command is used to remove a table from a database?", options: ["DROP", "DELETE", "REMOVE", "ERASE"], correct: 0 },
+        { question: "Which of the following is a NoSQL database?", options: ["MongoDB", "MySQL", "PostgreSQL", "SQLite"], correct: 0 },
+        { question: "What is the purpose of a 'package.json' file in Node.js?", options: ["To manage project dependencies", "To define CSS styles", "To store environment variables", "To configure database settings"], correct: 0 },
+        { question: "Which of the following is a frontend framework?", options: ["Angular", "Express", "Ruby on Rails", "Spring"], correct: 0 },
+        { question: "Which command is used to install a package globally in Node.js?", options: ["npm install -g", "npm install", "npm global", "npm add -g"], correct: 0 },
+        { question: "Which HTTP status code indicates a successful request?", options: ["200", "404", "500", "403"], correct: 0 },
+        { question: "Which of the following is used for version control in web development?", options: ["Git", "Docker", "Jenkins", "Webpack"], correct: 0 }
     ],
     2: [
-        { question: "Which HTML element is used to embed SVG graphics?", options: ["&lt;svg&gt;", "&lt;embed&gt;", "&lt;object&gt;", "&lt;graphic&gt;"], correct: 0 },
-        { question: "Which attribute is used to define a video source in HTML5?", options: ["src", "source", "video-src", "media"], correct: 1 },
-        { question: "Which HTML tag is used to create a form control that lets users enter text?", options: ["&lt;input&gt;", "&lt;textarea&gt;", "&lt;textfield&gt;", "&lt;textbox&gt;"], correct: 1 },
-        { question: "Which HTML5 attribute can be used to specify that an input field is a number?", options: ["type='number'", "number='true'", "data-type='number'", "inputtype='number'"], correct: 0 },
-        { question: "What is the default value of the 'position' property in CSS?", options: ["static", "relative", "absolute", "fixed"], correct: 0 },
-        { question: "Which CSS property is used to change the font of an element?", options: ["font-family", "font-style", "font-weight", "text-font"], correct: 0 },
-        { question: "Which CSS selector is used to target the first child element of its parent?", options: [":first-child", ":nth-child(1)", ":child(1)", ":first-of-type"], correct: 0 },
-        { question: "Which CSS property is used to change the text color of an element?", options: ["color", "text-color", "font-color", "background-color"], correct: 0 },
-        { question: "Which attribute is used to specify the maximum length of an input field in HTML5?", options: ["maxlength", "length", "max", "limit"], correct: 0 },
-        { question: "What is the purpose of the 'data-' attribute in HTML?", options: ["To store custom data", "To define styles", "To create forms", "To embed scripts"], correct: 0 },
-        { question: "Which CSS property controls the spacing between lines of text?", options: ["line-height", "text-spacing", "letter-spacing", "word-spacing"], correct: 0 },
-        { question: "Which HTML tag is used to define an unordered list?", options: ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;list&gt;", "&lt;dl&gt;"], correct: 0 },
-        { question: "Which CSS pseudo-class is used to select elements when the user mouses over them?", options: [":hover", ":focus", ":active", ":visited"], correct: 0 },
-        { question: "Which HTML tag defines a section in a document?", options: ["&lt;section&gt;", "&lt;div&gt;", "&lt;article&gt;", "&lt;group&gt;"], correct: 0 },
-        { question: "Which property is used to set the width of an element's border in CSS?", options: ["border-width", "border-size", "border-thickness", "border-line"], correct: 0 }
+        { question: "What is the purpose of the 'useEffect' hook in React?", options: ["To perform side effects in function components", "To manage state in class components", "To handle events in React", "To optimize performance"], correct: 0 },
+        { question: "Which of the following is true about RESTful APIs?", options: ["They are stateless", "They require XML format", "They use WebSockets", "They require OAuth2 authentication"], correct: 0 },
+        { question: "Which of the following can improve the performance of a React application?", options: ["Using React.memo", "Writing inline CSS", "Using multiple setState calls", "Avoiding use of hooks"], correct: 0 },
+        { question: "Which method is used in Node.js to read a file asynchronously?", options: ["fs.readFile()", "fs.readFileSync()", "fs.open()", "fs.read()"], correct: 0 },
+        { question: "In SQL, what does the 'JOIN' clause do?", options: ["Combines rows from two or more tables", "Deletes data from a table", "Sorts data in a table", "Filters data from a table"], correct: 0 },
+        { question: "Which of the following is a valid React lifecycle method?", options: ["componentDidMount", "componentWillUpdate", "componentShouldUpdate", "componentWillMount"], correct: 0 },
+        { question: "Which tool is commonly used for testing RESTful APIs?", options: ["Postman", "Nginx", "Webpack", "Docker"], correct: 0 },
+        { question: "What is the purpose of the 'this' keyword in JavaScript?", options: ["Refers to the current object", "Declares a variable", "Defines a function", "Calls a method"], correct: 0 },
+        { question: "Which of the following is a way to prevent SQL injection?", options: ["Using prepared statements", "Using string concatenation", "Disabling JavaScript", "Using eval()"], correct: 0 },
+        { question: "In CSS, what does the 'box-sizing' property do?", options: ["Defines how the width and height of an element are calculated", "Sets the layout model for an element", "Changes the element's display type", "Specifies the padding and margin for an element"], correct: 0 },
+        { question: "Which of the following is used to manage state in a React application?", options: ["Redux", "Express", "Node.js", "MongoDB"], correct: 0 },
+        { question: "In MongoDB, what does the '$match' stage do in an aggregation pipeline?", options: ["Filters documents", "Groups documents", "Sorts documents", "Limits the number of documents"], correct: 0 },
+        { question: "Which HTTP status code indicates 'Unauthorized' access?", options: ["401", "403", "404", "500"], correct: 0 },
+        { question: "What is the difference between '==' and '===' in JavaScript?", options: ["'==' checks for value equality, '===' checks for both value and type equality", "'==' checks for both value and type equality, '===' checks only for value equality", "'==' is for numbers, '===' is for strings", "'==' is a bitwise operator, '===' is a logical operator"], correct: 0 },
+        { question: "What is the main purpose of using Docker in web development?", options: ["To containerize applications", "To manage databases", "To write unit tests", "To deploy code to production"], correct: 0 }
     ]
 };
+
 
 
 let selectedLevel = 1; // Default level
@@ -231,7 +232,7 @@ function showResults() {
         }
     }
 
-    const formUrl = 'https://script.google.com/macros/s/AKfycbwlxbO-eMnpn97XPKulL5Sw4Dlnjz2yb9qPkYKkdtfLGB3vSW8UKxbmNH3Fd-UgY0EiqA/exec';
+    const formUrl = 'https://script.google.com/macros/s/AKfycbzbk7tjmrq4mhN1vwzcpfWdVf3jlhcDBi-fkqJmW2rHwIHXK88P_ysSoxlmuqksuSGy/exec';
     const formData = new FormData();
     
     formData.append('userName', userName);
