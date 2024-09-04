@@ -229,22 +229,8 @@ span{
   margin-bottom: 30px;
 }
 
-/* .quiz-item {
-  background-color: #1e2a48;
-  border-radius: 10px;
-  padding: 30px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-} */
 
-.quiz-item h3 {
-  margin: 0;
-  font-size: 1.5em;
-  color: var(--half-logo-color);
-}
-
-.quiz-item button {
+.quiz-list button {
   padding: 10px 15px;
   outline: none;
   display: flex;
@@ -260,7 +246,28 @@ span{
   -webkit-tap-highlight-color: transparent;
   transition: 0.3s;
 }
-.quiz-item button i{
+/* Glowing animation for the 1st and 2nd buttons */
+.quiz-list button:nth-child(1),
+.quiz-list button:nth-child(2) {
+  border: none;
+  color: var(--half-logo-color);
+  box-shadow: 0 0 7px var(--half-logo-color), 0 0 15px var(--half-logo-color),
+              0 0 20px var(--heading-color), 0 0 25px var(--heading-color);
+  animation: glowing 1.5s infinite alternate;
+}
+
+/* Keyframes for glowing effect */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 3px var(--half-logo-color);
+  }
+  100% {
+    box-shadow: 0 0 15px var(--half-logo-color), 0 0 20px var(--heading-color), 0 0 25px var(--heading-color), 0 0 30px var(--projects-heading-color);
+  }
+}
+
+
+.quiz-list button i{
   color: var(--half-logo-color);
   padding-right: 5px;
 }
@@ -553,11 +560,7 @@ span{
   }
   
   
-  .quiz-item h3 {
-    display: none;
-  }
-  
-  .quiz-item button {
+  .quiz-list button {
     padding: 10px 30px;
     outline: none;
     gap: 10px;
@@ -575,11 +578,30 @@ span{
     transition: 0.3s;
   }
   
-  .quiz-item button:hover{
+  /* Glowing animation for the 1st and 2nd buttons */
+.quiz-list button:nth-child(1),
+.quiz-list button:nth-child(2) {
+  border: none;
+  color: var(--half-logo-color);
+  box-shadow: 0 0 7px var(--half-logo-color), 0 0 15px var(--half-logo-color),
+              0 0 20px var(--heading-color), 0 0 25px var(--heading-color);
+  animation: glowing 1.5s infinite alternate;
+}
+
+/* Keyframes for glowing effect */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 3px var(--half-logo-color);
+  }
+  100% {
+    box-shadow: 0 0 15px var(--half-logo-color), 0 0 20px var(--heading-color), 0 0 25px var(--heading-color), 0 0 30px var(--projects-heading-color);
+  }
+}
+  .quiz-list button:hover{
     border-color: var(--half-logo-color);
   }
 
-  .quiz-item button i{
+  .quiz-list button i{
     color: var(--half-logo-color);
   }
 
