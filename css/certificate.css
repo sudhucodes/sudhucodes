@@ -318,6 +318,20 @@ span{
 
 .results p {
   margin: 10px 0;
+  padding: 0;
+}
+
+.results p:nth-child(1){
+  color: #007bff;
+  font-weight: 500;
+}
+.results p:nth-child(2){
+  color: #7a7e82;
+}
+.results p:nth-child(3){
+  color: #3e328f;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .certificate-container{

@@ -175,29 +175,33 @@ function showResults() {
 
     const percentage = (score / questions.length) * 100;
     let feedback = '';
+    let emoji = '';
     let certificateGenerated = false;
-
+    
     if (percentage < 50) {
         feedback = 'Very Bad. Improve Yourself! <br>';
     } else if (percentage >= 50 && percentage < 75) {
         feedback = 'Average. Keep Improving! <br>';
     } else {
         feedback = 'Congratulations!';
+        emoji = '<span class="emoji">🤩</span>';
         generateCertificate();
         certificateGenerated = true;
     }
-
+    
     document.querySelector('.quiz-container').style.display = 'none';
     document.querySelector('.navigation-buttons').style.display = 'none';
     document.getElementById('resultCertificateContainer').style.display = 'block';
-
+    
     const resultElement = document.getElementById('results');
     if (resultElement) {
         resultElement.innerHTML = `
+            <p>${feedback} ${userName} ${emoji}</p>
+            <p>${score} out of ${questions.length} answers were correct.</p>
             <p>Your Score: ${percentage.toFixed(2)}%</p>
-            <p>${feedback} ${userName}</p>
         `;
     }
+    
 
     const certificateContainer = document.getElementById('certificateContainer');
     const downloadCertificateButton = document.getElementById('downloadCertificateButton');
@@ -294,6 +298,16 @@ function generateCertificate() {
     }
 
     document.getElementById('certificateContainer').style.display = 'block';
+
+    // Stop the timer when generating the certificate
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+
+    // Hide the timer container
+    // if (timer) {
+    //     timer.style.display = 'none';
+    // }
 }
 
 
