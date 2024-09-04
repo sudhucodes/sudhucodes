@@ -88,7 +88,7 @@ function loadQuestion() {
     document.getElementById('submitBtn').style.display = currentQuestion === questions.length - 1 ? 'inline-block' : 'none';
 }
 
-let timerDuration = 10 * 60; // 15 minutes in seconds
+let timerDuration = 10 * 60; // 10 minutes in seconds
 let timerInterval;
 
 function startTimer() {
@@ -307,16 +307,6 @@ function generateCertificate() {
     }
 
     document.getElementById('certificateContainer').style.display = 'block';
-
-    // // Stop the timer when generating the certificate
-    // if (timerInterval) {
-    //     clearInterval(timerInterval);
-    // }
-
-    // // Hide the timer container
-    // if (timer) {
-    //     timer.style.display = 'none';
-    // }
 }
 
 

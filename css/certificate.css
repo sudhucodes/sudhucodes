@@ -272,6 +272,7 @@ span{
 
 .options li.selected {
   background: #007bff;
+  border-color: #007bff;
   color: white;
 }
 
@@ -495,15 +496,16 @@ font-size: 7px;
   padding-top: 10px;
   padding-bottom: 20px;
   text-align: center;
-  border: 1px solid #66666633;
+  border: 1px solid #1ff4ff61;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  backdrop-filter: blur(10px); /* Blur effect */
   overflow-y: auto;
   max-height: 80vh;
 }
 
-
+.container2 button i{
+  margin-left: 2px;
+}
 .start-container {
   margin-bottom: 20px;
 }
