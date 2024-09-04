@@ -202,6 +202,15 @@ function showResults() {
         `;
     }
     
+        // Stop the timer when generating the certificate
+        if (timerInterval) {
+            clearInterval(timerInterval);
+        }
+    
+        // Hide the timer container
+        if (timer) {
+            timer.style.display = 'none';
+        }
 
     const certificateContainer = document.getElementById('certificateContainer');
     const downloadCertificateButton = document.getElementById('downloadCertificateButton');
@@ -299,12 +308,12 @@ function generateCertificate() {
 
     document.getElementById('certificateContainer').style.display = 'block';
 
-    // Stop the timer when generating the certificate
-    if (timerInterval) {
-        clearInterval(timerInterval);
-    }
+    // // Stop the timer when generating the certificate
+    // if (timerInterval) {
+    //     clearInterval(timerInterval);
+    // }
 
-    // Hide the timer container
+    // // Hide the timer container
     // if (timer) {
     //     timer.style.display = 'none';
     // }

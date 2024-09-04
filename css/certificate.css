@@ -1,5 +1,7 @@
-body {
+*{
   font-family: "Outfit", sans-serif;
+}
+body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -332,11 +334,13 @@ span{
   color: #3e328f;
   font-size: 16px;
   font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .certificate-container{
   display: none;
   margin-bottom: 10px;
+  margin-top: -20px;
 }
 
 .certificate-container button {
