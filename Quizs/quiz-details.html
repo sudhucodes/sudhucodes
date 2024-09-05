@@ -7,190 +7,7 @@
     <link rel="shortcut icon" href="../images/logo_black.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
-    <style>
-    body {
-      font-family: "Outfit", sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background: #e7f6ff;
-    }
-    .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e7f6ff;
-    padding: 10px 30px;
-    color: #000;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Optional: Ensure it stays on top of other elements */
-    height: 40px;
-    /* border-bottom: 1px solid #373F62; */
-    overflow: hidden;
-  }
-  
-  .navbar .arrowdiv {
-    position: absolute;
-    left: 25px;
-    cursor: pointer;
-  }
-  
-  .arrowdiv {
-    padding-left: 10px;
-    color: #7f8c8d;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    padding-right: 10px;
-    font-size: 22px;
-    margin-left: -10px;
-    transition: all 0.2s ease;
-  }
-  
-  .arrowdiv:active {
-    color: #ddd; /* Change background color on click */
-    transform: scale(0.90); /* Slightly reduce the size */
-  }
-  
-  .navbar .logo {
-    color: #7f8c8d;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .navbar .logo p{
-    font-weight: 600;
-  }
-  span{
-    color: #6726ff;
-  }
-
-        .container {
-            margin: 10px;
-            padding-bottom: 20px;
-            padding: 10px;
-            padding-top: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            max-width: 800px;
-        }
-        .container .title{
-          display: grid;
-          padding: 20px;
-          background-color: #0d1224;
-          width: 90%;
-          border-radius: 10px;
-        }
-        .container .title h1{
-          font-weight: 500;
-          margin: 0;
-          font-size: 25px;
-          padding: 0;
-          color: #067ff8;
-        }
-        .container h2{
-          font-weight: 500;
-          color: #34495e;
-        }
-        #score{
-          padding: 0;
-          margin: 0px;
-        }
-        .container p{
-          font-weight: 400;
-          color: #7f8c8d;
-        }
-
-        .section{
-            padding: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
-            border-radius: 5px;
-            border: 1px solid #0d1224;
-            width: 300px;
-            background-color: #fff
-            
-        }
-        .question-details{
-            padding: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
-            width: 300px;
-        }
-
-
-        .section h2{
-            margin: 5px;
-        }
-        .container button{
-            border: 2px solid #4F46E5;
-            padding: 10px 20px;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            background-color: #4F46E5;
-        }
-        .question-details, .attempted-questions, .incorrect-questions, .skipped-questions {
-            text-align: left;
-            margin-top: 20px;
-            display: none;
-        }
-        .question-details p, .attempted-questions p, .incorrect-questions p, .skipped-questions p {
-            margin: 5px 0;
-        }
-        .correct {
-            color: #4CAF50;
-        }
-        .incorrect {
-            color: #F44336;
-        }
-        .skipped {
-            color: #FFC107;
-        }
-        .section {
-            margin: 20px 0;
-            text-align: left;
-        }
-        button {
-            margin: 5px;
-        }
-        footer {
-  color: #7f8c8d;
-  text-align: center;
-  padding: 15px;
-  margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
-  background-color: #e7f6ff; /* Footer ka background set kare */
-  width: 100%; /* Footer ko full width dena */
-  font-size: 12px;
-  display: grid;
-  gap: 10px;
-  box-sizing: border-box;
-}
-
-footer p{
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
-}
-
-.socialLinks a{
-  color: #7f8c8d;
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 300;
-}
-
-.socialLinks a:hover{
-  color: #26ffe3;
-}
-  
-    </style>
+    <link rel="stylesheet" href="quiz-details.css">
 </head>
 <body>
     <nav class="navbar">
@@ -207,27 +24,31 @@ footer p{
               <h1>Quiz Details</h1>
               <p id="score"></p>
             </div>
-            <div class="section">
+            <div class="section-flex">
+              <div class="section">
                 <h2>Attempted Questions</h2>
                 <p id="attemptedQuestions"></p>
-                <button onclick="showAttemptedQuestions()">View Questions</button>
+                <button onclick="showAttemptedQuestions()">View Questions <i class="fa fa-file-alt"></i></button>
                 <div class="attempted-questions" id="attemptedQuestionsDetails"></div>
             </div>
             <div class="section">
                 <h2>Incorrect Answers</h2>
                 <p id="incorrectAnswers"></p>
-                <button onclick="showIncorrectQuestions()">View Questions</button>
+                <button onclick="showIncorrectQuestions()">View Questions <i class="fa fa-file-alt"></i></button>
                 <div class="incorrect-questions" id="incorrectQuestionsDetails"></div>
             </div>
             <div class="section">
                 <h2>Skipped Questions</h2>
                 <p id="skippedQuestions"></p>
-                <button onclick="showSkippedQuestions()">View Questions</button>
+                <button onclick="showSkippedQuestions()">View Questions <i class="fa fa-file-alt"></i></button>
                 <div class="skipped-questions" id="skippedQuestionsDetails"></div>
             </div>
+            </div>
             <div class="btn">
-                <button onclick="toggleDetails()">Show All Questions</button>
-                <button onclick="window.history.back();">Back to Quiz</button>
+                <div>
+                  <button onclick="toggleDetails()">Show All Questions <i class="fa fa-file-alt"></i></button>
+                  <button class="back-to-quiz" onclick="window.history.back();"><i class="fa-solid fa-arrow-up-from-bracket"></i> Back to Quiz</button>
+                </div>
                 <div class="question-details" id="questionDetails"></div>
             </div>
         </div>
