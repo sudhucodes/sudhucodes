@@ -36,12 +36,9 @@ const questionsByLevel = {
     ]
 };
 
-
-
-
-let selectedLevel = 1; // Default level
+let selectedLevel = 1; 
 let currentQuestion = 0;
-let selectedOptions = Array(20).fill(-1); // Adjust the size based on the number of questions per level
+let selectedOptions = Array(20).fill(-1);
 let userName = '';
 
 function startQuiz() {
@@ -60,7 +57,6 @@ function startQuiz() {
     document.querySelector('.quiz-container').style.display = 'block';
     document.querySelector('.navbar').style.display = 'flex';
 
-    // Load questions based on the selected level
     questions = questionsByLevel[selectedLevel];
 
     selectedOptions = Array(questions.length).fill(-1);
@@ -107,7 +103,7 @@ function startTimer() {
             clearInterval(timerInterval);
             showTimeoutMessage();
         }
-    }, 1000); // Update every second
+    }, 1000); 
 }
 
 function showTimeoutMessage() {
@@ -118,7 +114,7 @@ function showTimeoutMessage() {
 }
 
 function restartQuiz() {
-    location.reload(); // Refresh the page
+    location.reload(); 
 }
 
 
@@ -148,7 +144,7 @@ function showResults() {
     let skipped = 0;
     const details = [];
     
-    // Get the selected level from the dropdown
+
     const selectedLevel = document.getElementById('levelSelect').value;
 
     for (let i = 0; i < questions.length; i++) {
@@ -178,18 +174,28 @@ function showResults() {
 
     const percentage = (score / questions.length) * 100;
     let feedback = '';
-    let emoji = '';
     let certificateGenerated = false;
     
-    if (percentage < 50) {
-        feedback = 'Very Bad. Improve Yourself!<span class="emoji">😞</span><br>';
-    } else if (percentage >= 50 && percentage < 75) {
-        feedback = 'Average. Keep Improving!<span class="emoji">☹️</span><br>';
-    } else {
-        feedback = 'Congratulations!';
-        emoji = '<span class="emoji">🤩</span>';
-        generateCertificate();
-        certificateGenerated = true;
+
+    if (selectedLevel === '1') {
+        if (percentage >= 75) {
+            feedback = `Very Good ${userName}!<br> Let's complete Level 2 for certificate<span class="emoji">🤩</span><br>`;
+            document.getElementById('start-level-2').style.display = 'inline';
+        } else if (percentage >= 50) {
+            feedback = 'Good Effort. Keep Improving!<span class="emoji">☹️</span><br>';
+        } else {
+            feedback = 'Needs Improvement. Try Again!<span class="emoji">😞</span><br>';
+        }
+    } else if (selectedLevel === '2') {
+        if (percentage >= 75) {
+            feedback = `Congratulations! ${userName}<span class="emoji">🤩</span><br>`;
+            generateCertificate();
+            certificateGenerated = true;
+        } else if (percentage >= 50) {
+            feedback = 'Good Effort. Keep Improving!<span class="emoji">😊</span><br>';
+        } else {
+            feedback = 'Needs Improvement. Try Again!<span class="emoji">😞</span><br>';
+        }
     }
     
     document.querySelector('.quiz-container').style.display = 'none';
@@ -199,18 +205,17 @@ function showResults() {
     const resultElement = document.getElementById('results');
     if (resultElement) {
         resultElement.innerHTML = `
-            <p>${feedback} ${userName} ${emoji}</p>
+            <p>${feedback}</p>
             <p>${score} out of ${questions.length} answers were correct.</p>
             <p>Your Score: ${percentage.toFixed(2)}%</p>
         `;
     }
     
-        // Stop the timer when generating the certificate
+
         if (timerInterval) {
             clearInterval(timerInterval);
         }
     
-        // Hide the timer container
         if (timer) {
             timer.style.display = 'none';
         }
@@ -243,13 +248,27 @@ function showResults() {
     formData.append('incorrect', incorrect);
     formData.append('skipped', skipped);
     formData.append('percentage', percentage.toFixed(2));
-    formData.append('level', selectedLevel); // Add selected level to form data
+    formData.append('level', selectedLevel); 
 
-    if (percentage >= 75) {
-        formData.append('certificateGenerated', 'Yes');
-    } else {
-        formData.append('certificateGenerated', 'No');
+    
+
+    if (selectedLevel === '1') {
+        if (percentage >= 75) {
+            formData.append('certificateGenerated', 'No');
+        } else {
+            formData.append('certificateGenerated', 'No');
+        }
+    } else if (selectedLevel === '2') {
+        if (percentage >= 75) {
+            formData.append('certificateGenerated', 'Yes');
+        } else {
+            formData.append('certificateGenerated', 'No');
+        }
     }
+
+
+
+
 
     fetch(formUrl, {
         method: 'POST',
@@ -267,7 +286,7 @@ function showResults() {
         incorrect: incorrect,
         skipped: skipped,
         details: details,
-        level: selectedLevel  // Store selected level in local storage
+        level: selectedLevel 
     }));
 }
 
@@ -285,7 +304,6 @@ function toggleDetails() {
 function generateCertificate() {
     const userNameElement = document.getElementById('userName');
     const currentDateElement = document.getElementById('currentDate');
-    const levelElement = document.getElementById('level'); // Assuming you add this element for level
 
     if (userNameElement) {
         userNameElement.textContent = userName;
@@ -303,12 +321,6 @@ function generateCertificate() {
         console.error('currentDate element not found in the DOM.');
     }
 
-    if (levelElement) {
-        levelElement.textContent = `Level ${selectedLevel}`;
-    } else {
-        console.error('level element not found in the DOM.');
-    }
-
     document.getElementById('certificateContainer').style.display = 'block';
 }
 
@@ -317,7 +329,7 @@ function downloadCertificate() {
     const certificateElement = document.getElementById('certificate');
     
     html2canvas(certificateElement, {
-        scale: 6 // Increase scale to improve resolution
+        scale: 7 // Increase scale to improve resolution
     }).then(canvas => {
         const imgData = canvas.toDataURL('image/png', 1.0); // 1.0 for full quality
         
