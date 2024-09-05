@@ -86,7 +86,7 @@ function loadQuestion() {
     document.getElementById('submitBtn').style.display = currentQuestion === questions.length - 1 ? 'inline-block' : 'none';
 }
 
-let timerDuration = 10 * 60; // 10 minutes in seconds
+let timerDuration = 15 * 60; // 15 minutes in seconds
 let timerInterval;
 
 function startTimer() {

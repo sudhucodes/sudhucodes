@@ -440,9 +440,7 @@ font-weight: 500;
 position: absolute;
 top: 122px;
 font-weight: 500;
-left: 51%;
-transform: translateX(-61%);
-width: 100%;
+margin-left: 59px;
 font-size: 8px;
 }
 

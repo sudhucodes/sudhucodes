@@ -146,7 +146,7 @@ function startQuizjs() {
 }
 
 function startQuizreact() {
-  window.open('certificates/comingsoon.html', '_blank');
+  window.open('certificates/reactcertificate.html', '_blank');
 }
 
 function startQuizfullstack() {
@@ -206,30 +206,27 @@ function updateCount(selector, targetId, elementType = '*') {
 }
 
 // Update counts for each section
-updateCount('.login-page', 'all-project-count', 'a'); // Sum of <a> tags inside all .login-page containers
-updateCount('.quiz-list', 'all-quiz-count', 'button'); // Count .quiz-item divs inside .quiz-list
-updateCount('.sourcecode-container', 'all-sourcecode-count', '.container'); // Count .container divs inside .main-container
-updateCount('.all-cource-container', 'all-cource-count', '.cource-container'); // Count .cource-container divs inside .all-cource-container
-updateCount('.assets-container', 'all-projectassets-count', '.container'); // Count .container divs inside .assets-container
-updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div'); // Count .stock-image-div elements inside .stock-main
+updateCount('.login-page', 'all-project-count', 'a'); 
+updateCount('.quiz-list', 'all-quiz-count', 'button'); 
+updateCount('.sourcecode-container', 'all-sourcecode-count', '.container');
+updateCount('.all-cource-container', 'all-cource-count', '.cource-container');
+updateCount('.assets-container', 'all-projectassets-count', '.container');
+updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div');
 
 
 
 
 
 
-// Set the current version of the website
-const currentVersion = '9.3';
+// Version of the website
+const currentVersion = '9.6';
 
 // Check if the current version is stored in localStorage
 const seenVersion = localStorage.getItem('siteVersion');
 
 if (seenVersion !== currentVersion) {
-    // Show the overlay and "What's New" popup
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('whatsNewPopup').style.display = 'block';
-
-    // Store the current version in localStorage after closing the popup
     document.getElementById('closePopup').addEventListener('click', function() {
         localStorage.setItem('siteVersion', currentVersion);
         document.getElementById('overlay').style.display = 'none';

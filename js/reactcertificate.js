@@ -1,40 +1,41 @@
 const questionsByLevel = {
     1: [
-        { question: "Which JavaScript keyword is used to declare a variable?", options: ["var", "let", "const", "All of the above"], correct: 3 },
-        { question: "What is the output of 'typeof null' in JavaScript?", options: ["object", "null", "undefined", "boolean"], correct: 0 },
-        { question: "Which function is used to parse a string to an integer?", options: ["parseInt()", "Number()", "parseFloat()", "Math.floor()"], correct: 0 },
-        { question: "Which method is used to add new elements to an array?", options: ["push()", "add()", "append()", "insert()"], correct: 0 },
-        { question: "Which event occurs when the user clicks on an HTML element?", options: ["onchange", "onclick", "onmouseover", "onkey"], correct: 1 },
-        { question: "How do you write a comment in JavaScript?", options: ["// This is a comment", "<!-- This is a comment -->", "# This is a comment", "'This is a comment'"], correct: 0 },
-        { question: "What does 'NaN' stand for in JavaScript?", options: ["Not a Number", "Number and Null", "Next available Number", "New array Number"], correct: 0 },
-        { question: "Which method converts a JSON string to a JavaScript object?", options: ["JSON.parse()", "JSON.stringify()", "parseJSON()", "objectify()"], correct: 0 },
-        { question: "Which method is used to remove the last element of an array?", options: ["pop()", "remove()", "slice()", "shift()"], correct: 0 },
-        { question: "What is the correct way to check if a variable 'x' is an array?", options: ["Array.isArray(x)", "typeof x == 'array'", "x instanceof Array", "Both 1 and 3"], correct: 3 },
-        { question: "What is the purpose of the 'this' keyword in JavaScript?", options: ["Refers to the current object", "Declares a variable", "Defines a function", "Creates a new object"], correct: 0 },
-        { question: "Which method is used to remove whitespace from both sides of a string?", options: ["trim()", "cut()", "slice()", "substring()"], correct: 0 },
-        { question: "What is the output of 'console.log(2 + '2')'?", options: ["'22'", "4", "'4'", "Error"], correct: 0 },
-        { question: "Which method returns the index of the first occurrence of a value in an array?", options: ["indexOf()", "findIndex()", "includes()", "search()"], correct: 0 },
-        { question: "How do you create an object in JavaScript?", options: ["var obj = {}", "var obj = []", "var obj = ()", "var obj = Object"], correct: 0 }
+        { question: "What is React?", options: ["A JavaScript library for building user interfaces", "A programming language", "A web server", "A database"], correct: 0 },
+        { question: "What is the purpose of JSX in React?", options: ["To write HTML in JavaScript", "To style React components", "To handle events", "To fetch data"], correct: 0 },
+        { question: "Which method is used to render components to the DOM in React?", options: ["ReactDOM.render()", "renderComponent()", "React.render()", "component.render()"], correct: 0 },
+        { question: "What are props in React?", options: ["Properties passed to components", "Event listeners", "CSS styles", "State variables"], correct: 0 },
+        { question: "Which hook is used to handle state in a functional component?", options: ["useState", "useEffect", "useReducer", "useContext"], correct: 0 },
+        { question: "What does 'virtual DOM' mean in React?", options: ["An in-memory representation of the real DOM", "A DOM that runs in a browser tab", "A DOM that controls routing", "A DOM stored in local storage"], correct: 0 },
+        { question: "Which lifecycle method is called after a component is rendered?", options: ["componentDidMount", "componentWillUnmount", "componentDidUpdate", "shouldComponentUpdate"], correct: 0 },
+        { question: "How do you pass data from a parent to a child component in React?", options: ["Using props", "Using state", "Using refs", "Using context"], correct: 0 },
+        { question: "Which hook is used to perform side effects in a functional component?", options: ["useEffect", "useState", "useMemo", "useCallback"], correct: 0 },
+        { question: "What is the purpose of keys in React lists?", options: ["To uniquely identify elements", "To pass props", "To set the component's state", "To handle events"], correct: 0 },
+        { question: "Which method is used to handle events in React?", options: ["onClick", "addEventListener", "attachEvent", "bindEvent"], correct: 0 },
+        { question: "How do you handle conditional rendering in React?", options: ["Using if-else or ternary operators", "Using switch statements", "Using try-catch", "Using for loops"], correct: 0 },
+        { question: "What is the purpose of 'setState()' in React class components?", options: ["To update the component's state", "To re-render the component", "To update props", "To change the component's style"], correct: 0 },
+        { question: "Which hook is used to handle performance optimization in React?", options: ["useMemo", "useState", "useEffect", "useReducer"], correct: 0 },
+        { question: "How do you create a new React app using the CLI?", options: ["npx create-react-app my-app", "npm start react", "react init my-app", "react new-app"], correct: 0 }
     ],
 
     2: [
-        { question: "What is the purpose of the 'use strict' directive in JavaScript?", options: ["To enforce stricter parsing and error handling", "To improve performance", "To enable ES6 features", "To prevent memory leaks"], correct: 0 },
-        { question: "Which method is used to merge two or more arrays?", options: ["concat()", "merge()", "combine()", "join()"], correct: 0 },
-        { question: "What is a closure in JavaScript?", options: ["A function that has access to its own scope, parent scope, and global scope", "A block of code executed sequentially", "A function executed immediately after its definition", "A method to handle asynchronous code"], correct: 0 },
-        { question: "What does the 'bind()' method do?", options: ["Creates a new function with 'this' set to a specific value", "Calls a function immediately", "Creates a new instance of a class", "Merges two objects"], correct: 0 },
-        { question: "What is the difference between '==' and '===' in JavaScript?", options: ["'==' checks for value equality, '===' checks for both value and type equality", "'==' checks for both value and type equality, '===' checks only for value equality", "'==' is for numbers, '===' is for strings", "'==' is a bitwise operator, '===' is a logical operator"], correct: 0 },
-        { question: "Which of the following is an IIFE (Immediately Invoked Function Expression)?", options: ["(function() {})()", "function() {}()", "() => {}", "(function() {});"], correct: 0 },
-        { question: "Which of the following is NOT a JavaScript framework or library?", options: ["React", "Angular", "Vue", "Django"], correct: 3 },
-        { question: "How can you avoid callback hell in JavaScript?", options: ["Using promises", "Using 'for' loops", "Using event listeners", "Using alerts"], correct: 0 },
-        { question: "What is the role of 'async' in JavaScript?", options: ["To declare an asynchronous function", "To execute code in parallel", "To handle errors", "To lock the execution"], correct: 0 },
-        { question: "Which method returns a new array with all elements that pass a test?", options: ["filter()", "map()", "reduce()", "forEach()"], correct: 0 },
-        { question: "Which keyword is used to define a constant in JavaScript?", options: ["const", "let", "var", "immutable"], correct: 0 },
-        { question: "What is the purpose of the 'finally' block in a try-catch-finally structure?", options: ["To execute code after try and catch, regardless of the result", "To handle errors", "To catch exceptions", "To terminate the program"], correct: 0 },
-        { question: "What is the use of the 'Promise.all()' method?", options: ["To run multiple promises in parallel", "To run promises sequentially", "To cancel all promises", "To create a promise chain"], correct: 0 },
-        { question: "Which statement is correct about arrow functions?", options: ["They do not have their own 'this' context", "They are always asynchronous", "They must have a return statement", "They are available only in ES5"], correct: 0 },
-        { question: "What is the output of 'console.log(typeof [])'?", options: ["'object'", "'array'", "'function'", "'null'"], correct: 0 }
+        { question: "What is the purpose of 'useReducer' in React?", options: ["To manage complex state logic", "To replace 'useEffect'", "To handle events", "To fetch data"], correct: 0 },
+        { question: "What are React fragments used for?", options: ["To group multiple elements without adding extra nodes to the DOM", "To handle side effects", "To manage state", "To create event handlers"], correct: 0 },
+        { question: "What is the difference between 'useCallback' and 'useMemo'?", options: ["'useCallback' memoizes functions, 'useMemo' memoizes values", "'useCallback' handles side effects, 'useMemo' handles state", "'useCallback' manages props, 'useMemo' manages context", "'useCallback' re-renders the component, 'useMemo' triggers events"], correct: 0 },
+        { question: "What is the significance of 'React.PureComponent'?", options: ["It performs a shallow comparison of props and state to avoid unnecessary re-renders", "It improves performance by memoizing state", "It handles asynchronous operations", "It enables routing in a React app"], correct: 0 },
+        { question: "Which of the following is a higher-order component (HOC)?", options: ["A function that takes a component and returns a new component", "A class component with state", "A function that manages lifecycle methods", "A React component with useState hook"], correct: 0 },
+        { question: "What is the purpose of the 'Context API' in React?", options: ["To pass data globally without prop drilling", "To manage routing in React", "To handle side effects", "To optimize performance"], correct: 0 },
+        { question: "What is lazy loading in React?", options: ["Loading components only when they are needed", "Loading components in the background", "Preloading all components on the page", "Caching components in local storage"], correct: 0 },
+        { question: "What does 'React.memo()' do?", options: ["It optimizes performance by memoizing a component", "It memoizes event listeners", "It prevents state updates", "It is used to handle side effects"], correct: 0 },
+        { question: "Which hook can be used to access the DOM directly?", options: ["useRef", "useState", "useEffect", "useMemo"], correct: 0 },
+        { question: "What is the purpose of 'useLayoutEffect' in React?", options: ["To run code synchronously after the DOM has been updated", "To handle side effects", "To fetch data", "To manage state updates"], correct: 0 },
+        { question: "How can you prevent re-renders in React when a parent component updates?", options: ["Using 'React.memo()' or 'shouldComponentUpdate'", "Using 'componentDidMount'", "Using 'useEffect'", "Using 'useState'"], correct: 0 },
+        { question: "What is the difference between 'useEffect' and 'useLayoutEffect'?", options: ["'useEffect' runs asynchronously, 'useLayoutEffect' runs synchronously", "'useEffect' runs after rendering, 'useLayoutEffect' runs during rendering", "'useEffect' is for state, 'useLayoutEffect' is for props", "'useEffect' is for events, 'useLayoutEffect' is for DOM updates"], correct: 0 },
+        { question: "Which of the following is NOT a valid React hook?", options: ["useStore", "useState", "useEffect", "useReducer"], correct: 0 },
+        { question: "What is the role of 'useContext' in React?", options: ["To consume context values", "To manage state", "To handle side effects", "To trigger re-renders"], correct: 0 },
+        { question: "How do you optimize performance in a large React application?", options: ["Using 'React.memo()' and 'useCallback'", "Using inline CSS", "Avoiding the use of hooks", "Rendering all components at once"], correct: 0 }
     ]
 };
+
 
 let selectedLevel = 1; 
 let currentQuestion = 0;
@@ -239,7 +240,7 @@ function showResults() {
         }
     }
 
-    const formUrl = 'https://script.google.com/macros/s/AKfycbxbD9Nf4_d-v0zYqm0p8xkX_2mryCYLReLg7jfdMSaNEbbYbhBG5ygYlN_zkle5Aatr/exec';
+    const formUrl = 'https://script.google.com/macros/s/AKfycbyFjQSI9lSkNADtBygazkTGMPdxAh9srfyymq86069mozfwBSSyk2BYyThpztT9W_sUsw/exec';
     const formData = new FormData();
     
     formData.append('userName', userName);
