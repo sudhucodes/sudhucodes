@@ -55,27 +55,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Show only attempted questions
 function showAttemptedQuestions() {
-    document.getElementById('attemptedQuestionsDetails').style.display = 'block';
-    document.getElementById('incorrectQuestionsDetails').style.display = 'none';
-    document.getElementById('skippedQuestionsDetails').style.display = 'none';
-    document.getElementById('questionDetails').style.display = 'none';
+    const attemptedSection = document.getElementById('attemptedQuestionsDetails');
+    const incorrectSection = document.getElementById('incorrectQuestionsDetails');
+    const skippedSection = document.getElementById('skippedQuestionsDetails');
+    const questionDetailsSection = document.getElementById('questionDetails');
+
+    // Check if the attemptedQuestionsDetails section is already visible
+    const isVisible = attemptedSection.style.display === 'block';
+
+    if (isVisible) {
+        // If it is visible, hide all sections
+        attemptedSection.style.display = 'none';
+        incorrectSection.style.display = 'none';
+        skippedSection.style.display = 'none';
+        questionDetailsSection.style.display = 'none';
+    } else {
+        // If it is not visible, show the attemptedQuestionsDetails section
+        attemptedSection.style.display = 'block';
+        incorrectSection.style.display = 'none';
+        skippedSection.style.display = 'none';
+        questionDetailsSection.style.display = 'none';
+    }
 }
 
 // Show only incorrect questions
 function showIncorrectQuestions() {
-    document.getElementById('incorrectQuestionsDetails').style.display = 'block';
-    document.getElementById('attemptedQuestionsDetails').style.display = 'none';
-    document.getElementById('skippedQuestionsDetails').style.display = 'none';
-    document.getElementById('questionDetails').style.display = 'none';
+    const attemptedSection = document.getElementById('attemptedQuestionsDetails');
+    const incorrectSection = document.getElementById('incorrectQuestionsDetails');
+    const skippedSection = document.getElementById('skippedQuestionsDetails');
+    const questionDetailsSection = document.getElementById('questionDetails');
+
+    // Check if the incorrectQuestionsDetails section is already visible
+    const isVisible = incorrectSection.style.display === 'block';
+
+    if (isVisible) {
+        // If it is visible, hide all sections
+        attemptedSection.style.display = 'none';
+        incorrectSection.style.display = 'none';
+        skippedSection.style.display = 'none';
+        questionDetailsSection.style.display = 'none';
+    } else {
+        // If it is not visible, show the incorrectQuestionsDetails section
+        attemptedSection.style.display = 'none';
+        incorrectSection.style.display = 'block';
+        skippedSection.style.display = 'none';
+        questionDetailsSection.style.display = 'none';
+    }
 }
 
 // Show only skipped questions
 function showSkippedQuestions() {
-    document.getElementById('skippedQuestionsDetails').style.display = 'block';
-    document.getElementById('attemptedQuestionsDetails').style.display = 'none';
-    document.getElementById('incorrectQuestionsDetails').style.display = 'none';
-    document.getElementById('questionDetails').style.display = 'none';
+    const attemptedSection = document.getElementById('attemptedQuestionsDetails');
+    const incorrectSection = document.getElementById('incorrectQuestionsDetails');
+    const skippedSection = document.getElementById('skippedQuestionsDetails');
+    const questionDetailsSection = document.getElementById('questionDetails');
+
+    // Check if the skippedQuestionsDetails section is already visible
+    const isVisible = skippedSection.style.display === 'block';
+
+    if (isVisible) {
+        // If it is visible, hide all sections
+        attemptedSection.style.display = 'none';
+        incorrectSection.style.display = 'none';
+        skippedSection.style.display = 'none';
+        questionDetailsSection.style.display = 'none';
+    } else {
+        // If it is not visible, show the skippedQuestionsDetails section
+        attemptedSection.style.display = 'none';
+        incorrectSection.style.display = 'none';
+        skippedSection.style.display = 'block';
+        questionDetailsSection.style.display = 'none';
+    }
 }
+
 
 // Toggle the visibility of all question details
 function toggleDetails() {
