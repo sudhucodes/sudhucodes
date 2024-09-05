@@ -142,7 +142,7 @@ function startQuizhtml() {
 }
 
 function startQuizjs() {
-  window.open('certificates/comingsoon.html', '_blank');
+  window.open('certificates/jscertificate.html', '_blank');
 }
 
 function startQuizreact() {
@@ -207,7 +207,7 @@ function updateCount(selector, targetId, elementType = '*') {
 
 // Update counts for each section
 updateCount('.login-page', 'all-project-count', 'a'); // Sum of <a> tags inside all .login-page containers
-updateCount('.quiz-list', 'all-quiz-count', '.quiz-item'); // Count .quiz-item divs inside .quiz-list
+updateCount('.quiz-list', 'all-quiz-count', 'button'); // Count .quiz-item divs inside .quiz-list
 updateCount('.sourcecode-container', 'all-sourcecode-count', '.container'); // Count .container divs inside .main-container
 updateCount('.all-cource-container', 'all-cource-count', '.cource-container'); // Count .cource-container divs inside .all-cource-container
 updateCount('.assets-container', 'all-projectassets-count', '.container'); // Count .container divs inside .assets-container
@@ -219,7 +219,7 @@ updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div'); // Coun
 
 
 // Set the current version of the website
-const currentVersion = '9.2';
+const currentVersion = '9.3';
 
 // Check if the current version is stored in localStorage
 const seenVersion = localStorage.getItem('siteVersion');

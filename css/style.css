@@ -1,10 +1,10 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: "Outfit", sans-serif;
 }
 
 body {
-  font-family: "Outfit", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -246,26 +246,9 @@ span{
   -webkit-tap-highlight-color: transparent;
   transition: 0.3s;
 }
-/* Glowing animation for the 1st and 2nd buttons */
-.quiz-list button:nth-child(1),
-.quiz-list button:nth-child(2) {
-  border: none;
-  color: var(--half-logo-color);
-  box-shadow: 0 0 7px var(--half-logo-color), 0 0 15px var(--half-logo-color),
-              0 0 20px var(--heading-color), 0 0 25px var(--heading-color);
-  animation: glowing 1.5s infinite alternate;
+.quiz-list button:hover{
+  border-color: var(--half-logo-color);
 }
-
-/* Keyframes for glowing effect */
-@keyframes glowing {
-  0% {
-    box-shadow: 0 0 3px var(--half-logo-color);
-  }
-  100% {
-    box-shadow: 0 0 15px var(--half-logo-color), 0 0 20px var(--heading-color), 0 0 25px var(--heading-color), 0 0 30px var(--projects-heading-color);
-  }
-}
-
 
 .quiz-list button i{
   color: var(--half-logo-color);
@@ -578,25 +561,6 @@ span{
     transition: 0.3s;
   }
   
-  /* Glowing animation for the 1st and 2nd buttons */
-.quiz-list button:nth-child(1),
-.quiz-list button:nth-child(2) {
-  border: none;
-  color: var(--half-logo-color);
-  box-shadow: 0 0 7px var(--half-logo-color), 0 0 15px var(--half-logo-color),
-              0 0 20px var(--heading-color), 0 0 25px var(--heading-color);
-  animation: glowing 1.5s infinite alternate;
-}
-
-/* Keyframes for glowing effect */
-@keyframes glowing {
-  0% {
-    box-shadow: 0 0 3px var(--half-logo-color);
-  }
-  100% {
-    box-shadow: 0 0 15px var(--half-logo-color), 0 0 20px var(--heading-color), 0 0 25px var(--heading-color), 0 0 30px var(--projects-heading-color);
-  }
-}
   .quiz-list button:hover{
     border-color: var(--half-logo-color);
   }
