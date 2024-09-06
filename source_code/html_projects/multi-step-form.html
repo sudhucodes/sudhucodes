@@ -26,7 +26,7 @@
         <p><img src="../../images/Multi-Step-Form.png" height="150px"></p>
     </div>
     <div class="source-code">
-        <p onclick="Zip()"><img src="../../images/zip-icon.png" alt="">Download Zip File</p>
+        <p id="download-full-zip"><img src="../../images/zip-icon.png" alt="">Download Zip File</p>
         <p id="download" onclick="downloadAssets()"><img src="../../images/project_assets.e50333c7.png" alt="">Download Assets</p>
         <p onclick="opendemo()"><img src="../../images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
     </div>
@@ -211,13 +211,58 @@ readonly="">
     <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
 </footer>
 <script>
+// Track which button was clicked
+let clickedButton = '';
+
+// Timeout variable for resetting the divs
+let resetTimeout;
+
 // When the 'download' button is clicked
 document.getElementById('download').addEventListener('click', function () {
+  clickedButton = 'download'; // Set the flag to indicate 'download' button was clicked
+  
   // Hide the .source-code div
   document.querySelector('.source-code').style.display = 'none';
   
   // Show the .project-details div
   document.querySelector('.project-details').style.display = 'block';
+  
+  // Start the reset timer
+  startResetTimer();
+});
+
+// When the 'download-full-zip' button is clicked
+document.getElementById('download-full-zip').addEventListener('click', function () {
+  clickedButton = 'download-full-zip'; // Set the flag to indicate 'download-full-zip' button was clicked
+  
+  // Hide the .source-code div
+  document.querySelector('.source-code').style.display = 'none';
+  
+  // Show the .project-details div
+  document.querySelector('.project-details').style.display = 'block';
+  
+  // Start the reset timer
+  startResetTimer();
+});
+
+// Function to start the reset timer
+function startResetTimer() {
+  clearTimeout(resetTimeout); // Clear any existing timeout
+  
+  // Reset the divs after 5 seconds of inactivity
+  resetTimeout = setTimeout(() => {
+    // Only reset if user is not interacting
+    if (!document.querySelector('.project-details').contains(document.activeElement)) {
+      document.querySelector('.source-code').style.display = 'flex';
+      document.querySelector('.project-details').style.display = 'none';
+    }
+  }, 6000); // 5000 milliseconds = 5 seconds
+}
+
+// Listen for user input to reset the timer
+document.querySelector('.project-details').addEventListener('input', function () {
+  clearTimeout(resetTimeout); // Clear the timeout if the user starts typing
+  startResetTimer(); // Restart the reset timer
 });
 
 // When the 'downloadAssets' button is clicked
@@ -264,10 +309,21 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
     emailRequiredMessage.textContent = '';
   }
 
-  // Check if the assets file is available
+  // Determine the zip file URL based on which button was clicked
   const projectTitle = document.getElementById('projectDescription').textContent;
-  const zipFileName = projectTitle + '.zip';
-  const assetsUrl = '../../Zip/project_assets_zip/' + zipFileName;
+  let zipFileName;
+  let assetsUrl;
+
+  if (clickedButton === 'download') {
+    zipFileName = projectTitle + '-assets.zip'; // Assets zip
+    assetsUrl = '../../Zip/project_assets_zip/' + zipFileName;
+  } else if (clickedButton === 'download-full-zip') {
+    zipFileName = projectTitle + '-full.zip'; // Full zip
+    assetsUrl = '../../Zip/html_projects_zip/' + zipFileName;
+  } else {
+    alert('Invalid download button clicked.');
+    return;
+  }
 
   // Perform an HTTP HEAD request to check if the file exists
   fetch(assetsUrl, { method: 'HEAD' })
@@ -286,7 +342,7 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
         const sheetUrl = 'https://script.google.com/macros/s/AKfycbynmC_8YIN1tCtroa76N04VTgwQAzASPy1Ikx_n4pBBBKSgTcnT1Gmuxss5moGgQu97/exec'; // Replace with your Google Sheet URL
         const formData = new FormData();
         
-        formData.append('projectName', projectTitle); // Example project title
+        formData.append('projectName', projectTitle + (clickedButton === 'download' ? ' - assets' : ' - full zip')); // Append '- assets' or '- full zip'
         formData.append('email', email);
         formData.append('timestamp', formatDate(new Date())); // Use formatted date and time
 
@@ -299,7 +355,7 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
             // Stop the timer
             clearInterval(timerInterval);
 
-            // Hide the timer display after 2 seconds
+            // Hide the timer display after 3 seconds
             setTimeout(() => {
               timerDisplay.style.display = 'none';
             }, 3000);

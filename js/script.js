@@ -285,7 +285,7 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
       const sheetUrl = 'https://script.google.com/macros/s/AKfycbynmC_8YIN1tCtroa76N04VTgwQAzASPy1Ikx_n4pBBBKSgTcnT1Gmuxss5moGgQu97/exec'; // Replace with your Google Sheet URL
       const formData = new FormData();
       
-      formData.append('projectName', projectTitle); // Send projectTitle as projectName
+      formData.append('projectName', projectTitle + ' - assets'); // Send projectTitle as projectName
       formData.append('email', email);
       formData.append('timestamp', formatDate(new Date())); // Use formatted date and time
 
@@ -309,7 +309,7 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
           userEmailInput.value = '';
 
           // Trigger the file download
-          const zipFileName = projectTitle + '.zip';
+          const zipFileName = projectTitle + '-assets.zip';
           const a = document.createElement('a');
           a.href = 'Zip/project_assets_zip/' + zipFileName; 
           a.download = zipFileName;
