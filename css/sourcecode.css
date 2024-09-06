@@ -133,10 +133,12 @@ body {
   }
   
   .source-code{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
     justify-content: center;
   }
+
   
   .source-code p:last-child img{
     height: 15px;
@@ -467,6 +469,8 @@ body {
     display: flex;
     border: 1px solid var(--border-color);
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
     background-color: var(--click-bg-color);
   }
 
@@ -478,6 +482,8 @@ body {
     margin: 20px;
     width: 50%;
   }
+
+
 
 .html-css2 h1{
   padding-bottom: 20px;
@@ -577,8 +583,105 @@ body {
     margin-left: 8px;
   }
   .image-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     background-color: var(--click-bg-color);
+  }
+}
+
+/* ----------Project assets------ */
+.project-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 20px;
+}
+.details-button{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.details-button input {
+  height: 40px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  background-color: transparent; /* Slightly transparent background */
+  font-size: 15px;
+  padding: 0px 45px 0px 15px;
+  color: var(--text-color-white); 
+  transition: 0.2s ease;
+}
+
+.details-button input::placeholder {
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color); /* Light color for placeholder text */
+}
+
+.details-button input:focus, .button:hover {
+  border-color: #626cd6;
+}
+.button{
+  padding: 10px 15px;
+  outline: none;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #878bff08;
+  border: none;
+  border-radius: 30px;
+  color: var(--text-color-white);
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s;
+}
+
+.assets-email{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.assets-email p{
+  color: red;
+  font-size: 15px;
+}
+
+.assets-download{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.assets-download p{
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+  .project-details {
+    padding: 20px;
+    margin: 0;
+  }
+  .details-image img {
+    width: 100%;
+  }
+  .details-button{
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 }
