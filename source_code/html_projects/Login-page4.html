@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SudhuCodes - Login-Page Source Code</title>
-    <link rel="shortcut icon" href="/images/logo_black.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/sourcecode.css">
+    <link rel="shortcut icon" href="../../images/logo_black.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/sourcecode.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
@@ -23,12 +23,12 @@
         <h1>Login-Page Project</h1>
         <div class="image-flex">
         <div class="login-page">
-            <p><img src="/images/Login-page4.png" height="150px"></p>
+            <p><img src="../../images/Login-page4.png" height="150px"></p>
         </div>
         <div class="source-code">
-            <p onclick="Zip()"><img src="/images/zip-icon.png" alt="">Download Zip File</p>
-            <p onclick="downloadAssets()"><img src="/images/project_assets.e50333c7.png" alt="">Download Assets</p>
-            <p onclick="opendemo()"><img src="/images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
+            <p onclick="Zip()"><img src="../../images/zip-icon.png" alt="">Download Zip File</p>
+            <p onclick="downloadAssets()"><img src="../../images/project_assets.e50333c7.png" alt="">Download Assets</p>
+            <p onclick="opendemo()"><img src="../../images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
           </div>
         </div>
 
@@ -226,13 +226,13 @@ function goback() {
 
 function opendemo() {
   const projectName = 'Login-page4'; // Change the project name here
-  window.open(`/live_dmo/html_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
+  window.open(`../../live_dmo/html_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
 }
 
 function Zip() {
   const projectName = 'Login-page4'; // Change the project name here
   var link = document.createElement('a');
-  link.href = `/Zip/html_projects_zip/${projectName}.zip`;
+  link.href = `../../Zip/html_projects_zip/${projectName}.zip`;
   link.download = `${projectName}.zip`;
   link.click();
 }
