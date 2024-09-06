@@ -311,7 +311,7 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
           // Trigger the file download
           const zipFileName = projectTitle + '.zip';
           const a = document.createElement('a');
-          a.href = '/Zip/project_assets_zip/' + zipFileName; 
+          a.href = '../Zip/project_assets_zip/' + zipFileName; 
           a.download = zipFileName;
           document.body.appendChild(a);
           a.click();
@@ -329,13 +329,6 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
     };
   });
 });
-
-
-
-
-
-
-
 
 
 
