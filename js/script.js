@@ -311,7 +311,7 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
           // Trigger the file download
           const zipFileName = projectTitle + '.zip';
           const a = document.createElement('a');
-          a.href = '../Zip/project_assets_zip/' + zipFileName; 
+          a.href = 'Zip/project_assets_zip/' + zipFileName; 
           a.download = zipFileName;
           document.body.appendChild(a);
           a.click();
@@ -333,7 +333,7 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
 
 
 // Version of the website
-const currentVersion = '9.9';
+const currentVersion = '1.0.2';
 
 // Check if the current version is stored in localStorage
 const seenVersion = localStorage.getItem('siteVersion');
