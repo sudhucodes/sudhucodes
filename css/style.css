@@ -1167,8 +1167,8 @@ body::-webkit-scrollbar-track {
   height: auto;
 }
 
-.code-buy-now-btn p:active {
-  background-color: var(--click-bg-color);
+.code-buy-now-btn p:hover {
+  background-color: #26ffe248;
 }
 
 .project-image img {
@@ -1195,7 +1195,7 @@ body::-webkit-scrollbar-track {
 
 .code-buy-now-btn p {
   text-wrap: nowrap;
-  
+  transition: 0.3s;
   margin: 0;
   font-size: 11px;
   background-color: var(--body-color);
@@ -1546,5 +1546,112 @@ body::-webkit-scrollbar-track {
 @media (min-width: 768px) {
   .popup-container {
       max-width: 40rem;
+  }
+}
+
+
+
+/* ----------Project assets------ */
+
+.project-details{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 90px;
+  padding-bottom: 10rem;
+}
+.details-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.details-image img {
+  width: 70%;
+  height: auto;
+  cursor: pointer;
+}
+
+#projectDescription{
+  font-size: 25px;
+}
+.details-button{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.details-button input {
+  height: 40px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  background-color: transparent; /* Slightly transparent background */
+  font-size: 15px;
+  padding: 0px 30px;
+  color: var(--text-color-white); 
+  transition: 0.2s ease;
+}
+
+.details-button input::placeholder {
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color); /* Light color for placeholder text */
+}
+
+.details-button input:focus, .button:hover {
+  border-color: #626cd6;
+}
+.button{
+  padding: 10px 20px;
+  font-size: 15px;
+  outline: none;
+  text-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1224;
+  border: none;
+  border-radius: 30px;
+  color: var(--text-color-white);
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s;
+}
+
+.assets-email{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.assets-email p{
+  color: red;
+  font-size: 15px;
+}
+
+.assets-download{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.assets-download p{
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+  .project-details {
+    padding: 20px;
+  }
+  .details-image img {
+    width: 100%;
+  }
+  .details-button{
+    display: grid;
   }
 }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SudhuCodes - Card-Design-1 Source Code</title>
-    <link rel="stylesheet" href="/sudhucodes/css/sourcecode.css">
-    <link rel="shortcut icon" href="/sudhucodes/images/logo_black.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/sourcecode.css">
+    <link rel="shortcut icon" href="/images/logo_black.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
@@ -23,12 +23,12 @@
         <h1>Card-Design</h1>
         <div class="image-flex">
           <div class="login-page">
-            <p><img src="/sudhucodes/images/Card-Design-1.png" height="150px"></p>
+            <p><img src="/images/Card-Design-1.png" height="150px"></p>
         </div>
         <div class="source-code">
-            <p onclick="Zip()"><img src="/sudhucodes/images/zip-icon.png" alt="">Download Zip File</p>
-            <p onclick="downloadAssets()"><img src="/sudhucodes/images/project_assets.e50333c7.png" alt="">Download Assets</p>
-            <p onclick="opendemo()"><img src="/sudhucodes/images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
+            <p onclick="Zip()"><img src="/images/zip-icon.png" alt="">Download Zip File</p>
+            <p onclick="downloadAssets()"><img src="/images/project_assets.e50333c7.png" alt="">Download Assets</p>
+            <p onclick="opendemo()"><img src="/images/arrow_icon.2a67aa4b.svg" alt="">View Live Demo</p>
         </div>
         </div>
     <div class="card-flex">
@@ -192,7 +192,7 @@
 <footer>
     <div class="socialLinks">
         <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
         <a href="https://github.com/sudhucodes" target="_blank">Github</a>
         <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
         <a href="mailto:sudhuteam@gmail.com?subject=Sudhucodes-Website&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
@@ -228,13 +228,13 @@ function goback() {
 
 function opendemo() {
   const projectName = 'Card-Design-1'; // Change the project name here
-  window.open(`/sudhucodes/live_dmo/html_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
+  window.open(`/live_dmo/html_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
 }
 
 function Zip() {
   const projectName = 'Card-Design-1'; // Change the project name here
   var link = document.createElement('a');
-  link.href = `/sudhucodes/Zip/html_projects_zip/${projectName}.zip`;
+  link.href = `/Zip/html_projects_zip/${projectName}.zip`;
   link.download = `${projectName}.zip`;
   link.click();
 }
