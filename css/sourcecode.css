@@ -597,12 +597,16 @@ body {
 .project-details{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 50%;
   margin: 20px;
 }
-
+.close-btn-div{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 #close-project-details{
   margin-bottom: 40px;
 }
@@ -611,7 +615,6 @@ body {
   align-items: flex-start;
   justify-content: center;
   gap: 20px;
-  width: 100%;
 }
 .details-button input {
   height: 40px;
