@@ -83,7 +83,7 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
 
   if (clickedButton === 'download') {
     zipFileName = projectTitle + '-assets.zip'; // Assets zip
-    assetsUrl = '../../Zip/project-assets_zip/' + zipFileName;
+    assetsUrl = '../../Zip/project_assets_zip/' + zipFileName;
   } else if (clickedButton === 'download-full-zip') {
     zipFileName = projectTitle + '-full.zip'; // Full zip
     assetsUrl = '../../Zip/html_projects_zip/' + zipFileName;
