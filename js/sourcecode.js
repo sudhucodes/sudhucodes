@@ -1,36 +1,29 @@
 // Track which button was clicked
 let clickedButton = '';
 
-// When the 'download' button is clicked
 document.getElementById('download').addEventListener('click', function () {
-  clickedButton = 'download'; // Set the flag to indicate 'download' button was clicked
-  
-  // Hide the .source-code div
+  clickedButton = 'download';
+  const assetsFullSpan = document.getElementById('assetsFull');
+  assetsFullSpan.textContent = 'Assets';
   document.querySelector('.source-code').style.display = 'none';
-  
-  // Show the .project-details div
   document.querySelector('.project-details').style.display = 'flex';
 });
 
-// When the 'download-full-zip' button is clicked
 document.getElementById('download-full-zip').addEventListener('click', function () {
-  clickedButton = 'download-full-zip'; // Set the flag to indicate 'download-full-zip' button was clicked
-  
-  // Hide the .source-code div
+  clickedButton = 'download-full-zip';
+  const assetsFullSpan = document.getElementById('assetsFull');
+  assetsFullSpan.textContent = 'Zip';
   document.querySelector('.source-code').style.display = 'none';
-  
-  // Show the .project-details div
   document.querySelector('.project-details').style.display = 'flex';
 });
 
-// When the 'close-project-details' button is clicked
 document.getElementById('close-project-details').addEventListener('click', function () {
-  // Hide the .project-details div
   document.querySelector('.project-details').style.display = 'none';
-  
-  // Show the .source-code div
-  document.querySelector('.source-code').style.display = 'flex'; // Assuming flex was the original display
+  const assetsFullSpan = document.getElementById('assetsFull');
+  assetsFullSpan.textContent = '';
+  document.querySelector('.source-code').style.display = 'flex';
 });
+
 
 // When the 'downloadAssets' button is clicked
 document.getElementById('downloadAssets').addEventListener('click', function () {
