@@ -20,6 +20,8 @@ document.getElementById('download-full-zip').addEventListener('click', function 
 document.getElementById('close-project-details').addEventListener('click', function () {
   document.querySelector('.project-details').style.display = 'none';
   const assetsFullSpan = document.getElementById('assetsFull');
+  const userEmailInput = document.getElementById('userEmail');
+  userEmailInput.value = '';
   assetsFullSpan.textContent = '';
   document.querySelector('.source-code').style.display = 'flex';
 });
@@ -79,7 +81,7 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
     assetsUrl = '../../Zip/project_assets_zip/' + zipFileName;
   } else if (clickedButton === 'download-full-zip') {
     zipFileName = projectTitle + '-full.zip'; // Full zip
-    assetsUrl = '../../Zip/html_projects_zip/' + zipFileName;
+    assetsUrl = '../../Zip/js_projects_zip/' + zipFileName;
   } else {
     alert('Invalid download button clicked.');
     return;
@@ -161,14 +163,14 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
   document.addEventListener('DOMContentLoaded', () => {
   const projectName = document.getElementById('projectDescription').textContent;
 
-  fetch(`html_txt_files/${projectName.toLowerCase()}-html.txt`)
+  fetch(`js_txt_files/${projectName.toLowerCase()}-html.txt`)
     .then(response => response.text())
     .then(data => {
       document.getElementById('htmlcode').textContent = data;
     })
     .catch(error => console.error('Error loading the file:', error));
 
-  fetch(`html_txt_files/${projectName.toLowerCase()}-css.txt`)
+  fetch(`js_txt_files/${projectName.toLowerCase()}-css.txt`)
     .then(response => response.text())
     .then(data => {
       document.getElementById('csscode').textContent = data;
@@ -186,7 +188,7 @@ function goback() {
 
 function opendemo() {
     const projectName = document.getElementById('projectDescription').textContent;
-  window.open(`../../live_dmo/html_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
+  window.open(`../../live_dmo/js_projects/${projectName}/index.html`, '_blank'); // Open in a new window or tab
 }
 
 function copyhtmlcode() {
