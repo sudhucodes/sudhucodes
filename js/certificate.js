@@ -239,7 +239,7 @@ function showResults() {
         }
     }
 
-    const formUrl = 'https://script.google.com/macros/s/AKfycbwlxbO-eMnpn97XPKulL5Sw4Dlnjz2yb9qPkYKkdtfLGB3vSW8UKxbmNH3Fd-UgY0EiqA/exec';
+    const formUrl = 'https://script.google.com/macros/s/AKfycbwF2j3JzJo_pqOGgtueZpvJ03ZNw0ABXKEaNRwtuvItvqYZmT-yYOwxRH4DZ2qk5fwI2A/exec';
     const formData = new FormData();
     
     formData.append('userName', userName);
