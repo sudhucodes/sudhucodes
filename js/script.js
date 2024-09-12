@@ -333,7 +333,7 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
 
 
 // Version of the website
-const currentVersion = '1.0.2';
+const currentVersion = '1.2.1';
 
 // Check if the current version is stored in localStorage
 const seenVersion = localStorage.getItem('siteVersion');

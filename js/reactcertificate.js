@@ -174,6 +174,33 @@ function showResults() {
     }
 
     const percentage = (score / questions.length) * 100;
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const month = currentDate.toLocaleString('default', { month: 'long' });
+    const year = currentDate.getFullYear();
+    
+    const formattedDate = `${day} ${month} ${year}`;
+    const formattedTime = currentDate.toLocaleTimeString();
+    
+    const userData = `This certificate is proudly awarded to ${userName} for successfully completing the React JS Project. 
+    
+    Quiz Details ~
+    - Total Questions Attempted: ${attempted} 
+    - Questions Skipped: ${skipped} 
+    - Incorrect Answers: ${incorrect} 
+    - Performance: ${percentage.toFixed(2)}%
+    
+    Date of Completion: ${formattedDate},
+    Time of Completion: ${formattedTime}
+    
+    Sudhanshu Kumar
+    Instructor, SudhuCodes`;
+
+    // Generate QR code
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(userData)}&size=150x150`;
+
+    const certificateQrDiv = document.getElementById('certificateqr');
+    certificateQrDiv.innerHTML = `<img src="${qrUrl}" alt="QR Code">`;
     let feedback = '';
     let certificateGenerated = false;
     
@@ -330,7 +357,8 @@ function downloadCertificate() {
     const certificateElement = document.getElementById('certificate');
     
     html2canvas(certificateElement, {
-        scale: 7 // Increase scale to improve resolution
+        scale: 7, // Adjust scale as needed
+        useCORS: true // Handle cross-origin images
     }).then(canvas => {
         const imgData = canvas.toDataURL('image/png', 1.0); // 1.0 for full quality
         
@@ -338,6 +366,8 @@ function downloadCertificate() {
         link.download = 'certificate.png';
         link.href = imgData;
         link.click();
+    }).catch(error => {
+        console.error('Error generating certificate:', error);
     });
 }
 
