@@ -17,22 +17,22 @@ const questionsByLevel = {
         { question: "Which tag defines the main content?", options: ["&lt;main&gt;", "&lt;body&gt;", "&lt;content&gt;", "&lt;primary&gt;"], correct: 0 }
     ],
     2: [
-        { question: "Which HTML element is used to embed SVG graphics?", options: ["&lt;svg&gt;", "&lt;embed&gt;", "&lt;object&gt;", "&lt;graphic&gt;"], correct: 0 },
-        { question: "Which attribute is used to define a video source in HTML5?", options: ["src", "source", "video-src", "media"], correct: 1 },
-        { question: "Which HTML tag is used to create a form control that lets users enter text?", options: ["&lt;input&gt;", "&lt;textarea&gt;", "&lt;textfield&gt;", "&lt;textbox&gt;"], correct: 1 },
-        { question: "Which HTML5 attribute can be used to specify that an input field is a number?", options: ["type='number'", "number='true'", "data-type='number'", "inputtype='number'"], correct: 0 },
-        { question: "What is the default value of the 'position' property in CSS?", options: ["static", "relative", "absolute", "fixed"], correct: 0 },
-        { question: "Which CSS property is used to change the font of an element?", options: ["font-family", "font-style", "font-weight", "text-font"], correct: 0 },
-        { question: "Which CSS selector is used to target the first child element of its parent?", options: [":first-child", ":nth-child(1)", ":child(1)", ":first-of-type"], correct: 0 },
-        { question: "Which CSS property is used to change the text color of an element?", options: ["color", "text-color", "font-color", "background-color"], correct: 0 },
-        { question: "Which attribute is used to specify the maximum length of an input field in HTML5?", options: ["maxlength", "length", "max", "limit"], correct: 0 },
-        { question: "What is the purpose of the 'data-' attribute in HTML?", options: ["To store custom data", "To define styles", "To create forms", "To embed scripts"], correct: 0 },
-        { question: "Which CSS property controls the spacing between lines of text?", options: ["line-height", "text-spacing", "letter-spacing", "word-spacing"], correct: 0 },
-        { question: "Which HTML tag is used to define an unordered list?", options: ["&lt;ul&gt;", "&lt;ol&gt;", "&lt;list&gt;", "&lt;dl&gt;"], correct: 0 },
-        { question: "Which CSS pseudo-class is used to select elements when the user mouses over them?", options: [":hover", ":focus", ":active", ":visited"], correct: 0 },
-        { question: "Which HTML tag defines a section in a document?", options: ["&lt;section&gt;", "&lt;div&gt;", "&lt;article&gt;", "&lt;group&gt;"], correct: 0 },
-        { question: "Which property is used to set the width of an element's border in CSS?", options: ["border-width", "border-size", "border-thickness", "border-line"], correct: 0 }
-    ]
+        { "question": "Which HTML element is used to embed SVG graphics?", "options": ["<object>", "<svg>", "<graphic>", "<embed>"], "correct": 1 },
+        { "question": "Which attribute is used to define a video source in HTML5?", "options": ["video-src", "media", "source", "src"], "correct": 3 },
+        { "question": "Which HTML tag is used to create a form control that lets users enter text?", "options": ["<textbox>", "<input>", "<textfield>", "<textarea>"], "correct": 1 },
+        { "question": "Which HTML5 attribute can be used to specify that an input field is a number?", "options": ["number='true'", "inputtype='number'", "data-type='number'", "type='number'"], "correct": 3 },
+        { "question": "What is the default value of the 'position' property in CSS?", "options": ["relative", "fixed", "static", "absolute"], "correct": 2 },
+        { "question": "Which CSS property is used to change the font of an element?", "options": ["text-font", "font-style", "font-weight", "font-family"], "correct": 3 },
+        { "question": "Which CSS selector is used to target the first child element of its parent?", "options": [":nth-child(1)", ":first-of-type", ":child(1)", ":first-child"], "correct": 3 },
+        { "question": "Which CSS property is used to change the text color of an element?", "options": ["background-color", "text-color", "font-color", "color"], "correct": 3 },
+        { "question": "Which attribute is used to specify the maximum length of an input field in HTML5?", "options": ["maxlength", "limit", "max", "length"], "correct": 0 },
+        { "question": "What is the purpose of the 'data-' attribute in HTML?", "options": ["To store custom data", "To create forms", "To define styles", "To embed scripts"], "correct": 0 },
+        { "question": "Which CSS property controls the spacing between lines of text?", "options": ["text-spacing", "letter-spacing", "word-spacing", "line-height"], "correct": 3 },
+        { "question": "Which HTML tag is used to define an unordered list?", "options": ["<list>", "<ul>", "<ol>", "<dl>"], "correct": 1 },
+        { "question": "Which CSS pseudo-class is used to select elements when the user mouses over them?", "options": [":active", ":focus", ":hover", ":visited"], "correct": 2 },
+        { "question": "Which HTML tag defines a section in a document?", "options": ["<div>", "<article>", "<section>", "<group>"], "correct": 2 },
+        { "question": "Which property is used to set the width of an element's border in CSS?", "options": ["border-thickness", "border-line", "border-size", "border-width"], "correct": 3 }
+    ]    
 };
 
 
@@ -173,6 +173,34 @@ function showResults() {
     }
 
     const percentage = (score / questions.length) * 100;
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const month = currentDate.toLocaleString('default', { month: 'long' });
+    const year = currentDate.getFullYear();
+    
+    const formattedDate = `${day} ${month} ${year}`;
+    const formattedTime = currentDate.toLocaleTimeString();
+    
+    const userData = `This certificate is proudly awarded to ${userName} for successfully completing the Frontend Project. 
+    
+    Quiz Details ~
+    - Total Questions Attempted: ${attempted} 
+    - Questions Skipped: ${skipped} 
+    - Incorrect Answers: ${incorrect} 
+    - Performance: ${percentage.toFixed(2)}%
+    
+    Date of Completion: ${formattedDate},
+    Time of Completion: ${formattedTime}
+    
+    Sudhanshu Kumar
+    Instructor, SudhuCodes`;
+
+    // Generate QR code
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(userData)}&size=150x150`;
+
+    const certificateQrDiv = document.getElementById('certificateqr');
+    certificateQrDiv.innerHTML = `<img src="${qrUrl}" alt="QR Code">`;
+
     let feedback = '';
     let certificateGenerated = false;
     
@@ -265,11 +293,6 @@ function showResults() {
             formData.append('certificateGenerated', 'No');
         }
     }
-
-
-
-
-
     fetch(formUrl, {
         method: 'POST',
         body: formData,
@@ -329,7 +352,8 @@ function downloadCertificate() {
     const certificateElement = document.getElementById('certificate');
     
     html2canvas(certificateElement, {
-        scale: 7 // Increase scale to improve resolution
+        scale: 7, // Adjust scale as needed
+        useCORS: true // Handle cross-origin images
     }).then(canvas => {
         const imgData = canvas.toDataURL('image/png', 1.0); // 1.0 for full quality
         
@@ -337,8 +361,11 @@ function downloadCertificate() {
         link.download = 'certificate.png';
         link.href = imgData;
         link.click();
+    }).catch(error => {
+        console.error('Error generating certificate:', error);
     });
 }
+
 
 
 function goback(){
