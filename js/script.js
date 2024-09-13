@@ -154,6 +154,14 @@ function startQuizfullstack() {
   window.open('certificates/fullstackcertificate.html', '_blank');
 }
 
+function startQuizyoutubeclone() {
+  window.open('certificates/comingsoon.html', '_blank');
+}
+
+function startQuizspotifyclone() {
+  window.open('certificates/comingsoon.html', '_blank');
+}
+
 function logoclick() {
   window.location.reload();
 }
