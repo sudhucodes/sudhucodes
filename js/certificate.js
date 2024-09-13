@@ -17,21 +17,21 @@ const questionsByLevel = {
         { question: "Which tag defines the main content?", options: ["&lt;main&gt;", "&lt;body&gt;", "&lt;content&gt;", "&lt;primary&gt;"], correct: 0 }
     ],
     2: [
-        { "question": "Which HTML element is used to embed SVG graphics?", "options": ["<object>", "<svg>", "<graphic>", "<embed>"], "correct": 1 },
-        { "question": "Which attribute is used to define a video source in HTML5?", "options": ["video-src", "media", "source", "src"], "correct": 3 },
-        { "question": "Which HTML tag is used to create a form control that lets users enter text?", "options": ["<textbox>", "<input>", "<textfield>", "<textarea>"], "correct": 1 },
-        { "question": "Which HTML5 attribute can be used to specify that an input field is a number?", "options": ["number='true'", "inputtype='number'", "data-type='number'", "type='number'"], "correct": 3 },
-        { "question": "What is the default value of the 'position' property in CSS?", "options": ["relative", "fixed", "static", "absolute"], "correct": 2 },
-        { "question": "Which CSS property is used to change the font of an element?", "options": ["text-font", "font-style", "font-weight", "font-family"], "correct": 3 },
-        { "question": "Which CSS selector is used to target the first child element of its parent?", "options": [":nth-child(1)", ":first-of-type", ":child(1)", ":first-child"], "correct": 3 },
-        { "question": "Which CSS property is used to change the text color of an element?", "options": ["background-color", "text-color", "font-color", "color"], "correct": 3 },
-        { "question": "Which attribute is used to specify the maximum length of an input field in HTML5?", "options": ["maxlength", "limit", "max", "length"], "correct": 0 },
-        { "question": "What is the purpose of the 'data-' attribute in HTML?", "options": ["To store custom data", "To create forms", "To define styles", "To embed scripts"], "correct": 0 },
-        { "question": "Which CSS property controls the spacing between lines of text?", "options": ["text-spacing", "letter-spacing", "word-spacing", "line-height"], "correct": 3 },
-        { "question": "Which HTML tag is used to define an unordered list?", "options": ["<list>", "<ul>", "<ol>", "<dl>"], "correct": 1 },
-        { "question": "Which CSS pseudo-class is used to select elements when the user mouses over them?", "options": [":active", ":focus", ":hover", ":visited"], "correct": 2 },
-        { "question": "Which HTML tag defines a section in a document?", "options": ["<div>", "<article>", "<section>", "<group>"], "correct": 2 },
-        { "question": "Which property is used to set the width of an element's border in CSS?", "options": ["border-thickness", "border-line", "border-size", "border-width"], "correct": 3 }
+        { question: "Which HTML element is used to embed SVG graphics?", options: ["&lt;object&gt;", "&lt;svg&gt;", "&lt;graphic&gt;", "&lt;embed&gt;"], correct: 1 },
+        { question: "Which attribute is used to define a video source in HTML5?", options: ["video-src", "media", "source", "src"], correct: 3 },
+        { question: "Which HTML tag is used to create a form control that lets users enter text?", options: ["&lt;textbox&gt;", "&lt;input&gt;", "&lt;textfield&gt;", "&lt;textarea&gt;"], correct: 1 },
+        { question: "Which HTML5 attribute can be used to specify that an input field is a number?", options: ["number='true'", "inputtype='number'", "data-type='number'", "type='number'"], correct: 3 },
+        { question: "What is the default value of the 'position' property in CSS?", options: ["relative", "fixed", "static", "absolute"], correct: 2 },
+        { question: "Which CSS property is used to change the font of an element?", options: ["text-font", "font-style", "font-weight", "font-family"], correct: 3 },
+        { question: "Which CSS selector is used to target the first child element of its parent?", options: [":nth-child(1)", ":first-of-type", ":child(1)", ":first-child"], correct: 3 },
+        { question: "Which CSS property is used to change the text color of an element?", options: ["background-color", "text-color", "font-color", "color"], correct: 3 },
+        { question: "Which attribute is used to specify the maximum length of an input field in HTML5?", options: ["maxlength", "limit", "max", "length"], correct: 0 },
+        { question: "What is the purpose of the 'data-' attribute in HTML?", options: ["To store custom data", "To create forms", "To define styles", "To embed scripts"], correct: 0 },
+        { question: "Which CSS property controls the spacing between lines of text?", options: ["text-spacing", "letter-spacing", "word-spacing", "line-height"], correct: 3 },
+        { question: "Which HTML tag is used to define an unordered list?", options: ["&lt;list&gt;", "&lt;ul&gt;", "&lt;ol&gt;", "&lt;dl&gt;"], correct: 1 },
+        { question: "Which CSS pseudo-class is used to select elements when the user mouses over them?", options: [":active", ":focus", ":hover", ":visited"], correct: 2 },
+        { question: "Which HTML tag defines a section in a document?", options: ["&lt;div&gt;", "&lt;article&gt;", "&lt;section&gt;", "&lt;group&gt;"], correct: 2 },
+        { question: "Which property is used to set the width of an element's border in CSS?", options: ["border-thickness", "border-line", "border-size", "border-width"], correct: 3 }
     ]    
 };
 
