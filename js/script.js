@@ -172,23 +172,10 @@ document.querySelectorAll('img').forEach(img => {
 });
 
 
-// Function to count and display elements
-function updateCount(selector, targetId, elementType = '*') {
-  const containers = document.querySelectorAll(selector);
-  let totalCount = 0;
-  
-  containers.forEach(container => {
-    totalCount += container.querySelectorAll(elementType).length;
-  });
+const totalCount = [...document.querySelectorAll('.quiz-list')]
+  .reduce((count, container) => count + container.querySelectorAll('button').length, 0);
 
-  document.getElementById(targetId).innerText = totalCount;
-}
-
-// Update counts for each section
-updateCount('.quiz-list', 'all-quiz-count', 'button'); 
-updateCount('.all-cource-container', 'all-cource-count', '.cource-container');
-updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div');
-
+document.getElementById('all-quiz-count').innerText = totalCount;
 
 
 // Event delegation for dynamically rendered buttons
