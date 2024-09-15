@@ -104,7 +104,7 @@ window.onload = function() {
 };
 
 // Handle link clicks
-document.querySelectorAll('.nav-links a, .assets-container .container .code-buy-now-btn').forEach(link => {
+document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const page = this.getAttribute('data-page');
@@ -166,36 +166,6 @@ function logoclick() {
   window.location.reload();
 }
 
-// Search functionality
-document.querySelectorAll('.search-box').forEach(searchBox => {
-  const searchInput = searchBox.querySelector('input[type="text"]');
-  const projectContainers = document.querySelectorAll('.container');
-  const crossIcon = searchBox.querySelector('.cross-icon');
-
-  searchInput.addEventListener('input', function () {
-    const query = searchInput.value.toLowerCase();
-
-    crossIcon.style.visibility = query ? 'visible' : 'hidden';
-    crossIcon.style.opacity = query ? '1' : '0';
-
-    projectContainers.forEach(function (container) {
-      const projectTitle = container.querySelector('.project-title p').textContent.toLowerCase();
-      container.style.display = projectTitle.includes(query) ? 'flex' : 'none';
-    });
-
-    if (!query) {
-      projectContainers.forEach(container => container.style.display = 'flex');
-    }
-  });
-
-  crossIcon.addEventListener('click', function () {
-    searchInput.value = '';
-    crossIcon.style.visibility = 'hidden';
-    crossIcon.style.opacity = '0';
-    projectContainers.forEach(container => container.style.display = 'flex');
-  });
-});
-
 
 document.querySelectorAll('img').forEach(img => {
   img.setAttribute('loading', 'lazy');
@@ -215,22 +185,25 @@ function updateCount(selector, targetId, elementType = '*') {
 }
 
 // Update counts for each section
-updateCount('.login-page', 'all-project-count', 'a'); 
 updateCount('.quiz-list', 'all-quiz-count', 'button'); 
-updateCount('.sourcecode-container', 'all-sourcecode-count', '.container');
 updateCount('.all-cource-container', 'all-cource-count', '.cource-container');
-updateCount('.assets-container', 'all-projectassets-count', '.container');
 updateCount('.stock-main', 'all-stockimages-count', '.stock-image-div');
 
 
 
-document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
-  btn.addEventListener('click', function () {
+// Event delegation for dynamically rendered buttons
+document.addEventListener('click', function(event) {
+  const codeBuyBtn = event.target.closest('.assets-container .container .code-buy-now-btn');
+  if (codeBuyBtn) {
+    // Navigate to the 'projectdetails' page when the button is clicked
+    navigateTo('projectdetails');
+
     // Get the clicked project details
-    const container = this.closest('.container');
+    const container = codeBuyBtn.closest('.container');
     const projectTitle = container.querySelector('.project-title p').textContent;
     const projectImageSrc = container.querySelector('img').getAttribute('src');
 
+    // Update the project details in the modal or page section
     document.getElementById('projectImage').setAttribute('src', projectImageSrc);
     document.getElementById('projectDescription').textContent = projectTitle;
 
@@ -252,7 +225,7 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
     // Function to format date and time
     function formatDate(date) {
       const day = String(date.getDate()).padStart(2, '0');
-      const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+      const month = String(date.getMonth() + 1).padStart(2, '0');
       const year = date.getFullYear();
       const hours = String(date.getHours()).padStart(2, '0');
       const minutes = String(date.getMinutes()).padStart(2, '0');
@@ -335,23 +308,5 @@ document.querySelectorAll('.code-buy-now-btn').forEach(btn => {
           console.error('Form submission error:', error);
         });
     };
-  });
+  }
 });
-
-
-
-// Version of the website
-const currentVersion = '1.2.1';
-
-// Check if the current version is stored in localStorage
-const seenVersion = localStorage.getItem('siteVersion');
-
-if (seenVersion !== currentVersion) {
-    document.getElementById('overlay').style.display = 'block';
-    document.getElementById('whatsNewPopup').style.display = 'block';
-    document.getElementById('closePopup').addEventListener('click', function() {
-        localStorage.setItem('siteVersion', currentVersion);
-        document.getElementById('overlay').style.display = 'none';
-        document.getElementById('whatsNewPopup').style.display = 'none';
-    });
-}
