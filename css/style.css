@@ -1228,9 +1228,11 @@ body::-webkit-scrollbar-track {
   transition: 0.3s;
 }
 
-.cource-container:hover{
-  transform: scale(1.02);
+.cource-container:hover {
+  box-shadow: 0 4px 8px var(--border-color);
+  transition: box-shadow 0.3s ease;
 }
+
 .cource-elements {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
