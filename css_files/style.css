@@ -891,6 +891,7 @@ footer p{
 @media (max-width: 768px) {
     nav{
         padding: 20px;
+        height: 60px;
     }
     .offer{
         display: none;
