@@ -1,5 +1,5 @@
 // Version of the website
-const currentVersion = '1.2.9';
+const currentVersion = '1.3.0';
 
 const updates = [
   { text: "Major update implemented", icon: "images/correct.png" },
