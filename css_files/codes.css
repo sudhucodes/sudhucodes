@@ -506,6 +506,9 @@ footer p{
 }
 
 @media (max-width: 767px) {
+  .navbar{
+    height: 60px;
+  }
   .project-details {
     padding: 0 20px;
     margin: 0;

@@ -598,6 +598,10 @@ nav .navbar a img{
 #source-code {
     padding: 20px 90px 90px 80px;
 }
+#source-code a{
+    width: 100%;
+    cursor: default;
+}
 .assetsContainer, 
 .sourceCodeContainer {
     display: flex;
@@ -617,20 +621,20 @@ nav .navbar a img{
 .sourceCodeContainer:hover {
     background-color: var(--click-bg-color);
 }
-.code-buy-now-btn p:hover {
+.code-buy-now-btn p:hover, .sourceCodeContainer a:hover{
     background-color: #26ffe248;
 }
 .project-image img {
     max-width: 90px; 
     height: auto;
-    cursor: pointer;
+    cursor: default;
 }
 .project-title {
     flex-grow: 1;
     text-align: left;
     font-size: 14px;
     font-weight: 400;
-    cursor: pointer;
+    cursor: default;
     margin-left: 20px;
 }
 .code-buy-now-btn {
@@ -639,7 +643,7 @@ nav .navbar a img{
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
-.code-buy-now-btn p {
+.code-buy-now-btn p, .sourceCodeContainer a {
     text-wrap: nowrap;
     transition: 0.3s;
     margin: 0;
@@ -897,7 +901,9 @@ footer p{
         display: none;
     }
     .nav-links {
+        top: 60px;
         width: 100%;
+        height: calc(100vh - 60px);
         border: none;
         left: auto;
         right: 0;
