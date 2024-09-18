@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         projects.forEach(project => project.classList.toggle('active', project.id === `${id}Projects`));
     };
 
-    // Show the HTML & CSS projects by default
     showProjects('htmlCss');
 
     buttons.forEach(button => {
@@ -56,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handling code-buy-now-btn clicks
     const codeBuyNowBtns = document.querySelectorAll('.assetsContainer .code-buy-now-btn');
 
     codeBuyNowBtns.forEach(btn => {
@@ -70,16 +68,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-const toggleButton = document.getElementById('toggle-button');
-const navLinks = document.getElementById('nav-links');
+function lockBodyScrollOnSmallScreens() {
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
 
-toggleButton.addEventListener('click', function() {
-  navLinks.classList.toggle('active');
-  toggleButton.classList.toggle('active');
-});
+  lockBodyScrollOnSmallScreens();
+
+  window.addEventListener('resize', lockBodyScrollOnSmallScreens);
+  
+  const toggleButton = document.getElementById('toggle-button');
+  const navLinks = document.getElementById('nav-links');
+  
+  toggleButton.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    toggleButton.classList.toggle('active');
+
+    if (toggleButton.classList.contains('active')) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  });
+  
 function closeNav() {
     navLinks.classList.add('active');
     toggleButton.classList.add('active');
+    document.body.style.overflow = 'auto';
 }
 
 document.addEventListener('click', function(event) {

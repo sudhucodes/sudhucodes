@@ -12,7 +12,7 @@
 <body>
     <nav>
         <div class="navbar">
-            <a href="/">
+            <a href="#all-projects">
                 <img src="images/logo.png">
                 <p>Sudhu<span>Codes.</span></p>
             </a>
@@ -209,6 +209,13 @@
         </section>
     </div>
     
+    <div id="overlay" style="display: none;"></div>
+    <div id="whatsNewPopup" class="popup-container" style="display: none;">
+        <h2></h2> <!-- Version number will be dynamically inserted here -->
+        <ul></ul> <!-- Updates will be dynamically inserted here -->
+        <button id="closePopup">Try the New Version <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+    </div>
+
     <footer>
         <div class="socialLinks">
             <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
@@ -222,6 +229,7 @@
     
 
     <script src="js_files/script.js"></script>
+    <script src="js_files/backend/update.js"></script>
     <script src="js_files/backend/projects.js"></script>
     <script src="js_files/backend/courses.js"></script>
     <script src="js_files/backend/stock-images.js"></script>
