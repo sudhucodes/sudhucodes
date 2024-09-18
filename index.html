@@ -1,254 +1,230 @@
 <!DOCTYPE html>
-<!------------Code chori mat kro bohot mehnat se bnaya hu 🙂----------->
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SudhuCodes - Full Stack Web Developer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/logo_black.png" type="image/x-icon">
+    <title>SudhuCodes - Web Developer</title>
+    <link rel="stylesheet" href="css_files/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
-  </head>
+</head>
 <body>
-
-<!-----------------Nav--Bar----------------->
-  <nav class="navbar">
-    <div class="logo" onclick="logoclick()"><img src="images/logo_black.png"><p>Sudhu<span>Codes.</span></p></div>
-    <div class="navmsg">
-      <img src="images/flame.32faab87.gif" alt="">
-      <p>Follow SudhuCodes on social media</p>
-      <button>Follow Now</button>
-    </div>
-    <ul class="nav-links" id="nav-links">
-      <li>
-        <a data-page="allprojects" class="a1" href="#" onclick="showProjects()"><i id="navigator" class="fa-solid fa-square"></i><img src="images/projects.af28bec5.png" height="19px">All Projects <div class="img">
-                <p id="all-project-count" class="avilable"></p>
-                <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
-            </div>
-        </a>
-      </li>
-      <li>
-        <a data-page="getcertificate" class="a2" href="#"><i id="navigator1" class="fa-solid fa-square"></i><img src="images/get_certified.38ee65f4.png" height="24px">Get Certificate <div class="img">
-                <p id="all-quiz-count" class="avilable"></p>
-                <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
-            </div>
-        </a>
-      </li>
-      <li>
-        <a data-page="cources" class="a3" href="#"><i id="navigator2" class="fa-solid fa-square"></i><img src="images/free_courses.65673ec2.png" height="19px">Courses <div class="img">
-                <p id="all-cource-count" class="avilable"></p>
-                <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
-            </div>
-        </a>
-      </li>
-      <li>
-        <a data-page="sourcecode" class="a4" href="#"><i id="navigator3" class="fa-solid fa-square"></i><img src="images/code_icon.9a2f1184.svg" height="20px">Source Code <div class="img">
-                <p id="all-sourcecode-count" class="avilable"></p>
-                <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
-            </div>
-        </a>
-      </li>
-      <li>
-        <a data-page="projectassets" class="a5" href="#"><i id="navigator4" class="fa-solid fa-square"></i><img src="images/project_assets.e50333c7.png" height="20px">Project Assets <div class="img">
-                <p id="all-projectassets-count" class="avilable"></p>
-                <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
-            </div>
-        </a>
-      </li>
-      <li>
-        <a data-page="stockimages" class="a6" href="#"><i id="navigator5" class="fa-solid fa-square"></i><img src="images/stock_pics.11d1f984.png" height="20px">Stock Images <div class="img">
-                <p id="all-stockimages-count" class="avilable"></p>
-                <img class="nav-arrow" src="images/arrow_icon.2a67aa4b.svg" height="22px">
-            </div>
-        </a>
-      </li>
-    </ul>
-    <div class="toggle-button" id="toggle-button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-
-
-
-<!-----------------All--Content--page----------------->
-<div class="content" id="content">
-
-
-
-<!-----------------allprojects--page----------------->
-<div id="allprojects" class="page active">
-      <div class="allProjects">
-        <h3>Projects</h3>
-      </div>
-
-      <div id="project-buttons" class="project-buttons">
-        <button id="htmlCss" onclick="selectButton('htmlCss')"><img src="images/html-5.png" alt="">HTML & CSS</button>
-        <button id="javaScript" onclick="selectButton('javaScript')"><img style="height: 16px;" src="images/js.png" alt="">JavaScript</button>
-        <button id="react" onclick="selectButton('react')"><img src="images/react-js.png" alt="">React JS</button>
-        <button id="fullStack" onclick="selectButton('fullStack')"><img style="filter: brightness(150%);" src="images/full-stack.png" alt="">Full Stack</button>
-    </div>
-    <hr>
-
-    <div class="allprojects2">
-    <div class="full-stack project-section">
-      <h1>Full Stack Projects</h1>
-      <div class="login-page" id="fullstackproject">
-        <!-- ---------------Full-stack Projects---------- -->
-      </div>
-    </div>
-    <div class="react project-section">
-      <h1>React Projects</h1>
-      <div class="login-page" id="reactproject">        
-        <!-- -------------react Projects----------- -->
-      </div>
-    </div>
-    <div class="html-css project-section">
-      <h1>HTML & CSS Projects</h1>
-      <div class="login-page" id="htmlcssproject">
-        <!-- ----------html-css-projects----------- -->
-      </div>
-    </div>      
-    <div class="javascript project-section">
-      <h1>JavaScript Projects</h1>
-      <div class="login-page" id="javascriptproject">
-        <!-- ----------JS Projects---------- -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-----------------Get --Certificate--page----------------->
-<div class="getcertificate page" id="getcertificate">
-  <div class="projects">
-    <div class="explore">
-      <div class="explorebtn">
-        <p>Get certified by completing the project & participating in <br>the Quiz.</p>
-        <button>Explore quizzes below <span2>&#8594;</span2></button>
-      </div>
-      <div class="explore-img">
-        <img src="images/certificate2.png" loading="lazy">
-      </div>
-    </div>
-    <div class="quiz-list">
-      <button onclick="startQuizhtml()"><i class="fa-solid fa-code"></i>Start HTML Quiz</button>
-      <button onclick="startQuizfullstack()"><i class="fa-solid fa-code"></i>Start Full-Stack Quiz</button>
-      <button onclick="startQuizjs()"><i class="fa-solid fa-code"></i>Start JavaScript Quiz</button>
-      <button onclick="startQuizreact()"><i class="fa-solid fa-code"></i>Start React Quiz</button>
-      <button onclick="startQuizyoutubeclone()"><i class="fa-solid fa-code"></i>Start Youtube Clone Quiz</button>
-      <button onclick="startQuizspotifyclone()"><i class="fa-solid fa-code"></i>Start Spotify Clone Quiz</button>
-      <!-- Add more quizzes here -->
-    </div>
-  </div>
-</div>
-
-
-<!-----------------Source--code--page----------------->
-<div id="sourcecode" class="page">
-  <div class="main-container sourcecode-container" id="sourceCodeContainer">
-    <div class="search-box">
-      <div class="search-item">
-        <div class="search-icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
+    <nav>
+        <div class="navbar">
+            <a href="/">
+                <img src="images/logo.png">
+                <p>Sudhu<span>Codes.</span></p>
+            </a>
+            <div class="offer">
+                <img src="images/flame.32faab87.gif" alt="">
+                <p>Follow SudhuCodes on social media</p>
+                <button>Follow Now</button>
+              </div>
         </div>
-        <input type="text" placeholder="Search project by name">
-        <div class="cross-icon" style="visibility: hidden; opacity: 0;">
-          <i class="fa-regular fa-circle-xmark"></i>
+        <div class="nav-links" id="nav-links">
+            <ul>
+                <li onclick="closeNav()" class="active">
+                    <a href="#all-projects">
+                        <i class="fa-solid fa-square"></i>
+                        <img src="images/projects.af28bec5.png">All Projects
+                    </a>
+                    <div>
+                        <p id="all-project-count"></p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" alt="">
+                    </div>
+                </li>
+                <li onclick="closeNav()">
+                    <a href="#get-certificate">
+                        <i class="fa-solid fa-square"></i>
+                        <img src="images/get_certified.38ee65f4.png">Get Certificate
+                    </a>
+                    <div>
+                        <p id="all-quiz-count"></p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" alt="">
+                    </div>
+                </li>
+                <li onclick="closeNav()">
+                    <a href="#courses">
+                        <i class="fa-solid fa-square"></i>
+                        <img src="images/free_courses.65673ec2.png">Cources
+                    </a>
+                    <div>
+                        <p id="all-cource-count"></p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" alt="">
+                    </div>
+                </li>
+                <li onclick="closeNav()">
+                    <a href="#source-code">
+                        <i class="fa-solid fa-square"></i>
+                        <img src="images/code_icon.9a2f1184.svg">Source Code
+                    </a>
+                    <div>
+                        <p id="all-sourcecode-count">0</p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" alt="">
+                    </div>
+                </li>
+                <li onclick="closeNav()">
+                    <a href="#project-assets">
+                        <i class="fa-solid fa-square"></i>
+                        <img src="images/project_assets.e50333c7.png">Project Assets
+                    </a>
+                    <div>
+                        <p id="all-projectassets-count"></p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" alt="">
+                    </div>
+                </li>
+                <li onclick="closeNav()">
+                    <a href="#stock-images">
+                        <i class="fa-solid fa-square"></i>
+                        <img src="images/stock_pics.11d1f984.png">Stock Images
+                    </a>
+                    <div>
+                        <p id="all-stockimages-count"></p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" alt="">
+                    </div>
+                </li>
+            </ul>
         </div>
-      </div>
-    </div>
-
-   
-  </div>
-</div>
-
-
-<!-- --------------Cource page---------- -->
-<div id="cources" class="page">
-  <div class="cource-main-container">
-    <div class="main-title">
-      <p>All Courses</p>
-    </div>
-    <div class="all-cource-container">
-      
-    </div>
-  </div>
-</div>
-
-
-<!-- -------------project Assets------------- -->
-<div id="projectassets" class="page">
-  <div class="main-container assets-container" id="assetsContainer">
-    <div class="search-box">
-      <div class="search-item">
-        <div class="search-icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="toggle-button" id="toggle-button">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <input type="text" placeholder="Search project by name">
-        <div class="cross-icon" style="visibility: hidden; opacity: 0;">
-          <i class="fa-regular fa-circle-xmark"></i>
-        </div>
-      </div>
+    </nav>
+
+
+    <div class="container">
+        <section id="all-projects" class="content-section active-section">
+            <div class="project-laung">
+                <button id="htmlCss" class="selected"><img src="./images/html-5.png" alt="html icon">HTML & CSS</button>
+                <button id="javaScript"><img src="./images/js.png" alt="js icon">JavaScript</button>
+                <button id="fullStack"><img src="./images/full-stack.png" alt="full-stack icon">Full-Stack</button>
+                <button id="reactJs"><img src="./images/react-js.png" alt="react-js icon">React JS</button>
+            </div>
+            
+            <div class="projects-container">
+                <div id="htmlCssProjects" class="project-mini-page">
+                    <p>HTML & CSS Projects</p>
+                    <div id="htmlCssProjectsRender" class="projects"></div>
+                </div>
+                
+                <div id="javaScriptProjects" class="project-mini-page">
+                    <p>JavaScript Projects</p>
+                    <div id="javaScriptProjectsRender" class="projects"></div>
+                </div>
+
+                <div id="fullStackProjects" class="project-mini-page">
+                    <p>Full-Stack Projects</p>
+                    <div id="fullStackProjectsRender" class="projects"></div>
+                </div>
+
+                <div id="reactJsProjects" class="project-mini-page">
+                    <p>React JS Projects</p>
+                    <div id="reactJsProjectsRender" class="projects"></div>
+                </div>
+            </div>            
+        </section>
+    
+        
+        <section id="get-certificate" class="content-section">
+            <div class="explore">
+                <div class="explorebtn">
+                  <p>Get certified by completing the project & participating in <br>the Quiz.</p>
+                  <button>Explore quizzes below <span2>&#8594;</span2></button>
+                </div>
+                <div class="explore-img">
+                  <img src="images/certificate2.png" loading="lazy">
+                </div>
+              </div>
+              <div class="quiz-list">
+                
+              </div>
+        </section>
+    
+
+        <section id="courses" class="content-section">
+            <div class="main-title">
+                <p>All Courses</p>
+            </div>
+            <div class="all-cource-container">
+                
+            </div>
+        </section>
+    
+
+        <section id="source-code" class="content-section">
+            <div class="search-box">
+                <div class="search-item">
+                  <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <input type="text" placeholder="Search project by name">
+                  <div class="cross-icon" style="visibility: hidden; opacity: 0;">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                  </div>
+                </div>
+              </div>
+        </section>
+    
+
+        <section id="project-assets" class="content-section">
+            <div class="search-box">
+                <div class="search-item">
+                  <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <input type="text" placeholder="Search project by name">
+                  <div class="cross-icon" style="visibility: hidden; opacity: 0;">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                  </div>
+                </div>
+              </div>
+        </section>
+        
+
+        <section id="project-details" class="content-section">
+            <div class="project-details">
+                <div class="details-image">
+                  <p id="projectDescription"></p>
+                  <img id="projectImage" src="" alt="Project Image">
+                </div>
+                <div class="details-button">
+                  <div class="assets-email">
+                    <input type="email" id="userEmail" placeholder="Enter your valid email id">
+                    <p id="email-required"></p>
+                  </div>
+                  <div class="assets-download">
+                    <button class="button" id="downloadAssets">Download Assets <i class="fa-solid fa-download"></i></button>
+                    <p id="download-timer"></p>
+                    <p id="download-complete"></p>
+                  </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="stock-images" class="content-section">
+            <div class="stock-main"></div>
+        </section>
     </div>
-
-  </div>
-</div>
-
-
-<!-- -------------Project assets download page------------- -->
-<div id="projectdetails" class="page">
-  <div class="project-details">
-    <div class="details-image">
-      <p id="projectDescription"></p>
-      <img id="projectImage" src="" alt="Project Image">
-    </div>
-    <div class="details-button">
-      <div class="assets-email">
-        <input type="email" id="userEmail" placeholder="Enter your valid email id">
-        <p id="email-required"></p>
-      </div>
-      <div class="assets-download">
-        <button class="button" id="downloadAssets">Download Assets <i class="fa-solid fa-download"></i></button>
-        <p id="download-timer"></p>
-        <p id="download-complete"></p>
-      </div>
-    </div>
-  </div>      
-  </div>
-
-
-<!-- -------------Stock Images------------- -->
-<div id="stockimages" class="page">
-  <div class="stock-main"></div>
-</div>
-
-  </div>
-<!-- -----------------Pop Up Update----------------- -->
-<div id="overlay" style="display:none;"></div>
-<div id="whatsNewPopup" class="popup-container" style="display:none;">
-    <h2></h2> <!-- Version number will be dynamically inserted here -->
-    <ul></ul> <!-- Updates will be dynamically inserted here -->
-    <button id="closePopup">Try the New Version</button>
-</div>
-
-
+    
     <footer>
-      <div class="socialLinks">
-          <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
-          <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
-          <a href="https://github.com/sudhucodes" target="_blank">Github</a>
-          <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
-          <a href="mailto:sudhuteam@gmail.com?subject=Sudhucodes-Website&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
-      </div>
-      <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
+        <div class="socialLinks">
+            <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
+            <a href="https://github.com/sudhucodes" target="_blank">Github</a>
+            <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
+            <a href="mailto:sudhuteam@gmail.com?subject=Sudhucodes-Website&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
+        </div>
+        <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
     </footer>
+    
 
-  <script src="js/script.js"></script>
-  <script src="js/backend/projects.js"></script>
-  <script src="js/backend/courses.js"></script>
-  <script src="js/backend/stock-images.js"></script>
-  <script src="js/backend/update.js"></script>
+    <script src="js_files/script.js"></script>
+    <script src="js_files/backend/projects.js"></script>
+    <script src="js_files/backend/courses.js"></script>
+    <script src="js_files/backend/stock-images.js"></script>
+    <script src="js_files/backend/certificate.js"></script>
 </body>
 </html>
