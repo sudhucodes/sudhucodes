@@ -80,6 +80,34 @@ function closeNav() {
     navLinks.classList.add('active');
     toggleButton.classList.add('active');
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const showBtn = document.getElementById('socialMediaLinkBtn');
+    const closeBtn = document.getElementById('socialMediaLinkCloseBtn');
+    const linksContainer = document.querySelector('.links-container');
+    const overlay2 = document.getElementById('overlay2');
+
+    showBtn.addEventListener('click', () => {
+        linksContainer.classList.add('active');
+        linksContainer.style.display = 'grid';
+        overlay2.classList.add('active'); // Corrected classList.add usage
+        document.body.classList.add('no-scroll'); // Corrected classList.add usage
+    });
+
+    closeBtn.addEventListener('click', () => {
+        linksContainer.classList.remove('active');
+        overlay2.classList.remove('active'); // Corrected classList.remove usage
+
+        setTimeout(() => {
+            document.body.classList.remove('no-scroll'); // Corrected classList.remove usage
+            linksContainer.style.display = 'none';
+        }, 300); // Matches the transition duration
+    });
+
+    // Ensure the container and overlay are hidden initially
+    linksContainer.style.display = 'none';
+});
+
+  
 
 document.addEventListener('click', function(event) {
     const codeBuyBtn = event.target.closest('.assetsContainer .code-buy-now-btn');

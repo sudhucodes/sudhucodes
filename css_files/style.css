@@ -975,6 +975,112 @@ nav .navbar a img{
 .popup-container button i{
     margin-left: 5px;
 }
+/* -------------SOCIAL MEDIA LINKS----------- */
+#overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.091);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+}
+
+#overlay2.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.links-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    background-color: var(--body-color);
+    padding: 4rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+    z-index: 1001;
+}
+
+.links-container.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.links-container button{
+    top: 10px;
+    font-size: 1.5rem;
+    right: 10px;
+    cursor: pointer;
+    position: absolute;
+
+}
+.links-container a {
+    text-decoration: none;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 10px 12px;
+    position: relative;
+}
+.links-container a::before {
+    content: '';
+    position: absolute;
+    border: 1px solid #373F62;
+    z-index: -2;
+    background-color: #ffffff3b;
+    height: 58px;
+    width: 57px;
+    border-radius: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.links-container a::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 60px;
+    width: 59px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.links-container .instagram::after {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.links-container .youtube::after {
+    background: linear-gradient(45deg, #ff0000 0%, #cc0000 100%);
+}
+.links-container .github::after {
+    background: linear-gradient(45deg, #333 0%, #000 100%);
+}
+.links-container .telegram::after {
+    background: linear-gradient(45deg, #0088cc 0%, #005b8e 100%);
+}
+.links-container a:hover::after {
+    transform: translateY(5px) rotate(35deg);
+}
+.links-container a i {
+    font-size: 38px;
+    color: #fff;
+}
 /* ----------FOOTER--------- */
 footer {
     color: var(--text-color-light);
