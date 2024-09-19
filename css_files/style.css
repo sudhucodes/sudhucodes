@@ -107,7 +107,7 @@ nav .navbar a img{
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: 0.2s;
-    animation: backgroundFlow 5s linear infinite; /* Adding animation */
+    animation: backgroundFlow 5s linear infinite;
 }
   
 @keyframes backgroundFlow {
@@ -156,12 +156,13 @@ nav .navbar a img{
     flex-direction: column;
     height: 100%;
     justify-content: flex-start;
-    padding-top: 5px;
+    padding-top: 12px;
+    font-size: 14px;
 }
 .nav-links ul li {
-    margin: 10px 0;
-    font-weight: 400;
-    height: 45px;
+    margin: 8px 0;
+    font-weight: 300;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,7 +187,7 @@ nav .navbar a img{
 }
 .nav-links ul li a {
     color: var(--text-color-white);
-    padding: 0 15px;
+    padding: 0 22px;
     height: 75px;
     display: block;
     width: 100%;
@@ -197,11 +198,11 @@ nav .navbar a img{
     gap: 10px;
 }
 .nav-links ul li a i{
-    font-size: 57px;
+    font-size: 58px;
     position: absolute;
     left: 0;
     rotate: 180deg;
-    width: 5px;
+    width: 4.2px;
     overflow: hidden;
     display: none;
     color: var(--half-logo-color);
@@ -211,15 +212,18 @@ nav .navbar a img{
 }
 .nav-links ul li:nth-child(1) a img,
 .nav-links ul li:nth-child(3) a img {
-    height: 15px;
+    height: 17px;
 }
 .nav-links ul li:nth-child(2) a img {
-    height: 20px;
+    height: 22px;
 }
 .nav-links ul li:nth-child(4) a img,
 .nav-links ul li:nth-child(5) a img,
 .nav-links ul li:nth-child(6) a img {
-    height: 16px;
+    height: 17px;
+}
+.nav-links ul li:nth-child(7) a img{
+    height: 19px;
 }
 .toggle-button {
     display: none;
@@ -594,8 +598,7 @@ nav .navbar a img{
     border-color: #626cd6;
 }
 /* ----------Project assets------ */
-#project-assets, 
-#source-code {
+#project-assets, #source-code {
     padding: 20px 90px 90px 80px;
 }
 #source-code a{
@@ -713,6 +716,8 @@ nav .navbar a img{
     color: transparent;
     font-weight: 600;
     font-size: 2rem;
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
 }
 /* -------------PROJECT DETAILS----------- */
 .project-details{
@@ -787,6 +792,109 @@ nav .navbar a img{
   
 .assets-download p{
     font-size: 15px;
+}
+/* -------------STARS------------- */
+#stars{
+    align-items: flex-start;
+    padding-top: 4rem;
+    padding-left: 7rem;
+}
+#stars .stars-title{
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-image: linear-gradient(to right, white, #d3d3d3a4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 2rem;
+}
+#stars .stars-title img{
+    height: 35px;
+}
+.stars-search-box{
+    border: var(--default-1px-border);
+    width: 35%;
+}
+.stars-search-box i{
+    color: #d3d3d367;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.stars-search-box input{
+    all: unset;
+    background-color: var(--body-color);
+    padding: 8px 10px;
+}
+.stars-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    gap: 40px;
+}
+.star-profile{
+    position: relative;
+    width: max-content;
+}
+.star{
+    transition: 0.4s;
+}
+.star:hover{
+    transform: translateY(-3px);
+}
+.star .star-profile .star-image {
+    height: 130px;
+    width: 130px;
+    object-fit: cover; 
+}
+.star-rating{
+    position: absolute;
+    bottom: 8px;
+    border-radius: 10px;
+    padding: 0 5px;
+    right: 5px;
+    background-color: #0000004f;
+}
+.star-rating img{
+    height: 13px;
+}
+.star .starName{
+    font-size: 15px;
+    opacity: 70%;
+    font-weight: 500;
+    padding: 5px 0;
+}
+.star .starProject{
+    opacity: 70%;
+    font-size: 12px;
+}
+.star-guide-div{
+    padding: 3rem 0;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.star-guide {
+    background: linear-gradient(to top, #24B0FF, #B415FF);
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 2rem;
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
 }
 /* -----------UPDATE-------------- */
 #whatsNewPopup {
@@ -940,6 +1048,9 @@ footer p{
     .nav-links ul li:nth-child(6) a img {
         height: 20px;
     }
+    .nav-links ul li:nth-child(7) a img{
+        height: 22px;
+    }
     .toggle-button, .nav-links ul li div{
         display: flex;
     }
@@ -1011,6 +1122,23 @@ footer p{
     }
     .details-button{
         display: grid;
+    }
+    #stars{
+        padding: 20px;
+    }
+    #stars .stars-title{
+        font-size: 1.8rem;
+        margin-left: 0.8rem;
+    }
+    .stars-search-box{
+        width: 80%;
+        margin-left: 0.8rem;
+    }
+    .stars-container{
+        justify-content: center;
+    }
+    .star-guide{
+        font-size: 1.5rem;
     }
     footer{
         width: 100%;

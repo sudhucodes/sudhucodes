@@ -12,7 +12,7 @@
 <body>
     <nav>
         <div class="navbar">
-            <a href="#all-projects">
+            <a href="index.html">
                 <img src="images/logo.png">
                 <p>Sudhu<span>Codes.</span></p>
             </a>
@@ -27,7 +27,7 @@
                 <li onclick="closeNav()" class="active">
                     <a href="#all-projects">
                         <i class="fa-solid fa-square"></i>
-                        <img src="images/projects.af28bec5.png">All Projects
+                        <img src="images/projects.af28bec5.png">Projects
                     </a>
                     <div>
                         <p id="all-project-count"></p>
@@ -81,6 +81,15 @@
                     </a>
                     <div>
                         <p id="all-stockimages-count"></p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" alt="">
+                    </div>
+                </li>
+                <li onclick="closeNav()">
+                    <a href="#stars">
+                        <i class="fa-solid fa-square"></i>
+                        <img src="images/stars_icon.d4b33099.svg">SudhuCodes Stars
+                    </a>
+                    <div>
                         <img src="images/arrow_icon.2a67aa4b.svg" alt="">
                     </div>
                 </li>
@@ -207,6 +216,20 @@
         <section id="stock-images" class="content-section">
             <div class="stock-main"></div>
         </section>
+
+
+        <section id="stars" class="content-section">
+            <h1 class="stars-title">SudhuCodes Stars <img src="/images/star-emoji-icon.svg" alt=""></h1>
+            <div class="stars-search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="stars-search-input" placeholder="Search Stars">
+            </div>
+            <div class="stars-container"></div>
+            <div class="star-guide-div">
+                <h1 class="star-guide">Complete Quizzes to Earn Your Certificate and Become a SudhuCodes Star!</h1>
+            </div>
+        </section>
+        
     </div>
     
     <div id="overlay" style="display: none;"></div>
@@ -234,5 +257,6 @@
     <script src="js_files/backend/courses.js"></script>
     <script src="js_files/backend/stock-images.js"></script>
     <script src="js_files/backend/certificate.js"></script>
+    <script src="js_files/backend/stars.js"></script>
 </body>
 </html>

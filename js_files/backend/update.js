@@ -1,8 +1,8 @@
 // Version of the website
-const currentVersion = '1.3.0';
+const currentVersion = '1.3.5';
 
 const updates = [
-  { text: "Major update implemented", icon: "images/correct.png" },
+  { text: "Added SudhuCodes star section", icon: "images/correct.png" },
   { text: "Website now utilizes 53.4% JavaScript", icon: "images/correct.png" },
   { text: "Complete redesign of the website", icon: "images/correct.png" },
   { text: "Introduced hash functionality in URLs", icon: "images/correct.png" }
