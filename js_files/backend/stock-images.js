@@ -68,7 +68,7 @@ const stockImages = [
       ${stockIconSection}
       ${stockIllustrationSection}
       <div class="stock-soon">
-        <h1>Coming Soon</h1>
+        <h1>Work in Progress...</h1>
       </div>
     `;
     countStockImages.textContent = `${stockImages.length}`;

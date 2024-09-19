@@ -272,34 +272,40 @@ function opendemo() {
 
 
 function copyhtmlcode() {
-    var textArea = document.getElementById("htmlcode");
+  var textArea = document.getElementById("htmlcode");
+
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); 
+  
+  navigator.clipboard.writeText(textArea.value).then(function() {
+    var copyButton = document.querySelector('.html_copy_toggle');
+    copyButton.classList.add('copied');
     
-    // Select the text to show it visually
-    textArea.select();
-    textArea.setSelectionRange(0, 99999); // For mobile devices
+    setTimeout(function() {
+      textArea.selectionEnd = textArea.selectionStart;
+      copyButton.classList.remove('copied');
+    }, 3000);
+  }).catch(function(error) {
+    console.error('Failed to copy text: ', error);
+  });
+}
+
+
+function copycsscode() {
+  var textArea = document.getElementById("csscode");
+
+  textArea.select();
+  textArea.setSelectionRange(0, 99999); 
   
-    // Copy the text using Clipboard API
-    navigator.clipboard.writeText(textArea.value).then(function() {
-      var copyButton = document.querySelector('.html-btn-copy');
-      copyButton.classList.add('copied');
-    }).catch(function(error) {
-      console.error('Failed to copy text: ', error);
-    });
-  }
-  
-  function copycsscode() {
-    var textArea = document.getElementById("csscode");
-  
-    // Select the text to show it visually
-    textArea.select();
-    textArea.setSelectionRange(0, 99999); // For mobile devices
-  
-    // Copy the text using Clipboard API
-    navigator.clipboard.writeText(textArea.value).then(function() {
-      var copyButton = document.querySelector('.css-btn-copy');
-      copyButton.classList.add('copied');
-    }).catch(function(error) {
-      console.error('Failed to copy text: ', error);
-    });
-  }
-  
+  navigator.clipboard.writeText(textArea.value).then(function() {
+    var copyButton = document.querySelector('.css_copy_toggle');
+    copyButton.classList.add('copied');
+    
+    setTimeout(function() {
+      textArea.selectionEnd = textArea.selectionStart;
+      copyButton.classList.remove('copied');
+    }, 3000);
+  }).catch(function(error) {
+    console.error('Failed to copy text: ', error);
+  });
+}

@@ -714,21 +714,6 @@ nav .navbar a img{
     font-weight: 600;
     font-size: 2rem;
 }
-/* ----------FOOTER--------- */
-footer {
-    color: var(--text-color-light);
-    text-align: center;
-    padding: 15px;
-    background-color: #0d1224;
-    width: 82%;
-    margin-left: 18%;
-    font-size: 12px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    gap: 10px;
-    border-top: 1px solid var(--border-color);
-}
 /* -------------PROJECT DETAILS----------- */
 .project-details{
     display: flex;
@@ -765,7 +750,7 @@ footer {
     height: 40px;
     border: 1px solid var(--border-color);
     outline: none;
-    background-color: transparent; /* Slightly transparent background */
+    background-color: transparent;
     font-size: 15px;
     padding: 0px 45px 0px 15px;
     color: var(--text-color-white); 
@@ -773,7 +758,7 @@ footer {
 }
   
 .details-button input::placeholder {
-    color: var(--text-color); /* Light color for placeholder text */
+    color: var(--text-color);
 }
   
 .details-button input:focus, .button:hover {
@@ -802,23 +787,6 @@ footer {
   
 .assets-download p{
     font-size: 15px;
-}
-footer p{
-    margin: 0;
-    padding: 0;
-    font-weight: 300;
-    cursor: default;
-}
-.socialLinks a{
-    color: var(--text-color-light);
-    text-decoration: none;
-    padding: 10px;
-    font-weight: 300;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.socialLinks a:hover{
-    color: var(--half-logo-color);
 }
 /* -----------UPDATE-------------- */
 #whatsNewPopup {
@@ -890,6 +858,38 @@ footer p{
 }
 .popup-container button i{
     margin-left: 5px;
+}
+/* ----------FOOTER--------- */
+footer {
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 15px;
+    background-color: #0d1224;
+    width: 82%;
+    margin-left: 18%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    gap: 10px;
+    border-top: 1px solid var(--border-color);
+}
+footer p{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    cursor: default;
+}
+.socialLinks a{
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.socialLinks a:hover{
+    color: var(--half-logo-color);
 }
 /* ------------RESPONSIVE CODE------------ */
 @media (max-width: 768px) {
@@ -1015,6 +1015,7 @@ footer p{
     footer{
         width: 100%;
         margin: 0;
+        padding: 10px;
         flex-direction: column;
     }
 }

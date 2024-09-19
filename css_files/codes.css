@@ -97,7 +97,6 @@ span{
   padding: 20px;
   font-weight: 400;
 }
-/* Ensure the selected section is shown */
 .full-stack.selected, .react.selected, .html-css2.selected, .javascript.selected {
   display: block;
 }
@@ -228,14 +227,14 @@ span{
 .title {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space between will position elements to the sides */
+  justify-content: space-between;
   width: 100%;
 }
 .title > :first-child {
-  margin-left: auto; /* Pushes the first child element to the center */
+  margin-left: auto;
 }
 .title > :last-child {
-  margin-left: auto; /* Keeps the last child element on the right */
+  margin-left: auto;
 }
 #title2 {
   color:var(--text-color-white);
@@ -268,161 +267,37 @@ span{
 .area:focus {
   outline: none;
 }
-.btn-copy {
-  --button-bg: #24233b;
-  --button-hover-bg: #24233b;
-  --button-text-color: #cccccc;
-  --button-hover-text-color: #8bb9fe;
-  --button-border-radius: 10px;
-  --button-diameter: 36px;
-  --button-outline-width: 1px;
-  --button-outline-color: rgb(141, 141, 141);
-  --tooltip-bg: #f4f3f3;
-  --toolptip-border-radius: 4px;
-  --tooltip-font-family: Menlo, Roboto Mono, monospace;
-  --tooltip-font-size: 12px;
-  --tootip-text-color: rgb(50, 50, 50);
-  --tooltip-padding-x: 7px;
-  --tooltip-padding-y: 7px;
-  --tooltip-offset: 8px;
-}
-.btn-copy {
-  box-sizing: border-box;
-  width: var(--button-diameter);
-  height: var(--button-diameter);
-  border-radius: var(--button-border-radius);
-  background-color: var(--button-bg);
-  color: var(--button-text-color);
-  border: none;
+/* -------------COPY BTN---------- */
+.html_copy_toggle, .css_copy_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: 0.65px solid #c1c2c5;
+  margin: 5px;
+  border-radius: 6px;
+  background-color: #202425;
+  color: #8e8e8e;
   cursor: pointer;
-  position: relative;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-.btn-copy > .cp-tooltip {
-  position: absolute;
-  opacity: 0;
-  visibility: 0;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: pre-wrap; /* This allows line breaks */
-  word-wrap: break-word; /* Break long words if necessary */
-  width: 80px;
-  font: var(--tooltip-font-size) var(--tooltip-font-family);
-  color: var(--tootip-text-color);
-  background: var(--tooltip-bg);
-  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
-  border-radius: var(--toolptip-border-radius);
-  pointer-events: none;
-  transition: all var(--tooltip-transition-duration)
-  cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.btn-copy > .cp-tooltip::before {
-  content: attr(data-text-initial);
-}
-.btn-copy > .cp-tooltip::after {
-  content: "";
-  position: absolute;
-  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
-  width: var(--tooltip-padding-y);
-  height: var(--tooltip-padding-y);
-  background: inherit;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  z-index: -999;
-  pointer-events: none;
-}
-.btn-copy svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.cp-check-mark {
-  display: none;
-}
-.btn-copy:hover .cp-tooltip,
-.btn-copy:focus:not(:focus-visible) .cp-tooltip {
-  opacity: 1;
-  visibility: visible;
-  top: calc((100% + var(--tooltip-offset)) * -1);
-}
-.btn-copy:focus:not(:focus-visible) .cp-tooltip::before {
-  content: attr(data-text-end);
-}
-.btn-copy:focus:not(:focus-visible) .cp-clipboard {
-  display: none;
-}
-.btn-copy:focus:not(:focus-visible) .cp-check-mark {
-  display: block;
-}
-.btn-copy:hover,
-.btn-copy:focus {
-  background-color: var(--button-hover-bg);
-}
-.btn-copy:active {
-  outline: var(--button-outline-width) solid var(--button-outline-color);
-}
-.btn-copy:hover svg {
-  color: var(--button-hover-text-color);
-}
-.btn-copy.copied .cp-clipboard {
-  display: none;
-}
-.btn-copy.copied .cp-check-mark {
-  display: block;
-}
-.btn-copy.copied .cp-tooltip::before {
-  content: attr(data-text-end);
-}
-footer {
-  color: var(--text-color);
-  text-align: center;
-  padding: 15px;
-  margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
-  background-color: var(--body-color); /* Footer ka background set kare */
-  width: 100%; /* Footer ko full width dena */
-  font-size: 12px;
-  display: grid;
-  gap: 10px;
-  box-sizing: border-box;
-  border-top: 1px solid var(--border-color);
-}
-footer p{
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
-}
-.socialLinks a{
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 300;
-}
-.socialLinks a:hover{
-  color: var(--half-logo-color);
-}
-@media (max-width: 768px) {
-  .image-flex{
-    gap: 40px;
-    padding: 10px 10px 50px 10px;
-    width: 100%;
-    margin: 0;
-    flex-direction: column;
-  }
-  .project-section{
-    width: 100%;
-    padding: 20px;
-    margin: 10px;
-  }
-  .card-flex{
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-  }
 }
 
+.html_copy_toggle > svg, .css_copy_toggle > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.html_copy_toggle.copied > svg > path, .css_copy_toggle.copied > svg > path {
+  animation: clipboard-check 100ms linear forwards;
+}
+
+@keyframes clipboard-check {
+  100% {
+    color: #fff;
+    d: path(
+      "M 9 5 H 7 a 2 2 0 0 0 -2 2 v 12 a 2 2 0 0 0 2 2 h 10 a 2 2 0 0 0 2 -2 V 7 a 2 2 0 0 0 -2 -2 h -2 M 9 5 a 2 2 0 0 0 2 2 h 2 a 2 2 0 0 0 2 -2 M 9 5 a 2 2 0 0 1 2 -2 h 2 a 2 2 0 0 1 2 2 m -6 9 l 2 2 l 4 -4"
+    );
+  }
+}
 /* ----------Project assets------ */
 .project-details{
   display: flex;
@@ -504,7 +379,37 @@ footer p{
 .assets-download p{
   font-size: 15px;
 }
-
+/* ----------FOOTER----------- */
+footer {
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 15px;
+  background-color: #0d1224;
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+}
+footer p{
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  cursor: default;
+}
+.socialLinks a{
+  color: var(--text-color-light);
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.socialLinks a:hover{
+  color: var(--half-logo-color);
+}
 @media (max-width: 767px) {
   .navbar{
     height: 60px;
@@ -521,4 +426,25 @@ footer p{
   #close-project-details{
     margin-bottom: 30px;
   }
+  .image-flex{
+    gap: 40px;
+    padding: 10px 10px 50px 10px;
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+  .project-section{
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+  }
+  .card-flex{
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+  footer{
+    padding: 10px;
+    flex-direction: column;
+}
 }

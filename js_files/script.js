@@ -160,7 +160,7 @@ document.addEventListener('click', function(event) {
 
                     const zipFileName = projectTitle + '-assets.zip';
                     const a = document.createElement('a');
-                    a.href = 'Zip/project_assets_zip/' + zipFileName;
+                    a.href = 'Zip/assets_zip/' + zipFileName;
                     a.download = zipFileName;
                     document.body.appendChild(a);
                     a.click();

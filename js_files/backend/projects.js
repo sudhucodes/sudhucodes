@@ -156,30 +156,23 @@ function initializeProjectLinkClick() {
   const projectLinks = document.querySelectorAll('.project-link');
 
   projectLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
       const category = this.getAttribute('data-category');
-      if (category) {
-        localStorage.setItem('clickedProjectCategory', category);
+      const projectImg = this.querySelector('img').src;
+      const projectName = this.querySelector('img').alt;
+
+      localStorage.setItem('clickedProjectCategory', category);
+      localStorage.setItem('projectName', projectName);
+      localStorage.setItem('projectImg', projectImg);
+
+      if (this.target === "_blank") {
+        window.open(this.href, '_blank');
+      } else {
+        window.location.href = this.href;
       }
     });
   });
 }
 
 renderProjects();
-
-document.querySelectorAll('.project-link').forEach(link => {
-  link.addEventListener('click', function(e) {
-    const projectImg = this.querySelector('img').src;
-    const projectName = this.querySelector('img').alt;
-
-    localStorage.setItem('projectName', projectName);
-    localStorage.setItem('projectImg', projectImg);
-
-    if (this.target === "_blank") {
-      window.open(this.href, '_blank');
-    } else {
-      window.location.href = this.href;
-    }
-    e.preventDefault();
-  });
-});
