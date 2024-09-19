@@ -234,7 +234,7 @@ function startTimer() {
             timerValueElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
         } else {
             clearInterval(timerInterval);
-            showTimeoutMessage(); // Handle timeout scenario
+            showTimeoutMessage();
         }
     }, 1000); 
 }

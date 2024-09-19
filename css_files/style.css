@@ -815,19 +815,27 @@ nav .navbar a img{
 #stars .stars-title img{
     height: 35px;
 }
-.stars-search-box{
+.stars-search-box {
     border: var(--default-1px-border);
+    display: flex;
+    align-items: center;
     width: 35%;
+    transition: border-color 0.2s ease;
 }
-.stars-search-box i{
+.stars-search-box i {
     color: #d3d3d367;
     font-size: 14px;
     padding-left: 10px;
 }
-.stars-search-box input{
+.stars-search-box input {
     all: unset;
+    font-size: 14px;
     background-color: var(--body-color);
+    width: 100%;
     padding: 8px 10px;
+}
+.stars-search-box:focus-within {
+    border-color: #626cd6;
 }
 .stars-container{
     display: flex;
