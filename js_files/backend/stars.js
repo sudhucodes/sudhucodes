@@ -1,7 +1,7 @@
 // Array of star data
 const stars = [
-    { imgSrc: 'images/sudhanshu_img_logo.png', name: 'Sudhanshu Kumar', project: 'E-Commerce Website', rating: 3 },
-    { imgSrc: 'images/User_img.jpeg', name: 'Aman Kumar', project: 'Portfolio Website', rating: 4 }
+    { imgSrc: 'images/sudhanshu_img_logo.png', name: 'Sudhanshu Kumar', project: 'E-Commerce Website', profileLink: 'https://www.instagram.com/ig__sudhanshu__/', rating: 3 },
+    { imgSrc: 'images/User_img.jpeg', name: 'Aman Kumar', project: 'Portfolio Website', profileLink: 'https://www.instagram.com/_its.aman04/', rating: 4 }
 ];
 function renderStars(filteredStars) {
     const container = document.querySelector('.stars-container');
@@ -11,6 +11,9 @@ function renderStars(filteredStars) {
         return `
             <div class="star">
                 <div class="star-profile">
+                    <div class="star-profile-link">
+                    <a target="_blank" href="${star.profileLink}">Profile <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                     <img class="star-image" src="${star.imgSrc}" alt="${star.name}">
                     <div class="star-rating">
                         ${ratingStars}

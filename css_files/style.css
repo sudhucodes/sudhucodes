@@ -847,17 +847,45 @@ nav .navbar a img{
 .star-profile{
     position: relative;
     width: max-content;
+    overflow: hidden;
+    height: 130px;
+    width: 130px;
+}
+.star-profile:hover .star-profile-link{
+    top: 0;
+}
+.star-profile-link {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000004f;
+    transition: 0.35s;
+}
+.star-profile-link a{
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: default;
+}
+.star-profile-link a i{
+    font-size: 11px;
+}
+.star .star-profile .star-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 .star{
     transition: 0.4s;
 }
 .star:hover{
     transform: translateY(-3px);
-}
-.star .star-profile .star-image {
-    height: 130px;
-    width: 130px;
-    object-fit: cover; 
 }
 .star-rating{
     position: absolute;
@@ -896,7 +924,7 @@ nav .navbar a img{
 }
 
 .star-guide {
-    background: linear-gradient(to top, #24B0FF, #B415FF);
+    background: linear-gradient(to right, #0bfbc7, #B415FF);
     background-clip: text;
     color: transparent;
     font-weight: 600;
