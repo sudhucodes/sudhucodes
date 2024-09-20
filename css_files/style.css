@@ -1273,11 +1273,11 @@ footer p{
         margin-left: 0.8rem;
     }
     .stars-search-box{
-        width: 80%;
-        margin-left: 0.8rem;
+        width: 100%;
     }
     .stars-container{
         justify-content: center;
+        width: 100%;
     }
     .star-guide{
         font-size: 1.5rem;
