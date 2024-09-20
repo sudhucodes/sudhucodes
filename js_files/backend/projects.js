@@ -1,22 +1,22 @@
 // Project List
 const projects = [
-  { name: "Responsive-sidebar-menu", image: "images/Responsive-sidebar-menu.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Landing-page1", image: "images/Landing-page1.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-page4", image: "images/Login-page4.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Website-with-Login-Form", image: "images/Website-with-Login-Form.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-Page3-Project", image: "images/Login-Page3.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Netflix-Login-Page", image: "images/Netflix-Login-Page.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Card-Design-1", image: "images/Card-Design-1.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Glass-Login-Form-Project", image: "images/Glassmorphism-Login-Form.jpg", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-signup-combo", image: "images/Login-signup-combo.png", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "Modern-Login-Page-Project", image: "images/Login-Page.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "E-commerce-Website", image: "images/E-commerce-Website.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Contact-Us", image: "images/Contact-Us.png", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "Multi-Step-Form", image: "images/Multi-Step-Form.png", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Clock-JS-Project", image: "images/clock-js.png", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "javascript" },
-  { name: "Student-Grade-Calculator", image: "images/Student-grade-calculator.png", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "javascript" }
+  { name: "Social-media-links-button", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
+  { name: "Responsive-sidebar-menu", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Landing-page1", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Login-page4", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Website-with-Login-Form", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Login-Page3-Project", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Netflix-Login-Page", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Card-Design-1", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Glass-Login-Form-Project", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Login-signup-combo", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
+  { name: "Modern-Login-Page-Project", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "E-commerce-Website", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Contact-Us", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
+  { name: "Multi-Step-Form", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
+  { name: "Clock-JS-Project", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "javascript" },
+  { name: "Student-Grade-Calculator", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "javascript" }
 ];
-
 function initializeSearchFunctionality(containerId, containerSelector) {
   const searchBox = document.querySelector(`#${containerId} .search-box`);
   if (!searchBox) return;
@@ -56,56 +56,32 @@ function renderProjects() {
   const javascriptContainer = document.getElementById('javaScriptProjectsRender');
   const fullstackContainer = document.getElementById('fullStackProjectsRender');
 
-  let htmlCssCount = 0, reactCount = 0, javascriptCount = 0, fullstackCount = 0;
-  let sourceCodeCount = 0, assetsCount = 0, totalCount = 0;
-  let hasHtmlCssProjects = false, hasReactProjects = false, hasJavaScriptProjects = false, hasFullStackProjects = false;
+  const categories = {
+    htmlcss: { container: htmlcssContainer, count: 0 },
+    react: { container: reactContainer, count: 0 },
+    javascript: { container: javascriptContainer, count: 0 },
+    fullstack: { container: fullstackContainer, count: 0 },
+  };
 
   projects.forEach(project => {
-    if (project.category === 'htmlcss') {
-      htmlcssContainer.innerHTML += `
-        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="htmlcss">
-          <img src="${project.image}" height="150px" alt="${project.name}" loading="lazy">
+    const projectImage = `images/${project.name}.png`;
+
+   
+    if (categories[project.category]) {
+      categories[project.category].container.innerHTML += `
+        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}">
+          <img src="${projectImage}" height="150px" alt="${project.name}" loading="lazy">
         </a>
       `;
-      htmlCssCount++;
-      hasHtmlCssProjects = true;
+      categories[project.category].count++;
     }
 
-    if (project.category === 'react') {
-      reactContainer.innerHTML += `
-        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="react">
-          <img src="${project.image}" height="150px" alt="${project.name}" loading="lazy">
-        </a>
-      `;
-      reactCount++;
-      hasReactProjects = true;
-    }
-
-    if (project.category === 'javascript') {
-      javascriptContainer.innerHTML += `
-        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="javascript">
-          <img src="${project.image}" height="150px" alt="${project.name}" loading="lazy">
-        </a>
-      `;
-      javascriptCount++;
-      hasJavaScriptProjects = true;
-    }
-
-    if (project.category === 'fullstack') {
-      fullstackContainer.innerHTML += `
-        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="fullstack">
-          <img src="${project.image}" height="150px" alt="${project.name}" loading="lazy">
-        </a>
-      `;
-      fullstackCount++;
-      hasFullStackProjects = true;
-    }
-
+    
     sourceCode.innerHTML += `
       <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}">
         <div class="sourceCodeContainer">
           <div class="project-image">
-            <img src="${project.image}" alt="${project.name}" loading="lazy">
+            <img src="${projectImage}" alt="${project.name}" loading="lazy">
           </div>
           <div class="project-title">
             <p>${project.name}</p>
@@ -116,13 +92,13 @@ function renderProjects() {
         </div>
       </a>
     `;
-    sourceCodeCount++;
 
+    
     if (project.hasAssets) {
       projectAssets.innerHTML += `
         <div class="assetsContainer">
           <div class="project-image">
-            <img src="${project.image}" alt="${project.name}" loading="lazy">
+            <img src="${projectImage}" alt="${project.name}" loading="lazy">
           </div>
           <div class="project-title">
             <p>${project.name}</p>
@@ -132,20 +108,14 @@ function renderProjects() {
           </a>
         </div>
       `;
-      assetsCount++;
     }
   });
 
-  totalCount = htmlCssCount + reactCount + javascriptCount + fullstackCount;
-
-  document.getElementById('all-project-count').textContent = totalCount;
-  document.getElementById('all-sourcecode-count').textContent = sourceCodeCount;
-  document.getElementById('all-projectassets-count').textContent = assetsCount;
-
-  if (!hasHtmlCssProjects) htmlcssContainer.innerHTML = '';
-  if (!hasReactProjects) reactContainer.innerHTML = '';
-  if (!hasJavaScriptProjects) javascriptContainer.innerHTML = '';
-  if (!hasFullStackProjects) fullstackContainer.innerHTML = '';
+  
+  const totalCounts = Object.values(categories).reduce((acc, cat) => acc + cat.count, 0);
+  document.getElementById('all-project-count').textContent = totalCounts;
+  document.getElementById('all-sourcecode-count').textContent = projects.length; // Total source codes
+  document.getElementById('all-projectassets-count').textContent = projects.filter(p => p.hasAssets).length; // Count of assets
 
   initializeProjectLinkClick();
   initializeSearchFunctionality('source-code', '.sourceCodeContainer');
