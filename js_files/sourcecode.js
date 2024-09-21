@@ -93,13 +93,13 @@ if (clickedButton === 'download') {
     
     // Determine the assets URL based on the category
     if (category === 'htmlcss') {
-        assetsUrl = '../Zip/htmlcss/' + zipFileName;
+        assetsUrl = '../Zip/assets_zip/' + zipFileName;
     } else if (category === 'react') {
-        assetsUrl = '../Zip/react/' + zipFileName;
+        assetsUrl = '../Zip/assets_zip/' + zipFileName;
     } else if (category === 'javascript') {
-        assetsUrl = '../Zip/javascript/' + zipFileName;
+        assetsUrl = '../Zip/assets_zip/' + zipFileName;
     } else if (category === 'fullstack') {
-        assetsUrl = '../Zip/fullstack/' + zipFileName;
+        assetsUrl = '../Zip/assets_zip/' + zipFileName;
     } else {
         alert('Unknown category.');
         return;

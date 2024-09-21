@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  { name: "YouTube-clone-full-Responsive", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
   { name: "Social-media-links-button", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
   { name: "Responsive-sidebar-menu", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
   { name: "Landing-page1", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },

@@ -1,12 +1,13 @@
 // Version of the website
-const currentVersion = '1.3.8';
+const currentVersion = '1.4.2';
 
 const updates = [
+  { text: "Added YouTube clone project", icon: "images/correct.png" },
   { text: "Added SudhuCodes star section", icon: "images/correct.png" },
   { text: "Added Social Media Links star(Desktop)", icon: "images/correct.png" },
+  // { text: "Complete redesign of the website", icon: "images/correct.png" },
+  // { text: "Introduced hash functionality in URLs", icon: "images/correct.png" }
   { text: "Website now utilizes 53.4% JavaScript", icon: "images/correct.png" },
-  { text: "Complete redesign of the website", icon: "images/correct.png" },
-  { text: "Introduced hash functionality in URLs", icon: "images/correct.png" }
 ];
 
 function renderPopupUpdates() {
