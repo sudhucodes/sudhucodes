@@ -3,7 +3,7 @@ const projects = [
   { name: "Login-SignUp-page", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
   { name: "Calculator-UI-design", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
   { name: "YouTube-clone-full-Responsive", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Social-media-links-button", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
+  { name: "Social-media-links-button", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "ghtmlcss" },
   { name: "Responsive-sidebar-menu", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
   { name: "Landing-page1", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
   { name: "Login-page4", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
