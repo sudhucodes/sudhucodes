@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<!-- -----------Code with SudhuCodes----------- -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SudhuCodes - Calculator (HTML & CSS)</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-container">
@@ -13,7 +15,7 @@
         </div>
         <div class="controls">
             <button class="function-btn">AC</button>
-            <button class="function-btn">X</button>
+            <button class="function-btn"><i class="fa-solid fa-delete-left"></i></button>
             <button class="function-btn">%</button>
             <button class="operation-btn">÷</button>
 

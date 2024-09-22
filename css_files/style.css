@@ -162,7 +162,7 @@ nav .navbar a img{
 .nav-links ul li {
     margin: 8px 0;
     font-weight: 300;
-    height: 48px;
+    height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -551,8 +551,8 @@ nav .navbar a img{
     justify-content: space-between;
     align-items: center;
     background-color: var(--body-color);
-    width: 100%;
-    border-radius: 50px;
+    width: 80%;
+    border-radius: 3px;
     height: 40px;
     border: 1px solid var(--border-color);
     padding: 0 15px;
@@ -560,11 +560,11 @@ nav .navbar a img{
 }
 .search-icon {
     border-right: 1px solid var(--border-color);
-    padding: 10px;
-    padding-right: 15px;
+    padding-right: 12px;
 }
 .cross-icon {
     cursor: pointer;
+    padding-left: 12px;
 }
 .search-icon, 
 .cross-icon {
@@ -572,23 +572,24 @@ nav .navbar a img{
     display: flex;
     align-items: center;
     font-size: 17px;
-    color: var(--text-color); 
+    color: var(--text-color);
+    color: rgba(254, 254, 254, 0.7);
     transition: 0.2s ease;
 }
 .search-box input {
-    width: 80%;
-    height: 40px;
+    width: 100%;
+    height: 38px;
     border: none;
     outline: none;
-    background-color: transparent; 
+    background-color: transparent;
     font-size: 15px;
     padding: 0 20px;
     padding-left: 10px;
-    color: var(--text-color-white); 
+    color: var(--text-color);
     transition: 0.2s ease;
 }
 .search-box input::placeholder {
-    color: var(--text-color); 
+    color: rgba(254, 254, 254, 0.7);
 }
 .search-box input:focus {
     border-color: #626cd6;
