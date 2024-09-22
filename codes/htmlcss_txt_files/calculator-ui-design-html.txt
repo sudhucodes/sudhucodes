@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Calculator (HTML & CSS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="display">
+            <p>99.99</p>
+        </div>
+        <div class="controls">
+            <button class="function-btn">AC</button>
+            <button class="function-btn">X</button>
+            <button class="function-btn">%</button>
+            <button class="operation-btn">÷</button>
+
+            <button class="number-btn">1</button>
+            <button class="number-btn">2</button>
+            <button class="number-btn">3</button>
+            <button class="operation-btn">+</button>
+
+            <button class="number-btn">4</button>
+            <button class="number-btn">5</button>
+            <button class="number-btn">6</button>
+            <button class="operation-btn">-</button>
+
+            <button class="number-btn">7</button>
+            <button class="number-btn">8</button>
+            <button class="number-btn">9</button>
+            <button class="operation-btn">×</button>
+
+            <button class="number-btn">00</button>
+            <button class="number-btn">0</button>
+            <button class="number-btn">.</button>
+            <button class="equal-btn">=</button>
+        </div>
+    </div>
+</body>
+</html>

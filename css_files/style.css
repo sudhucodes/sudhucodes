@@ -910,6 +910,7 @@ nav .navbar a img{
 }
 .star-guide-div{
     padding: 3rem 0;
+    width: 50%;
 }
 @keyframes gradientAnimation {
     0% {
@@ -924,13 +925,20 @@ nav .navbar a img{
 }
 
 .star-guide {
-    background: linear-gradient(to right, #0bfbc7, #B415FF);
+    background: linear-gradient(to right, #37fb0b, #B415FF);
     background-clip: text;
     color: transparent;
-    font-weight: 600;
-    font-size: 2rem;
+    text-wrap: balance;
+    font-weight: 500;
+    font-size: 1.3rem;
     background-size: 200% 200%;
     animation: gradientAnimation 3s ease infinite;
+}
+.star-guide > span{
+    color: var(--text-color);
+}
+.star-guide > span > span{
+    color: var(--half-logo-color);
 }
 /* -----------UPDATE-------------- */
 #whatsNewPopup {
@@ -1275,12 +1283,12 @@ footer p{
     .stars-search-box{
         width: 100%;
     }
+    .star-guide-div{
+        width: 100%;
+    }
     .stars-container{
         justify-content: center;
         width: 100%;
-    }
-    .star-guide{
-        font-size: 1.5rem;
     }
     footer{
         width: 100%;
