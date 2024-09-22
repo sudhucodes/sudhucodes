@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- -------Code with SudhuCodes--------- -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Login SignUp page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="login-form" id="loginForm">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Password">
+            <button class="login-btn">Login</button>
+            <div class="reset">
+                <a href="#">Forget password</a>
+            </div>
+            <div class="signup-link">
+                <p>Don't have an account? <a id="signupLink" href="#">SignUp</a></p>
+            </div>
+        </form>
+
+        <form class="signup-form" id="signupForm">
+            <h2>Signup</h2>
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Password">
+            <input type="text" placeholder="Confirm password">
+            <button class="signup-btn">Signup</button>
+            <div class="login-link">
+                <p>Alerady have an account? <a id="loginLink" href="#">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const signupForm = document.getElementById("signupForm");
+
+        document.getElementById("signupLink").addEventListener('click', () => {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'flex';
+
+        })
+        document.getElementById("loginLink").addEventListener('click', () => {
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'flex';
+
+        })
+    </script>
+</body>
+</html>

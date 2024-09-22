@@ -89,21 +89,20 @@ document.addEventListener('DOMContentLoaded', () => {
     showBtn.addEventListener('click', () => {
         linksContainer.classList.add('active');
         linksContainer.style.display = 'grid';
-        overlay2.classList.add('active'); // Corrected classList.add usage
-        document.body.classList.add('no-scroll'); // Corrected classList.add usage
+        overlay2.classList.add('active');
+        document.body.classList.add('no-scroll');
     });
 
     closeBtn.addEventListener('click', () => {
         linksContainer.classList.remove('active');
-        overlay2.classList.remove('active'); // Corrected classList.remove usage
+        overlay2.classList.remove('active');
 
         setTimeout(() => {
-            document.body.classList.remove('no-scroll'); // Corrected classList.remove usage
+            document.body.classList.remove('no-scroll');
             linksContainer.style.display = 'none';
-        }, 300); // Matches the transition duration
+        }, 300);
     });
 
-    // Ensure the container and overlay are hidden initially
     linksContainer.style.display = 'none';
 });
 
