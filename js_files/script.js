@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     codeBuyNowBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Add active class to the third list item in the navigation
             const thirdNavItem = document.querySelector('.nav-links ul li:nth-child(5)');
             if (thirdNavItem) {
                 thirdNavItem.classList.add('active');
@@ -68,16 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
   
-function toggleNoScroll() {
-    if (window.innerWidth <= 768) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }
-  
-  window.addEventListener('resize', toggleNoScroll);
-  window.addEventListener('load', toggleNoScroll);
+
 
   const toggleButton = document.getElementById('toggle-button');
   const navLinks = document.getElementById('nav-links');
