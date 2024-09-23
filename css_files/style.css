@@ -61,11 +61,7 @@ nav .navbar a{
     cursor: pointer;
 }
 nav .navbar a{
-    font-size: 24px;
-    font-weight: 500;
-}
-nav .navbar a p span{
-    color: var(--half-logo-color);
+    -webkit-tap-highlight-color: transparent;
 }
 nav .navbar a img{
     height: 30px;

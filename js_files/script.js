@@ -68,18 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
   
+function toggleNoScroll() {
+    if (window.innerWidth <= 768) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }
+  
+  window.addEventListener('resize', toggleNoScroll);
+  window.addEventListener('load', toggleNoScroll);
+
   const toggleButton = document.getElementById('toggle-button');
   const navLinks = document.getElementById('nav-links');
   
   toggleButton.addEventListener('click', function() {
     navLinks.classList.toggle('active');
     toggleButton.classList.toggle('active');
+  
+    if (navLinks.classList.contains('active') || toggleButton.classList.contains('active')) {
+      document.body.classList.remove('no-scroll');
+    } else {
+      document.body.classList.add('no-scroll');
+    }
   });
   
 function closeNav() {
     navLinks.classList.add('active');
     toggleButton.classList.add('active');
+    document.body.classList.remove('no-scroll');
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     const showBtn = document.getElementById('socialMediaLinkBtn');
     const closeBtn = document.getElementById('socialMediaLinkCloseBtn');
