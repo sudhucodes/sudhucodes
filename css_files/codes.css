@@ -67,14 +67,13 @@ body{
   color: #ddd;
   transform: scale(0.90);
 }
-.navbar .logo {
-  color: var(--text-color-white);
-  font-size: 24px;
-  cursor: pointer;
-  font-weight: bold;
+.navbar > .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.navbar .logo p{
-  font-weight: 500;
+.navbar > .logo > img {
+  height: 30px;
 }
 span{
   color: var(--half-logo-color);
@@ -94,9 +93,9 @@ span{
 }
 .login-page p img{
   width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
   height: 100%;
-  border: 2px solid var(--click-bg-color);
+  border: 1px solid var(--click-bg-color);
   transition: 0.4s;
 }
 .login-page p img:hover{
@@ -158,7 +157,7 @@ span{
   display: flex;
   background-color: var(--glass-bg-color);
   border: var(--default-1px-border);
-  border-radius: 10px;
+  border-radius: 8px;
   width: 100%;
   padding: 40px;
 }
