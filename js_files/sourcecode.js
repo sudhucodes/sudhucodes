@@ -30,13 +30,14 @@ document.getElementById('close-project-details').addEventListener('click', funct
   document.querySelector('.project-details').style.display = 'none';
   const assetsFullSpan = document.getElementById('assetsFull');
   const userEmailInput = document.getElementById('userEmail');
+  const emailRequiredMessage = document.getElementById('email-required');
   userEmailInput.value = '';
   assetsFullSpan.textContent = '';
+  emailRequiredMessage.textContent = '';
   document.querySelector('.source-code').style.display = 'flex';
 });
 
 
-// When the 'downloadAssets' button is clicked
 document.getElementById('downloadAssets').addEventListener('click', function () {
   const timerDisplay = document.getElementById('download-timer');
   const downloadCompleteMessage = document.getElementById('download-complete');
@@ -45,7 +46,6 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
   let elapsedTime = 0;
   let timerInterval;
 
-  // Function to update the timer display
   function updateTimer() {
     elapsedTime++;
     const minutes = Math.floor(elapsedTime / 60);
@@ -53,7 +53,6 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
     timerDisplay.textContent = `Time elapsed: ${minutes}m ${seconds}s`;
   }
 
-  // Function to format date and time
   function formatDate(date) {
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
@@ -64,28 +63,22 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
     return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
   }
 
-  // Validate email and handle download
   const email = userEmailInput.value;
   
   if (!email) {
-    // Show message in the #email-required paragraph
     emailRequiredMessage.textContent = 'Please enter your email to download the assets.';
     return;
   } else if (!email.includes('@gmail.com')) {
-    // Show message in the #email-required paragraph for invalid email
     emailRequiredMessage.textContent = 'Please enter a valid Gmail address.';
     return;
   } else {
-    // Clear the message if email is provided and valid
     emailRequiredMessage.textContent = '';
   }
 
-  // Determine the zip file URL based on which button was clicked
   const projectTitle = document.getElementById('projectDescription').textContent;
 let zipFileName;
 let assetsUrl;
 
-// Retrieve the project category from localStorage
 const category = localStorage.getItem('clickedProjectCategory');
 
 if (clickedButton === 'download') {
@@ -105,7 +98,7 @@ if (clickedButton === 'download') {
         return;
     }
 } else if (clickedButton === 'download-full-zip') {
-    zipFileName = projectTitle + '-full.zip'; // Full zip
+    zipFileName = projectTitle + '-full.zip';
     
     // Determine the assets URL based on the category
     if (category === 'htmlcss') {
@@ -133,9 +126,7 @@ console.log('Assets URL:', assetsUrl);
   fetch(assetsUrl, { method: 'HEAD' })
     .then(response => {
       if (response.ok) {
-        // The file exists, proceed with the download process
 
-        // Start the timer
         elapsedTime = 0;
         timerDisplay.textContent = 'Time elapsed: 0m 0s';
         timerDisplay.style.display = 'block';
@@ -251,7 +242,6 @@ function opendemo() {
   const projectName = document.getElementById('projectDescription').textContent;
   const category = localStorage.getItem('clickedProjectCategory');
 
-  // Determine the folder path based on the category
   let folderPath;
   if (category === 'htmlcss') {
       folderPath = 'htmlcss';
@@ -266,7 +256,6 @@ function opendemo() {
       return;
   }
 
-  // Open the demo in a new window or tab
   window.open(`../demo/${folderPath}/${projectName}/index.html`, '_blank');
 }
 

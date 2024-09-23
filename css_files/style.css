@@ -42,7 +42,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1000;
     height: 70px;
@@ -76,13 +76,11 @@ nav .navbar a img{
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
-  
+}
 .offer p {
     color: var(--text-color);
     animation: fadeUpDown 2s ease-in-out infinite;
 }
-  
 @keyframes fadeUpDown {
     0%, 100% {
       opacity: 1;
@@ -91,8 +89,6 @@ nav .navbar a img{
       opacity: 0.5;
     }
 }
-  
-  
 .offer button {
     all: unset;
     padding: 7px 16px;
@@ -109,38 +105,37 @@ nav .navbar a img{
     transition: 0.2s;
     animation: backgroundFlow 5s linear infinite;
 }
-  
 @keyframes backgroundFlow {
     0% {
-      background-color: rgb(200, 0, 255); /* Initial color */
+      background-color: rgb(200, 0, 255);
     }
     12.5% {
-      background-color: rgb(52, 152, 219); /* First transition color */
+      background-color: rgb(52, 152, 219);
     }
     25% {
-      background-color: rgb(26, 255, 227); /* Second transition color */
+      background-color: rgb(26, 255, 227);
     }
     37.5% {
-      background-color: rgb(83, 9, 255); /* Third transition color */
+      background-color: rgb(83, 9, 255);
     }
     50% {
-      background-color: rgb(241, 196, 15); /* Fourth transition color */
+      background-color: rgb(241, 196, 15);
     }
     62.5% {
-      background-color: rgb(231, 76, 60); /* Fifth transition color */
+      background-color: rgb(231, 76, 60);
     }
     75% {
-      background-color: rgb(46, 204, 113); /* Sixth transition color */
+      background-color: rgb(46, 204, 113);
     }
     87.5% {
-      background-color: rgb(155, 89, 182); /* Seventh transition color */
+      background-color: rgb(155, 89, 182);
     }
     100% {
-      background-color: rgb(200, 0, 255); /* Loop back to initial color */
+      background-color: rgb(200, 0, 255);
     }
 }
 .nav-links{
-    position: fixed;
+    position: absolute;
     top: 70px;
     height: calc(100vh - 70px);
     width: 18%;
@@ -171,8 +166,7 @@ nav .navbar a img{
     background: linear-gradient(to right, rgba(38, 255, 227, 0.25), rgba(38, 255, 227, 0));
 }
 .nav-links ul li div{
-    position: absolute;
-    right: 25px;
+    padding-right: 25px;
     cursor: pointer;
     display: none;
     align-items: center;
@@ -271,7 +265,6 @@ nav .navbar a img{
 /* --------------SPA CONTAINER------------ */
 .container{
     width: 100%;
-    margin-top: 70px;
     min-height: calc(100vh - 110px);
 }
 .content-section {
@@ -314,7 +307,7 @@ nav .navbar a img{
     text-wrap: nowrap;
     -webkit-tap-highlight-color: transparent;
     gap: 5px;
-    padding: 0.6rem 2.5rem;
+    padding: 0.6rem 2.3rem;
     font-size: 14px;
     border-radius: 3rem;
     border: var(--default-1px-border);
@@ -357,9 +350,10 @@ nav .navbar a img{
 .projects a img{
     width: 100%;
     height: auto;
-    transition: 0.4s;
+    transition: 0.5s;
     border: var(--default-2px-border);
     border-color: var(--body-color);
+    border-radius: 10px;
     cursor: pointer;
 }
 .projects a img:hover{
@@ -915,38 +909,6 @@ nav .navbar a img{
     opacity: 70%;
     font-size: 12px;
 }
-.star-guide-div{
-    padding: 3rem 0;
-    width: 50%;
-}
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-
-.star-guide {
-    background: linear-gradient(to right, #90f47c, #fcacb6);
-    background-clip: text;
-    color: transparent;
-    text-wrap: balance;
-    font-weight: 500;
-    font-size: 1.3rem;
-    background-size: 200% 200%;
-    animation: gradientAnimation 3s ease infinite;
-}
-.star-guide > span{
-    color: var(--text-color);
-}
-.star-guide > span > span{
-    color: var(--half-logo-color);
-}
 /* -----------UPDATE-------------- */
 #whatsNewPopup {
     position: fixed;
@@ -958,6 +920,7 @@ nav .navbar a img{
     max-width: 28rem;
 }
 #overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1162,17 +1125,25 @@ footer p{
         border: none;
         left: auto;
         right: 0;
-        transition: right 0.3s ease;
+        overflow: hidden;
+        transition: width 0.6s cubic-bezier(0.80, 0, 0.175, 1);
     }
     .nav-links.active {
-        right: -100%;
+        width: 0;
+        transition: width 0.4s cubic-bezier(0.200, 0, 0.175, 1);;
     }
     .nav-links ul{
         padding: 0;
+        opacity: 1;
+    }
+    .nav-links.active ul {
+        opacity: 0;
+        transition: opacity 0.4s ease;
     }
     .nav-links ul li{
         height: 75px;
         font-size: 14px;
+        text-wrap: nowrap;
         margin: 0;
         border-bottom: var(--default-1px-border);
     }
@@ -1212,8 +1183,7 @@ footer p{
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(2, 1fr);
-        padding: 1rem;
-        padding-bottom: 2rem;
+        padding: 2rem 1rem;
         gap: 1rem;
     }
     .project-laung button{
@@ -1281,9 +1251,6 @@ footer p{
         margin-left: 0.8rem;
     }
     .stars-search-box{
-        width: 100%;
-    }
-    .star-guide-div{
         width: 100%;
     }
     .stars-container{
