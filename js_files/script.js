@@ -66,8 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-  
-
 
   const toggleButton = document.getElementById('toggle-button');
   const navLinks = document.getElementById('nav-links');
@@ -75,18 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleButton.addEventListener('click', function() {
     navLinks.classList.toggle('active');
     toggleButton.classList.toggle('active');
-  
-    if (navLinks.classList.contains('active') || toggleButton.classList.contains('active')) {
-      document.body.classList.remove('no-scroll');
-    } else {
-      document.body.classList.add('no-scroll');
-    }
   });
   
 function closeNav() {
     navLinks.classList.add('active');
     toggleButton.classList.add('active');
-    document.body.classList.remove('no-scroll');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
