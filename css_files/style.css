@@ -1130,7 +1130,6 @@ footer p{
     }
     .nav-links.active {
         width: 0;
-        transition: width 0.4s cubic-bezier(0.200, 0, 0.175, 1);;
     }
     .nav-links ul{
         padding: 0;
