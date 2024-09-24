@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  { name: "Credit-card-Design", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
   { name: "Login-Page-UI-Dark", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
   { name: "Login-SignUp-page", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
   { name: "Calculator-UI-design", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
