@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  { name: "Modern-Login-Form", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "tailwindCSS" },
   { name: "Registation-form-Design", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
   { name: "Credit-card-Design", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
   { name: "Login-Page-UI-Dark", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
@@ -60,13 +61,13 @@ function renderProjects() {
   const projectAssets = document.getElementById('project-assets');
   const reactContainer = document.getElementById('reactJsProjectsRender');
   const javascriptContainer = document.getElementById('javaScriptProjectsRender');
-  const fullstackContainer = document.getElementById('fullStackProjectsRender');
+  const tailwindCSSContainer = document.getElementById('tailwindCSSProjectsRender');
 
   const categories = {
     htmlcss: { container: htmlcssContainer, count: 0 },
     react: { container: reactContainer, count: 0 },
     javascript: { container: javascriptContainer, count: 0 },
-    fullstack: { container: fullstackContainer, count: 0 },
+    tailwindCSS: { container: tailwindCSSContainer, count: 0 },
   };
 
   projects.forEach(project => {

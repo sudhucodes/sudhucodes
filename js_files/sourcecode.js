@@ -91,7 +91,7 @@ if (clickedButton === 'download') {
         assetsUrl = '../Zip/assets_zip/' + zipFileName;
     } else if (category === 'javascript') {
         assetsUrl = '../Zip/assets_zip/' + zipFileName;
-    } else if (category === 'fullstack') {
+    } else if (category === 'tailwindCSS') {
         assetsUrl = '../Zip/assets_zip/' + zipFileName;
     } else {
         alert('Unknown category.');
@@ -107,8 +107,8 @@ if (clickedButton === 'download') {
         assetsUrl = '../Zip/react/' + zipFileName;
     } else if (category === 'javascript') {
         assetsUrl = '../Zip/javascript/' + zipFileName;
-    } else if (category === 'fullstack') {
-        assetsUrl = '../Zip/fullstack/' + zipFileName;
+    } else if (category === 'tailwindCSS') {
+        assetsUrl = '../Zip/tailwindCSS/' + zipFileName;
     } else {
         alert('Unknown category.');
         return;
@@ -205,8 +205,8 @@ document.addEventListener('DOMContentLoaded', () => {
     folderPath = 'javascript_txt_files/';
   } else if (category === 'react') {
     folderPath = 'react_txt_files/';
-  } else if (category === 'fullstack') {
-    folderPath = 'fullstack_txt_files/';
+  } else if (category === 'tailwindCSS') {
+    folderPath = 'tailwindCSS_txt_files/';
   } else {
     console.error('Unknown category.');
     return;
@@ -249,8 +249,8 @@ function opendemo() {
       folderPath = 'javascript';
   } else if (category === 'react') {
       folderPath = 'react';
-  } else if (category === 'fullstack') {
-      folderPath = 'fullstack';
+  } else if (category === 'tailwindCSS') {
+      folderPath = 'tailwindCSS';
   } else {
       console.error('Unknown category.');
       return;
