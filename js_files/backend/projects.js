@@ -92,7 +92,7 @@ function renderProjects() {
           <div class="project-title">
             <p>${project.name}</p>
           </div>
-          <div onclick="window.open('${project.codeUrl}', '_blank')" class="code-buy-now-btn">
+          <div class="code-buy-now-btn">
             <p>Get Code</p>
           </div>
         </div>
