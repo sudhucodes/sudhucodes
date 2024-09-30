@@ -1,7 +1,9 @@
 // Array of star data
 const stars = [
+    { imgSrc: 'images/stars-image/no-user-image.jpg', name: 'Rajesh Kumar', project: 'Spotify Clone Project', profileLink: 'https://www.instagram.com/', rating: 4 },
+    { imgSrc: 'images/stars-image/no-user-image.jpg', name: 'Mohit Singh', project: 'YouTube Clone Project', profileLink: 'https://www.instagram.com/', rating: 3 },
     { imgSrc: 'images/stars-image/sudhanshu-kumar.png', name: 'Sudhanshu Kumar', project: 'E-Commerce Website', profileLink: 'https://www.instagram.com/ig__sudhanshu__/', rating: 3 },
-    { imgSrc: 'images/stars-image/aman-kumar.jpeg', name: 'Aman Kumar', project: 'Portfolio Website', profileLink: 'https://www.instagram.com/_its.aman04/', rating: 4 }
+    { imgSrc: 'images/stars-image/no-user-image.jpg', name: 'Aman Kumar', project: 'Portfolio Website', profileLink: 'https://www.instagram.com/_its.aman04/', rating: 4 }
 ];
 function renderStars(filteredStars) {
     const container = document.querySelector('.stars-container');

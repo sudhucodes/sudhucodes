@@ -345,6 +345,7 @@ nav .navbar a img{
 .projects a{
     border-radius: 10px;
     -webkit-tap-highlight-color: transparent;
+    position: relative;
 }
 .projects a img{
     width: 100%;
@@ -354,6 +355,25 @@ nav .navbar a img{
     border-color: transparent;
     border-radius: 10px;
     cursor: pointer;
+}
+.projects a .creator-name {
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    right: 7px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.projects a:hover .creator-name{
+    opacity: 1;
+    transform: translateY(0);
 }
 .projects a img:hover{
     border-color: var(--half-logo-color);

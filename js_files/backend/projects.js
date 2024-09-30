@@ -20,9 +20,9 @@ const projects = [
   {"name": "Stylish Login Form with Glassmorphism and Blur Effect (HTML & CSS)", "shortName": "Login page Glassmorphism - HTML/CSS", "projectId": "HTMLCSS-LPG-H-20240929-6NY0Q", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
   {"name": "Dynamic Login & Signup Page with Slide Animation (HTML & CSS)", "shortName": "Login & Signup - HTML/CSS", "projectId": "HTMLCSS-L&S-H-20240929-1KRU1", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
   {"name": "Sleek Modern Login Page with Social Media Authentication", "shortName": "Modern login page - HTML/CSS", "projectId": "HTMLCSS-MLP-H-20240929-Q49CZ", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
-  {"name": "E-commerce Red Store: A Comprehensive HTML & CSS Website", "shortName": "E-commerce Red Store - HTML/CSS", "projectId": "HTMLCSS-ERS-H-20240929-OYIA8", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
-  {"name": "Contact Us Form with HTML and CSS - Responsive Design", "shortName": "Contact Us - HTML/CSS", "projectId": "HTMLCSS-CU-H-20240929-5C599", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
-  {"name": "Responsive Multi-Step Signup Form with HTML, CSS, and JavaScript", "shortName": "Multi-Step Signup - HTML/CSS", "projectId": "HTMLCSS-MSF-20240929-7K8XM", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"}
+  {"name": "E-commerce Red Store: A Comprehensive HTML & CSS Website", "shortName": "E-commerce Red Store - HTML/CSS", "projectId": "HTMLCSS-ERS-H-20240929-OYIA8", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss", "creatorName": "GreatStack"},
+  {"name": "Contact Us Form with HTML and CSS - Responsive Design", "shortName": "Contact Us - HTML/CSS", "projectId": "HTMLCSS-CU-H-20240929-5C599", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss", "creatorName": "GreatStack"},
+  {"name": "Responsive Multi-Step Signup Form with HTML, CSS, and JavaScript", "shortName": "Multi-Step Signup - HTML/CSS", "projectId": "HTMLCSS-MSF-20240929-7K8XM", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss", "creatorName": "GreatStack"}
 ];
 
 function initializeSearchFunctionality(containerId, containerSelector) {
@@ -73,12 +73,14 @@ function renderProjects() {
 
   projects.forEach(project => {
     const projectImage = `images/thumbnails/${project.projectId}.png`;
+    const creatorName = project.creatorName ? project.creatorName : 'SudhuCodes';
 
    
     if (categories[project.category]) {
       categories[project.category].container.innerHTML += `
         <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}" data-projectId="${project.projectId}" data-shortName="${project.shortName}" data-projectName="${project.name}">
           <img src="${projectImage}" height="150px" alt="${project.shortName}" loading="lazy">
+          <div class="creator-name">Made by ${creatorName}</div>
         </a>
       `;
       categories[project.category].count++;
