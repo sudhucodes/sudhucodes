@@ -1,29 +1,30 @@
 // Project List
 const projects = [
-  { name: "Modern-Login-Form", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "tailwindCSS" },
-  { name: "Registation-form-Design", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "Credit-card-Design", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-Page-UI-Dark", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-SignUp-page", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "Calculator-UI-design", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "YouTube-clone-full-Responsive", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Social-media-links-button", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "Responsive-sidebar-menu", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Landing-page1", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-page4", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Website-with-Login-Form", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-Page3-Project", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Netflix-Login-Page", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Card-Design-1", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Glass-Login-Form-Project", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Login-signup-combo", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "Modern-Login-Page-Project", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "E-commerce-Website", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Contact-Us", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "htmlcss" },
-  { name: "Multi-Step-Form", codeUrl: "codes/sourcecode.html", hasAssets: true, category: "htmlcss" },
-  { name: "Clock-JS-Project", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "javascript" },
-  { name: "Student-Grade-Calculator", codeUrl: "codes/sourcecode.html", hasAssets: false, category: "javascript" }
+  {"name": "Student Grade Calculator Using HTML, CSS & JavaScript", "shortName": "Grade Calculator - HTML/CSS/JS", "projectId": "JAVASCRIPT-GC-H-20240930-QOFT3", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "javascript"},
+  {"name": "Dark-Themed Clock Built with HTML, CSS & JavaScript", "shortName": "Clock - HTML/CSS/JS", "projectId": "JAVASCRIPT-C-H-20240930-P4ZFU", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "javascript"},
+  {"name": "Modern Login Form with Glassmorphism Effect & Background Image (TailwindCSS)", "shortName": "Login Form - TailwindCSS", "projectId": "TAILWINDCSS-LF-T-20240930-3V1XT", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
+  {"name": "Stylish Registration Form Design with Responsive Layout (HTML & CSS)", "shortName": "Registration Form - HTML/CSS", "projectId": "HTMLCSS-RF-H-20240930-RH0C7", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
+  {"name": "Realistic Visa Credit Card Design (HTML & CSS)", "shortName": "Visa Card Design - HTML/CSS", "projectId": "HTMLCSS-VCD-H-20240930-OV9SZ", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Dark-Themed Login Page with Social Media Authentication (HTML & CSS)", "shortName": "Dark Login Page - HTML/CSS", "projectId": "HTMLCSS-DLP-H-20240930-LNKR8", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Login & Signup Page Combo with Smooth Transition (HTML, CSS & JavaScript)", "shortName": "Login & Signup - HTML/CSS/JS", "projectId": "HTMLCSS-L&S-H-20240930-NW31T", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
+  {"name": "Calculator UI Design with Modern Aesthetics (HTML & CSS)", "shortName": "Calculator UI - HTML/CSS", "projectId": "HTMLCSS-CU-H-20240930-L8367", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
+  {"name": "YouTube Clone Project with Modern UI and Functionality (HTML, CSS & JavaScript)", "shortName": "YouTube Clone - HTML/CSS/JS", "projectId": "HTMLCSS-YC-H-20240930-ZRJCL", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Interactive Social Media Icons with Hover Animation (HTML & CSS)", "shortName": "Social Media Links - HTML/CSS", "projectId": "HTMLCSS-SML-H-20240930-5RGN6", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
+  {"name": "Responsive Sidebar Menu with Smooth Animations (HTML & CSS)", "shortName": "Responsive Sidebar - HTML/CSS", "projectId": "HTMLCSS-RS-H-20240930-VDE2V", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Modern Landing Page with Stylish Hero Section and Navbar (HTML & CSS)", "shortName": "Modern Landing Page - HTML/CSS", "projectId": "HTMLCSS-MLP-H-20240930-UUTKM", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Dark-Themed Professional Login Page Clone Inspired by Creatica (HTML & CSS)", "shortName": "Creatica Dark Login - HTML/CSS", "projectId": "HTMLCSS-CDL-H-20240930-D5L7N", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Responsive Hero Section with Popup Login Form Integration (HTML, CSS & JavaScript)", "shortName": "Hero Section & Login - HTML/CSS/JS", "projectId": "HTMLCSS-HS&L-H-20240930-6F8K4", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Light-Themed Login Page with User Profile Display (HTML & CSS)", "shortName": "Login Page with Profile - HTML/CSS", "projectId": "HTMLCSS-LPWP-H-20240930-C79MM", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Netflix Login Page Clone with HTML & CSS", "shortName": "Netflix Login Clone - HTML/CSS", "projectId": "HTMLCSS-NLC-H-20240930-V5SRI", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Interactive Card Design with Hover Effect (HTML & CSS)", "shortName": "Hover Effect Card - HTML/CSS", "projectId": "HTMLCSS-HEC-H-20240929-U0973", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Stylish Login Form with Glassmorphism and Blur Effect (HTML & CSS)", "shortName": "Login page Glassmorphism - HTML/CSS", "projectId": "HTMLCSS-LPG-H-20240929-6NY0Q", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Dynamic Login & Signup Page with Slide Animation (HTML & CSS)", "shortName": "Login & Signup - HTML/CSS", "projectId": "HTMLCSS-L&S-H-20240929-1KRU1", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
+  {"name": "Sleek Modern Login Page with Social Media Authentication", "shortName": "Modern login page - HTML/CSS", "projectId": "HTMLCSS-MLP-H-20240929-Q49CZ", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "E-commerce Red Store: A Comprehensive HTML & CSS Website", "shortName": "E-commerce Red Store - HTML/CSS", "projectId": "HTMLCSS-ERS-H-20240929-OYIA8", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"},
+  {"name": "Contact Us Form with HTML and CSS - Responsive Design", "shortName": "Contact Us - HTML/CSS", "projectId": "HTMLCSS-CU-H-20240929-5C599", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss"},
+  {"name": "Responsive Multi-Step Signup Form with HTML, CSS, and JavaScript", "shortName": "Multi-Step Signup - HTML/CSS", "projectId": "HTMLCSS-MSF-20240929-7K8XM", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss"}
 ];
+
 function initializeSearchFunctionality(containerId, containerSelector) {
   const searchBox = document.querySelector(`#${containerId} .search-box`);
   if (!searchBox) return;
@@ -71,13 +72,13 @@ function renderProjects() {
   };
 
   projects.forEach(project => {
-    const projectImage = `images/${project.name}.png`;
+    const projectImage = `images/thumbnails/${project.projectId}.png`;
 
    
     if (categories[project.category]) {
       categories[project.category].container.innerHTML += `
-        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}">
-          <img src="${projectImage}" height="150px" alt="${project.name}" loading="lazy">
+        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}" data-projectId="${project.projectId}" data-shortName="${project.shortName}" data-projectName="${project.name}">
+          <img src="${projectImage}" height="150px" alt="${project.shortName}" loading="lazy">
         </a>
       `;
       categories[project.category].count++;
@@ -85,10 +86,10 @@ function renderProjects() {
 
     
     sourceCode.innerHTML += `
-      <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}">
+      <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}" data-projectId="${project.projectId}" data-shortName="${project.shortName}" data-projectName="${project.name}">
         <div class="sourceCodeContainer">
           <div class="project-image">
-            <img src="${projectImage}" alt="${project.name}" loading="lazy">
+            <img src="${projectImage}" alt="${project.shortName}" loading="lazy">
           </div>
           <div class="project-title">
             <p>${project.name}</p>
@@ -103,9 +104,9 @@ function renderProjects() {
     
     if (project.hasAssets) {
       projectAssets.innerHTML += `
-        <div class="assetsContainer">
+        <div class="assetsContainer" data-projectId="${project.projectId}" data-shortName="${project.shortName}" data-projectName="${project.name}">
           <div class="project-image">
-            <img src="${projectImage}" alt="${project.name}" loading="lazy">
+            <img src="${projectImage}" alt="${project.shortName}" loading="lazy">
           </div>
           <div class="project-title">
             <p>${project.name}</p>
@@ -136,10 +137,14 @@ function initializeProjectLinkClick() {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const category = this.getAttribute('data-category');
+      const shortName = this.getAttribute('data-shortName');
+      const projectName = this.getAttribute('data-projectName');
+      const projectId = this.getAttribute('data-projectId');
       const projectImg = this.querySelector('img').src;
-      const projectName = this.querySelector('img').alt;
 
       localStorage.setItem('clickedProjectCategory', category);
+      localStorage.setItem('shortName', shortName);
+      localStorage.setItem('projectId', projectId);
       localStorage.setItem('projectName', projectName);
       localStorage.setItem('projectImg', projectImg);
 

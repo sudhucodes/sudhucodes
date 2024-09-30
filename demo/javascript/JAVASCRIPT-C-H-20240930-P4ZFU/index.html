@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- ---------Code with SudhuCodes-------- -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="clock-container">
+        <div id="digital-clock"></div>
+        <div id="date"></div>
+    </div>
+
+    <script>
+        function updateDigitalClock() {
+            const now = new Date();
+
+            // Time
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('digital-clock').textContent = `${hours}:${minutes}:${seconds}`;
+
+            // Date
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = [
+                'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+            ];
+            const dayName = days[now.getDay()];
+            const monthName = months[now.getMonth()];
+            const day = now.getDate();
+            const year = now.getFullYear();
+            document.getElementById('date').textContent = `${dayName}, ${day} ${monthName} ${year}`;
+        }
+
+        // Update every second
+        setInterval(updateDigitalClock, 1000);
+        updateDigitalClock(); // Initial call when the page loads
+
+    </script>
+</body>
+</html>

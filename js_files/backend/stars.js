@@ -1,12 +1,12 @@
 // Array of star data
 const stars = [
-    { imgSrc: 'images/sudhanshu_img_logo.png', name: 'Sudhanshu Kumar', project: 'E-Commerce Website', profileLink: 'https://www.instagram.com/ig__sudhanshu__/', rating: 3 },
-    { imgSrc: 'images/User_img.jpeg', name: 'Aman Kumar', project: 'Portfolio Website', profileLink: 'https://www.instagram.com/_its.aman04/', rating: 4 }
+    { imgSrc: 'images/stars-image/sudhanshu-kumar.png', name: 'Sudhanshu Kumar', project: 'E-Commerce Website', profileLink: 'https://www.instagram.com/ig__sudhanshu__/', rating: 3 },
+    { imgSrc: 'images/stars-image/aman-kumar.jpeg', name: 'Aman Kumar', project: 'Portfolio Website', profileLink: 'https://www.instagram.com/_its.aman04/', rating: 4 }
 ];
 function renderStars(filteredStars) {
     const container = document.querySelector('.stars-container');
     const starsHtml = filteredStars.map(star => {
-        const ratingStars = Array(star.rating).fill('<img src="images/star-emoji-icon.svg" alt="Star">').join('');
+        const ratingStars = Array(star.rating).fill('<img src="images/icons/star-emoji-icon.svg" alt="Star">').join('');
 
         return `
             <div class="star">

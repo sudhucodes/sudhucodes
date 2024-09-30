@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#clock-container {
+    font-weight: 600;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #1b213b, #2c355c);
+    color: #e0e6f1;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), 
+                inset 10px 10px 20px rgba(0, 0, 0, 0.5),
+                inset -10px -10px 20px rgba(100, 100, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#digital-clock {
+    font-size: 5em;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+#date {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#temperature {
+    font-size: 1.5em;
+    color: #26ffe3;
+}

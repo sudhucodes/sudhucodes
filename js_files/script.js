@@ -112,11 +112,13 @@ document.addEventListener('click', function(event) {
     const codeBuyBtn = event.target.closest('.assetsContainer .code-buy-now-btn');
     if (codeBuyBtn) {
         const container = codeBuyBtn.closest('.assetsContainer');
-        const projectTitle = container.querySelector('.project-title p').textContent;
+        const projectName = container.getAttribute('data-projectName');
         const projectImageSrc = container.querySelector('img').getAttribute('src');
+        const projectId = container.getAttribute('data-projectId');
+        const shortName = container.getAttribute('data-shortName');
 
         document.getElementById('projectImage').setAttribute('src', projectImageSrc);
-        document.getElementById('projectDescription').textContent = projectTitle;
+        document.getElementById('projectDescription').textContent = projectName;
 
         let timerInterval;
         const timerDisplay = document.getElementById('download-timer');
@@ -162,13 +164,10 @@ document.addEventListener('click', function(event) {
 
             timerInterval = setInterval(updateTimer, 1000);
 
-            console.log('Project Title:', projectTitle);
-            console.log('Email:', email);
-
             const sheetUrl = 'https://script.google.com/macros/s/AKfycbynmC_8YIN1tCtroa76N04VTgwQAzASPy1Ikx_n4pBBBKSgTcnT1Gmuxss5moGgQu97/exec';
             const formData = new FormData();
 
-            formData.append('projectName', projectTitle + ' - assets');
+            formData.append('projectName', projectName + ' - assets');
             formData.append('email', email);
             formData.append('timestamp', formatDate(new Date()));
 
@@ -177,27 +176,39 @@ document.addEventListener('click', function(event) {
                 body: formData
             }).then(response => response.text())
                 .then(result => {
-                    console.log('Form submission success:', result);
-
                     clearInterval(timerInterval);
                     timerDisplay.style.display = 'none';
-                    downloadCompleteMessage.textContent = 'Download complete';
 
-                    userEmailInput.value = '';
-
-                    const zipFileName = projectTitle + '-assets.zip';
+                    const zipFileName = projectId + '-assets.zip';
+                    const zipFileShortName = shortName + ' - Project Assets.zip';
                     const a = document.createElement('a');
                     a.href = 'Zip/assets_zip/' + zipFileName;
-                    a.download = zipFileName;
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
 
+                    fetch(a.href, { method: 'HEAD' })
+                        .then(res => {
+                            if (res.ok) {
+                                downloadCompleteMessage.textContent = 'Download complete';
+                                a.download = zipFileShortName;
+                                document.body.appendChild(a);
+                                a.click();
+                                document.body.removeChild(a);
+                            } else {
+                                downloadCompleteMessage.textContent = 'Assets not found';
+                            }
+                        })
+                        .catch(() => {
+                            downloadCompleteMessage.textContent = 'Assets not found';
+                        });
+
+                    userEmailInput.value = '';
                     setTimeout(() => {
                         downloadCompleteMessage.textContent = '';
                     }, 3000);
                 })
                 .catch(error => {
+                    clearInterval(timerInterval);
+                    timerDisplay.style.display = 'none';
+                    downloadCompleteMessage.textContent = 'Error submitting form';
                     console.error('Form submission error:', error);
                 });
         };

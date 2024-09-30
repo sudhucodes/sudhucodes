@@ -83,7 +83,10 @@ span{
   display: block;
 }
 .html-css2 h1{
-  padding-bottom: 20px;
+  padding: 2rem;
+  line-height: 30px;
+  padding-top: 1rem;
+  width: 80%;
   font-weight: 500;
   font-size: 28px;
   margin: 0;
@@ -398,6 +401,11 @@ footer p{
   .navbar{
     height: 60px;
   }
+  .html-css2 h1{
+    width: 100%;
+    font-size: 22px;
+    padding: auto 0;
+  }
   .project-details {
     padding: 0 20px;
     margin: 0;
@@ -420,6 +428,7 @@ footer p{
   .project-section{
     width: 100%;
     padding: 20px;
+    padding-top: 0px;
     margin: 10px;
   }
   .card-flex{

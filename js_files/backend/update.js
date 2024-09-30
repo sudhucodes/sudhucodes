@@ -1,14 +1,13 @@
 // Version of the website
-const currentVersion = '1.6.2';
+const currentVersion = '1.6.3';
 
 const updates = [
-  { text: "Removed Full-Stack category", icon: "images/correct.png" },
-  { text: "Added tailwindCSS category", icon: "images/correct.png" },
-  // { text: "Added SudhuCodes star section", icon: "images/correct.png" },
-  // { text: "Complete redesign of the website", icon: "images/correct.png" },
-  // { text: "Introduced hash functionality in URLs", icon: "images/correct.png" },
-  { text: "Added first tailwindCSS project", icon: "images/correct.png" },
+  { text: "Implemented unique identifiers for all projects to enhance backend management", icon: "images/icons/correct.png" },
+  { text: "Restructured file organization for improved clarity and efficiency", icon: "images/icons/correct.png" },
+  { text: "Enabled dynamic fetching of all assets (images, text files, etc.) via project-specific IDs", icon: "images/icons/correct.png" },
+  { text: "Optimized backend processes for seamless project asset retrieval through unique IDs", icon: "images/icons/correct.png" },
 ];
+
 
 function renderPopupUpdates() {
   const popupContainer = document.querySelector('.popup-container ul');

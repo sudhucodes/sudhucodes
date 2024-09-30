@@ -1,16 +1,16 @@
 const stockImages = [
-    { name: "Unsplash", link: "https://unsplash.com/", imgSrc: "images/redirect_icon.a05a35c3.svg" },
-    { name: "Pexels", link: "https://www.pexels.com/", imgSrc: "images/redirect_icon.a05a35c3.svg" },
-    { name: "Pixabay", link: "https://pixabay.com/", imgSrc: "images/redirect_icon.a05a35c3.svg" }
+    { name: "Unsplash", link: "https://unsplash.com/", imgSrc: "images/icons/redirect-icon.svg" },
+    { name: "Pexels", link: "https://www.pexels.com/", imgSrc: "images/icons/redirect-icon.svg" },
+    { name: "Pixabay", link: "https://pixabay.com/", imgSrc: "images/icons/redirect-icon.svg" }
   ];
   
   const stockIcons = [
-    { name: "Icons8", link: "https://icons8.com/", imgSrc: "images/redirect_icon.a05a35c3.svg" },
-    { name: "Flaticon", link: "https://www.flaticon.com/", imgSrc: "images/redirect_icon.a05a35c3.svg" }
+    { name: "Icons8", link: "https://icons8.com/", imgSrc: "images/icons/redirect-icon.svg" },
+    { name: "Flaticon", link: "https://www.flaticon.com/", imgSrc: "images/icons/redirect-icon.svg" }
   ];
   
   const stockIllustrations = [
-    { name: "Undraw", link: "https://undraw.co/illustrations", imgSrc: "images/redirect_icon.a05a35c3.svg" }
+    { name: "Undraw", link: "https://undraw.co/illustrations", imgSrc: "images/icons/redirect-icon.svg" }
   ];
   
 

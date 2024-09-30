@@ -1,6 +1,8 @@
 // Get project data from localStorage
 const projectName = localStorage.getItem('projectName');
 const projectImg = localStorage.getItem('projectImg');
+const projectId = localStorage.getItem('projectId');
+const shortName = localStorage.getItem('shortName');
 
 // Fill the data into the page
 document.getElementById('projectDescription').textContent = projectName;
@@ -77,12 +79,14 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
 
   const projectTitle = document.getElementById('projectDescription').textContent;
 let zipFileName;
+let zipFileShortName;
 let assetsUrl;
 
 const category = localStorage.getItem('clickedProjectCategory');
 
 if (clickedButton === 'download') {
-    zipFileName = projectTitle + '-assets.zip'; // Assets zip
+    zipFileName = projectId + '-assets.zip'; // Assets zip
+    zipFileShortName = shortName + ' - Project Assets.zip';
     
     // Determine the assets URL based on the category
     if (category === 'htmlcss') {
@@ -98,7 +102,8 @@ if (clickedButton === 'download') {
         return;
     }
 } else if (clickedButton === 'download-full-zip') {
-    zipFileName = projectTitle + '-full.zip';
+    zipFileName = projectId + '-full.zip';
+    zipFileShortName = shortName + ' - Complete Project Files.zip';
     
     // Determine the assets URL based on the category
     if (category === 'htmlcss') {
@@ -172,7 +177,7 @@ console.log('Assets URL:', assetsUrl);
             // Trigger the file download
             const a = document.createElement('a');
             a.href = assetsUrl; 
-            a.download = zipFileName;
+            a.download = zipFileShortName;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -194,7 +199,6 @@ console.log('Assets URL:', assetsUrl);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const projectName = document.getElementById('projectDescription').textContent;
   const category = localStorage.getItem('clickedProjectCategory');
 
   // Determine the folder path based on the category
@@ -213,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Fetch HTML code
-  fetch(`${folderPath}${projectName.toLowerCase()}-html.txt`)
+  fetch(`${folderPath}${projectId}-html.txt`)
     .then(response => response.text())
     .then(data => {
       document.getElementById('htmlcode').textContent = data;
@@ -221,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error('Error loading the HTML file:', error));
 
   // Fetch CSS code
-  fetch(`${folderPath}${projectName.toLowerCase()}-css.txt`)
+  fetch(`${folderPath}${projectId}-css.txt`)
     .then(response => response.text())
     .then(data => {
       document.getElementById('csscode').textContent = data;
@@ -239,7 +243,6 @@ function goback() {
 }
 
 function opendemo() {
-  const projectName = document.getElementById('projectDescription').textContent;
   const category = localStorage.getItem('clickedProjectCategory');
 
   let folderPath;
@@ -256,7 +259,7 @@ function opendemo() {
       return;
   }
 
-  window.open(`../demo/${folderPath}/${projectName}/index.html`, '_blank');
+  window.open(`../demo/${folderPath}/${projectId}/index.html`, '_blank');
 }
 
 

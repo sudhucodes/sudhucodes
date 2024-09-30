@@ -1193,6 +1193,10 @@ footer p{
         gap: 10px;
         grid-template-columns: repeat(1, 1fr);
     }
+    .project-title{
+        font-size: 12px;
+        text-wrap: balance;
+    }
     #get-certificate{
         padding: 0;
     }
