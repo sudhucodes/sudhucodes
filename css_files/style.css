@@ -887,7 +887,7 @@ nav .navbar a img{
     background-color: #0000004f;
     transition: 0.35s;
 }
-.star-profile-link a{
+.star-profile-link a, .star-profile-link > span{
     font-size: 12px;
     border: 1px solid #ccc;
     padding: 5px 10px;
@@ -1277,8 +1277,11 @@ footer p{
         width: 100%;
     }
     .stars-container{
-        justify-content: center;
+        justify-content: space-between;
         width: 100%;
+    }
+    .star{
+        margin: 0 10px;
     }
     footer{
         width: 100%;
