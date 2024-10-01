@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projects.forEach(project => project.classList.toggle('active', project.id === `${id}Projects`));
     };
 
-    showProjects('htmlCss');
+    showProjects('tailwindCSS');
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {

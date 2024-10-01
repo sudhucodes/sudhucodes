@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Premium Login Page with TailwindCSS & Gradient Background", "shortName": "Login Page - TailwindCSS", "projectId": "TAILWINDCSS-LP-T-20241001-C6UL0", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Student Grade Calculator Using HTML, CSS & JavaScript", "shortName": "Grade Calculator - HTML/CSS/JS", "projectId": "JAVASCRIPT-GC-H-20240930-QOFT3", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "javascript"},
   {"name": "Dark-Themed Clock Built with HTML, CSS & JavaScript", "shortName": "Clock - HTML/CSS/JS", "projectId": "JAVASCRIPT-C-H-20240930-P4ZFU", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "javascript"},
   {"name": "Modern Login Form with Glassmorphism Effect & Background Image (TailwindCSS)", "shortName": "Login Form - TailwindCSS", "projectId": "TAILWINDCSS-LF-T-20240930-3V1XT", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
