@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- ------Code with SudhuCodes------ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - A Professional and User-Friendly Review Section Design Using TailwindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-[#2f1c6a]">
+    <h1 class="text-3xl font-bold pb-10">Trusted by 3+ million website owners worldwide</h1>
+    <div class="grid grid-cols-3 px-5 gap-4">
+        <!-- ---------first user--------- -->
+        <div class="border max-w-[320px] rounded-xl overflow-hidden">
+            <div class="flex items-center px-6 py-3 gap-4 h-24 bg-[#f4f5ff]">
+                <img class="w-14" src="./images/image-1.png" alt="user-1">
+                <label>
+                    <h2 class="font-bold">Shreyash Pandey</h2>
+                    <p class="text-sm">Founder of Ethereal Corporate Network</p>
+                </label>
+            </div>
+            <div class="p-6 pb-9">
+                <div class="flex items-center">
+                    <img class="h-6" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                </div>
+                <p class="text-[#2f1c6a] text-xs leading-5 py-5 pb-6">Unlike the previous web hosts we’ve tried, Hostinger’s user experience was much less complicated. Its hPanel is easy to use, and the response time is fast. I don’t need to train my team members on how to navigate it because everyone can learn it by themselves.</p>
+                <a class="font-semibold text-[#673de6]" href="#">Read the full story</a>
+            </div>
+        </div>
+        <!-- ---------second user--------- -->
+        <div class="border max-w-[320px] rounded-xl relative overflow-hidden">
+            <div class="flex items-center px-6 py-3 gap-4 h-24 bg-[#f4f5ff]">
+                <img class="w-14" src="./images/image-2.png" alt="user-1">
+                <label>
+                    <h2 class="font-bold">Pranay Jain</h2>
+                    <p class="text-sm">Co-founder of Brandemic</p>
+                </label>
+            </div>
+            <div class="p-6 pb-9">
+                <div class="flex items-center">
+                    <img class="h-6" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                </div>
+                <p class="text-[#2f1c6a] text-xs leading-5 py-5">I found out about Hostinger through an ad, and it’s been great since the first experience. I’ve now hosted over 150 websites on Hostinger and joined the affiliate program.</p>
+                <a class="font-semibold text-[#673de6] absolute bottom-8" href="#">Read the full story</a>
+            </div>
+        </div>
+        <!-- ---------third user--------- -->
+        <div class="border max-w-[320px] rounded-xl relative overflow-hidden">
+            <div class="flex items-center px-6 py-3 gap-4 h-24 bg-[#f4f5ff]">
+                <img class="w-14" src="./images/image-3.png" alt="user-1">
+                <label>
+                    <h2 class="font-bold">Charlie Low</h2>
+                    <p class="text-sm">Co-founder of Nohma</p>
+                </label>
+            </div>
+            <div class="p-6 pb-9">
+                <div class="flex items-center">
+                    <img class="h-6" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                    <img class="h-6 -ml-4" src="./images/ic-star-primary.png" alt="star-icon">
+                </div>
+                <p class="text-[#2f1c6a] text-xs leading-5 py-5">Ever since we've been with Hostinger, it's been amazing. We've not really had any issues at all and if we ever do have a question, their customer service is incredible.</p>
+                <a class="font-semibold text-[#673de6] absolute bottom-8" href="#">Read the full story</a>
+            </div>
+        </div>
+    </div>
+    <div class="w-full text-center py-14">
+        <a class="font-semibold border-[2px] px-8 py-2 text-[#673de6] hover:bg-[#ebe4ff] transition duration-500 rounded-lg border-[#673de6]" href="#">Read more stories</a>
+    </div>
+</body>
+</html>
