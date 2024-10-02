@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Code with SudhuCodes -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Hostinger Pricing Table Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-[#fafbff]  text-[#2f1c6a] font-sans flex justify-center items-center min-h-screen">
+        <div class="p-6 w-full max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#2f1c6a]">Pick your perfect plan</h2>
+            <p class="text-center text-base mb-10 text-[#2f1c6a]">Get started in complete confidence. Our 30-day money-back guarantee means it's risk-free.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+                <!-- Basic Plan Section -->
+                <div class="p-6 rounded-xl border border-[#0804ff1e] mt-10">
+                    <h3 class="text-xl font-semibold text-left mb-4 text-[#2f1c6a]">Single</h3>
+                    <p class="text-sm py-3  text-[#2f1c6a]">A great solution for beginners</p>
+                    <p class="my-8"><span class="line-through text-[#6d7081]">₹399.00</span><span class="bg-[#d5dfff] font-semibold text-sm rounded-full px-2 py-1 ml-2">SAVE 82%</span></p>
+                    <div class="text-left my-6">
+                        <span class="text-gray-400">₹</span>
+                        <span class="text-4xl font-bold  text-[#2f1c6a]">69.00</span>
+                        <span class="text-gray-400">/mo</span>
+                    </div>
+                    <div class="grid text-center pt-9">
+                        <a href="#" class="border-[2px] border-[#673de6] text-[#673de6] font-semibold py-2 px-4 rounded-lg hover:bg-[#ebe4ff] transition duration-300">Choose Plan</a>
+                    </div>
+                    <p class="text-sm py-4 text-[#6d7081]">₹179.00/mo when you renew</p>
+                    <hr>
+                    <ul class="text-sm pt-7 flex flex-col gap-3">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed"><span class="font-semibold">1</span> website</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed">Managed WordPress Hosting</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p><span class="font-semibold">50 GB</span> SSD storage</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p>Hostinger Website Builder</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-minus pt-1 text-[#2f1c6a]"></i><p class="underline underline-offset-4 decoration-dashed">Free domain (₹749.00 value)</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p>Free automatic website migration</p></li>
+                    </ul>
+                    <div class="flex cursor-pointer items-center text-[#673de6] gap-2 pt-6 justify-center w-full">
+                        <p class="font-semibold">See all features</p>
+                        <i class="fa-solid fa-chevron-down pt-[2px]"></i>
+                    </div>
+                </div>
+
+                <!-- Standard Plan Section (Highlighted) -->
+                <div class="rounded-xl border-[2px] border-[#8c85ff]">
+                    <h2 class="p-2 rounded-t-lg text-center font-semibold text-white mt-[-1px] bg-[#8c85ff]">MOST POPULAR</h2>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-left mb-1 text-[#2f1c6a]">Premium</h3>
+                        <p class="text-sm py-3 mt-4 text-[#2f1c6a]">Everything you need to create your website.</p>
+                        <p class="my-7 mt-4"><span class="line-through text-[#6d7081]">₹599.00</span><span class="bg-[#d5dfff] font-semibold text-sm rounded-full px-2 py-1 ml-2">SAVE 75%</span></p>
+                        <div class="text-left my-5 mb-3">
+                            <span class="text-gray-400">₹</span>
+                            <span class="text-4xl font-bold  text-[#2f1c6a]">149.00</span>
+                            <span class="text-gray-400">/mo</span>
+                        </div>
+                        <p class="text-base font-semibold text-[#673de6]">+3 months free</p>
+                        <div class="grid text-center pt-6">
+                            <a href="#" class="border-[2px] border-[#673de6] bg-[#673de6] text-[#ffff] font-semibold py-2 px-4 rounded-lg hover:bg-[#5126d2] transition duration-300">Choose Plan</a>
+                        </div>
+                        <p class="text-sm py-4 text-[#6d7081]">₹249.00/mo when you renew</p>
+                        <hr>
+                        <ul class="text-sm pt-7 flex flex-col gap-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed"><span class="font-semibold">100</span> website</p></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed">Managed WordPress Hosting</p></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p><span class="font-semibold">100 GB</span> SSD storage</p></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p>Hostinger Website Builder</p></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed">Free domain (₹749.00 value)</p></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p>Free automatic website migration</p></li>
+                        </ul>
+                        <div class="flex cursor-pointer items-center text-[#673de6] gap-2 pt-6 justify-center w-full">
+                            <p class="font-semibold">See all features</p>
+                            <i class="fa-solid fa-chevron-down pt-[2px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Plan Section -->
+                <div class="p-6 rounded-xl border border-[#0804ff1e] mt-10">
+                    <h3 class="text-xl font-semibold text-left mb-4 text-[#2f1c6a]">Business</h3>
+                    <p class="text-sm py-3  text-[#2f1c6a]">Level up with more power and enhanced features.</p>
+                    <p class="my-6"><span class="line-through text-[#6d7081]">₹699.00</span><span class="bg-[#d5dfff] font-semibold text-sm rounded-full px-2 py-1 ml-2">SAVE 64%</span></p>
+                    <div class="text-left my-5 mb-3">
+                        <span class="text-gray-400">₹</span>
+                        <span class="text-4xl font-bold  text-[#2f1c6a]">249.00</span>
+                        <span class="text-gray-400">/mo</span>
+                    </div>
+                    <p class="text-base font-semibold text-[#673de6]">+3 months free</p>
+                    <div class="grid text-center pt-5">
+                        <a href="#" class="border-[2px] border-[#673de6] text-[#673de6] font-semibold py-2 px-4 rounded-lg hover:bg-[#ebe4ff] transition duration-300">Choose Plan</a>
+                    </div>
+                    <p class="text-sm py-4 text-[#6d7081]">₹499.00/mo when you renew</p>
+                    <hr>
+                    <ul class="text-sm pt-7 flex flex-col gap-3">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed"><span class="font-semibold">100</span> website</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed">Managed WordPress Hosting</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p><span class="font-semibold">200 GB</span> SSD storage</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p>Hostinger Website Builder</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p class="underline underline-offset-4 decoration-dashed">Free domain (₹749.00 value)</p></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check pt-1 text-green-500"></i><p>Free automatic website migration</p></li>
+                    </ul>
+                    <div class="flex cursor-pointer items-center text-[#673de6] gap-2 pt-6 justify-center w-full">
+                        <p class="font-semibold">See all features</p>
+                        <i class="fa-solid fa-chevron-down pt-[2px]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
