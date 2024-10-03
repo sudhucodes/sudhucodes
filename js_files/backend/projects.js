@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Interactive User List Component with Profiles Tailwind CSS", "shortName": "User List - TailwindCSS", "projectId": "TAILWINDCSS-UL-T-20241003-CXMJG", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Dynamic FAQ Interface - Smooth Toggle Animations for Web Development Queries", "shortName": "FAQ Interface - TailwindCSS", "projectId": "TAILWINDCSS-FI-T-20241003-X354Q", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Premium Subscription Pricing Card with Tailwind CSS and Feature List", "shortName": "Pricing Card - TailwindCSS", "projectId": "TAILWINDCSS-PC-T-20241003-PD8WO", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "A Professional and User-Friendly Review Section Design Using TailwindCSS", "shortName": "Review section - TailwindCSS", "projectId": "TAILWINDCSS-RS-T-20241002-FCKLI", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
