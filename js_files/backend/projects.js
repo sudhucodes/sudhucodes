@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Dynamic FAQ Interface - Smooth Toggle Animations for Web Development Queries", "shortName": "FAQ Interface - TailwindCSS", "projectId": "TAILWINDCSS-FI-T-20241003-X354Q", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Premium Subscription Pricing Card with Tailwind CSS and Feature List", "shortName": "Pricing Card - TailwindCSS", "projectId": "TAILWINDCSS-PC-T-20241003-PD8WO", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "A Professional and User-Friendly Review Section Design Using TailwindCSS", "shortName": "Review section - TailwindCSS", "projectId": "TAILWINDCSS-RS-T-20241002-FCKLI", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
   {"name": "Hostinger Domain Plan Pricing Table Clone - Using TailwindCSS", "shortName": "Pricing Table - TailwindCSS", "projectId": "TAILWINDCSS-PT-T-20241002-KV8UN", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
