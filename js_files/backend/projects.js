@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Premium Subscription Pricing Card with Tailwind CSS and Feature List", "shortName": "Pricing Card - TailwindCSS", "projectId": "TAILWINDCSS-PC-T-20241003-PD8WO", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "A Professional and User-Friendly Review Section Design Using TailwindCSS", "shortName": "Review section - TailwindCSS", "projectId": "TAILWINDCSS-RS-T-20241002-FCKLI", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
   {"name": "Hostinger Domain Plan Pricing Table Clone - Using TailwindCSS", "shortName": "Pricing Table - TailwindCSS", "projectId": "TAILWINDCSS-PT-T-20241002-KV8UN", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Advanced Payment Form with TailwindCSS & Smooth User Interface", "shortName": "TailwindCSS Payment Interface Form", "projectId": "TAILWINDCSS-TPIF-20241001-RUWO5", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},

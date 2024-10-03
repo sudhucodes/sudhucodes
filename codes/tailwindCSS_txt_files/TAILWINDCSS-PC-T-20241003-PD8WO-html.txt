@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- ------Code with SudhuCodes------ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Premium Subscription Pricing Card with Tailwind CSS and Feature List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-['IBM_Plex_Sans'] bg-slate-700 min-h-screen flex items-center justify-center">
+    <div class="max-w-[400px] rounded-2xl bg-[#23243A] p-6 text-white md:rounded-lg">
+        <div class="flex items-end justify-between">
+            <div>
+                <p>Monthly</p>
+            </div>
+            <div>
+                <p class="text-2xl -mb-1 text-[#5a45ff]">»</p>
+            </div>
+            <div>
+                <p class="rounded-full bg-gradient-to-tr from-[#5a45ff] to-[#FFC1DA] px-3 py-1 text-xs">20% off</p>
+                <p class="text-zinc-400">Annually</p>
+            </div>
+        </div>
+        <div class="text-center pt-7">
+            <h2 class="text-3xl font-semibold">$50 <span class="text-lg font-normal">/month</span></h2>
+        </div>
+        <div class="text-center py-4">
+            <p class="text-gray-400">Get access to all premium features</p>
+        </div>
+        <button class="text-center w-full px-6 py-2 mt-3 bg-[#5a45ff] hover:bg-[#4230bf] transition duration-500 font-semibold rounded-md">Unlock Pro Creativity</button>
+        <ul class="text-sm flex flex-col gap-1 pt-7">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>Access to 50+ Website Background Generators</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>High-Quality SVG and PNG Downloads</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>Unlimited Background Customizations</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>Real-Time Preview and Editing Tools</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>Cloud Storage for Saved Designs</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>Regularly Updated Design Collections</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>Exclusive Access to Premium Generators</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check pt-1 text-[#5a45ff]"></i>Commercial Use License</li>
+        </ul>
+    </div>
+</body>
+</html>
