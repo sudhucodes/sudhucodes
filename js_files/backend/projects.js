@@ -170,4 +170,30 @@ function initializeProjectLinkClick() {
   });
 }
 
+const projectDisplay = document.getElementById("projectDisplay");
+let currentProjectIndex = 0;
+
+function showProject() {
+    const currentProject = projects[currentProjectIndex];
+    const existingText = projectDisplay.innerText;
+
+    if (existingText) {
+        projectDisplay.classList.add("fade-out");
+        setTimeout(() => {
+            projectDisplay.innerText = currentProject.name;
+            projectDisplay.classList.remove("fade-out");
+            projectDisplay.classList.add("fade-in");
+        }, 500);
+    } else {
+        projectDisplay.innerText = currentProject.name;
+        projectDisplay.classList.add("fade-in");
+    }
+    currentProjectIndex = (currentProjectIndex < 3) ? currentProjectIndex + 1 : 0;
+    setTimeout(() => {
+        projectDisplay.classList.remove("fade-in");
+        showProject();
+    }, 3000);
+}
+
+showProject();
 renderProjects();

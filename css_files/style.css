@@ -288,14 +288,50 @@ nav .navbar a img{
 /* ----------ALL PROJECT SECTION-------- */
 .project-laung{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     width: 100%;
     padding: 2.7rem;
-    padding-bottom: 3.7rem;
+    padding-bottom: 0rem;
     border-bottom: var(--default-1px-border);
+    width: 100%;
 }
-.project-laung button {
+.new-porject-text {
+    width: 20%;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 10px;
+    border-right: 2px solid var(--half-logo-color);
+    background: linear-gradient(to right, #067ff8, #26ffe3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#projectDisplay {
+    width: 80%;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.new-porjects {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 2.2rem;
+    padding-bottom: 1rem;
+}
+.project-laung-btns{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.project-laung-btns button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,10 +346,10 @@ nav .navbar a img{
     cursor: pointer;
     transition: border-color 0.3s ease;
 }
-.project-laung button.selected {
+.project-laung-btns button.selected {
     border-color: var(--half-logo-color);
 }
-.project-laung button img{
+.project-laung-btns button img{
     height: 15px;
 }
 .projects-container{
@@ -1198,14 +1234,18 @@ footer p{
         margin: 0;
         width: 100%;
     }
-    .project-laung {
+    .project-laung{
+        padding: 0;
+    }
+    .project-laung-btns {
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(2, 1fr);
         padding: 2rem 1rem;
+        padding-bottom: 20px;
         gap: 1rem;
     }
-    .project-laung button{
+    .project-laung-btns button{
         padding: 10px;
     }
     .projects{
@@ -1216,6 +1256,28 @@ footer p{
     .project-title{
         font-size: 12px;
         text-wrap: balance;
+    }
+    .new-porjects{
+        flex-direction: column;
+        padding-top: 0;
+        display: none;
+        gap: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .new-porject-text{
+        width: max-content;
+        font-size: 1.2rem;
+        text-align: center;
+        border: none;
+        padding: 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+    }
+    #projectDisplay{
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
     }
     #get-certificate{
         padding: 0;
@@ -1289,4 +1351,33 @@ footer p{
         padding: 10px;
         flex-direction: column;
     }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
 }

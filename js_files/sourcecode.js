@@ -1,12 +1,11 @@
 // Get project data from localStorage
 const projectName = localStorage.getItem('projectName');
-const projectImg = localStorage.getItem('projectImg');
 const projectId = localStorage.getItem('projectId');
 const shortName = localStorage.getItem('shortName');
 
 // Fill the data into the page
 document.getElementById('projectDescription').textContent = projectName;
-document.getElementById('project-img').src = projectImg;
+document.getElementById('project-img').src = `../images/thumbnails/${projectId}.png`;
 
 
 // Track which button was clicked
