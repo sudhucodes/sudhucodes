@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Smartest Mind Reader Project using JAVASCRIPT", "shortName": "Mind Reader - JavaScript", "projectId": "JAVASCRIPT-MR-J-20241004-6DKOE", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "javascript"},
   {"name": "An Engaging and Interactive Weather Information Card Design Using Tailwind CSS", "shortName": "Weather Information Card - TailwindCSS", "projectId": "TAILWINDCSS-WIC-T-20241003-JRFON", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
   {"name": "Interactive User List Component with Profiles Tailwind CSS", "shortName": "User List - TailwindCSS", "projectId": "TAILWINDCSS-UL-T-20241003-CXMJG", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Dynamic FAQ Interface - Smooth Toggle Animations for Web Development Queries", "shortName": "FAQ Interface - TailwindCSS", "projectId": "TAILWINDCSS-FI-T-20241003-X354Q", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
