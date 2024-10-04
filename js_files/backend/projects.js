@@ -1,5 +1,7 @@
 // Project List
 const projects = [
+  {"name": "Elegant Social Media Icon Design with Fluid Animations in TailwindCSS", "shortName": "Social Media Icon Design - TailwindCSS", "projectId": "TAILWINDCSS-SMID-T-20241004-63RPF", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
+  {"name": "Stylish OTP Verification with Gradient Hover Effects Using TailwindCSS", "shortName": "OTP Verification Design - TailwindCSS", "projectId": "TAILWINDCSS-OVD-T-20241004-WHB3V", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Sleek and Dynamic Login Design Crafted with TailwindCSS", "shortName": "Login Page Design - TailwindCSS", "projectId": "TAILWINDCSS-LPD-T-20241004-4JWYL", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
   {"name": "Smartest Mind Reader Project using JAVASCRIPT", "shortName": "Mind Reader - JavaScript", "projectId": "JAVASCRIPT-MR-J-20241004-6DKOE", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "javascript"},
   {"name": "An Engaging and Interactive Weather Information Card Design Using Tailwind CSS", "shortName": "Weather Information Card - TailwindCSS", "projectId": "TAILWINDCSS-WIC-T-20241003-JRFON", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
