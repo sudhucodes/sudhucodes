@@ -6,7 +6,8 @@ const stockImages = [
   
   const stockIcons = [
     { name: "Icons8", link: "https://icons8.com/", imgSrc: "images/icons/redirect-icon.svg" },
-    { name: "Flaticon", link: "https://www.flaticon.com/", imgSrc: "images/icons/redirect-icon.svg" }
+    { name: "Flaticon", link: "https://www.flaticon.com/", imgSrc: "images/icons/redirect-icon.svg" },
+    { name: "Heroicons", link: "https://heroicons.com/outline", imgSrc: "images/icons/redirect-icon.svg" }
   ];
   
   const stockIllustrations = [

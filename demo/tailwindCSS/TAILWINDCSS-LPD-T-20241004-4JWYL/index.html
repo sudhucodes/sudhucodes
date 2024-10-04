@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- ------Code with SudhuCodes------ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Sleek and Dynamic Login Design Crafted with TailwindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen font-['Rubik'] bg-[#e8e8e8]">
+
+    <div class="p-8 text-[#747474] bg-white shadow-md rounded-md w-[320px]">
+
+        <h2 class="text-black font-medium text-2xl text-center mb-4">Welcome back</h2>
+
+        <input class="border px-4 outline-none text-xs w-full h-9 rounded-full mt-3 transition-all duration-300 focus:border-blue-300" type="text" placeholder="Enter your email">
+        <input class="border px-4 outline-none text-xs w-full h-9 rounded-full mt-3 transition-all duration-300 focus:border-blue-300" type="password" placeholder="Enter your password">
+
+        <div class="text-right pt-1">
+            <a class="text-xs hover:text-blue-700 underline underline-offset-2" href="#">Forget password?</a>
+        </div>
+
+        <button class="w-full shadow hover:bg-[#02786e] transition duration-300 text-sm bg-teal-600 text-white h-9 rounded-full mt-5">Login</button>
+
+        <div class="pt-3 text-center">
+            <p class="text-xs">Not have an account? <a href="#" class="text-blue-700 underline underline-offset-1">Signup</a></p>
+        </div>
+
+        <div class="flex hover:scale-105 transition duration-300 cursor-pointer gap-2 bg-black h-[34px] border-[1.5px] border-black rounded-full items-center w-full mt-6 justify-center">
+            <img class="h-4" src="./images/apple-logo.png" alt="apple-logo">
+            <p class="text-xs text-white pt-[2px]">Login with Apple</p>
+        </div>
+        <div class="flex hover:scale-105 transition duration-300 cursor-pointer gap-2 border-[1.5px] border-[#747474] h-[34px] rounded-full items-center w-full mt-3 justify-center">
+            <img class="h-[14px]" src="./images/google-logo.png" alt="google-logo">
+            <p class="text-xs">Login with Google</p>
+        </div>
+
+    </div>
+</body>
+</html>
