@@ -1,5 +1,8 @@
 // Project List
 const projects = [
+  {"name": "Interactive Sign-In Form with Smooth Label Animation and TailwindCSS", "shortName": "Sign-In Form - TailwindCSS", "projectId": "TAILWINDCSS-SF-T-20241006-6I05Y", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
+  {"name": "Interactive Profile Card with Smooth Hover Transitions Using TailwindCSS", "shortName": "Profile Card Transitions - TailwindCSS", "projectId": "TAILWINDCSS-PCT-T-20241005-1PRUR", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
+  {"name": "Modern and User-Friendly Password Reset UI Built with TailwindCSS", "shortName": "Password Reset UI - TailwindCSS", "projectId": "TAILWINDCSS-PRU-T-20241005-HMJUC", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Elegant Social Media Icon Design with Fluid Animations in TailwindCSS", "shortName": "Social Media Icon Design - TailwindCSS", "projectId": "TAILWINDCSS-SMID-T-20241004-63RPF", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Stylish OTP Verification with Gradient Hover Effects Using TailwindCSS", "shortName": "OTP Verification Design - TailwindCSS", "projectId": "TAILWINDCSS-OVD-T-20241004-WHB3V", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Sleek and Dynamic Login Design Crafted with TailwindCSS", "shortName": "Login Page Design - TailwindCSS", "projectId": "TAILWINDCSS-LPD-T-20241004-4JWYL", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
