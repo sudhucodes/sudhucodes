@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Responsive Footer Design with TailwindCSS for a Developer Website", "shortName": "Footer Design - TailwindCSS", "projectId": "TAILWINDCSS-FD-T-20241006-1YGAR", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS"},
   {"name": "Simple Sign-Up Form with Clean Design with TailwindCSS", "shortName": "Sign-Up Form - TailwindCSS", "projectId": "TAILWINDCSS-SF-T-20241006-QW5C9", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Interactive Sign-In Form with Smooth Label Animation and TailwindCSS", "shortName": "Sign-In Form - TailwindCSS", "projectId": "TAILWINDCSS-SF-T-20241006-6I05Y", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},
   {"name": "Interactive Profile Card with Smooth Hover Transitions Using TailwindCSS", "shortName": "Profile Card Transitions - TailwindCSS", "projectId": "TAILWINDCSS-PCT-T-20241005-1PRUR", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS"},

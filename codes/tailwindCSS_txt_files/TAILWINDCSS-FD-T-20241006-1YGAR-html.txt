@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- ------Code with SudhuCodes------ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Responsive Footer Design with TailwindCSS for a Developer Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="flex font-['IBM_Plex_Sans'] h-screen items-end justify-center bg-[#0c0d2c] text-gray-200">
+
+    <footer class="w-full flex md:flex-row flex-col items-center pb-24 px-5 md:px-0">
+        <div class="flex flex-col items-center w-full gap-6">
+            <div class="flex md:flex-row flex-col gap-10 pb-10 md:pb-0 md:gap-0 justify-around w-full">
+                <div>
+                    <h2 class="text-xl pb-3 font-semibold text-gray-100">Connect with Us</h2>
+                    <ul class="flex flex-col gap-1">
+                        <li><a class="text-sm" href="#">Twitter</a></li>
+                        <li><a class="text-sm" href="#">Facebook</a></li>
+                        <li><a class="text-sm" href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl pb-3 font-semibold text-gray-100">Quick Links</h2>
+                    <ul class="flex flex-col gap-1">
+                        <li><a class="text-sm" href="#">Home</a></li>
+                        <li><a class="text-sm" href="#">Background</a></li>
+                        <li><a class="text-sm" href="#">Create Account</a></li>
+                        <li><a class="text-sm" href="#">Terms and Attribution Policy</a></li>
+                        <li><a class="text-sm" href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl pb-3 font-semibold text-gray-100">Contact Us</h2>
+                    <ul class="flex flex-col gap-1">
+                        <li class="text-sm">Reach Support</li>
+                        <li class="flex gap-4">
+                            <p class="text-sm">Email:</p>
+                            <p class="text-sm text-gray-400">sudhuteam@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-sm absolute left-[15%] md:left-[40%] bottom-16">© SudhuCodes 2024 - All rights reserved.</p>
+        </div>
+        <img class="h-52 hidden md:inline-block -mb-2" src="./images/footer-bg.png" alt="">
+    </footer>
+
+</body>
+</html>
