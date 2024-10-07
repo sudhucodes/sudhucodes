@@ -1,11 +1,11 @@
 // Version of the website
-const currentVersion = '1.6.3';
+const currentVersion = '1.8.4';
 
 const updates = [
-  { text: "Implemented unique identifiers for all projects to enhance backend management", icon: "images/icons/correct.png" },
-  { text: "Restructured file organization for improved clarity and efficiency", icon: "images/icons/correct.png" },
-  { text: "Enabled dynamic fetching of all assets (images, text files, etc.) via project-specific IDs", icon: "images/icons/correct.png" },
-  { text: "Optimized backend processes for seamless project asset retrieval through unique IDs", icon: "images/icons/correct.png" },
+  { text: "Implemented new sourcecode themes", icon: "images/icons/correct.png" },
+  { text: "Using prism.js for color theme in source code", icon: "images/icons/correct.png" },
+  // { text: "Enabled dynamic fetching of all assets (images, text files, etc.) via project-specific IDs", icon: "images/icons/correct.png" },
+  { text: "Improved source code fetching methods", icon: "images/icons/correct.png" },
 ];
 
 

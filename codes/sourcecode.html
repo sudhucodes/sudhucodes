@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SudhuCodes - Source Code Page</title>
+    <title>SudhuCodes - Source Code Repository and Live Demos</title>
     <link rel="stylesheet" href="../css_files/codes.css">
     <link rel="shortcut icon" href="../images/logo/logo-transparant.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar">
@@ -15,116 +16,65 @@
             <i class="fa-solid fa-arrow-left"></i>
         </div>
         <div class="logo">
-            <img src="../images/logo/logo-white.png" alt="">
+            <img src="../images/logo/logo-white.png" alt="SudhuCodes Logo">
         </div>
-      </nav>
+    </nav>
       
-      <div class="html-css2 project-section">
+    <div class="html-css2 project-section">
         <h1 id="projectDescription"></h1>
         <div class="image-flex">
-          <div class="login-page">
-            <p><img id="project-img" src="" height="150px"></p>
-          </div>
-        <div class="source-code">
-            <p id="download-full-zip"><img src="../images/icons/zip-icon.png" alt="">Download Zip File</p>
-            <p data-page="project-details" id="download"><img src="../images/icons/project-assets-icon.png" alt="">Download Assets</p>
-            <p onclick="opendemo()"><img src="../images/icons/big-arrow-icon.svg" alt="">View Live Demo</p>
+            <div class="login-page">
+                <p><img id="project-img" src="" height="150" alt="Project Image"></p>
+            </div>
+            <div class="source-code">
+                <p id="download-full-zip">
+                    <img src="../images/icons/zip-icon.png" alt="">Download Zip File
+                </p>
+                <p data-page="project-details" id="download">
+                    <img src="../images/icons/project-assets-icon.png" alt="">Download Assets
+                </p>
+                <p onclick="opendemo()">
+                    <img src="../images/icons/big-arrow-icon.svg" alt="">View Live Demo
+                </p>
+            </div>
+            <div style="display: none;" class="project-details">
+                <button id="close-project-details" class="button">
+                    <i class="fa-solid fa-rectangle-xmark"></i>
+                </button>
+                <div class="details-button">
+                    <div class="assets-email">
+                        <input type="email" id="userEmail" placeholder="Enter your valid email id" required>
+                        <p id="email-required"></p>
+                    </div>
+                    <div class="assets-download">
+                        <button class="button" id="downloadAssets">
+                            Download <span style="color: #fff;" id="assetsFull"></span> <i class="fa-solid fa-download"></i>
+                        </button>
+                        <p id="download-timer"></p>
+                        <p id="download-complete"></p>
+                    </div>
+                </div>
+            </div> 
         </div>
-        <div style="display: none;" class="project-details">
-          <button id="close-project-details" class="button"><i class="fa-solid fa-rectangle-xmark"></i></button>
-          <div class="details-button">
-            <div class="assets-email">
-              <input type="email" id="userEmail" placeholder="Enter your valid email id">
-              <p id="email-required"></p>
-            </div>
-            <div class="assets-download">
-              <button class="button" id="downloadAssets">Download <span style="color: #fff;" id="assetsFull"></span> <i class="fa-solid fa-download"></i></button>
-              <p id="download-timer"></p>
-              <p id="download-complete"></p>
-            </div>
-          </div>
-        </div> 
-        </div>
-    <div class="card-flex">
-
-
-        <!-- Only one card section with a copy button -->
-        <div class="card">
-            <div class="header">
-              <div class="top">
-                <div class="circle">
-                  <span class="red circle2"></span>
-                </div>
-                <div class="circle">
-                  <span class="yellow circle2"></span>
-                </div>
-                <div class="circle">
-                  <span class="green circle2"></span>
-                </div>
-                <div class="title">
-                  <p id="title2">index.html</p>
-                  <button class="html_copy_toggle" tabindex="-1" type="button" onclick="copyhtmlcode()">
-                    <svg class="clipboard_icon" width="16px" height="16px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none">
-                      <path class="clipboard_path" d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
-                      <path class="clipboard_path" d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="code-container">
-              <textarea class="area" id="htmlcode" name="code"
-    readonly="">
-    
-              </textarea>
-            </div>
-        </div>
-    
-        <!-- Another card section for CSS with a copy button -->
-        <div class="card">
-            <div class="header">
-              <div class="top">
-                <div class="circle">
-                  <span class="red circle2"></span>
-                </div>
-                <div class="circle">
-                  <span class="yellow circle2"></span>
-                </div>
-                <div class="circle">
-                  <span class="green circle2"></span>
-                </div>
-                <div class="title">
-                  <p id="title2">style.css</p>
-                  <button class="css_copy_toggle" tabindex="-1" type="button" onclick="copycsscode()">
-                    <svg class="clipboard_icon" width="16px" height="16px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none">
-                      <path class="clipboard_path" d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
-                      <path class="clipboard_path" d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="code-container">
-              <textarea class="area" id="csscode" name="code"
-    readonly="">
-    
-    </textarea>
-            </div>
-        </div>
-      </div>
-
+        <div class="code-blocks-container" id="code-blocks-container"></div>
     </div>
 
-<footer>
-    <div class="socialLinks">
-        <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        <a href="https://github.com/sudhucodes" target="_blank">Github</a>
-        <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
-        <a href="mailto:sudhuteam@gmail.com?subject=Sudhucodes-Website&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
-    </div>
-    <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
-</footer>
-<script src="../js_files/sourcecode.js"></script>
+    <footer>
+        <div class="socialLinks">
+            <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <a href="https://github.com/sudhucodes" target="_blank">Github</a>
+            <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
+            <a href="mailto:sudhuteam@gmail.com?subject=sudhucodes-Website&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
+        </div>
+        <p>&copy; 2024 SudhuCodes - All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-html.min.js"></script>
+    <script src="../js_files/sourcecode.js"></script>
+    <script src="../js_files/backend/sourcecode.js"></script>
 </body>
 </html>

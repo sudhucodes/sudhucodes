@@ -194,45 +194,6 @@ console.log('Assets URL:', assetsUrl);
       alert('Error checking file availability.');
     });
 });
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const category = localStorage.getItem('clickedProjectCategory');
-
-  // Determine the folder path based on the category
-  let folderPath;
-  if (category === 'htmlcss') {
-    folderPath = 'htmlcss_txt_files/';
-  } else if (category === 'javascript') {
-    folderPath = 'javascript_txt_files/';
-  } else if (category === 'react') {
-    folderPath = 'react_txt_files/';
-  } else if (category === 'tailwindCSS') {
-    folderPath = 'tailwindCSS_txt_files/';
-  } else {
-    console.error('Unknown category.');
-    return;
-  }
-
-  // Fetch HTML code
-  fetch(`${folderPath}${projectId}-html.txt`)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('htmlcode').textContent = data;
-    })
-    .catch(error => console.error('Error loading the HTML file:', error));
-
-  // Fetch CSS code
-  fetch(`${folderPath}${projectId}-css.txt`)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('csscode').textContent = data;
-    })
-    .catch(error => console.error('Error loading the CSS file:', error));
-});
-
-
 function goback() {
   if (window.history.length > 1) {
     window.history.back();
@@ -261,42 +222,87 @@ function opendemo() {
   window.open(`../demo/${folderPath}/${projectId}/index.html`, '_blank');
 }
 
+const availableFiles = localStorage.getItem('availableFiles');
+const category = localStorage.getItem('clickedProjectCategory');
 
-function copyhtmlcode() {
-  var textArea = document.getElementById("htmlcode");
+const filePaths = {
+    htmlcss: 'htmlcss_txt_files/',
+    javascript: 'javascript_txt_files/',
+    react: 'react_txt_files/',
+    tailwindCSS: 'tailwindCSS_txt_files/'
+};
 
-  textArea.select();
-  textArea.setSelectionRange(0, 99999); 
-  
-  navigator.clipboard.writeText(textArea.value).then(function() {
-    var copyButton = document.querySelector('.html_copy_toggle');
-    copyButton.classList.add('copied');
-    
-    setTimeout(function() {
-      textArea.selectionEnd = textArea.selectionStart;
-      copyButton.classList.remove('copied');
-    }, 3000);
-  }).catch(function(error) {
-    console.error('Failed to copy text: ', error);
-  });
+const filePath = filePaths[category] || console.error('Unknown category.');
+const fileOrder = ['html', 'css', 'js'];
+
+function renderProjectCodeBlocks(projectId, availableFiles) {
+    const container = document.getElementById('code-blocks-container');
+    container.innerHTML = '';
+
+    const sortedFiles = availableFiles.split(',')
+        .map(file => file.trim())
+        .filter(fileType => fileOrder.includes(fileType))
+        .sort((a, b) => fileOrder.indexOf(a) - fileOrder.indexOf(b));
+
+    sortedFiles.forEach(fileType => {
+        const fileName = `${projectId}-${fileType}.txt`;
+        const fileURL = `${filePath}${fileName}`;
+
+        fetch(fileURL)
+            .then(response => response.text())
+            .then(codeContent => {
+                createCodeBlock(container, fileType, codeContent);
+            })
+            .catch(error => console.error('Error fetching file:', error));
+    });
 }
 
+function createCodeBlock(container, fileType, codeContent) {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('code-wrapper');
 
-function copycsscode() {
-  var textArea = document.getElementById("csscode");
-
-  textArea.select();
-  textArea.setSelectionRange(0, 99999); 
-  
-  navigator.clipboard.writeText(textArea.value).then(function() {
-    var copyButton = document.querySelector('.css_copy_toggle');
-    copyButton.classList.add('copied');
+    const preElem = document.createElement('pre');
+    const codeElem = document.createElement('code');
+    codeElem.classList.add(`language-${fileType}`);
+    codeElem.textContent = codeContent;
+    preElem.appendChild(codeElem);
+    wrapper.appendChild(preElem);
     
-    setTimeout(function() {
-      textArea.selectionEnd = textArea.selectionStart;
-      copyButton.classList.remove('copied');
-    }, 3000);
-  }).catch(function(error) {
-    console.error('Failed to copy text: ', error);
-  });
+    Prism.highlightElement(codeElem);
+
+    const copyBtn = createCopyButton(codeElem.textContent);
+    wrapper.appendChild(copyBtn);
+    
+    container.appendChild(wrapper);
 }
+
+function createCopyButton(code) {
+    const copyBtn = document.createElement('button');
+    copyBtn.classList.add('copy-btn');
+    copyBtn.textContent = ' Copy ';
+    
+    const icon = document.createElement('i');
+    icon.classList.add('fa-solid', 'fa-copy');
+    copyBtn.appendChild(icon);
+    
+    copyBtn.onclick = () => copyCodeToClipboard(code, copyBtn, icon);
+    return copyBtn;
+}
+
+function copyCodeToClipboard(code, button, icon) {
+    navigator.clipboard.writeText(code).then(() => {
+        button.firstChild.textContent = 'Copied';
+        icon.style.display = 'none';
+        button.disabled = true;
+
+        setTimeout(() => {
+            button.firstChild.textContent = ' Copy ';
+            icon.style.display = 'inline';
+            button.disabled = false;
+        }, 3000);
+    }).catch(err => {
+        console.error('Failed to copy code:', err);
+    });
+}
+
+renderProjectCodeBlocks(projectId, availableFiles);
