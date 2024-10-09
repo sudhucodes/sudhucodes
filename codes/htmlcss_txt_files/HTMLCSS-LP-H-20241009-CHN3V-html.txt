@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- --------Code with SudhuCodes-------- -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Login page with Email Authentication and Social Media Sign-In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Welcome Back!</h1>
+
+        <div class="sign-buttons">
+            <button class="google-btn">
+                <img src="./images/google.png" alt="">
+                <p>Sign in with Google</p>
+            </button>
+            <button class="apple-btn">
+                <img src="./images/apple-logo.png" alt="">
+                <p>Sign in with Apple</p>
+            </button>
+        </div>
+        <div class="hr"></div>
+        <div class="fields">
+            <div class="input-field">
+                <label for="">Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+            <div class="input-field">
+                <label for="">Password</label>
+                <input type="password" placeholder="Enter your password">
+            </div>
+        </div>
+        <button class="signin-btn">Sign In</button>
+        <div class="forget-btn">
+            <a href="#">Forget Password?</a>
+        </div>
+        <p class="signup-link">Don't have an account? <a href="#">Signup here</a></p>
+    </div>
+</body>
+</html>
