@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- ------Code with SudhuCodes------ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Modern OTP Verification Page with Resend Option - TailwindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+
+    <div class="w-[350px] bg-white p-8 border rounded-xl shadow relative">
+            <i class="fa-solid fa-x py-2 px-[13px] bg-white rounded-full text-sm shadow-[0px_0px_20px_#00000025] absolute top-3 right-3"></i>
+        <h2 class="text-center text-3xl font-bold pb-7">Enter OTP</h2>
+        <p class="text-center text-lg text-gray-600">We have sent a verification code to your mobile number</p>
+        <div class="grid grid-cols-4 px-8 gap-3 mt-5">
+            <input class="bg-gray-200 p-3 rounded-lg outline-none focus:border-indigo-300 border border-white" type="text" maxlength="1">
+            <input class="bg-gray-200 p-3 rounded-lg outline-none focus:border-indigo-300 border border-white" type="text" maxlength="1">
+            <input class="bg-gray-200 p-3 rounded-lg outline-none focus:border-indigo-300 border border-white" type="text" maxlength="1">
+            <input class="bg-gray-200 p-3 rounded-lg outline-none focus:border-indigo-300 border border-white" type="text" maxlength="1">
+        </div>
+        <button class="bg-indigo-400 px-2 py-[10px] w-full text-xl text-white font-semibold mt-10 rounded-lg">Verify</button>
+        <p class="text-center mt-8">Didn't recived the code?</p>
+        <div class="text-center text-lg font-bold text-indigo-500">
+            <a href="#">Resend Code</a>
+        </div>
+    </div>
+
+</body>
+</html>
