@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Step-by-Step Instagram Profile Completion Cards - TailwindCSS Design", "shortName": "Profile Completion Cards - TailwindCSS", "projectId": "TAILWINDCSS-PCC-T-20241010-M4PUF", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Modern OTP Verification Page with Resend Option - TailwindCSS", "shortName": "OTP Verification Page - TailwindCSS", "projectId": "TAILWINDCSS-OVP-T-20241009-J7UZX", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Login page with Email Authentication and Social Media Sign-In", "shortName": "Login page - HTML&CSS", "projectId": "HTMLCSS-LP-H-20241009-CHN3V", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "htmlcss", "availableFiles": ["html", "css"]},
   {"name": "Portfolio Website with Smooth Scrolling Navbar and Hero Section - TailwindCSS", "shortName": "Portfolio Website - TailwindCSS", "projectId": "TAILWINDCSS-PW-T-20241008-CR02Z", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS", "availableFiles": ["html"]},
