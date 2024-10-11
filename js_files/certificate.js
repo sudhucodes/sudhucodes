@@ -444,7 +444,7 @@ function showResults() {
 }
 
 function toggleDetails() {
-    window.location.href = '../Quizs/quiz-details.html'; // Redirect to the new page
+    window.location.href = '../get/certificate-details.html';
 }
 
 function generateCertificate() {
