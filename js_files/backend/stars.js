@@ -2,7 +2,7 @@
 const stars = [
     { imgSrc: 'images/stars-image/rajesh-kumar.jpg', name: 'Rajesh Kumar', project: 'Spotify Clone Project', profileLink: '', rating: 4 },
     { imgSrc: 'images/stars-image/mohit-singh.jpg', name: 'Mohit Singh', project: 'YouTube Clone Project', profileLink: '', rating: 3 },
-    { imgSrc: 'images/stars-image/sudhanshu-kumar.png', name: 'Sudhanshu Kumar', project: 'E-Commerce Website', profileLink: 'https://www.instagram.com/ig__sudhanshu__/', rating: 3 },
+    // { imgSrc: 'images/stars-image/sudhanshu-kumar.png', name: 'Sudhanshu Kumar', project: 'E-Commerce Website', profileLink: 'https://www.instagram.com/ig__sudhanshu__/', rating: 3 },
     { imgSrc: 'images/stars-image/aman-kumar.jpg', name: 'Aman Kumar', project: 'Portfolio Website', profileLink: 'https://www.instagram.com/_its.aman04/', rating: 4 }
 ];
 
@@ -20,7 +20,7 @@ function renderStars(filteredStars) {
                     <div class="star-profile-link">
                         ${profileHtml}
                     </div>
-                    <img class="star-image" src="${star.imgSrc}" alt="${star.name}">
+                    <img class="star-image" src="${star.imgSrc}" alt="${star.name}" loading="lazy">
                     <div class="star-rating">
                         ${ratingStars}
                     </div>

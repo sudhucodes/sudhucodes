@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Dark Mode Signup Form Design using TailwindCSS", "shortName": "Signup Form Design - TailwindCSS", "projectId": "TAILWINDCSS-SFD-T-20241012-W3OPO", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Gradient-Themed Profile Card with Social Media Links - TailwindCSS", "shortName": "Profile Card - TailwindCSS", "projectId": "TAILWINDCSS-PC-T-20241011-4C45Y", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Step-by-Step Instagram Profile Completion Cards - TailwindCSS Design", "shortName": "Profile Completion Cards - TailwindCSS", "projectId": "TAILWINDCSS-PCC-T-20241010-M4PUF", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Modern OTP Verification Page with Resend Option - TailwindCSS", "shortName": "OTP Verification Page - TailwindCSS", "projectId": "TAILWINDCSS-OVP-T-20241009-J7UZX", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
