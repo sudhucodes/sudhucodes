@@ -1,5 +1,7 @@
 // Project List
 const projects = [
+  {"name": "Professional Card Design Highlighting Beginner Plans TailwindCSS", "shortName": "Card Design - TailwindCSS", "projectId": "TAILWINDCSS-CD-T-20241013-KR0ML", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
+  {"name": "Engaging Responsive Feature Presentation and Highlight Card - TailwindCSS", "shortName": "Feature Presentation and Highlight Card - TailwindCSS", "projectId": "TAILWINDCSS-FPAHC-T-20241013-REWOI", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Dark Mode Signup Form Design using TailwindCSS", "shortName": "Signup Form Design - TailwindCSS", "projectId": "TAILWINDCSS-SFD-T-20241012-W3OPO", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Gradient-Themed Profile Card with Social Media Links - TailwindCSS", "shortName": "Profile Card - TailwindCSS", "projectId": "TAILWINDCSS-PC-T-20241011-4C45Y", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Step-by-Step Instagram Profile Completion Cards - TailwindCSS Design", "shortName": "Profile Completion Cards - TailwindCSS", "projectId": "TAILWINDCSS-PCC-T-20241010-M4PUF", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},

@@ -102,6 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
             linksContainer.style.display = 'none';
         }, 300);
     });
+    
+    overlay2.addEventListener('click', () => {
+        linksContainer.classList.remove('active');
+        overlay2.classList.remove('active');
+
+        setTimeout(() => {
+            document.body.classList.remove('no-scroll');
+            linksContainer.style.display = 'none';
+        }, 300);
+    });
 
     linksContainer.style.display = 'none';
 });
