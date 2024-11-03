@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "Dynamic Navbar with Gradient Offer and Navigation Links - HTML&CSS", "shortName": "Dynamic Navbar - HTML&CSS", "projectId": "HTMLCSS-DN-H-20241103-W6WFQ", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss", "availableFiles": ["html", "css"]},
   {"name": "Professional Card Design Highlighting Beginner Plans TailwindCSS", "shortName": "Card Design - TailwindCSS", "projectId": "TAILWINDCSS-CD-T-20241013-KR0ML", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Engaging Responsive Feature Presentation and Highlight Card - TailwindCSS", "shortName": "Feature Presentation and Highlight Card - TailwindCSS", "projectId": "TAILWINDCSS-FPAHC-T-20241013-REWOI", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Dark Mode Signup Form Design using TailwindCSS", "shortName": "Signup Form Design - TailwindCSS", "projectId": "TAILWINDCSS-SFD-T-20241012-W3OPO", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},

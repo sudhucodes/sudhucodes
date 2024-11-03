@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
-  user-select: none;
 }
 :root{
   --body-color: #0d1224;

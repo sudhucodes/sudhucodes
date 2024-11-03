@@ -1,0 +1,68 @@
+/* -----Code with SudhuCodes------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F5F7FF;
+}
+
+.container {
+    width: 100%;
+    font-size: 0.875rem;
+    color: #4A4A4A;
+}
+
+.offer {
+    text-align: center;
+    background: linear-gradient(90deg, #8A2BE2, #9938CA, #E0724A); /* violet to pink to orange */
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+.offer span {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: white;
+}
+
+.logo {
+    width: 133px;
+    height: 39px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-left: 1.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.get-started {
+    background-color: white;
+    border: 1px solid #4A4A4A;
+    color: #4A4A4A;
+    padding: 0.6rem 2rem;
+    border-radius: 9999px;
+    cursor: pointer;
+}
