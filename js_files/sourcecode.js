@@ -1,14 +1,18 @@
-// Get project data from localStorage
-const projectName = localStorage.getItem('projectName');
-const projectId = localStorage.getItem('projectId');
-const shortName = localStorage.getItem('shortName');
+const urlParams = new URLSearchParams(window.location.search);
+const projectId = urlParams.get('projectId');
+const project = getProjectById(projectId);
+const projectName = project.name;
+const shortName = project.shortName;
+const category = project.category;
+const availableFilesArray = project.availableFiles;
+const availableFiles = availableFilesArray.join(", ");
 
-// Fill the data into the page
+
+
 document.getElementById('projectDescription').textContent = projectName;
 document.getElementById('project-img').src = `../images/thumbnails/${projectId}.png`;
 
 
-// Track which button was clicked
 let clickedButton = '';
 
 document.getElementById('download').addEventListener('click', function () {
@@ -56,7 +60,7 @@ document.getElementById('downloadAssets').addEventListener('click', function () 
 
   function formatDate(date) {
     const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+    const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
@@ -81,10 +85,8 @@ let zipFileName;
 let zipFileShortName;
 let assetsUrl;
 
-const category = localStorage.getItem('clickedProjectCategory');
-
 if (clickedButton === 'download') {
-    zipFileName = projectId + '-assets.zip'; // Assets zip
+    zipFileName = projectId + '-assets.zip';
     zipFileShortName = shortName + ' - Project Assets.zip';
     
     // Determine the assets URL based on the category
@@ -122,11 +124,9 @@ if (clickedButton === 'download') {
     return;
 }
 
-// Use the assetsUrl for further processing, e.g., initiating download
 console.log('Assets URL:', assetsUrl);
 
 
-  // Perform an HTTP HEAD request to check if the file exists
   fetch(assetsUrl, { method: 'HEAD' })
     .then(response => {
       if (response.ok) {
@@ -135,15 +135,14 @@ console.log('Assets URL:', assetsUrl);
         timerDisplay.textContent = 'Time elapsed: 0m 0s';
         timerDisplay.style.display = 'block';
         downloadCompleteMessage.textContent = '';
-        timerInterval = setInterval(updateTimer, 1000); // Update every second
+        timerInterval = setInterval(updateTimer, 1000);
 
-        // Record to Google Sheets (placeholder URL)
-        const sheetUrl = 'https://script.google.com/macros/s/AKfycbynmC_8YIN1tCtroa76N04VTgwQAzASPy1Ikx_n4pBBBKSgTcnT1Gmuxss5moGgQu97/exec'; // Replace with your Google Sheet URL
+        const sheetUrl = 'https://script.google.com/macros/s/AKfycbynmC_8YIN1tCtroa76N04VTgwQAzASPy1Ikx_n4pBBBKSgTcnT1Gmuxss5moGgQu97/exec';
         const formData = new FormData();
         
-        formData.append('projectName', projectTitle + (clickedButton === 'download' ? ' - assets' : ' - full zip')); // Append '- assets' or '- full zip'
+        formData.append('projectName', projectTitle + (clickedButton === 'download' ? ' - assets' : ' - full zip'));
         formData.append('email', email);
-        formData.append('timestamp', formatDate(new Date())); // Use formatted date and time
+        formData.append('timestamp', formatDate(new Date()));
 
         fetch(sheetUrl, {
           method: 'POST',
@@ -151,29 +150,22 @@ console.log('Assets URL:', assetsUrl);
         }).then(response => response.text())
           .then(result => {
             console.log('Form submission success:', result);
-            // Stop the timer
             clearInterval(timerInterval);
 
-            // Hide the timer display after 2 seconds
             setTimeout(() => {
               timerDisplay.style.display = 'none';
             }, 3000);
 
-            // Show the download complete message for 3 seconds
             downloadCompleteMessage.textContent = 'Download complete';
             setTimeout(() => {
-              // Clear the download complete message
               downloadCompleteMessage.textContent = '';
 
-              // Revert the div visibility back to its original state
               document.querySelector('.source-code').style.display = 'flex';
               document.querySelector('.project-details').style.display = 'none';
             }, 3000);
 
-            // Clear the input field
             userEmailInput.value = '';
 
-            // Trigger the file download
             const a = document.createElement('a');
             a.href = assetsUrl; 
             a.download = zipFileShortName;
@@ -185,7 +177,6 @@ console.log('Assets URL:', assetsUrl);
             console.error('Form submission error:', error);
           });
       } else {
-        // The file does not exist, show an alert
         alert('Assets not available.');
       }
     })
@@ -203,7 +194,6 @@ function goback() {
 }
 
 function opendemo() {
-  const category = localStorage.getItem('clickedProjectCategory');
 
   let folderPath;
   if (category === 'htmlcss') {
@@ -221,9 +211,6 @@ function opendemo() {
 
   window.open(`../demo/${folderPath}/${projectId}/index.html`, '_blank');
 }
-
-const availableFiles = localStorage.getItem('availableFiles');
-const category = localStorage.getItem('clickedProjectCategory');
 
 const filePaths = {
     htmlcss: 'htmlcss_txt_files/',

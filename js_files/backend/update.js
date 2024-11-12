@@ -1,11 +1,11 @@
 // Version of the website
-const currentVersion = '1.8.4';
+const currentVersion = '1.9.6';
 
 const updates = [
-  { text: "Implemented new sourcecode themes", icon: "images/icons/correct.png" },
-  { text: "Using prism.js for color theme in source code", icon: "images/icons/correct.png" },
+  { text: "Easily share project links directly with others.", icon: "images/icons/correct.png" },
+  { text: "Enhanced backend logic for smoother performance.", icon: "images/icons/correct.png" },
   // { text: "Enabled dynamic fetching of all assets (images, text files, etc.) via project-specific IDs", icon: "images/icons/correct.png" },
-  { text: "Improved source code fetching methods", icon: "images/icons/correct.png" },
+  { text: "Project details dynamically fetched using unique IDs.", icon: "images/icons/correct.png" },
 ];
 
 

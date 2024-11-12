@@ -108,7 +108,7 @@ function renderProjects() {
    
     if (categories[project.category]) {
       categories[project.category].container.innerHTML += `
-        <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}" data-projectId="${project.projectId}" data-shortName="${project.shortName}" data-projectName="${project.name}" data-availableFiles="${project.availableFiles}">
+        <a class="project-link" target="_blank" href="${project.codeUrl}?projectId=${project.projectId}">
           <img src="${projectImage}" height="150px" alt="${project.shortName}" loading="lazy">
           <div class="creator-name">Made by ${creatorName}</div>
         </a>
@@ -118,7 +118,7 @@ function renderProjects() {
 
     
     sourceCode.innerHTML += `
-      <a class="project-link" target="_blank" href="${project.codeUrl}" data-category="${project.category}" data-projectId="${project.projectId}" data-shortName="${project.shortName}" data-projectName="${project.name}" data-availableFiles="${project.availableFiles}">
+      <a class="project-link" target="_blank" href="${project.codeUrl}?projectId=${project.projectId}">
         <div class="sourceCodeContainer">
           <div class="project-image">
             <img src="${projectImage}" alt="${project.shortName}" loading="lazy">
@@ -154,8 +154,8 @@ function renderProjects() {
   
   const totalCounts = Object.values(categories).reduce((acc, cat) => acc + cat.count, 0);
   document.getElementById('all-project-count').textContent = totalCounts;
-  document.getElementById('all-sourcecode-count').textContent = projects.length; // Total source codes
-  document.getElementById('all-projectassets-count').textContent = projects.filter(p => p.hasAssets).length; // Count of assets
+  document.getElementById('all-sourcecode-count').textContent = projects.length;
+  document.getElementById('all-projectassets-count').textContent = projects.filter(p => p.hasAssets).length;
 
   initializeProjectLinkClick();
   initializeSearchFunctionality('source-code', '.sourceCodeContainer');
@@ -218,3 +218,7 @@ function showProject() {
 
 showProject();
 renderProjects();
+
+function getProjectById(projectId) {
+  return projects.find(project => project.projectId === projectId);
+}
