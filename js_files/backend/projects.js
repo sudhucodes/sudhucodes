@@ -1,5 +1,6 @@
 // Project List
 const projects = [
+  {"name": "All-in-One Advanced Smart Calculator with Full Functionality - JavaScript", "shortName": "Calculator with Full Functionality - JavaScript", "projectId": "JAVASCRIPT-CWFF-J-20241118-JYT5U", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "javascript", "availableFiles": ["html", "css", "js"]},
   {"name": "Responsive Customer Review and Highlight Testimonial Card - TailwindCSS", "shortName": "Testimonial Card - TailwindCSS", "projectId": "TAILWINDCSS-TC-T-20241103-66CAO", "codeUrl": "codes/sourcecode.html", "hasAssets": true, "category": "tailwindCSS", "availableFiles": ["html"]},
   {"name": "Dynamic Navbar with Gradient Offer and Navigation Links - HTML&CSS", "shortName": "Dynamic Navbar - HTML&CSS", "projectId": "HTMLCSS-DN-H-20241103-W6WFQ", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "htmlcss", "availableFiles": ["html", "css"]},
   {"name": "Professional Card Design Highlighting Beginner Plans TailwindCSS", "shortName": "Card Design - TailwindCSS", "projectId": "TAILWINDCSS-CD-T-20241013-KR0ML", "codeUrl": "codes/sourcecode.html", "hasAssets": false, "category": "tailwindCSS", "availableFiles": ["html"]},
