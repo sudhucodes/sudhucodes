@@ -4,6 +4,25 @@ Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital 
 
 ---
 
+## **Table of Contents**
+
+- [**Enhanced "My Work and Projects" Section**](#enhanced-my-work-and-projects-section)
+- [**Featured Projects**](#featured-projects)
+- [**Bots and Automation Projects**](#bots-and-automation-projects-)
+- [**Other Collaborations and Tools**](#other-collaborations-and-tools)
+- [**Personal Details for SudhuCodes**](#personal-details-for-sudhucodes)
+- [**Achievements and Recognition**](#achievements-and-recognition-)
+- [**Future Plans & Goals**](#future-plans--goals-)
+- [**Social Media Ventures**](#social-media-ventures-)
+- [**Community Impact & Contributions**](#community-impact--contributions-)
+- [**Contact Information**](#contact-information)
+- [**Testimonials & Feedback**](#testimonials--feedback-)
+- [**Challenges Overcome**](#challenges-overcome-)
+- [**Upcoming Projects & Vision**](#upcoming-projects--vision-)
+- [**Call to Action**](#call-to-action-)
+
+---
+
 ### Enhanced "My Work and Projects" Section
 
 ### Featured Projects
