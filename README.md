@@ -27,7 +27,7 @@ Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital 
 
 ### Featured Projects
 
-#### 1. [SudhuCodes Main Website](https://sudhucodes.github.io/sudhucodes/)  
+#### 1. [SudhuCodes Main Website](https://sudhucodes.vercel.app/)  
 - **Status**: Active  
 - **Description**: A central hub showcasing my projects, certifications, and downloadable resources like source code and assets.  
 - **Public URL**: [GitHub Repository](https://github.com/sudhucodes/sudhucodes)  

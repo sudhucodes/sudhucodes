@@ -1,281 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SudhuCodes - Web Developer</title>
-    <link rel="stylesheet" href="css_files/style.css">
-    <link rel="shortcut icon" href="images/logo/logo-transparant.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+    <title>SudhuCodes — By Sudhanshu Kumar</title>
+    <link rel="shortcut icon" href="./images/logo-transparant.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav>
-        <div class="navbar">
-            <a href="">
-                <img src="images/logo/logo-white.png">
+<body class="font-['Outfit'] min-h-screen bg-gradient-to-b from-[#F2FFF9] to-[#FFF6F1]">
+
+
+    <nav id="home" class="w-full h-20 flex items-center px-6 md:px-24 justify-between py-4">
+        <a href="index.html">
+            <img class="w-44 md:w-auto" src="./images/logo-dark2.svg" alt="logo-dark2">
+        </a>
+    
+        <ul class="hidden md:flex items-center space-x-10 text-gray-800/80">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#why">Why</a></li>
+            <li><a href="#benifits">Benifits</a></li>
+        </ul>
+
+        <a href="mailto:sudhuteam@gmail.com?subject=SudhuCodes-Website&body=Hii,%20SudhuCodes" class="bg-indigo-500 md:flex hidden text-white text-sm px-8 py-2.5 rounded-full">
+            Contact Us
+        </a>
+
+        <button onclick="openMenu()" id="menu-open-btn" class="md:hidden flex">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.75 7H18.25M1.75 1.5H18.25M1.75 12.5H18.25" stroke="#1F2937" stroke-opacity="0.8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button onclick="closeMenu()" id="menu-close-btn" class="md:hidden hidden">
+            <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="12.5317" width="17.4978" height="2.09974" rx="1.04987" transform="rotate(-45.7402 0 12.5317)" fill="#1F2937" fill-opacity="0.7"/>
+                <rect x="12.5312" y="13.9144" width="17.4978" height="2.09974" rx="1.04987" transform="rotate(-135.74 12.5312 13.9144)" fill="#1F2937" fill-opacity="0.7"/>
+            </svg>
+        </button>
+    
+        <ul id="mobile-menu" class="flex flex-col fixed h-screen w-8/12 bg-indigo-200 left-0 top-0 md:hidden items-start gap-4 pt-10 px-6 transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="pb-6">
+                <a href="index.html">
+                    <img class="w-44 md:w-auto" src="./images/logo-dark2.svg" alt="logo">
+                </a>
+            </div>
+            <li><a onclick="closeMenu()" href="#home">Home</a></li>
+            <li><a onclick="closeMenu()" href="#why">Why</a></li>
+            <li><a onclick="closeMenu()" href="#benifits">Benifits</a></li>
+            <a href="mailto:sudhuteam@gmail.com?subject=SudhuCodes-Website&body=Hii,%20SudhuCodes" class="bg-indigo-500 text-white text-sm px-8 py-2.5 rounded-full">
+                Contact Us
             </a>
-            <div class="offer">
-                <img src="images/icons/flame-icon.gif" alt="">
-                <p>Follow SudhuCodes on social media</p>
-                <button id="socialMediaLinkBtn">Check It Out</button>
-            </div>
-        </div>
-        <div class="nav-links" id="nav-links">
-            <ul>
-                <li onclick="closeNav()" class="active">
-                    <a href="#projects">
-                        <i class="fa-solid fa-square"></i>
-                        <img src="images/icons/projects-icon.png">Projects
-                    </a>
-                    <div>
-                        <p id="all-project-count"></p>
-                        <img src="images/icons/big-arrow-icon.svg" alt="">
-                    </div>
-                </li>
-                <li onclick="closeNav()">
-                    <a href="#get-certificate">
-                        <i class="fa-solid fa-square"></i>
-                        <img src="images/icons/certificate-tag-icon.png">Get Certificate
-                    </a>
-                    <div>
-                        <p id="all-quiz-count"></p>
-                        <img src="images/icons/big-arrow-icon.svg" alt="">
-                    </div>
-                </li>
-                <li onclick="closeNav()">
-                    <a href="#courses">
-                        <i class="fa-solid fa-square"></i>
-                        <img src="images/icons/courses-icon.png">Cources
-                    </a>
-                    <div>
-                        <p id="all-cource-count"></p>
-                        <img src="images/icons/big-arrow-icon.svg" alt="">
-                    </div>
-                </li>
-                <li onclick="closeNav()">
-                    <a href="#source-code">
-                        <i class="fa-solid fa-square"></i>
-                        <img src="images/icons/sourcecode-icon.svg">Source Code
-                    </a>
-                    <div>
-                        <p id="all-sourcecode-count">0</p>
-                        <img src="images/icons/big-arrow-icon.svg" alt="">
-                    </div>
-                </li>
-                <li onclick="closeNav()">
-                    <a href="#project-assets">
-                        <i class="fa-solid fa-square"></i>
-                        <img src="images/icons/project-assets-icon.png">Project Assets
-                    </a>
-                    <div>
-                        <p id="all-projectassets-count"></p>
-                        <img src="images/icons/big-arrow-icon.svg" alt="">
-                    </div>
-                </li>
-                <li onclick="closeNav()">
-                    <a href="#stock-images">
-                        <i class="fa-solid fa-square"></i>
-                        <img src="images/icons/stock-images-icon.png">Stock Images
-                    </a>
-                    <div>
-                        <p id="all-stockimages-count"></p>
-                        <img src="images/icons/big-arrow-icon.svg" alt="">
-                    </div>
-                </li>
-                <li onclick="closeNav()">
-                    <a href="#stars">
-                        <i class="fa-solid fa-square"></i>
-                        <img src="images/icons/stars-icon.svg">SudhuCodes Stars
-                    </a>
-                    <div>
-                        <img src="images/icons/big-arrow-icon.svg" alt="">
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="toggle-button" id="toggle-button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        </ul>
     </nav>
-
-
-    <div class="container">
-        <section id="projects" class="content-section active-section">
-            <div class="project-laung">
-                <div class="project-laung-btns">
-                    <button id="htmlCss"><img src="./images/icons/html-logo.png" alt="html icon">HTML & CSS</button>
-                    <button id="tailwindCSS" class="selected"><img src="./images/icons/tailwindcss_icon.png" alt="tailwindCSS icon">Tailwind CSS</button>
-                    <button id="javaScript"><img src="./images/icons/javascript-logo.png" alt="js icon">JavaScript</button>
-                    <button id="reactJs"><img src="./images/icons/react-js-logo.png" alt="react-js icon">React JS</button>
-                </div>
-                <div class="new-porjects">
-                    <p class="new-porject-text">New Projects</p>
-                    <p id="projectDisplay"></p>
-                </div>
-            </div>
-            
-            <div class="projects-container">
-                <div id="htmlCssProjects" class="project-mini-page">
-                    <p>HTML & CSS Projects</p>
-                    <div id="htmlCssProjectsRender" class="projects"></div>
-                </div>
-                
-                <div id="tailwindCSSProjects" class="project-mini-page">
-                    <p>Tailwind CSS Projects</p>
-                    <div id="tailwindCSSProjectsRender" class="projects"></div>
-                </div>
-                
-                <div id="javaScriptProjects" class="project-mini-page">
-                    <p>JavaScript Projects</p>
-                    <div id="javaScriptProjectsRender" class="projects"></div>
-                </div>
-
-                <div id="reactJsProjects" class="project-mini-page">
-                    <p>React JS Projects</p>
-                    <div id="reactJsProjectsRender" class="projects"></div>
-                </div>
-            </div>            
-        </section>
-    
-        
-        <section id="get-certificate" class="content-section">
-            <div class="explore">
-                <div class="explorebtn">
-                  <p>Get certified by completing the project & participating in <br>the Quiz.</p>
-                  <button>Explore quizzes below <span2>&#8594;</span2></button>
-                </div>
-                <div class="explore-img">
-                  <img src="images/logo/certificate-demo.png" loading="lazy">
-                </div>
-              </div>
-              <div class="quiz-list">
-                
-              </div>
-        </section>
     
 
-        <section id="courses" class="content-section">
-            <div class="main-title">
-                <p>All Courses</p>
+    <section class="h-[calc(100vh-80px)] flex md:flex-row flex-col-reverse items-center justify-center md:justify-between md:px-24 px-6">
+        <div class="md:w-1/2 md:mb-20 mb-00">
+            <h1 class="md:text-5xl text-3xl text-center md:text-left md:leading-[60px] md:w-[600px] font-semibold text-gray-900">
+                We’ve
+                <span class="bg-gradient-to-r from-[#4338CA] to-[#8B5CF6] bg-clip-text text-transparent">
+                    Upgraded
+                </span> to Serve You Better!
+            </h1>
+            <p class="text-gray-500 mt-3 text-center text-balance md:text-left">Your favorite content, now on a faster, more reliable platform with better features and a smoother browsing experience.</p>
+            <div class="flex md:flex-row flex-col gap-6 items-center mt-7">
+                <a id="redirect-link" href="https://sudhucodes.vercel.app/" class="flex items-center justify-center gap-3 bg-indigo-500 hover:brightness-90 transition text-white text-sm h-12 px-8 rounded">
+                    Go to New Website
+                    <img src="./images/arrow.svg" alt="arrow">
+                </a>
+                <p id="timer-text">Redirecting you in <span id="timer">20</span> seconds... <span class="text-red-500 underline cursor-pointer" id="stop-button">Stop</span></p>
             </div>
-            <div class="all-cource-container">
-                
-            </div>
-        </section>
-    
-
-        <section id="source-code" class="content-section">
-            <div class="search-box">
-                <div class="search-item">
-                  <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </div>
-                  <input type="text" placeholder="Search project by name">
-                  <div class="cross-icon" style="visibility: hidden; opacity: 0;">
-                    <i class="fa-regular fa-circle-xmark"></i>
-                  </div>
-                </div>
-              </div>
-        </section>
-    
-
-        <section id="project-assets" class="content-section">
-            <div class="search-box">
-                <div class="search-item">
-                  <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </div>
-                  <input type="text" placeholder="Search project by name">
-                  <div class="cross-icon" style="visibility: hidden; opacity: 0;">
-                    <i class="fa-regular fa-circle-xmark"></i>
-                  </div>
-                </div>
-              </div>
-        </section>
-        
-
-        <section id="project-details" class="content-section">
-            <div class="project-details">
-                <div class="details-image">
-                  <p id="projectDescription"></p>
-                  <img id="projectImage" src="" alt="Project Image">
-                </div>
-                <div class="details-button">
-                  <div class="assets-email">
-                    <input type="email" id="userEmail" placeholder="Enter your valid email id">
-                    <p id="email-required"></p>
-                  </div>
-                  <div class="assets-download">
-                    <button class="button" id="downloadAssets">Download Assets <i class="fa-solid fa-download"></i></button>
-                    <p id="download-timer"></p>
-                    <p id="download-complete"></p>
-                  </div>
-                </div>
-            </div>
-        </section>
-        
-
-        <section id="stock-images" class="content-section">
-            <div class="stock-main"></div>
-        </section>
-
-
-        <section id="stars" class="content-section">
-            <h1 class="stars-title">SudhuCodes Stars <img src="images/icons/star-emoji-icon.svg" alt=""></h1>
-            <div class="stars-search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="stars-search-input" autocomplete="off" placeholder="Search Stars">
-            </div>
-            <div class="stars-container"></div>
-        </section>
-        
-    </div>
-    
-    <div id="overlay"></div>
-    <div id="whatsNewPopup" class="popup-container" style="display: none;">
-        <h2></h2> <!-- Version number will be dynamically inserted here -->
-        <ul></ul> <!-- Updates will be dynamically inserted here -->
-        <button id="closePopup">Explore Projects <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-    </div>
-
-    <div id="overlay2"></div>
-    <div class="links-container">
-        <a class="instagram" href="https://www.instagram.com/sudhucodes/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a class="youtube" href="https://www.youtube.com/@sudhucodes" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a class="github" href="https://github.com/sudhucodes" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a class="telegram" href="https://t.me/sudhucodes" target="_blank">
-            <i class="fa-brands fa-telegram"></i>
-        </a>
-        <button id="socialMediaLinkCloseBtn"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-
-    <footer>
-        <div class="socialLinks">
-            <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
-            <a href="https://github.com/sudhucodes" target="_blank">Github</a>
-            <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
-            <a href="mailto:sudhuteam@gmail.com?subject=Sudhucodes-Website&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
         </div>
-        <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
-    </footer>
-    
 
-    <script src="js_files/script.js"></script>
-    <script src="js_files/backend/update.js"></script>
-    <script src="js_files/backend/projects.js"></script>
-    <script src="js_files/backend/courses.js"></script>
-    <script src="js_files/backend/stock-images.js"></script>
-    <script src="js_files/backend/certificate.js"></script>
-    <script src="js_files/backend/stars.js"></script>
+        <div class="p-14 md:p-0">
+            <img src="./images/right-side-img.svg" alt="right-side-illusration">
+        </div>
+    </section>
+
+
+    <section id="why" class="flex flex-col items-center md:px-24 px-6 md:pl-24 gap-20 pb-20">
+        <h1 class="md:text-[40px] text-3xl font-medium">Why Did We Upgrade?</h1>
+        <div class="flex md:flex-row gap-14 md:gap-0 flex-col w-full items-center md:items-start">
+            <div class="md:w-1/2 w-auto">
+                <img src="./images/left-side-svg.svg" alt="left-side-svg">
+            </div>
+            <div class="md:w-1/2 w-auto text-sm pl-4 md:pl-0">
+                <ul class="space-y-2">
+                    <li class="list-decimal font-medium text-gray-800">
+                        Enhanced Privacy — <span class="text-gray-500 font-normal">Our previous website was hosted using a GitHub repository that posed certain privacy concerns. Moving to a dedicated platform ensures that your data and interactions remain secure and private.</span>
+                    </li>
+                    <li class="list-decimal font-medium text-gray-800">
+                        Faster Performance — <span class="text-gray-500 font-normal">The new platform provides significantly faster load times and improved overall responsiveness, so you can enjoy a smoother browsing experience.</span>
+                    </li>
+                    <li class="list-decimal font-medium text-gray-800">
+                        Modernized Features — <span class="text-gray-500 font-normal">We’ve integrated new tools and functionalities designed to meet your evolving needs and expectations.</span>
+                    </li>
+                    <li class="list-decimal font-medium text-gray-800">
+                        Improved Design and Accessibility — <span class="text-gray-500 font-normal">A fresh, user-friendly interface optimized for all devices ensures a consistent experience, whether you’re browsing on mobile or desktop.</span>
+                    </li>
+                </ul>
+                <ul id="benifits" class="text-gray-500">
+                    <h3 class="text-xl font-medium text-gray-800 pb-2 -ml-4 mt-4">What Does This Mean for You?</h3>
+                    <li class="list-disc">A faster, more secure platform.</li>
+                    <li class="list-disc">Features tailored to provide a richer experience.</li>
+                    <li class="list-disc">An updated website URL that reflects our commitment to innovation.</li>
+                </ul>
+                <a href="https://sudhucodes.vercel.app/" class="flex items-center justify-center mt-5 -ml-4 w-max gap-3 bg-indigo-500 hover:brightness-90 transition text-white text-sm h-11 px-7 rounded">
+                    Visit Our New Website
+                    <img src="./images/arrow.svg" alt="arrow">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="flex md:flex-row flex-col-reverse gap-2 md:gap-0 items-center justify-between md:px-24 px-6 pb-4 text-sm text-gray-500">
+        <div class="flex items-center gap-5">
+            <a class="hidden md:inline-block" href="index.html">
+                <img src="./images/logo-dark2.svg" alt="apextube-logo">
+            </a>
+            <div class="hidden md:inline-block h-6 w-px bg-gray-500/60"></div>
+            <p>
+                All rights reserved. Copyright 
+                <a href="https://sudhucodes.vercel.app/" class="hover:text-gray-700 transition">@SudhuCodes</a>
+            </p>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="https://github.com/sudhucodes" target="_blank" class="hover:brightness-90 transition">
+                <img src="./images/github_icon.svg" alt="github_icon">
+            </a>
+            <a href="https://twitter.com/sudhucodes" target="_blank" class="hover:brightness-90 transition">
+                <img src="./images/twitter_icon.svg" alt="twitter_icon">
+            </a>
+            <a href="https://www.instagram.com/sudhucodes/" target="_blank" class="hover:brightness-90 transition">
+                <img src="./images/instagram_icon.svg" alt="instagram_icon">
+            </a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
