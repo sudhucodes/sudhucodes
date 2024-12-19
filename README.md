@@ -61,6 +61,12 @@ Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital 
 - **Technologies**: Python, Music APIs  
 - **Deployment**: Active on local servers and hosting.
 
+#### 5. **YouTube Song Downloader**  
+- **Status**: Active  
+- **Description**: A Python-based script to download high-quality audio from YouTube by simply providing song titles. The script searches, downloads, and saves songs with proper filenames, offering an efficient and lightweight solution for automating song downloads.  
+- **Technologies**: Python, `yt-dlp` library  
+- **Deployment**: Open-source script available on [GitHub](https://github.com/sudhucodes/ytmusicdownloader)
+
 ---
 
 ### Bots and Automation Projects 🤖
