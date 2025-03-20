@@ -6,7 +6,7 @@ Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital 
 # 1. [SudhuCodes Main Website](https://sudhucodes.vercel.app/)  
 - **Status**: Active  
 - **Description**: A central hub showcasing my projects, certifications, and downloadable resources like source code and assets.
-- **Technologies**: React.js, Express.js, Node.js, MongoDB, Cloudinary, Tailwind CSS, CSS, Git, GitHub, Vercel, Firebase and more.
+- **Technologies**: React.js, Express.js, Node.js, MongoDB, Cloudinary, Tailwind CSS, CSS, Git, GitHub, Vercel, FirestoreDB and Firebase Auth and more.
 
 ## Features  
 - **Projects Section:** Browse HTML-CSS, Tailwind, JavaScript, and React projects.  
