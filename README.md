@@ -3,8 +3,7 @@
 Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital space. I'm a skilled Full-Stack Web Developer, Software Developer, UI/UX Designer and Bot Automater from **Madhubani - Bihar, India**. My primary focus is on building functional, user-friendly tools, Full-Stack Websites and sharing resources that empower developers worldwide. I aim to make technology accessible to everyone, whether through tutorials, open-source contributions, creating bots, or innovative applications.
 
 
-# 1. [SudhuCodes Main Website](https://sudhucodes.vercel.app/)  
-- **Status**: Active  
+# 1. [SudhuCodes Website](https://sudhucodes.vercel.app/)  
 - **Description**: A main sudhucodes website showcasing my projects, certifications, and downloadable resources of projects like source code and assets.
 - **Technologies**: React.js, Express.js, Node.js, MongoDB, Cloudinary, Tailwind CSS, CSS, Git, GitHub, Vercel, FirestoreDB and Firebase Auth and more.
 - **Note**: Now this website is made with NextJS, MongoDB, Cloudinary, Firebase and more.
@@ -15,7 +14,13 @@ Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital 
 - **Courses:** Explore free or premium courses to learn new technologies.  
 - **Source Code:** Access source code for projects with advanced search functionality.  
 - **Project Assets & Stock Images:** Download relevant assets and images directly.  
-- **Social Media Integration:** Stay connected via Instagram, YouTube, and GitHub.    
+- **Social Media Integration:** Stay connected via Instagram, YouTube, and GitHub.
+
+  
+# 2. [SudhuBots Website](https://sudhubots.vercel.app/)  
+- **Description**: Explore a powerful collection of AI bots crafted by SudhuCodes. Boost your productivity, automate tasks, and learn with intelligent tools designed for creators and developers.
+- **Technologies**: NextJS, Tailwind CSS, CSS, Git, GitHub, Vercel and more.
+
 
 <br>
 <br>
@@ -30,8 +35,8 @@ Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital 
 | **🗣️ Languages**   | English, Hindi |
 | **📧 Email**       | [sudhuteam@gmail.com](mailto:sudhuteam@gmail.com) |
 | **🔗 Website**     | [https://sudhucodes.vercel.app/](https://sudhucodes.vercel.app/) |
-| **🐦 Twitter**     | [@SudhuCodes](https://twitter.com/sudhucodes) |
-| **👨‍💻 GitHub**    | [github.com/SudhuCodes](https://github.com/sudhucodes) |
+| **🐦 Twitter**     | [@sudhucodes](https://twitter.com/sudhucodes) |
+| **👨‍💻 GitHub**    | [@sudhucodes](https://github.com/sudhucodes) |
 | **Instagram**       | [@sudhucodes](https://instagram.com/sudhucodes) |
 | **🎯 Interests**   | Web Development, AI, Automation, Bot Creation, Teaching |
 
@@ -65,10 +70,10 @@ Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital 
 # Contact Information:  
 Developed and maintained by **SudhuCodes**.  
 
-- **GitHub:** [sudhucodes](https://github.com/sudhucodes)  
+- **GitHub:** [@sudhucodes](https://github.com/sudhucodes)  
 - **Instagram:** [@sudhucodes](https://instagram.com/sudhucodes)  
-- **YouTube:** [sudhucodes](https://www.youtube.com/@sudhucodes)  
-- **Telegram**: [Apex Comunity](https://t.me/ApexDownloader)
+- **YouTube:** [@sudhucodes](https://www.youtube.com/@sudhucodes)  
+- **Telegram**: [@sudhubots](https://t.me/sudhubots)
 - **Email:** [sudhuteam@gmail.com](mailto:sudhuteam@gmail.com)
 
 
