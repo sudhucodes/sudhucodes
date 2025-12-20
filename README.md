@@ -1,18 +1,21 @@
 # SudhuCodes (Sudhanshu Kumar)
 
-Hi, I'm **Sudhanshu Kumar**, widely recognized as **SudhuCodes** in the digital space. I'm a skilled Full-Stack Developer & UI/UX Designer. My primary focus is on building functional, user-friendly tools, Full-Stack Websites and sharing resources that empower developers worldwide. I aim to make technology accessible to everyone, whether through tutorials, open-source contributions, creating bots or innovative applications.
+Hi there,
+
+I’m Sudhanshu Kumar — the founder and developer behind SudhuCodes.
+
+Sudhanshu Kumar (b. 2006, India) is a Full-Stack Developer and UI/UX Designer with a strong focus on clean user experience, performance and scalable architectures. Since 2023, he has been building production-ready applications, developer tools and open-source projects.
 
 
-# [Visit SudhuCodes](https://sudhucodes.com)  
+[Visit SudhuCodes](https://sudhucodes.com)  
 
-> SudhuCodes is a Software Company by Sudhanshu Kumar
 
-# Contact:
+### Contact:
 
 - **GitHub:** [@sudhucodes](https://github.com/sudhucodes)  
 - **Instagram:** [@sudhucodes](https://instagram.com/sudhucodes)  
 - **YouTube:** [@sudhucodes](https://www.youtube.com/@sudhucodes)  
 - **Telegram**: [@sudhubots](https://t.me/sudhubots)
-- **Email:** [sudhuteam@gmail.com](mailto:contact@sudhucodes.com)
+- **Email:** [contact@sudhucodes.com](mailto:contact@sudhucodes.com)
 
-> “Feel free to reach out for collaborations, feedback or just a friendly chat! Your support inspires me to innovate and share more.”
+“I spend most of my time building and improving my own products and services. However, I’m always open to meaningful collaborations, partnerships and exciting ideas. If you have something in mind, I’d love to hear from you.”
