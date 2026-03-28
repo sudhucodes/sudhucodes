@@ -1,4 +1,4 @@
-![SudhuCodes](/assets/readme-image.jpg)
+![SudhuCodes](/assets/readme-image.png)
 
 **SudhuCodes** is a unified developer platform delivering production-ready software for the global tech community.
 
