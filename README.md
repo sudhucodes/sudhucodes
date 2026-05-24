@@ -9,3 +9,7 @@ Each SudhuCodes product is developed in accordance with professional engineering
 SudhuCodes primarily invests its time in building and refining its own products and services, while remaining open to meaningful collaborations, strategic partnerships and innovative opportunities.
 
 Website 👉 [https://sudhucodes.com](https://sudhucodes.com)
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" />
+</div>
