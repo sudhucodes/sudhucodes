@@ -1,4 +1,4 @@
-![SudhuCodes](/assets/readme-image.png)
+![SudhuCodes](./readme-image.png)
 
 **SudhuCodes** is a unified developer platform delivering production-ready software for the global tech community.
 
@@ -7,5 +7,15 @@ Founded in 2023, SudhuCodes focuses on building robust applications, developer t
 Each SudhuCodes product is developed in accordance with professional engineering standards, comprehensive documentation practices and scalable foundations. This ensures that solutions can evolve seamlessly from early-stage concepts into reliable, enterprise-grade systems.
 
 SudhuCodes primarily invests its time in building and refining its own products and services, while remaining open to meaningful collaborations, strategic partnerships and innovative opportunities.
+
+### Live Products
+
+- FormSync – [https://formsync.app](https://formsync.app/)
+- GoLink – [https://golink.buzz](https://golink.buzz/)
+- Auth – [https://auth.sudhucodes.com](https://auth.sudhucodes.com/)
+- LinkHub – [https://linkhub.sudhucodes.com](https://linkhub.sudhucodes.com//)
+- Envnix – [https://envnix.sudhucodes.com](https://envnix.sudhucodes.com/)
+- Docstra – [https://docstra.sudhucodes.com](https://docstra.sudhucodes.com/)
+- RTM – [https://rtm.sudhucodes.com](https://rtm.sudhucodes.com/)
 
 [https://sudhucodes.com](https://sudhucodes.com)
