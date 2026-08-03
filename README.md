@@ -1,4 +1,4 @@
-![SudhuCodes](/assets/readme-image.png)
+![SudhuCodes](./readme-image.png)
 
 **SudhuCodes** is a unified developer platform delivering production-ready software for the global tech community.
 
@@ -8,8 +8,14 @@ Each SudhuCodes product is developed in accordance with professional engineering
 
 SudhuCodes primarily invests its time in building and refining its own products and services, while remaining open to meaningful collaborations, strategic partnerships and innovative opportunities.
 
-Website 👉 [https://sudhucodes.com](https://sudhucodes.com)
+### Live Products
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" />
-</div>
+- FormSync – [https://formsync.app](https://formsync.app/)
+- GoLink – [https://golink.buzz](https://golink.buzz/)
+- Auth – [https://auth.sudhucodes.com](https://auth.sudhucodes.com/)
+- LinkHub – [https://linkhub.sudhucodes.com](https://linkhub.sudhucodes.com//)
+- Envnix – [https://envnix.sudhucodes.com](https://envnix.sudhucodes.com/)
+- Docstra – [https://docstra.sudhucodes.com](https://docstra.sudhucodes.com/)
+- RTM – [https://rtm.sudhucodes.com](https://rtm.sudhucodes.com/)
+
+[https://sudhucodes.com](https://sudhucodes.com)
