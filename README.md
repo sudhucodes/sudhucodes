@@ -10,14 +10,16 @@ SudhuCodes primarily invests its time in building and refining its own products 
 
 ## Products
 
-| Project  | Category            | Repository             | Website                        |
-| :------- | :------------------ | :--------------------- | :----------------------------- |
-| FormSync | SaaS                | -                      | https://formsync.app           |
-| GoLink   | SaaS                | -                      | https://golink.buzz            |
-| Auth     | Authentication      | -                      | https://auth.sudhucodes.com    |
-| LinkHub  | SaaS                | -                      | https://linkhub.sudhucodes.com |
-| Envnix   | Open Source         | ✅ Available on GitHub | https://envnix.sudhucodes.com  |
-| Docstra  | SaaS                | -                      | https://docstra.sudhucodes.com |
-| RTM      | React Toast Library | ✅ Available on GitHub | https://rtm.sudhucodes.com     |
+| Project         | Category    | Repository             | Website                        |
+| :-------------- | :---------- | :--------------------- | :----------------------------- |
+| LINKHUB         | SaaS        | -                      | https://linkhub.sudhucodes.com |
+| ENVNIX          | Open Source | ✅ Available on GitHub | https://envnix.sudhucodes.com  |
+| GoLink          | SaaS        | -                      | https://golink.buzz            |
+| MAXAUTH         | Framework   | -                      | -                              |
+| ARIX            | AI          | -                      | -                              |
+| FormSync        | SaaS        | -                      | https://formsync.app           |
+| React Toast MSG | Open Source | ✅ Available on GitHub | https://rtm.sudhucodes.com     |
+| Docstra         | Framework   | -                      | https://docstra.sudhucodes.com |
+| Apex Downloader | Bot         | -                      | https://t.me/apexdownloaderbot |
 
 [https://sudhucodes.com](https://sudhucodes.com)

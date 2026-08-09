@@ -1,0 +1,9 @@
+{
+    "name": "sudhucodes",
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "build": "node scripts/build.js && pnpm format",
+        "format": "pnpx prettier --write ."
+    }
+}
